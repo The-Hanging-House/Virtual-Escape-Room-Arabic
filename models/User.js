@@ -19,6 +19,10 @@ const UserSchema = new.mongoose.Schema({
   avatar: {
     type: String,
   },
+  age: {
+    type: String,
+    required: true,
+  },
   date: {
     type: Date,
     default: Date.now,
