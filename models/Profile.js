@@ -18,11 +18,9 @@ const ProfileSchema = new mongoose.Schema({
   },
   score: {
     type: Number,
-    required: true,
   },
   time: {
     type: Number,
-    required: true,
   },
 });
 
