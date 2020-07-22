@@ -22,7 +22,6 @@ router.post(
       "Please enter a password with 6 or more characters"
     ).isLength({ min: 6 }),
     check("email", "Please include a valid Email").isEmail(),
-    check("age", "Please input a valid age number!").not().isEmpty().isInt(),
   ],
   async (req, res) => {
     const errors = validationResult(req);
