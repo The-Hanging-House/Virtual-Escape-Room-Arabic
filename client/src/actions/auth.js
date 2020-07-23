@@ -7,6 +7,7 @@ import {
   AUTH_ERROR,
   LOGIN_SUCCESS,
   LOGIN_FAIL,
+  LOGOUT,
 } from "./types";
 import setAuthToken from "../utils/setAuthToken";
 
@@ -65,7 +66,7 @@ export const register = ({ username, email, password }) => async (dispatch) => {
 };
 
 // Login User
-export const login = (email, password) => async (dispatch) => {
+export const login = (username, password) => async (dispatch) => {
   const config = {
     headers: {
       "Content-Type": "application/json",
@@ -73,7 +74,7 @@ export const login = (email, password) => async (dispatch) => {
   };
 
   const body = JSON.stringify({
-    email,
+    username,
     password,
   });
 
@@ -97,3 +98,5 @@ export const login = (email, password) => async (dispatch) => {
     });
   }
 };
+
+// Logout
