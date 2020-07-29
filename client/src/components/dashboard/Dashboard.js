@@ -4,23 +4,31 @@ import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
 import Spinner from '../layout/Spinner'
 import { getCurrentProfile } from '../../actions/profile'
+import bg from '../../img/component1.png'
 
 const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
     useEffect(() => {
         getCurrentProfile();
     }, [getCurrentProfile])
 
-    return loading && profile === null ? <Spinner /> : <Fragment>
-        <h1 className="large text-primary">
-            Dashboard
-        </h1>
-<p className="lead">Welcome { user && user.username }</p>
-
-<div className="buttons">
-              <Link to="intro" className="btn btn-light">
-                Play Instructions
-              </Link>
-            </div>
+    return loading && profile === null ? <Spinner /> : 
+    <Fragment>
+        <div className="bg-image"></div>
+        <div className="bg-text1"></div>
+        <img className="bg-text1" src={bg} alt="Dashboard" useMap="#workmap" width="400" height="500" />
+        <map name="workmap">
+            <area shape="rect" coords="633,458,300,350" alt="Computer" href="intro" />
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm" />
+        </map>
+        <div>
+            <p className="lead">Welcome { user && user.username }</p>
+        </div>
+        <div className="buttons">
+            <Link to="intro" className="btn btn-light">
+            Play Instructions
+            </Link>
+        </div>
+        
     </Fragment>
 
 }

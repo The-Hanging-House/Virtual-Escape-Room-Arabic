@@ -8,6 +8,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import Profile from './components/dashboard/Profile';
 import PrivateRoute from './components/routing/PrivateRoute';
 import Intro from './components/gameplay/Intro';
+import Scene1 from './components/gameplay/Scene1';
 
 
 
@@ -16,6 +17,9 @@ import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
+
+
+
 
 import "./App.css";
 
@@ -41,6 +45,7 @@ const App = () => {
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute exact path="/profile" component={Profile} />
               <PrivateRoute exact path="/intro" component={Intro} />
+              <PrivateRoute exact path="/scene1" component={Scene1} />
             </Switch>
           </section>
         </Fragment>

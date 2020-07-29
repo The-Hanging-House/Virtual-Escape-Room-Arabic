@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Intro = () => {
@@ -17,7 +17,7 @@ const Intro = () => {
               <Link to="/" className="btn btn-primary">
                  INSTRUCTIONS
                 </Link>
-                <Link to="/" className="btn btn-primary">
+                <Link to="/scene1" className="btn btn-primary">
                  PLAY 
                 </Link>
             </div>
