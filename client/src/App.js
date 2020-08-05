@@ -7,6 +7,8 @@ import Alert from "./components/layout/Alert";
 import Dashboard from './components/dashboard/Dashboard';
 import Instruction from './components/dashboard/Instruction';
 import Dashboard2 from './components/dashboard/Dashboard2';
+import Briefing from './components/dashboard/Briefing'
+import Briefing2 from './components/dashboard/Briefing2'
 import Profile from './components/dashboard/Profile';
 import PrivateRoute from './components/routing/PrivateRoute';
 import Intro from './components/gameplay/Intro';
@@ -49,6 +51,8 @@ const App = () => {
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute exact path="/instruction" component={Instruction} />
               <PrivateRoute exact path="/dashboard2" component={Dashboard2} />
+              <PrivateRoute exact path="/briefing" component={Briefing} />
+              <PrivateRoute exact path="/briefing2" component={Briefing2} />
               <PrivateRoute exact path="/profile" component={Profile} />
               <PrivateRoute exact path="/intro" component={Intro} />
               {/* <Timer /> */}

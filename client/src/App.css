@@ -155,6 +155,16 @@
 .btn.btn-primary:hover {
   background: #ffc233;
 }
+.btn.btn-primary1 {
+  background-color: #FF0000;
+  color: #fff;
+  border-radius: 20px;
+}
+.btn.btn-light1 {
+  background-color:	#008000;
+  color: #fff;
+  border-radius: 20px;
+}
 .orange-overlay {
   height: 100%;
   width: 100%;
@@ -287,6 +297,17 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top:50%
+}
+
+.react-player {
+  position: fixed;
+  top: 10%;
+  left: 12.5%;
 }
 
 

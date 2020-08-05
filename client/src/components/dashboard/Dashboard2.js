@@ -18,7 +18,7 @@ const Dashboard2 = ({ getCurrentProfile, auth: { user }, profile: { profile, loa
         <img className="bg-text1" src={bg} alt="Dashboard" useMap="#workmap" width="400" height="500" />
         <map name="workmap">
             <area shape="rect" coords="150,170,500,425" alt="Intro" href="instruction"/>
-            <area shape="rect" coords="300,429,751,480" alt="Game" href="scene1" />
+            <area shape="rect" coords="300,429,751,480" alt="Game" href="briefing" />
         </map>
         <div className="lead1">
             <p className="lead1">Welcome <br /> { user && user.username }</p>

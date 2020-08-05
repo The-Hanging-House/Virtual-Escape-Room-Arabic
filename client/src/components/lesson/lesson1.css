@@ -1,0 +1,10 @@
+.marker {
+    padding: 15px 20px;
+    margin: 20px 0;
+    display: inline-block;
+}
+
+.marker--not-complete {
+    visibility: hidden;
+}
+
