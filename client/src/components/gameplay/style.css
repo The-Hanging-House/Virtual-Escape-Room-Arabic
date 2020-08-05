@@ -13,3 +13,37 @@
     overflow: hidden;
     padding: 0 0rem;
   }
+
+  .container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .btn.btn-primary {
+    background-color: #ffb300;
+    color: #fff;
+    border-radius: 2px;
+  }
+  /* .btn.btn-light {
+    background-color: #fff;
+    color: #111;
+    border-radius: 2px;
+  } */
+  .btn.btn-primary:hover {
+    background: #ffc233;
+  }
+
+  .alert {
+    border-radius: 50px;
+    display: block;
+
+  }
+
+  .alert-inside {
+    margin: 2rem;
+  }
+  
+  span {
+    display: none;
+  }

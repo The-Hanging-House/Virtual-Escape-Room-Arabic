@@ -4,7 +4,7 @@
 }
 .my-1 {
   margin: 1rem 0;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: rgb(0,0,0, 0.5)
 }
 .p-1 {
@@ -62,7 +62,7 @@
   padding: 5rem 0;
 }
 .container {
-  background: #fff;
+  /* background: #fff; */
   /* border-radius: 10%; */
   width: 100%;
   margin: auto;
@@ -70,21 +70,35 @@
 }
 .x-large {
   font-size: 6rem;
+  color: #fff;
   letter-spacing: 34px;
   line-height: 1.2;
   margin-bottom: 1rem;
   word-wrap: break-word;
 }
 .large {
-  padding-top: 2rem;
-  font-size: 1.2rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 2;
+}
+.lead1 {
+  font-family: "Permanent Marker", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  -ms-transform: rotate(-5deg); /* IE 9 */
+  transform: rotate(-5deg); /* Standard syntax */
 }
 .lead {
-  font-size: 28px;
-  margin-bottom: 2rem;
-  letter-spacing: 20px;
+  font-size: 2rem;
+  letter-spacing: 1rem
 }
 .text-primary {
   color: #111;
@@ -133,12 +147,10 @@
 .btn.btn-primary {
   background-color: #ffb300;
   color: #fff;
-  border-radius: 12px;
+  border-radius: 20px;
 }
 .btn.btn-light {
-  background-color: #fff;
-  color: #111;
-  border-radius: 12px;
+  color: #fff;
 }
 .btn.btn-primary:hover {
   background: #ffc233;
@@ -167,6 +179,7 @@
 .form textarea {
   display: block;
   width: 100%;
+  color: #111;
   padding: 0.8rem 2rem;
   font-size: 0.8rem;
   border: 1px solid #c9c9c9;
@@ -205,10 +218,14 @@ body {
   background: url("./img/image1.png") no-repeat center/cover;
   height: 100vh;
 }
+.landing1 {
+  position: relative;
+  background: url("./img/instructions.png") no-repeat center/cover;
+  height: 100vh;
+}
 .bg-text {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(255,255,255, 1); /* Black w/opacity/see-through */
-  color: white;
+  background-color: white;
+  color: black;
   border-radius: 20px;
   font-weight: bold;
   border: 3px solid #f1f1f1;
@@ -228,6 +245,21 @@ body {
   z-index: 2;
   height: 100vh;
   width: 100vh;
+}
+.bg-text2 {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
 }
 .login {
   position: relative;
@@ -255,4 +287,17 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .bg-text1 {
+    width: 200;
+    height: 250; 
+  }
+  .bg-image {
+    width: 200;
+    height: 250;
+  }
 }
