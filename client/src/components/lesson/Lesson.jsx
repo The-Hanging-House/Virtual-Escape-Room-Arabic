@@ -18,7 +18,6 @@ const Lesson = () => {
     return (
         <section className="landing">
             <div className="orange-overlay">
-                <div className="landing-inner">
                     <ResponsivePlayer
                         url="video/briefing1.mp4"
                         onProgress={handleWatchComplete} />
@@ -32,7 +31,6 @@ const Lesson = () => {
                                 </Link>
                             </div>
                         </div>
-                </div>
             </div>
         </section>
     )
