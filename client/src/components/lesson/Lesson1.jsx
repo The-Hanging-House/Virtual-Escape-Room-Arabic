@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import './lesson.css'
 import ResponsivePlayer from '../video/ResponsivePlayer1'
 
+import briefing1 from '../../video/briefing2.mp4'
+
 const Lesson1 = () => {
 
     const [watchComplete, setWatchComplete] = useState(false)
@@ -19,7 +21,7 @@ const Lesson1 = () => {
         <section className="landing">
             <div className="orange-overlay">
                     <ResponsivePlayer
-                        url="video/briefing2.mp4"
+                        url={briefing1}
                         onProgress={handleWatchComplete} />
                         <div className={watchComplete ? "marker marker--is-complete" : "marker marker--not-complete"}>
                             <div className="buttons1">

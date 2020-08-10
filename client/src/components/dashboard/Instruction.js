@@ -20,8 +20,8 @@ class Instruction extends React.Component {
                     <form className="checkbox">
                         <div>
                             <input type='checkbox' id="check1" onChange={this.handleCheckChange} /> 
-                            I'VE READ THE RULES
-                            <div className="buttons" hidden={!this.state.checked}>
+                            I'VE READ THE RULES <br />
+                            <div className="buttons3" hidden={!this.state.checked}>
                                 <Link to="dashboard2" className="btn btn-primary3">
                                     Proceed
                                 </Link>
