@@ -22,19 +22,19 @@ const TouchPoint2 = ({ position, color, onClick }) => {
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" color={color} /> 
+            <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
             <Html center>
             <Container>
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert1"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert" style={{color : 'white', padding : '5px', width : '40vw', backgroundColor: 'rgba(230, 206, 166, 0.9)'}}
+                        className="alert1"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
@@ -43,9 +43,6 @@ const TouchPoint2 = ({ position, color, onClick }) => {
                             <div>
                                 <img src={tools} alt='tools' width='100%' height='100%' />
                             </div>
-                            <p onClick={() => setShowMessage(false)} style={{ fontSize: '2rem'}}>
-                                Ok.
-                            </p>
                         </div>
                         </Alert>
                     </CSSTransition>

@@ -56,7 +56,7 @@ const Login = ({ login, isAuthenticated }) => {
       </form>
 
       <p className="my-1">
-        DON'T HAVE AN ACCOUNT? PLEASE <Link to="/register">REGISTER</Link>
+        DON'T HAVE AN ACCOUNT? PLEASE <Link to="/register" className='link'>REGISTER</Link>
       </p>
     </div>  
     <section className="login">

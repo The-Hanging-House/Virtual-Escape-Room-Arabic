@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
-import './lesson.css'
+// import './lesson.css'
 import ResponsivePlayer from '../video/ResponsivePlayer'
 
 import briefing from '../../video/briefing1.mp4'
@@ -21,7 +21,6 @@ const Lesson = () => {
     }
     
     return (
-        <section className="landing">
             <div className="orange-overlay">
                     <ResponsivePlayer
                         url={briefing}
@@ -39,7 +38,6 @@ const Lesson = () => {
                             </div>
                         </div>
             </div>
-        </section>
     )
 }
 

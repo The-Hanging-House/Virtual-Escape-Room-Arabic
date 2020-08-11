@@ -31,7 +31,7 @@ function TouchPoint3({ position, color, onClick }) {
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" color={color} /> 
+            <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
             <Html center>
             <Container>
                     <CSSTransition
@@ -43,7 +43,7 @@ function TouchPoint3({ position, color, onClick }) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert" style={{color : 'white', padding : '5px', width : '40vw', backgroundColor: 'rgba(230, 206, 166, 0.9)'}}
+                        className="alert"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
@@ -54,11 +54,6 @@ function TouchPoint3({ position, color, onClick }) {
                                 Glare from artificial lights make it hard for wildlife to see, lets help the wildlife by 
                                 </p>
                             </Alert.Heading>
-                                <h3 onMouseEnter={event => onMouseOver(event)}
-                                    onMouseOut={event => onMouseOut(event)}
-                                    href>
-                                    LOOKING FOR THEM
-                                </h3>
                                 <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>

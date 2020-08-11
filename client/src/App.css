@@ -357,10 +357,50 @@ body {
   bottom: 12%;
 }
 .alert {
+  background-image: url(../src/img/popup.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100%;
   border-radius: 30px;
+  color: white;
+  padding: 5px;
+  width: 30vw;
+  height: 35vh;
+  position: absolute;
+  top: -270px;
+  left: -20px;
+}
+.alert1 {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 30px;
+  color: white;
+  padding: 5px;
+  width: 30vw;
+  height: 1vh;
+  position: absolute;
+}
+.alert2 {
+  background-image: url(../src/img/popup.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 30px;
+  color: white;
+  padding: 5px;
+  width: 25vw;
+  height: 35vh;
+  position: absolute;
+  top: -220px;
+  left: -20px;
+}
+.alert-inside2 {
+  position: absolute;
+  top: 20px;
+  left: 30px;
 }
 .alert-inside {
-  margin: 0.5rem 1rem;
   padding-bottom: 1rem;
 }
 .alert-inside p {
@@ -371,13 +411,26 @@ body {
 .alert-inside h3 {
   margin-bottom: 0.5rem
 }
+.alert-inside2 p {
+  color: #FFFFFFC7;
+  font-size: 1rem;
+  margin: 1rem 0rem;
+}
+.alert-inside2 h3 {
+  margin-bottom: 0.5rem
+}
 
 a {
   text-decoration: none;
   color: #fff;
 }
-
-
+h3 {
+  border-radius: 12px;
+  margin-top: 10px;
+}
+.link {
+  color: #111;
+}
 
 @media only screen and (max-width: 600px) {
   .bg-text1 {

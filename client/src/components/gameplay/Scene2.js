@@ -20,10 +20,6 @@ const Controls = (props) => {
     return <orbitControls ref={ref} target={[0, 0, 0]} {...props} args={[camera, gl.domElement]} />
   }
 
-
-
-
-
 const Dome = () => {
     const texture = useLoader(THREE.TextureLoader, 'background2.jpg')
     return (
@@ -34,13 +30,16 @@ const Dome = () => {
     )
   }
 
-
-// function Portals() {
-//   const [which, set] = useState(0)
-//   const { link, ...props } = store[which]
-//   const maps = useLoader(THREE.TextureLoader, store.map(entry => entry.url))
-//   return <Dome onClick={() => set(link)} {...props} texture={maps[which]} />
-// }
+const Box = () => {
+    const mesh = useRef(null);
+    useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
+    return (
+        <mesh ref={mesh}>
+            <boxBufferGeometry attach='geometry' args={[1, 1, 1]} />
+            <meshStandardMaterial attach='material' />
+        </mesh>
+    )
+}
 
 function Scene2() {
     return (
@@ -48,9 +47,7 @@ function Scene2() {
             <Canvas camera={{ position: [0, 0, 0.1] }}>
                 <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
                     <Suspense fallback={null}>
-                        <Dome />
-                        
-                        
+                        <Dome />  
                         <TouchPoint1 position={[25, 1, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint2 position={[25, -27, -30]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-20 -2, -15]} args={[3, 2, 1]} color='#F8A61F' />

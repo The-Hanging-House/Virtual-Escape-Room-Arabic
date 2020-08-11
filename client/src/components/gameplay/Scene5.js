@@ -7,7 +7,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { Html } from 'drei';
 
 import Task1 from '../popup/Task1';
-import TouchPoint1 from '../touchpoints/scene5/Touchpoint1'
+// import TouchPoint1 from '../touchpoints/scene5/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene5/Touchpoint2'
 import './style.css'
 
@@ -57,7 +57,7 @@ function Scene5() {
                     <Suspense fallback={null}>
                         <Dome />
                         <Task />
-                        <TouchPoint1 position={[-.2, -1, -2]} args={[3, 2, 1]} color='#F8A61F' />
+                        {/* <TouchPoint1 position={[-.2, -1, -2]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         <TouchPoint2 position={[0.85, -0.6, -2]} args={[3, 2, 1]} color='#F8A61F' />
                         {/* <TouchPoint3 position={[-11, -5, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint4 position={[-11, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />

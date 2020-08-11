@@ -21,7 +21,7 @@ function TouchPoint4({ position, color, onClick }) {
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" color={color} /> 
+            <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
             <Html center>
                 <Container>
                     <CSSTransition
@@ -33,7 +33,7 @@ function TouchPoint4({ position, color, onClick }) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert" style={{color : 'white', padding : '5px', width : '40vw', backgroundColor: 'rgba(230, 206, 166, 0.9)'}}
+                        className="alert"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}

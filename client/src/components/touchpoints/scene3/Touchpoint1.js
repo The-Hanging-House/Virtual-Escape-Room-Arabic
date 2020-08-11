@@ -39,7 +39,7 @@ function TouchPoint1({ position, color, onClick }) {
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" color={color} /> 
+            <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
             <Html center>
                 <Container>
                     <CSSTransition
@@ -51,12 +51,12 @@ function TouchPoint1({ position, color, onClick }) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert" style={{color : 'white', padding : '5px', width : '30vw', backgroundColor: 'rgba(230, 206, 166, 0.9)'}}
+                        className="alert2"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside">
+                        <div className="alert-inside2">
                             <Alert.Heading>
                                 <p>
                                 You're done with this task.
