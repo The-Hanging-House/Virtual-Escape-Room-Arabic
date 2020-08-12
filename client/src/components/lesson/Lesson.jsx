@@ -1,12 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
-// import './lesson.css'
+import './lesson.css'
 import ResponsivePlayer from '../video/ResponsivePlayer'
-
-import briefing from '../../video/briefing1.mp4'
-
-import AnswerLogo from '../../img/answer.svg'
-import RejectLogo from '../../img/reject.svg'
 
 const Lesson = () => {
 
@@ -21,23 +16,25 @@ const Lesson = () => {
     }
     
     return (
+        <section className="landing">
             <div className="orange-overlay">
+                <div className="landing-inner">
                     <ResponsivePlayer
-                        url={briefing}
+                        url="video/briefing1.mp4"
                         onProgress={handleWatchComplete} />
                         <div className={watchComplete ? "marker marker--is-complete" : "marker marker--not-complete"}>
-                            <div className="buttons2">
+                            <div className="buttons">
                                 <Link to="briefing2" className="btn btn-light1">
-                                    <img src={AnswerLogo} className="accept" alt="answer logo" /><br />
-                                    CALL NOW
+                                ANSWER
                                 </Link>
                                 <Link to="dashboard2" className="btn btn-primary1">
-                                    <img src={RejectLogo} className="reject" alt="reject logo" /><br />
-                                    DON'T
+                                REJECT
                                 </Link>
                             </div>
                         </div>
+                </div>
             </div>
+        </section>
     )
 }
 
