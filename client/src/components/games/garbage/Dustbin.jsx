@@ -1,23 +1,6 @@
 import React from 'react'
 import { DropTarget } from 'react-dnd'
-import bin1 from '../../../img/bin1.png'
-import bin2 from '../../../img/bin2.png'
-import bin3 from '../../../img/bin3.png'
 
-const bins = [
-  {
-      photo: {bin1},
-      alt: 'bin1'
-  },
-  {
-      photo: {bin2},
-      alt: 'bin2'
-  },
-  {
-      photo: {bin3},
-      alt: 'bin3'
-  }
-]
 
 const style = {
   height: '12rem',
@@ -46,9 +29,10 @@ export const Dustbin = ({
     backgroundColor = 'darkkhaki'
   }
   return connectDropTarget(
-    <div style={{ ...style, backgroundColor, backgroundImage: bins.map(photo => `url(${bin1})`) }}>
+    <div style={{ ...style, backgroundColor }}>
       {isActive
-        }
+        ? 'Release to drop'
+        : `This dustbin accepts: ${accepts.join(', ')}`}
 
       {lastDroppedItem && (
         <p>Last dropped: {JSON.stringify(lastDroppedItem)}</p>

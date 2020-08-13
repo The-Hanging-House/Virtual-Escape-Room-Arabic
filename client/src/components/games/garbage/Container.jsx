@@ -1,25 +1,20 @@
 import React, { useState, useCallback } from "react";
-import { NativeTypes } from "react-dnd-html5-backend";
 import Dustbin from "./Dustbin";
 import Box from "./Box";
 import { ItemTypes } from "./ItemTypes";
 import update from "immutability-helper";
-import bin1 from '../../../img/bin1.png'
-// import bin2 from '../../../img/bin2.png'
-// import bin3 from '../../../img/bin3.png'
-import { Button } from "react-bootstrap";
 
 
 export const Container = () => {
-  const [dustbins] = useState([
-    { accepts: [ItemTypes.GLASS] },
-    { accepts: [ItemTypes.FOOD] },
-    { accepts: [ItemTypes.PAPER] }
+  const [dustbins, setDustbins] = useState([
+    { accepts: [ItemTypes.GLASS], lastDroppedItem: null },
+    { accepts: [ItemTypes.FOOD], lastDroppedItem: null },
+    { accepts: [ItemTypes.PAPER, ItemTypes.GLASS], lastDroppedItem: null }
   ]);
   const [boxes] = useState([
-    { name: "Bottle1", type: ItemTypes.GLASS },
-    { name: "Banana1", type: ItemTypes.FOOD },
-    { name: "Magazine1", type: ItemTypes.PAPER }
+    { name: "Bottle", type: ItemTypes.GLASS },
+    { name: "Banana", type: ItemTypes.FOOD },
+    { name: "Magazine", type: ItemTypes.PAPER }
   ]);
   const [droppedBoxNames, setDroppedBoxNames] = useState([]);
   function isDropped(boxName) {
@@ -31,8 +26,17 @@ export const Container = () => {
       setDroppedBoxNames(
         update(droppedBoxNames, name ? { $push: [name] } : { $push: [] })
       );
-    }
-    // [droppedBoxNames, dustbins]
+      setDustbins(
+        update(dustbins, {
+          [index]: {
+            lastDroppedItem: {
+              $set: item
+            }
+          }
+        })
+      );
+    },
+    [droppedBoxNames, dustbins]
   );
   return (
     <div>
@@ -57,7 +61,6 @@ export const Container = () => {
           />
         ))}
       </div>
-      <Button href='scene3'>Proceed</Button>
     </div>
   );
 };

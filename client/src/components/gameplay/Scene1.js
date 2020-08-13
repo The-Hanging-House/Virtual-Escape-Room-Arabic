@@ -10,7 +10,7 @@ import TouchPoint1 from '../touchpoints/scene1/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene1/Touchpoint2'
 import TouchPoint3 from '../touchpoints/scene1/Touchpoint3'
 import TouchPoint4 from '../touchpoints/scene1/Touchpoint4'
-// import TouchPoint5 from '../touchpoints/scene1/Touchpoint5'
+import TouchPoint5 from '../touchpoints/scene1/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene1/Touchpoint6'
 import './style.css'
 
@@ -37,7 +37,7 @@ const Controls = (props) => {
     return (
         <mesh>
             <Html>
-                <div>{showPopup && <Task1 />}</div>
+                <div>Hi</div>
             </Html>
         </mesh>
     )
@@ -64,13 +64,13 @@ function Scene1() {
                 <Controls enableDamping dampingFactor={0.1}  />
                     <Suspense fallback={null}>
                         <Dome />
-                        <Task />
+                        {/* <Task /> */}
                         
                         <TouchPoint1 position={[-4, -3, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint2 position={[-10, -1, 1]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-11, -5, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint4 position={[-11, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        {/* <TouchPoint5 position={[11, -15, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
+                        <TouchPoint5 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint6 position={[6, -9, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         
                     </Suspense>

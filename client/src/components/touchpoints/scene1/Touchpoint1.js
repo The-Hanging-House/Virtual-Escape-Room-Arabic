@@ -8,10 +8,9 @@ import { Html } from 'drei';
 
 function TouchPoint1({ position, color, onClick }) {
     const [hovered, set] = useState(false)
-    // const [showButton, setShowButton] = useState(true);
-    // const [showPopup, setShowPopup] = useState(false);
-    // const toggle = () => setShowPopup(!showPopup)
     const [showMessage, setShowMessage] = useState(false);
+
+    const [showPop, setShowPop] = useState(false);
 
     const onMouseOver = event => {
         const el = event.target;

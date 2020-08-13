@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react'
 import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
+import App from '../../games/lock/App'
+
 import { Html } from 'drei';
 
 function TouchPoint2({ position, color, onClick }) {
@@ -50,15 +52,15 @@ function TouchPoint2({ position, color, onClick }) {
                         >
                         <div className="alert-inside2">
                             <Alert.Heading>
-                                <p>
-                                Opps! You should see your sorroundings first!
-                                </p>
+                                <App />
                             </Alert.Heading>
-                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
-                                onMouseEnter={event => onMouseOver(event)}
-                                onMouseOut={event => onMouseOut(event)}>
+                        <a href='scene2'>
+                            <h3 onMouseEnter={event => onMouseOver(event)}
+                                onMouseOut={event => onMouseOut(event)}
+                                href>
                                 OK
                             </h3>
+                        </a>
                         </div>
                         </Alert>
                     </CSSTransition>

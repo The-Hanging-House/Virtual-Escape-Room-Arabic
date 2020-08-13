@@ -3,7 +3,10 @@ import React, { useState, useEffect } from 'react'
 import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
+
+
 import { Html } from 'drei';
+import App1 from '../../games/game/App1';
 
 function TouchPoint3({ position, color, onClick }) {
     const [hovered, set] = useState(false)
@@ -50,9 +53,7 @@ function TouchPoint3({ position, color, onClick }) {
                         >
                         <div className="alert-inside2">
                             <Alert.Heading>
-                                <p>
-                                Opps! You should see your sorroundings first!
-                                </p>
+                                <App1 />
                             </Alert.Heading>
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}

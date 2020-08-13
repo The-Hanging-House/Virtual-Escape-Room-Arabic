@@ -1,6 +1,5 @@
 export const ItemTypes = {
-    FOOD: "food1",
-    GLASS: "glass1",
-    PAPER: "paper1"
-  };
-  
+  FOOD: 'food',
+  GLASS: 'glass',
+  PAPER: 'paper',
+}

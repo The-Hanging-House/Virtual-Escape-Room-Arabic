@@ -9,6 +9,7 @@ import TouchPoint2 from '../touchpoints/scene2/Touchpoint2'
 import TouchPoint3 from '../touchpoints/scene2/Touchpoint3'
 import Portal from '../touchpoints/scene2/Portal'
 
+import Box1 from '../3dobjects/Box1'
 
 import './style.css'
 extend({ OrbitControls })
@@ -30,16 +31,28 @@ const Dome = () => {
     )
   }
 
-const Box = () => {
-    const mesh = useRef(null);
-    useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
-    return (
-        <mesh ref={mesh}>
-            <boxBufferGeometry attach='geometry' args={[1, 1, 1]} />
-            <meshStandardMaterial attach='material' />
-        </mesh>
-    )
-}
+//   function Box(props) {
+//     const mesh = useRef()
+//     const [hovered, setHover] = useState(false)
+//     const [active, setActive] = useState(false)
+  
+//     useFrame(({ camera, mouse }) => {
+//       mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+//     })
+  
+//     return (
+//       <mesh
+//         {...props}
+//         ref={mesh}
+//         scale={active ? [1.5, 1.5, 1.5] : [1, 1, 1]}
+//         onClick={e => setActive(!active)}
+//         onPointerOver={e => setHover(true)}
+//         onPointerOut={e => setHover(false)}>
+//         <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
+//         <meshStandardMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} />
+//       </mesh>
+//     )
+//   }
 
 function Scene2() {
     return (
@@ -48,9 +61,13 @@ function Scene2() {
                 <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
                     <Suspense fallback={null}>
                         <Dome />  
+                        <ambientLight />
+                        <pointLight position={[10, 10, 10]} />
+                        <Box1 position={[-10, 0, 0]} />
+                        <Box1 position={[10, 0, 0]} />
                         <TouchPoint1 position={[25, 1, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint2 position={[25, -27, -30]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint3 position={[-20 -2, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint3 position={[-10 -10, 0]} args={[3, 2, 1]} color='#F8A61F' />
                         <Portal position={[-10, -12, -20]} args={[3, 2, 1]} color='#fff' />
                     </Suspense>
             </Canvas>,
