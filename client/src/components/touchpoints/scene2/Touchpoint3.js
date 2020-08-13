@@ -1,0 +1,56 @@
+import React, { useState, useEffect } from 'react'
+
+import { Container, Alert } from 'react-bootstrap';
+import { CSSTransition } from 'react-transition-group';
+
+import { Html } from 'drei';
+
+import board2 from '../../../img/board2.jpg'
+
+
+const TouchPoint3 = ({ position, color, onClick }) => {
+    const [hovered, set] = useState(false)
+    // const [showButton, setShowButton] = useState(true);
+    const [showMessage, setShowMessage] = useState(false);
+    
+    useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
+    return (
+        <mesh 
+            scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
+            position={position}
+            onPointerOver={() => set(true)}
+            onPointerOut={() => set(false)}
+            onClick={() => setShowMessage(true)}>
+            <sphereGeometry attach="geometry" args={[1, 32, 32]} />
+            <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
+            <Html center>
+            <Container>
+                    <CSSTransition
+                        in={showMessage}
+                        timeout={300}
+                        classNames="alert"
+                        unmountOnExit
+                        // onEnter={() => setShowButton(false)}
+                        // onExited={() => setShowButton(true)}
+                    >
+                        <Alert
+                        className="alert2" style={{color : 'white', padding : '5px', width : '40vw', backgroundColor: 'rgba(230, 206, 166, 0.9)'}}
+                        variant="primary"
+                        dismissible
+                        onClose={() => setShowMessage(false)}
+                        >
+                        <div className="alert-inside">
+                            <div>
+                                <img src={board2} alt='board2' width='100%' height='100%' />
+                            </div>
+                        </div>
+                        </Alert>
+                    </CSSTransition>
+                </Container>
+            </Html>
+        </mesh>
+    )
+}
+
+
+export default TouchPoint3

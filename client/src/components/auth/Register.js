@@ -78,7 +78,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       </form>
 
       <p className="my-1">
-        ALREADY HAVE AN ACCOUNT? <Link to="/login">LOG IN</Link>
+        ALREADY HAVE AN ACCOUNT? <Link to="/login" className='link'>LOG IN</Link>
       </p>
       </div>
     </Fragment>

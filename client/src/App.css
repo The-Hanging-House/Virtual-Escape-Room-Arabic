@@ -141,7 +141,6 @@
   font-size: 1.2rem;
   outline: none;
   text-decoration: none;
-  margin: 1rem;
   transition: all 0.5s ease-in;
 }
 .btn.btn-primary {
@@ -155,13 +154,51 @@
 .btn.btn-primary:hover {
   background: #ffc233;
 }
+.buttons {
+  text-align: center;
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+}
+.buttons3 {
+  text-align: center;
+  position: absolute;
+  left: 12%;
+}
+.buttons2 {
+  text-align: center;
+  position: absolute;
+  bottom: 10%;
+  left: 38%;
+}
+.buttons1 {
+  text-align: center;
+  position: absolute;
+  bottom: 5%;
+  left: 45%;
+}
 .btn.btn-primary1 {
-  background-color: #FF0000;
+  background-color: rgb(255,0,0,0);
   color: #fff;
   border-radius: 20px;
+  margin-left: 2rem;
+}
+.accept {
+  height: 60%;
+  width: 60%;
 }
 .btn.btn-light1 {
-  background-color:	#008000;
+  background-color:	rgba(0, 128, 0, 0);
+  color: #fff;
+  border-radius: 20px;
+  margin-right: 2rem;
+}
+.reject {
+  height: 60%;
+  width: 60%;
+}
+.btn-primary3 {
+  background-color: #ffb300;
   color: #fff;
   border-radius: 20px;
 }
@@ -229,9 +266,11 @@ body {
   height: 100vh;
 }
 .landing1 {
-  position: relative;
-  background: url("./img/instructions.png") no-repeat center/cover;
-  height: 100vh;
+  background: url("./img/Instructions1.png") no-repeat center/cover;
+  /* padding-top: 56.25%; */
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 .bg-text {
   background-color: white;
@@ -267,7 +306,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
- 
+  width: 30%;
   padding: 20px;
   text-align: center;
 }
@@ -301,16 +340,108 @@ body {
 
 .player-wrapper {
   position: relative;
-  padding-top:50%
+  padding-top: 56.25%;
 }
 
 .react-player {
   position: fixed;
-  top: 10%;
-  left: 12.5%;
+  top: 0;
+  left: 100;
+}
+.checkbox {
+  color: #161616;
+  font-size: 1rem;
+  text-align: center;
+  position: absolute;
+  left: 44%;
+  bottom: 12%;
+}
+.alert {
+  background-image: url(../src/img/popup.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 30px;
+  color: white;
+  padding: 5px;
+  width: 30vw;
+  height: 35vh;
+  position: absolute;
+  top: -270px;
+  left: -20px;
+}
+.alert1 {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 30px;
+  color: white;
+  padding: 5px;
+  width: 30vw;
+  height: 1vh;
+  position: absolute;
+}
+.alert2 {
+  background-image: url(../src/img/popup.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 30px;
+  color: white;
+  padding: 5px;
+  width: 25vw;
+  height: 35vh;
+  position: absolute;
+  top: -220px;
+  left: -20px;
+}
+.alert-inside2 {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+.alert-inside {
+  padding-bottom: 1rem;
+}
+.alert-inside p {
+  color: #FFFFFFC7;
+  font-size: 1rem;
+  margin: 1rem 0rem;
+}
+.alert-inside h3 {
+  margin-bottom: 0.5rem
+}
+.alert-inside2 p {
+  color: #FFFFFFC7;
+  font-size: 1rem;
+  margin: 1rem 0rem;
+}
+.alert-inside2 h3 {
+  margin-bottom: 0.5rem
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+h3 {
+  border-radius: 12px;
+  margin-top: 10px;
+}
+.link {
+  color: #111;
+}
 
+@media only screen and (max-width: 600px) {
+  .bg-text1 {
+    width: 200;
+    height: 250; 
+  }
+  .bg-image {
+    width: 200;
+    height: 250;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .bg-text1 {
@@ -356,5 +487,32 @@ body {
   .landing-inner
   {
     color: #000;
+  }
+  .bg-image
+  {
+   width: 100% ;
+  }
+  .checkbox
+  {
+    color: #161616;
+    font-size: 1rem;
+    text-align: center;
+    position: absolute;
+    left: 26%;
+    bottom: 36%;
+  }
+  .x-large
+  {
+    font-size: 3rem;
+    letter-spacing: 10px;
+  }
+  .lead
+  {
+    letter-spacing: 0;
+  }
+  .buttons
+  {
+    left: 10%;
+    bottom: 19%;
   }
 }
