@@ -13,6 +13,7 @@ function TouchPoint2({ position, color, onClick }) {
     const [showMessage, setShowMessage] = useState(false);
 
     const onMouseOver = event => {
+       
         const el = event.target;
         let colorhex = "#F8A61F"
         el.style.background = colorhex;

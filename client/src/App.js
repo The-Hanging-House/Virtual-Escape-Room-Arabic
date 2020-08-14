@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, BrowserRouter } from "react-router-dom";
 import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
@@ -47,13 +47,13 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <Router>
-        <Fragment>
+     
+       <BrowserRouter>
           <Route exact path="/" component={Landing} />
 
           <section className="container">
             <Alert />
-            <Timer/>
+           
             <Switch>
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
@@ -64,7 +64,7 @@ const App = () => {
               <PrivateRoute exact path="/briefing2" component={Briefing2} />
               <PrivateRoute exact path="/profile" component={Profile} />
               <PrivateRoute exact path="/intro" component={Intro} />
-              {/* <Timer /> */}
+               {/* <Timer/> */}
               <PrivateRoute exact path="/scene1" component={Scene1} />
               <PrivateRoute exact path="/garbage" component={Garbage} />
               <PrivateRoute exact path="/scene3" component={Scene3} />
@@ -76,8 +76,10 @@ const App = () => {
               <PrivateRoute exact path="/portal1scene2" component={Portal1Scene2} />
             </Switch>
           </section>
-        </Fragment>
-      </Router>
+
+          </BrowserRouter>
+      
+     
     </Provider>
   );
 };
