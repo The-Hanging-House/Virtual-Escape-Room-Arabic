@@ -3400,6 +3400,13 @@ color@^3.0.0:
     color-convert "^1.9.1"
     color-string "^1.5.2"
 
+combination-lock-react@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/combination-lock-react/-/combination-lock-react-1.0.3.tgz#0f8ddbcb43a281cbfaa1270f43da8a1f0dad6958"
+  integrity sha512-h0lZTC/ggLuWZuzrJQ6xhYjiHi/GTpIak/H0GqIXiqLpKozxc8ZdHPMZht5WVoYd36l/DWg4aYk4yxS4h0+lWg==
+  dependencies:
+    react-draggable "^3.1.1"
+
 combined-stream@^1.0.6, combined-stream@~1.0.6:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.8.tgz#c3d45a8b34fd730631a110a8a2520682b31d5a7f"
@@ -7520,7 +7527,7 @@ ms@2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
   integrity sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
 
-ms@^2.1.1:
+ms@^2.1.1, ms@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
@@ -9100,7 +9107,7 @@ prop-types-extra@^1.1.0:
     react-is "^16.3.2"
     warning "^4.0.0"
 
-prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -9723,6 +9730,14 @@ react-dom@^16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
+react-draggable@^3.1.1:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/react-draggable/-/react-draggable-3.3.2.tgz#966ef1d90f2387af3c2d8bd3516f601ea42ca359"
+  integrity sha512-oaz8a6enjbPtx5qb0oDWxtDNuybOylvto1QLydsXgKmwT7e3GXC2eMVDwEMIUYJIFqVG72XpOv673UuuAq6LhA==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.0"
+
 react-error-overlay@^6.0.7:
   version "6.0.7"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
@@ -9766,6 +9781,11 @@ react-overlays@^4.1.0:
     prop-types "^15.7.2"
     uncontrollable "^7.0.0"
     warning "^4.0.3"
+
+react-pin-input@^0.9.4:
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/react-pin-input/-/react-pin-input-0.9.4.tgz#5902985cd79c86b3e7475c4ccdea178419cead9f"
+  integrity sha512-DfaXMs4dnwq4SPvFyEfYwV3uaWIcvPJPJ0D4J5zM1hjDwsqEanVs422g//r601S6yf36lIJxwUKtx9d//OleVQ==
 
 react-player@^2.6.0:
   version "2.6.0"
@@ -9910,6 +9930,13 @@ react-spring@^8.0.27:
   dependencies:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
+
+react-stopwatch@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-stopwatch/-/react-stopwatch-2.0.4.tgz#b76e25bbcee0da62cfe58facd7b36c85404366bf"
+  integrity sha512-FBF5MS3ODWbGWi7f5wkspMuazZFBZTdUZ2Qgjct7k6tnicHTuUdY1v//MmB3PKmFDX5wrtU++DhTO3ARGVr2wQ==
+  dependencies:
+    ms "^2.1.2"
 
 react-three-fiber@^4.2.17:
   version "4.2.20"

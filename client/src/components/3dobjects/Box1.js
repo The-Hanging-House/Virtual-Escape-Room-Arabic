@@ -1,10 +1,14 @@
+import * as THREE from 'three'
 import React, { useState, useRef } from 'react'
-import { useFrame } from 'react-three-fiber'
+import { useFrame, useLoader } from 'react-three-fiber'
+
+import img from './../../img/pp1.png'
 
 function Box1(props) {
     const mesh = useRef()
     const [hovered, setHover] = useState(false)
     const [active, setActive] = useState(false)
+    const texture = useLoader(THREE.TextureLoader, img)
   
     useFrame(({ camera, mouse }) => {
       mesh.current.rotation.x = mesh.current.rotation.y += 0.01
@@ -19,7 +23,7 @@ function Box1(props) {
         onPointerOver={e => setHover(true)}
         onPointerOut={e => setHover(false)}>
         <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
-        <meshStandardMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} />
+        <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
       </mesh>
     )
   }

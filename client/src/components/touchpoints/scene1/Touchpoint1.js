@@ -61,7 +61,7 @@ function TouchPoint1({ position, color, onClick }) {
                                 setShowMessage(false)}} style={{ fontSize: '1rem'}} >
                                 Pick them up and dispose of them properly.
                             </p> */}
-                            <a href='scene3'>
+                            <a href='garbage'>
                                 <h3 onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     href>

@@ -9,6 +9,7 @@ import { Html } from 'drei';
 import Task1 from '../popup/Task1';
 // import TouchPoint1 from '../touchpoints/scene5/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene5/Touchpoint2'
+import Timer from '../timer/Timer'
 import './style.css'
 
 import Music2 from '../../audio/Music2'
@@ -52,6 +53,7 @@ const Dome = () => {
 function Scene5() {
     return (
         <>
+        <Timer/>
             <Canvas camera={{ position: [-0, 0, 0.01] }}>
                 <Controls enableDamping dampingFactor={0.2}  />
                     <Suspense fallback={null}>

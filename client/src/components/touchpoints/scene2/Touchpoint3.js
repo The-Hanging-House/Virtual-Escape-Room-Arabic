@@ -5,18 +5,17 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import board2 from '../../../img/board2.jpg'
-
+import board from '../../../img/watercooler.jpg'
 
 const TouchPoint3 = ({ position, color, onClick }) => {
     const [hovered, set] = useState(false)
     // const [showButton, setShowButton] = useState(true);
     const [showMessage, setShowMessage] = useState(false);
-    
+
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
+            scale={hovered ? [0.2, 0.2, 0.2] : [0.1, 0.1, 0.1]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
@@ -24,7 +23,7 @@ const TouchPoint3 = ({ position, color, onClick }) => {
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
             <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
             <Html center>
-            <Container>
+                <Container>
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
@@ -34,14 +33,14 @@ const TouchPoint3 = ({ position, color, onClick }) => {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert2" style={{color : 'white', padding : '5px', width : '40vw', backgroundColor: 'rgba(230, 206, 166, 0.9)'}}
+                        className="alert1"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-inside">
                             <div>
-                                <img src={board2} alt='board2' width='100%' height='100%' />
+                                <img src={board} alt='board' width='120%' height='120%' />
                             </div>
                         </div>
                         </Alert>
@@ -52,5 +51,4 @@ const TouchPoint3 = ({ position, color, onClick }) => {
     )
 }
 
-
-export default TouchPoint3
+export default TouchPoint3;

@@ -1,15 +1,18 @@
 import React, { useState, useCallback } from "react";
+import { Link } from "react-router-dom";
 import Dustbin from "./Dustbin";
 import Box from "./Box";
 import { ItemTypes } from "./ItemTypes";
 import update from "immutability-helper";
+
+import Bin1 from './images/bin1.png'
 
 
 export const Container = () => {
   const [dustbins, setDustbins] = useState([
     { accepts: [ItemTypes.GLASS], lastDroppedItem: null },
     { accepts: [ItemTypes.FOOD], lastDroppedItem: null },
-    { accepts: [ItemTypes.PAPER, ItemTypes.GLASS], lastDroppedItem: null }
+    { accepts: [ItemTypes.PAPER], lastDroppedItem: null }
   ]);
   const [boxes] = useState([
     { name: "Bottle", type: ItemTypes.GLASS },
@@ -40,7 +43,7 @@ export const Container = () => {
   );
   return (
     <div>
-      <div style={{ overflow: "hidden", clear: "both" }}>
+      <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center' }}>
         {dustbins.map(({ accepts, lastDroppedItem }, index) => (
           <Dustbin
             accepts={accepts}
@@ -51,7 +54,7 @@ export const Container = () => {
         ))}
       </div>
 
-      <div style={{ overflow: "hidden", clear: "both" }}>
+      <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center' }}>
         {boxes.map(({ name, type }, index) => (
           <Box
             name={name}
@@ -60,6 +63,11 @@ export const Container = () => {
             key={index}
           />
         ))}
+      </div>
+      <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center' }}>
+          <button to="scene3" className="btn btn-primary3">
+              Proceed
+          </button>
       </div>
     </div>
   );

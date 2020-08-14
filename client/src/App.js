@@ -12,7 +12,7 @@ import Briefing2 from './components/dashboard/Briefing2'
 import Profile from './components/dashboard/Profile';
 import PrivateRoute from './components/routing/PrivateRoute';
 import Intro from './components/gameplay/Intro';
-// import Timer from './components/timer/Timer'
+import Timer from'./components/timer/Timer'
 import Scene1 from './components/gameplay/Scene1';
 import Garbage from './components/gameplay/Garbage';
 import Scene3 from './components/gameplay/Scene3';
@@ -50,8 +50,10 @@ const App = () => {
       <Router>
         <Fragment>
           <Route exact path="/" component={Landing} />
+
           <section className="container">
             <Alert />
+            <Timer/>
             <Switch>
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />

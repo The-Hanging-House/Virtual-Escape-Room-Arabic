@@ -14,6 +14,7 @@ import TouchPoint4 from '../touchpoints/scene3/Touchpoint4'
 // import TouchPoint5 from '../touchpoints/scene3/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene3/Touchpoint6'
 import Portal from '../touchpoints/scene3/Portal'
+import Timer from '../timer/Timer'
 import './style.css'
 
 import Music1 from '../../audio/Music1'
@@ -57,6 +58,7 @@ const Dome = () => {
 function Scene3() {
     return (
         <>
+        <Timer/>
             <Canvas camera={{ position: [0, 0, 0.1] }}>
                 <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
                     <Suspense fallback={null}>

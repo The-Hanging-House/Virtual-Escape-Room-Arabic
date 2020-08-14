@@ -1,10 +1,17 @@
 import React from 'react'
 import { DropTarget } from 'react-dnd'
 
+import Bin1 from './images/bin1.png'
+
+// const array = ['bin1', 'bin2', 'bin3'];
+
+// const images = array.map(image => {
+//   return <img key={image} url={require(`./images/${image}.png`)} className='img-responsive' alt='bins' />
+// })
 
 const style = {
-  height: '12rem',
-  width: '12rem',
+  height: '20rem',
+  width: '15rem',
   marginRight: '1.5rem',
   marginBottom: '1.5rem',
   color: 'white',
@@ -13,6 +20,7 @@ const style = {
   fontSize: '1rem',
   lineHeight: 'normal',
   float: 'left',
+  backgroundImage : `url(${Bin1})`
 }
 export const Dustbin = ({
   accepts,
@@ -22,7 +30,7 @@ export const Dustbin = ({
   lastDroppedItem,
 }) => {
   const isActive = isOver && canDrop
-  let backgroundColor = '#222'
+  let backgroundColor = 'transparent'
   if (isActive) {
     backgroundColor = 'darkgreen'
   } else if (canDrop) {
@@ -30,13 +38,7 @@ export const Dustbin = ({
   }
   return connectDropTarget(
     <div style={{ ...style, backgroundColor }}>
-      {isActive
-        ? 'Release to drop'
-        : `This dustbin accepts: ${accepts.join(', ')}`}
-
-      {lastDroppedItem && (
-        <p>Last dropped: {JSON.stringify(lastDroppedItem)}</p>
-      )}
+      {isActive}
     </div>,
   )
 }
