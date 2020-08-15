@@ -7,9 +7,9 @@ class App extends React.PureComponent {
     value: "",
   };
 
-  onChange = value => {
-    this.setState({ value });
-  };
+  // onChange = value => {
+  //   this.setState({ value });
+  // };
 
   // onClear = () => {
   //   this.setState({
@@ -19,7 +19,7 @@ class App extends React.PureComponent {
   // };
 
   render() {
-    const { value } = this.state;
+    const {  } = this.state;
     return (
       <div className="app">
         <PinInput

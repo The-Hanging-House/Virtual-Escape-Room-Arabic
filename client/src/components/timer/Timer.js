@@ -1,8 +1,8 @@
 import React from 'react'
-import ReactStopwatch from 'react-stopwatch';
+// import ReactStopwatch from 'react-stopwatch';
 function Timer(seconds,minutes) {
-var seconds=seconds;
-var minutes=minutes
+// var seconds=seconds;
+// var minutes=minutes
 const [counter, setCounter] = React.useState(600);
 
 React.useEffect(() => {

@@ -1,11 +1,10 @@
 import React, { useState, useCallback } from "react";
-import { Link } from "react-router-dom";
 import Dustbin from "./Dustbin";
 import Box from "./Box";
 import { ItemTypes } from "./ItemTypes";
 import update from "immutability-helper";
 
-import Bin1 from './images/bin1.png'
+
 
 
 export const Container = () => {

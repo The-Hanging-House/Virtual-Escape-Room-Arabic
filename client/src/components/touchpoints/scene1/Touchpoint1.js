@@ -10,7 +10,7 @@ function TouchPoint1({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
 
-    const [showPop, setShowPop] = useState(false);
+    // const [showPop, setShowPop] = useState(false);
 
     const onMouseOver = event => {
         const el = event.target;

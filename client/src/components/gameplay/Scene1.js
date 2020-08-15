@@ -1,11 +1,10 @@
 import * as THREE from 'three'
-import React, { Suspense, useRef, useState } from 'react'
+import React, { Suspense, useRef } from 'react'
 import { Canvas, extend, useFrame, useThree, useLoader } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
-import { Html } from 'drei';
+// import { Html } from 'drei';
 
-import Task1 from '../popup/Task1';
 import TouchPoint1 from '../touchpoints/scene1/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene1/Touchpoint2'
 import TouchPoint3 from '../touchpoints/scene1/Touchpoint3'
@@ -32,17 +31,17 @@ const Controls = (props) => {
 
 
 
-  const Task = () => {
-    const [showPopup] = useState(false);
+//   const Task = () => {
+//     const [showPopup] = useState(false);
      
-    return (
-        <mesh>
-            <Html>
-                <div>Hi</div>
-            </Html>
-        </mesh>
-    )
-}
+//     return (
+//         <mesh>
+//             <Html>
+//                 <div>Hi</div>
+//             </Html>
+//         </mesh>
+//     )
+// }
 
 
 

@@ -33,12 +33,12 @@ function TouchPoint4({ position, color, onClick }) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert1"
+                        className="alert1" style={{color : 'white', padding : '5px', width : '40vw'}}
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside">
+                        <div className="alert-inside1">
                             <div>
                                 <img src={trunk1} alt='Trunk1' width='100%' height='100%' />
                             </div>

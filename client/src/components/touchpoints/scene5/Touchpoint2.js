@@ -5,6 +5,10 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
+import Lock from '../../../img/lock.jpg'
+
+import App from '../../games/lock/App'
+
 function TouchPoint2({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     // const [showButton, setShowButton] = useState(true);
@@ -43,22 +47,23 @@ function TouchPoint2({ position, color, onClick }) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert2"
+                        className="alert1" style={{color : 'white', padding : '5px', width : '40vw'}}
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside2">
+                         <div className="alert-inside2">
+                            <div>
+                                <img src={Lock} alt='Trunk2' width='100%' height='100%' />
+                            </div>
                             <Alert.Heading>
-                                <p>
-                                Door Unlocked!
-                                </p>
+                                <App />
                             </Alert.Heading>
                             <a href='scene2'>
                                 <h3 onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     href>
-                                    PROCEED
+                                    OK
                                 </h3>
                             </a>
                         </div>
