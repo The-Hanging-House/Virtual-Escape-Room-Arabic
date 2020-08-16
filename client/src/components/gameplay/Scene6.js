@@ -8,11 +8,11 @@ import { Html } from 'drei';
 import Timer from '../timer/Timer'
 import Task1 from '../popup/Task1';
 // import TouchPoint1 from '../touchpoints/scene6/Touchpoint1'
-// import TouchPoint2 from '../touchpoints/scene6/Touchpoint2'
+import TouchPoint2 from '../touchpoints/scene6/Touchpoint2'
 import TouchPoint3 from '../touchpoints/scene6/Touchpoint3'
-// import TouchPoint4 from '../touchpoints/scene6/Touchpoint4'
-// import TouchPoint5 from '../touchpoints/scene6/Touchpoint5'
-// import TouchPoint6 from '../touchpoints/scene6/Touchpoint6'
+import TouchPoint4 from '../touchpoints/scene1/Touchpoint4'
+import TouchPoint6 from '../touchpoints/scene1/Touchpoint6'
+import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
 import './style.css'
 
 import Music2 from '../../audio/Music2'
@@ -62,12 +62,12 @@ function Scene6() {
                     <Suspense fallback={null}>
                         <Dome />
                         <Task />
-                        {/* <TouchPoint1 position={[-6.5, -4, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint2 position={[-15, -3.5, -1.5]} args={[3, 2, 1]} color='#F8A61F' /> */}
+                        {/* <TouchPoint1 position={[-6.5, -4, 5]} args={[3, 2, 1]} color='#F8A61F' /> */}
+                        <TouchPoint2 position={[-15, -3.5, 1]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-4.5, -8.5, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        {/* <TouchPoint4 position={[-11, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint5 position={[5, -9, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint6 position={[4, -7, 5]} args={[3, 2, 1]} color='#F8A61F' /> */}
+                        <TouchPoint4 position={[-11, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint6 position={[6, -9, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint7 position={[-1, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         
                     </Suspense>
             </Canvas>,

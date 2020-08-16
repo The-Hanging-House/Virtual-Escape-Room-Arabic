@@ -57,6 +57,13 @@ class Puzzle extends Component {
         <ol className="jigsaw__solved-board" style={{ backgroundImage: `url(${originalImage})` }}>
           {this.state.solved.map((piece, i) => this.renderPieceContainer(piece, i, 'solved'))}
         </ol>
+        <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center' }}>
+          <a href="scene7">
+            <button className="btn btn-primary3">
+                Proceed
+            </button>
+          </a>
+      </div>
       </div>
     );
   }

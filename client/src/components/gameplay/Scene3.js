@@ -7,12 +7,14 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { Html } from 'drei';
 
 import Task1 from '../popup/Task1';
-import TouchPoint1 from '../touchpoints/scene3/Touchpoint1'
+// import TouchPoint1 from '../touchpoints/scene3/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene3/Touchpoint2'
 import TouchPoint3 from '../touchpoints/scene3/Touchpoint3'
 import TouchPoint4 from '../touchpoints/scene3/Touchpoint4'
-// import TouchPoint5 from '../touchpoints/scene3/Touchpoint5'
+import TouchPoint5 from '../touchpoints/scene3/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene3/Touchpoint6'
+import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
+
 import Portal from '../touchpoints/scene3/Portal'
 import Timer from '../timer/Timer'
 import './style.css'
@@ -65,12 +67,13 @@ function Scene3() {
                         <Dome />
                         <Task />
                         
-                        <TouchPoint1 position={[-4, -3, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        {/* <TouchPoint1 position={[-4, -3, 5]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         <TouchPoint2 position={[-6, -1.5, 1]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-11, -5, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint4 position={[-11, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        {/* <TouchPoint5 position={[11, -15, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
+                        <TouchPoint5 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint6 position={[6, -9, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint7 position={[0, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <Portal position={[-6, -5, 1]} args={[3, 2, 1]} color='#fff' />
                         
                     </Suspense>

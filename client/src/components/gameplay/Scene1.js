@@ -11,6 +11,7 @@ import TouchPoint3 from '../touchpoints/scene1/Touchpoint3'
 import TouchPoint4 from '../touchpoints/scene1/Touchpoint4'
 import TouchPoint5 from '../touchpoints/scene1/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene1/Touchpoint6'
+import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
 import Timer from '../timer/Timer'
 import './style.css'
 
@@ -74,6 +75,7 @@ function Scene1() {
                         <TouchPoint4 position={[-11, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint6 position={[6, -9, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint7 position={[0, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         
                     </Suspense>
             </Canvas>,

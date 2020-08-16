@@ -33,7 +33,7 @@ function TouchPoint2({ position, color, onClick }) {
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
             <meshBasicMaterial attach="material" color={color} /> 
             <Html center>
-            <Container>
+                <Container>
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
@@ -43,12 +43,12 @@ function TouchPoint2({ position, color, onClick }) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert" style={{color : 'white', padding : '5px', width : '40vw', backgroundColor: 'rgba(230, 206, 166, 0.9)'}}
+                        className="alert2"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside">
+                        <div className="alert-inside2">
                             <Alert.Heading>
                                 <p>
                                 Opps! You should see your sorroundings first!

@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import board from '../../../img/watercooler.jpg'
+import board from '../../../img/trap.jpg'
 
 const TouchPoint4 = ({ position, color, onClick }) => {
     const [hovered, set] = useState(false)

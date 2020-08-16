@@ -1,17 +1,23 @@
 import React from 'react'
 import { DropTarget } from 'react-dnd'
 
-import Bin1 from './images/bin1.png'
+// import Bin1 from '../garbage/images/bin1.png'
 
-// const array = ['bin1', 'bin2', 'bin3'];
 
-// const images = array.map(image => {
-//   return <img key={image} url={require(`./images/${image}.png`)} className='img-responsive' alt='bins' />
-// })
+const backgroundsList = {
+  bin1:
+    '/bin1.png',
+  avocado:
+    '/bin2.png',
+  snowman:
+    '/bin3.png'
+};
+
 
 const style = {
-  height: '20rem',
-  width: '15rem',
+  backgroundSize: 'cover',
+  height: '250px',
+  width: '200px',
   marginRight: '1.5rem',
   marginBottom: '1.5rem',
   color: 'white',
@@ -20,7 +26,6 @@ const style = {
   fontSize: '1rem',
   lineHeight: 'normal',
   float: 'left',
-  backgroundImage : `url(${Bin1})`
 }
 export const Dustbin = ({
   accepts,
@@ -28,6 +33,7 @@ export const Dustbin = ({
   canDrop,
   connectDropTarget,
   lastDroppedItem,
+  bgImageName
 }) => {
   const isActive = isOver && canDrop
   let backgroundColor = 'transparent'
@@ -36,13 +42,14 @@ export const Dustbin = ({
   } else if (canDrop) {
     backgroundColor = 'darkkhaki'
   }
+  let backgroundImage = `url(${backgroundsList[bgImageName]})`; 
   return connectDropTarget(
-    <div style={{ ...style, backgroundColor }}>
+    <div style={{ ...style, backgroundColor, backgroundImage }}>
       {isActive}
     </div>,
   )
 }
-export default DropTarget(
+export default DropTarget( 
   (props) => props.accepts,
   {
     drop(props, monitor) {

@@ -40,7 +40,7 @@ const TouchPoint3 = ({ position, color, onClick }) => {
                         >
                         <div className="alert-inside">
                             <div>
-                                <img src={board} alt='board' width='120%' height='120%' />
+                                <img src={board} alt='board' width='80%' height='80%' />
                             </div>
                         </div>
                         </Alert>

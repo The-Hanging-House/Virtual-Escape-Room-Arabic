@@ -5,12 +5,24 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import trunk2 from '../../../img/trunk2.jpg'
+import trunk2 from '../../../img/plant.jpg'
 
 function TouchPoint5({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     // const [showButton, setShowButton] = useState(true);
     const [showMessage, setShowMessage] = useState(false);
+
+    // const onMouseOver = event => {
+    //     const el = event.target;
+    //     let colorhex = "#F8A61F"
+    //     el.style.background = colorhex;
+    //   };
+
+    //   const onMouseOut = event => {
+    //     const el = event.target;
+    //     let black = "transparent";
+    //     el.style.background = black;
+    //   };
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
@@ -42,10 +54,9 @@ function TouchPoint5({ position, color, onClick }) {
                             <div>
                                 <img src={trunk2} alt='Trunk2' width='100%' height='100%' />
                             </div>
-                            
-                            {/* <Button onClick={() => setShowMessage(false)}>
-                                Close
-                            </Button> */}
+                            {/* <p style={{ textAlign: 'justify' }}>
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            </p> */}
                         </div>
                         </Alert>
                     </CSSTransition>

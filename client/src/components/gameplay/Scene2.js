@@ -8,6 +8,7 @@ import TouchPoint1 from '../touchpoints/scene2/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene2/Touchpoint2'
 import TouchPoint3 from '../touchpoints/scene2/Touchpoint3'
 import TouchPoint4 from '../touchpoints/scene2/Touchpoint4'
+import TouchPoint5 from '../touchpoints/scene2/Touchpoint5'
 
 import Portal from '../touchpoints/scene2/Portal'
 
@@ -59,7 +60,8 @@ function Scene2() {
                         <TouchPoint1 position={[25, 1, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint2 position={[25, -27, -30]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-5, -2, -8]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint4 position={[10, -4, -18]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint4 position={[8, -10, -18]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[7, -7, -20]} args={[3, 2, 1]} color='#F8A61F' />
                         <Portal position={[-10, -12, -20]} args={[3, 2, 1]} color='#fff' />
                     </Suspense>
             </Canvas>,

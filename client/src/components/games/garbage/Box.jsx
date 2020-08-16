@@ -2,28 +2,37 @@ import React from 'react'
 import { DragSource } from 'react-dnd'
 
 
-import Trash from './images/trash.png'
+const backgroundsList = {
+  trash:
+    '/trash.png',
+  trash1:
+    '/trash1.png',
+  trash2:
+    '/trash2.png'
+};
 
 
 const style = {
-  height: '13rem',
-  width: '20rem',
+  backgroundSize: 'cover',
+  height: '160px',
+  width: '180px',
   backgroundColor: 'white',
   padding: '0.5rem 1rem',
   marginRight: '1.5rem',
   marginBottom: '1.5rem',
   cursor: 'move',
   float: 'left',
-  backgroundImage : `url(${Trash})`,
 }
-export const Box = ({ name, isDropped, isDragging, connectDragSource }) => {
+export const Box = ({ name, isDropped, isDragging, connectDragSource, bgImageName }) => {
   const opacity = isDragging ? 0.4 : 1
   const visibility = isDropped ? 'hidden' : 'vissible'
+  let backgroundImage = `url(${backgroundsList[bgImageName]})`;
   return connectDragSource(
     <div style={{ 
       ...style, 
       opacity, 
-      visibility 
+      visibility, 
+      backgroundImage
     }}
     >
       {isDropped ? <s>{name}</s> : name}
