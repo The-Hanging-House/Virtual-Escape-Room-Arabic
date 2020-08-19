@@ -5,9 +5,12 @@ import { ItemTypes } from "./ItemTypes";
 import update from "immutability-helper";
 
 
-
+var count = 0
+var ddd = 'hidden'
 
 export const Container = () => {
+  var canProceed = ['visible', 'hidden']
+
   const [dustbins, setDustbins] = useState([
     { accepts: [ItemTypes.GLASS], lastDroppedItem: null, bgImageName: "bin1" },
     {
@@ -22,9 +25,9 @@ export const Container = () => {
     }
   ]);
   const [boxes] = useState([
-    { name: "", type: ItemTypes.PAPER, bgImageName: "trash2" },
-    { name: "", type: ItemTypes.GLASS, bgImageName: "trash" },
-    { name: "", type: ItemTypes.FOOD, bgImageName: "trash1" }
+    { name: "1", type: ItemTypes.PAPER, bgImageName: "trash2" },
+    { name: "2", type: ItemTypes.GLASS, bgImageName: "trash" },
+    { name: "3", type: ItemTypes.FOOD, bgImageName: "trash1" }
     
   ]);
   const [droppedBoxNames, setDroppedBoxNames] = useState([]);
@@ -46,12 +49,16 @@ export const Container = () => {
           }
         })
       );
+      count = count + 1;
+      if(count > 1){
+        ddd = canProceed[0]
+      }
     },
     [droppedBoxNames, dustbins]
   );
   return (
     <div>
-      <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center' }}>
+      <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center'}}>
         {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
           <Dustbin
             accepts={accepts}
@@ -74,7 +81,7 @@ export const Container = () => {
           />
         ))}
       </div>
-      <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center' }}>
+      <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center', visibility: ddd  }}>
           <a href="scene3">
             <button className="btn btn-primary3">
                 Proceed

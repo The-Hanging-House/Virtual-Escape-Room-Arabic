@@ -37,13 +37,13 @@ function TouchPoint3({ position, color, onClick }) {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert2"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert"
+                        className="alert2"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
@@ -53,7 +53,6 @@ function TouchPoint3({ position, color, onClick }) {
                                 <p>
                                 Glare from artificial lights make it hard for wildlife to see, lets help the wildlife by 
                                 </p>
-                            </Alert.Heading>
                                 <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
@@ -67,6 +66,8 @@ function TouchPoint3({ position, color, onClick }) {
                                 </h3>
                             
                             </a>
+                            </Alert.Heading>
+                                
                         </div>
                         </Alert>
                     </CSSTransition>

@@ -40,7 +40,7 @@ function TouchPoint3({ position, color, onClick }) {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert2"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
@@ -51,17 +51,18 @@ function TouchPoint3({ position, color, onClick }) {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside2">
+                        <div className="alert-inside">
                             <Alert.Heading>
                                 <p>
                                 Opps! You should see your sorroundings first!
                                 </p>
-                            </Alert.Heading>
-                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                                <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 OK
                             </h3>
+                            </Alert.Heading>
+                            
                             {/* <Button onClick={() => setShowMessage(false)}>
                                 Close
                             </Button> */}

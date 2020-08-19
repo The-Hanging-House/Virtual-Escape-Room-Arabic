@@ -37,13 +37,13 @@ function TouchPoint3({ position, color, onClick }) {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert2"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert"
+                        className="alert2"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
@@ -53,19 +53,19 @@ function TouchPoint3({ position, color, onClick }) {
                                 <p>
                                 The car door is not locked, what should I do?
                                 </p>
-                            </Alert.Heading>
-                            <a href="scene4">
-                                <h3 onMouseEnter={event => onMouseOver(event)}
-                                        onMouseOut={event => onMouseOut(event)}
-                                        href>
-                                        OPEN IT
-                                </h3>
-                            </a>
-                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                                <a href="scene4">
+                                    <h3 onMouseEnter={event => onMouseOver(event)}
+                                            onMouseOut={event => onMouseOut(event)}
+                                            href>
+                                            OPEN IT
+                                    </h3>
+                                </a>
+                                <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
-                                IGNORE IT
-                            </h3>
+                                    IGNORE IT
+                                </h3>
+                            </Alert.Heading>
                         </div>
                         </Alert>
                     </CSSTransition>

@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react'
 import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
+import Puzzle from '../../games/puzzle/Puzzle'
+
 import { Html } from 'drei';
 // import Tp from '../../img/tp.svg'
 
@@ -39,29 +41,24 @@ function TouchPoint5({ position, color, onClick }) {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert2"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert" 
+                        className="alert2" 
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside">
+                        <div className="alert-inside2">
                             <Alert.Heading>
-                                <p>
+                                <Puzzle />
+                                {/* <p>
                                 Congrats! You have collected all the puzzle pieces.
                                 </p>
-                            </Alert.Heading>
-                            {/* <p onClick={() => {
-                                toggle(); 
-                                setShowMessage(false)}} style={{ fontSize: '1rem'}} >
-                                Pick them up and dispose of them properly.
-                            </p> */}
-                            <a href='puzzle'>
+                                <a href='puzzle'>
                                 <h3 onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     href>
@@ -72,7 +69,14 @@ function TouchPoint5({ position, color, onClick }) {
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE IT
-                            </h3>
+                            </h3> */}
+                            </Alert.Heading>
+                            {/* <p onClick={() => {
+                                toggle(); 
+                                setShowMessage(false)}} style={{ fontSize: '1rem'}} >
+                                Pick them up and dispose of them properly.
+                            </p> */}
+                            
                             {/* <Button onClick={() => setShowMessage(false)}>
                                 Close
                             </Button> */}

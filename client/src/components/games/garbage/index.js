@@ -5,7 +5,7 @@ import { HTML5Backend } from 'react-dnd-html5-backend'
 
 function App() {
     return (
-        <div className="App">
+        <div className="App" style={{ margin: '2rem' }} >
             <DndProvider backend={HTML5Backend}>
                 <Example />
             </DndProvider>

@@ -16,7 +16,7 @@ const style = {
   backgroundSize: 'cover',
   height: '160px',
   width: '180px',
-  backgroundColor: 'white',
+  backgroundColor: 'transparent',
   padding: '0.5rem 1rem',
   marginRight: '1.5rem',
   marginBottom: '1.5rem',

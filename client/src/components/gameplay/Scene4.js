@@ -1,12 +1,12 @@
 import * as THREE from 'three'
-import React, { Suspense, useRef, useState } from 'react'
+import React, { Suspense, useRef } from 'react'
 
 import { Canvas, extend, useFrame, useThree, useLoader } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
-import { Html } from 'drei';
+// import { Html } from 'drei';
 
-import Task1 from '../popup/Task1';
+// import Task1 from '../popup/Task1';
 // import TouchPoint1 from '../touchpoints/scene4/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene4/Touchpoint2'
 // import TouchPoint3 from '../touchpoints/scene4/Touchpoint3'
@@ -15,7 +15,7 @@ import TouchPoint5 from '../touchpoints/scene4/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene4/Touchpoint6'
 import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
 
-import Timer from '../timer/Timer'
+// import Timer from '../timer/Timer'
 import './style.css'
 
 import Music1 from '../../audio/Music1'
@@ -30,18 +30,6 @@ const Controls = (props) => {
   }
 
 
-
-  const Task = () => {
-    const [showPopup] = useState(false);
-     
-    return (
-        <mesh>
-            <Html>
-                <div>{showPopup && <Task1 />}</div>
-            </Html>
-        </mesh>
-    )
-}
 
 
 
@@ -59,12 +47,11 @@ const Dome = () => {
 function Scene4() {
     return (
         <>
-        <Timer/>
+        {/* <Timer/> */}
             <Canvas camera={{ position: [0, 0, 0.1] }}>
                 <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
                     <Suspense fallback={null}>
                         <Dome />
-                        <Task />
                         {/* <TouchPoint1 position={[-6.5, -4, 5]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         <TouchPoint2 position={[-15, -3.5, -1.5]} args={[3, 2, 1]} color='#F8A61F' />
                         {/* <TouchPoint3 position={[1, -9, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}

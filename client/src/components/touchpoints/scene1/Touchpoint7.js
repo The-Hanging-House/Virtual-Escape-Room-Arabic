@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import egg from '../../../img/plant.jpg'
+import egg from '../../../img/feather.jpg'
 
 function TouchPoint7({ position, color, onClick }) {
     const [hovered, set] = useState(false)

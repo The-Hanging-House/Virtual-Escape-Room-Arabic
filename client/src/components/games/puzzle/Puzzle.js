@@ -10,7 +10,7 @@ class Puzzle extends Component {
   };
 
   componentDidMount() {
-    const pieces = [...Array(16)]
+    const pieces = [...Array(7)]
       .map((_, i) => (
         {
           img: `ny_${('0' + (i + 1)).substr(-2)}.png`,
@@ -51,19 +51,13 @@ class Puzzle extends Component {
   render() {
     return (
       <div className="jigsaw">
-        <ul className="jigsaw__shuffled-board">
-          {this.state.shuffled.map((piece, i) => this.renderPieceContainer(piece, i, 'shuffled'))}
-        </ul>
+        
         <ol className="jigsaw__solved-board" style={{ backgroundImage: `url(${originalImage})` }}>
           {this.state.solved.map((piece, i) => this.renderPieceContainer(piece, i, 'solved'))}
         </ol>
-        <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center' }}>
-          <a href="scene7">
-            <button className="btn btn-primary3">
-                Proceed
-            </button>
-          </a>
-      </div>
+        <ul className="jigsaw__shuffled-board">
+          {this.state.shuffled.map((piece, i) => this.renderPieceContainer(piece, i, 'shuffled'))}
+        </ul>
       </div>
     );
   }

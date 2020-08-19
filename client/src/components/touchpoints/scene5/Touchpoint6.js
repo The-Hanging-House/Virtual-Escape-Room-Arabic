@@ -27,20 +27,20 @@ function TouchPoint6({ position, color, onClick }) {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert2"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert"
+                        className="alert2"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside">
+                        <div className="alert-inside2">
                             <div>
-                                <img src={egg} alt='Trunk2' width='100%' height='100%' />
+                                <img src={egg} alt='Egg' width='100%' height='100%' />
                             </div>
                             <p onClick={() => setShowMessage(false)} style={{ fontSize: '2rem'}}>
                                 Ok.

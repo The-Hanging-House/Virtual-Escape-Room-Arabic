@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import Lock from '../../../img/lock.jpg'
+import Lock from '../../../img/lock.png'
 
 import App from '../../games/lock/App'
 
@@ -53,19 +53,14 @@ function TouchPoint2({ position, color, onClick }) {
                         onClose={() => setShowMessage(false)}
                         >
                          <div className="alert-inside2">
-                            <div>
-                                <img src={Lock} alt='Trunk2' width='100%' height='100%' />
-                            </div>
                             <Alert.Heading>
-                                <App />
+                            <App />
+                            <img src={Lock} alt='pinlock' style={{ height: '50%', width: '50%', marginLeft: '25%', right: '50%', left: '50%'}} />
+                                
+                                
                             </Alert.Heading>
-                            <a href='scene2'>
-                                <h3 onMouseEnter={event => onMouseOver(event)}
-                                    onMouseOut={event => onMouseOut(event)}
-                                    href>
-                                    OK
-                                </h3>
-                            </a>
+                                
+                            
                         </div>
                         </Alert>
                     </CSSTransition>

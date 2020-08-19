@@ -38,13 +38,13 @@ function TouchPoint5({ position, color, onClick }) {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert2"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert"
+                        className="alert2"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
@@ -54,19 +54,20 @@ function TouchPoint5({ position, color, onClick }) {
                                     <p>
                                     Did you know noise disturbs nature? How would you like to help in this situation ?
                                     </p>
-                            </Alert.Heading>
-                                <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                                    <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
                                     DANCE AND SING
-                                </h3>
-                                <a href='scene6'>
-                                    <h3 onMouseEnter={event => onMouseOver(event)}
-                                        onMouseOut={event => onMouseOut(event)}
-                                        href>
-                                        SWITCH OFF THE MUSIC
                                     </h3>
-                            </a>
+                                    <a href='scene6'>
+                                        <h3 onMouseEnter={event => onMouseOver(event)}
+                                            onMouseOut={event => onMouseOut(event)}
+                                            href>
+                                            SWITCH OFF THE MUSIC
+                                        </h3>
+                                    </a>
+                            </Alert.Heading>
+                                
                             {/* <Button onClick={() => setShowMessage(false)}>
                                 Close
                             </Button> */}

@@ -12,7 +12,7 @@ import TouchPoint4 from '../touchpoints/scene1/Touchpoint4'
 import TouchPoint5 from '../touchpoints/scene1/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene1/Touchpoint6'
 import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
-import Timer from '../timer/Timer'
+// import Timer from '../timer/Timer'
 import './style.css'
 
 import Music1 from '../../audio/Music1'
@@ -62,14 +62,14 @@ function Scene1() {
     return (
       
         <>
-          <Timer/>
+          {/* <Timer/> */}
             <Canvas camera={{ position: [-1, 0, 0.1] }}>
                 <Controls enableDamping dampingFactor={0.1}  />
                     <Suspense fallback={null}>
                         <Dome />
                         {/* <Task /> */}
                         
-                        <TouchPoint1 position={[-4, -3, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint1 position={[-4, -4, 0]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint2 position={[-10, -1, 1]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-11, -5, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint4 position={[-11, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />

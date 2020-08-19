@@ -5,7 +5,7 @@ import { Canvas, extend, useFrame, useThree, useLoader } from 'react-three-fiber
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 import { Html } from 'drei';
-import Timer from '../timer/Timer'
+// import Timer from '../timer/Timer'
 import Task1 from '../popup/Task1';
 // import TouchPoint1 from '../touchpoints/scene6/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene6/Touchpoint2'
@@ -56,7 +56,7 @@ const Dome = () => {
 function Scene6() {
     return (
         <>
-        <Timer/>
+        {/* <Timer/> */}
             <Canvas camera={{ position: [0, 0, 0.1] }}>
                 <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
                     <Suspense fallback={null}>

@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react'
 import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
+import Index from '../../games/garbage/index'
+
 import { Html } from 'drei';
 // import Tp from '../../img/tp.svg'
 
@@ -39,29 +41,30 @@ function TouchPoint1({ position, color, onClick }) {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert2"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert" 
+                        className="alert2" 
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside">
+                        <div className="alert-inside2">
                             <Alert.Heading>
-                                <p>
+                                <Index />
+                                {/* <p>
                                 Litter doesn't belong in the dessert, but it's everywhere. What would you like to do?
-                                </p>
+                                </p> */}
                             </Alert.Heading>
                             {/* <p onClick={() => {
                                 toggle(); 
                                 setShowMessage(false)}} style={{ fontSize: '1rem'}} >
                                 Pick them up and dispose of them properly.
                             </p> */}
-                            <a href='garbage'>
+                            {/* <a href='garbage'>
                                 <h3 onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     href>
@@ -72,7 +75,7 @@ function TouchPoint1({ position, color, onClick }) {
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE IT
-                            </h3>
+                            </h3> */}
                             {/* <Button onClick={() => setShowMessage(false)}>
                                 Close
                             </Button> */}

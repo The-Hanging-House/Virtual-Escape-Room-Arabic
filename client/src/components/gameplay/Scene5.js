@@ -13,7 +13,7 @@ import TouchPoint4 from '../touchpoints/scene1/Touchpoint4'
 import TouchPoint6 from '../touchpoints/scene1/Touchpoint6'
 import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
 
-import Timer from '../timer/Timer'
+// import Timer from '../timer/Timer'
 import './style.css'
 
 import Music2 from '../../audio/Music2'
@@ -57,7 +57,7 @@ const Dome = () => {
 function Scene5() {
     return (
         <>
-        <Timer/>
+        {/* <Timer/> */}
             <Canvas camera={{ position: [-0, 0, 0.01] }}>
                 <Controls enableDamping dampingFactor={0.2}  />
                     <Suspense fallback={null}>
