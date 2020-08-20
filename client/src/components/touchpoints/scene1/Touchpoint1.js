@@ -14,17 +14,17 @@ function TouchPoint1({ position, color, onClick }) {
 
     // const [showPop, setShowPop] = useState(false);
 
-    const onMouseOver = event => {
-        const el = event.target;
-        let colorhex = "#F8A61F"
-        el.style.background = colorhex;
-      };
+    // const onMouseOver = event => {
+    //     const el = event.target;
+    //     let colorhex = "#F8A61F"
+    //     el.style.background = colorhex;
+    //   };
 
-      const onMouseOut = event => {
-        const el = event.target;
-        let black = "transparent";
-        el.style.background = black;
-      };
+    //   const onMouseOut = event => {
+    //     const el = event.target;
+    //     let black = "transparent";
+    //     el.style.background = black;
+    //   };
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (

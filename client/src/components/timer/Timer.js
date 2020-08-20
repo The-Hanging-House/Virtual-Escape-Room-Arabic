@@ -12,7 +12,6 @@ React.useEffect(() => {
     return (
        
         <div className="bg-text2">
-            <h1>10:00</h1>
            
                   
             <div>Timer: {counter}</div>

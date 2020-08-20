@@ -1,22 +1,25 @@
 import React, { useState } from 'react'
-import { Link } from "react-router-dom";
+import { Link, Redirect} from "react-router-dom";
 import './lesson.css'
 import ResponsivePlayer from '../video/ResponsivePlayer1'
 
 import briefing1 from '../../video/briefing2.mp4'
+
 
 const Lesson1 = () => {
 
     const [watchComplete, setWatchComplete] = useState(false)
 
     const handleWatchComplete = ({ played }) => {
-        if(played >= 0.9 && !watchComplete) {
+        if(played >= 1 && !watchComplete) {
             setWatchComplete(true)
+            var someData = new Date().getTime();
+            localStorage.setItem('myDataKey', someData);
+            console.log("CTSET: ", someData)
         }
-        // console.log(played)
-
     }
     
+
     return (
         <section className="landing">
             <div className="orange-overlay">
@@ -26,8 +29,9 @@ const Lesson1 = () => {
                         <div className={watchComplete ? "marker marker--is-complete" : "marker marker--not-complete"}>
                             <div className="buttons1">
                                 <Link to="scene1" className="btn btn-primary">
-                                PROCEED
+                                    PROCEED
                                 </Link>
+                                
                             </div>
                         </div>
                 </div>

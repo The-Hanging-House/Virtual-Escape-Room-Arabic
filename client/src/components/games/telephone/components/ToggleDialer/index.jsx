@@ -1,5 +1,5 @@
 import React from "react";
-// import MaterialIcon from "material-icons-react";
+import MaterialIcon from "material-icons-react";
 import { useStore } from "../../store";
 import { Button } from "./atom";
 
@@ -19,8 +19,8 @@ export default () => {
 
   return (
     <Button opened={opened} onClick={toggleDialer}>
-      {/* {opened && <MaterialIcon icon="close" color="#FFF" size={24} />}
-      {!opened && <MaterialIcon icon="call" color="#FFF" size={24} />} */}
+      {opened && <MaterialIcon icon="close" color="#FFF" size={24} />}
+      {!opened && <MaterialIcon icon="call" color="#FFF" size={24} />}
     </Button>
   );
 };

@@ -23,6 +23,57 @@ import Music1 from '../../audio/Music1'
 
 extend({ OrbitControls })
 
+var data;
+data = localStorage.getItem('myDataKey');
+  
+
+function obama(){
+  
+    var datetime = data;
+    console.log("datetime", datetime)
+  
+    var now = new Date().getTime();
+
+    if( isNaN(datetime) )
+    {
+      return "";
+    }
+  
+    if (datetime < now) {
+      var milisec_diff = now - datetime;
+    }else{
+      var milisec_diff = datetime - now;
+    }
+    var final = Math.round(600-(milisec_diff/1000)) -15;
+    if (final < 0){
+      final = 0;
+    }
+
+    return final
+  }
+  
+  function Timer() {
+    var minutes = obama() //minutes passed since start
+    console.log("minutes", minutes)
+    // const [counter, setCounter] = React.useState(600);
+    const [counter, setCounter] = React.useState(minutes);
+  
+    React.useEffect(() => {
+        counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+    }, [counter]);
+  
+    return (
+       
+        <div className="bg-text2">
+            <h1>10:00</h1>
+           
+                  
+            <div>Timer: {counter}</div>
+          
+        </div>
+    )
+  }
+
 const Controls = (props) => {
     const { camera, gl } = useThree()
     const ref = useRef()
@@ -56,10 +107,23 @@ const Dome = () => {
     )
   }
 
+function Counter(){
+  return (
+      <div className="bg-text3">
+          <h1>1<span>/7</span></h1>
+          <h3>CHALLENGES</h3>
+      </div>
+  )
+}
+const counter = <Counter />
+
+const elementorso = <Timer/>
 
 function Scene3() {
     return (
         <>
+        {elementorso}
+        {counter}
         {/* <Timer/> */}
             <Canvas camera={{ position: [0, 0, 0.1] }}>
                 <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />

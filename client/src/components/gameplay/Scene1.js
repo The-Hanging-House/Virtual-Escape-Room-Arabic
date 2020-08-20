@@ -3,6 +3,8 @@ import React, { Suspense, useRef } from 'react'
 import { Canvas, extend, useFrame, useThree, useLoader } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
+// import Counter from '../counter/Counter'
+
 // import { Html } from 'drei';
 
 import TouchPoint1 from '../touchpoints/scene1/Touchpoint1'
@@ -22,6 +24,10 @@ import Music1 from '../../audio/Music1'
 
 extend({ OrbitControls })
 
+
+var someData = new Date().getTime();
+
+localStorage.setItem('myDataKey', someData);
 
 const Controls = (props) => {
     const { camera, gl } = useThree()
@@ -55,19 +61,60 @@ const Dome = () => {
         </mesh>
     )
   }
+var data;
+if (data===''){
+    setInterval(function(){
+        
+            var data = localStorage.getItem('myDataKey');
+        
+    }, 1000);
+}
 
+function Timer() {
+  var minutes = 600 //minutes passed since start
+  console.log("minutes", minutes)
+  // const [counter, setCounter] = React.useState(600);
+  const [counter, setCounter] = React.useState(minutes);
 
+  React.useEffect(() => {
+      counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+  }, [counter]);
+
+  return (
+     
+      <div className="bg-text2">
+         
+                
+          <div>Timer: {counter}</div>
+        
+      </div>
+  )
+}
+
+function Counter(){
+    return (
+        <div className="bg-text3">
+            <h1>0<span>/7</span></h1>
+            <h3>CHALLENGES</h3>
+        </div>
+    )
+}
+
+const elementorso = <Timer/>
+const counter = <Counter />
 
 function Scene1() {
     return (
       
         <>
-          {/* <Timer/> */}
+        {/* <Task /> */}
+        {elementorso}
+        {/* <Timer/> */}
+        {counter}
             <Canvas camera={{ position: [-1, 0, 0.1] }}>
                 <Controls enableDamping dampingFactor={0.1}  />
                     <Suspense fallback={null}>
                         <Dome />
-                        {/* <Task /> */}
                         
                         <TouchPoint1 position={[-4, -4, 0]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint2 position={[-10, -1, 1]} args={[3, 2, 1]} color='#F8A61F' />

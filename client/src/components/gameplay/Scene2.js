@@ -674,18 +674,6 @@ function TouchPoint5({ position, color, onClick }) {
     }
   }, 1000);
 
-
-  // const onMouseOver = event => {
-  //     const el = event.target;
-  //     let colorhex = "#F8A61F"
-  //     el.style.background = colorhex;
-  //   };
-
-  //   const onMouseOut = event => {
-  //     const el = event.target;
-  //     let black = "transparent";
-  //     el.style.background = black;
-  //   };
   
   useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
   return (
@@ -705,8 +693,7 @@ function TouchPoint5({ position, color, onClick }) {
                       timeout={300}
                       classNames="alert2"
                       unmountOnExit
-                      // onEnter={() => setShowButton(false)}
-                      // onExited={() => setShowButton(true)}
+            
                   >
                       <Alert
                       className="alert2" 
@@ -717,44 +704,83 @@ function TouchPoint5({ position, color, onClick }) {
                       <div className="alert-inside2">
                           <Alert.Heading>
                             <Puzzle />
-                              {/* <p>
-                              Congrats! You have collected all the puzzle pieces.
-                              </p> */}
-                          </Alert.Heading>
-                          {/* <p onClick={() => {
-                              toggle(); 
-                              setShowMessage(false)}} style={{ fontSize: '1rem'}} >
-                              Pick them up and dispose of them properly.
-                          </p> */}
-                          {/* <a href='puzzle'>
-                              <h3 onMouseEnter={event => onMouseOver(event)}
-                                  onMouseOut={event => onMouseOut(event)}
-                                  href>
-                                  PLAY THE PUZZLE GAME
-                              </h3>
-                          </a>
-                          <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
-                              onMouseEnter={event => onMouseOver(event)}
-                              onMouseOut={event => onMouseOut(event)}>
-                              IGNORE IT
-                          </h3> */}
-                          {/* <Button onClick={() => setShowMessage(false)}>
-                              Close
-                          </Button> */}
+                          </Alert.Heading>                       
                       </div>
                       </Alert>
                   </CSSTransition>
-                  {/* <h1>{showPopup && <Task1 />}</h1> */}
               </Container>
           </Html>
       </mesh>
   )
 }
 
+var data;
+data = localStorage.getItem('myDataKey');
+  
 
+function obama(){
+  
+    var datetime = data;
+    console.log("datetime", datetime)
+  
+    var now = new Date().getTime();
+
+    if( isNaN(datetime) )
+    {
+      return "";
+    }
+  
+    if (datetime < now) {
+      var milisec_diff = now - datetime;
+    }else{
+      var milisec_diff = datetime - now;
+    }
+    var final = Math.round(600-(milisec_diff/1000)) - 60;
+    if (final < 0){
+      final = 0;
+    }
+
+    return final
+  }
+  
+  function Timer() {
+    var minutes = obama() //minutes passed since start
+    console.log("minutes", minutes)
+    // const [counter, setCounter] = React.useState(600);
+    const [counter, setCounter] = React.useState(minutes);
+  
+    React.useEffect(() => {
+        counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+    }, [counter]);
+  
+    return (
+       
+        <div className="bg-text2">
+            <h1>10:00</h1>
+           
+                  
+            <div>Timer: {counter}</div>
+          
+        </div>
+    )
+  }
+
+function Counter(){
+return (
+      <div className="bg-text3">
+        <h1>4<span>/7</span></h1>
+        <h3>CHALLENGES</h3>
+      </div>
+)
+}
+const counter1 = <Counter />
+
+const elementorso = <Timer/>
 function Scene2(va) {
   return (
       <>
+        {elementorso}
+        {counter1}
         {/* <Timer/> */}
           <Canvas camera={{ position: [0, 0, 0.1] }}>
               <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />

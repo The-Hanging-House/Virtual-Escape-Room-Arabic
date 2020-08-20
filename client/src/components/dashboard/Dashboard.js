@@ -10,7 +10,8 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
     useEffect(() => {
         getCurrentProfile();
     }, [getCurrentProfile])
-
+    // console.log(user && user.username)
+    // console.log(user && user._id)
     return loading && profile === null ? <Spinner /> : 
     <Fragment>
         <div className="bg-image"></div>
