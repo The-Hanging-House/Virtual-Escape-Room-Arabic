@@ -7,7 +7,7 @@ import { Html } from 'drei';
 
 function TouchPoint3({ position, color, onClick }) {
     const [hovered, set] = useState(false)
-    // const [showButton, setShowButton] = useState(true);
+    const [CON, setCON] = useState(false);
     const [showMessage, setShowMessage] = useState(false);
 
     const onMouseOver = event => {
@@ -21,6 +21,14 @@ function TouchPoint3({ position, color, onClick }) {
         let black = "transparent";
         el.style.background = black;
       };
+
+      if(CON){
+        var scene3 = new Date().getTime();
+        localStorage.setItem('scene3', scene3);
+        console.log(localStorage.getItem('scene3'));
+        window.location.href = '/scene4';
+      };
+    //   console.log("con", CON);
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
@@ -53,13 +61,13 @@ function TouchPoint3({ position, color, onClick }) {
                                 <p>
                                 The car door is not locked, what should I do?
                                 </p>
-                                <a href="scene4">
+                                {/* <a href="scene4"> */}
                                     <h3 onMouseEnter={event => onMouseOver(event)}
-                                            onMouseOut={event => onMouseOut(event)}
+                                            onMouseOut={event => onMouseOut(event)} onClick={() => setCON(true)}
                                             href>
                                             OPEN IT
                                     </h3>
-                                </a>
+                                {/* </a> */}
                                 <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>

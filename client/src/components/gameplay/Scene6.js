@@ -5,7 +5,7 @@ import { Canvas, extend, useFrame, useThree, useLoader } from 'react-three-fiber
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 import Logout from '../logout/Logout'
-
+import Loader from '../../img/loader.gif'
 import { Html } from 'drei';
 // import Timer from '../timer/Timer'
 import Task1 from '../popup/Task1';
@@ -31,13 +31,25 @@ const Controls = (props) => {
   var data;
   data = localStorage.getItem('myDataKey');
     
-  
+  var now; 
+  // console.log("CT: ", localStorage.getItem('myDataKey'));
+
+  setInterval(function(){
+    now = localStorage.getItem('scene4');
+    // console.log("scene3: ", localStorage.getItem('scene3'));
+    // console.log("now", now);
+    if(now!='NaN'){
+      Scene6();
+    }
+  }, 500);
+
+
   function obama(){
     
       var datetime = data;
       console.log("datetime", datetime)
     
-      var now = new Date().getTime();
+      var now = localStorage.getItem('scene4');
   
       if( isNaN(datetime) )
       {
@@ -49,7 +61,7 @@ const Controls = (props) => {
       }else{
         var milisec_diff = datetime - now;
       }
-      var final = Math.round(600-(milisec_diff/1000)) - 40;
+      var final = Math.round(600-(milisec_diff/1000));
       if (final < 0){
         final = 0;
       }
@@ -67,13 +79,24 @@ const Controls = (props) => {
           counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
       }, [counter]);
     
+      console.log(counter);
+      var mins = Math.floor(counter/60);
+      var secs = counter - mins * 60;
+      if (secs < 10){
+        secs = "0" + secs;
+      }
+      var arigato = mins + "" + ":" +secs + "";
+  
+      if (counter === 0){
+        console.log("Fail");
+        window.location.href = "/timesup"
+      }
+    
       return (
          
-          <div className="bg-text2">
-              <h1>10:00</h1>
-             
+          <div className="bg-text5">
                     
-              <div>Timer: {counter}</div>
+              <div>{arigato}</div>
             
           </div>
       )
@@ -111,7 +134,14 @@ function Scene6() {
         {/* <Timer/> */}
             <Canvas camera={{ position: [0, 0, 0.1] }}>
                 <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
-                    <Suspense fallback={null}>
+                    <Suspense fallback={
+                      <Html center style={{ color: 'white' }}>
+                        <img src={Loader} />
+                        <div>
+                            <h1 style={{ color: '#F8A61F', textAlign: 'center'}}>Loading...</h1>
+                        </div>
+                      </Html>
+                    }>
                         <Dome />
                         {/* <TouchPoint1 position={[-6.5, -4, 5]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         <TouchPoint2 position={[-15, -3.5, 1]} args={[3, 2, 1]} color='#F8A61F' />

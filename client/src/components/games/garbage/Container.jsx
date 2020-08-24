@@ -25,9 +25,9 @@ export const Container = () => {
     }
   ]);
   const [boxes] = useState([
-    { name: "1", type: ItemTypes.PAPER, bgImageName: "trash2" },
-    { name: "2", type: ItemTypes.GLASS, bgImageName: "trash" },
-    { name: "3", type: ItemTypes.FOOD, bgImageName: "trash1" }
+    { name: " ", type: ItemTypes.PAPER, bgImageName: "trash2" },
+    { name: "  ", type: ItemTypes.GLASS, bgImageName: "trash" },
+    { name: "   ", type: ItemTypes.FOOD, bgImageName: "trash1" }
     
   ]);
   const [droppedBoxNames, setDroppedBoxNames] = useState([]);
@@ -50,12 +50,16 @@ export const Container = () => {
         })
       );
       count = count + 1;
-      if(count > 1){
-        ddd = canProceed[0]
-      }
+
     },
     [droppedBoxNames, dustbins]
   );
+  if(count > 1){
+    ddd = canProceed[0]
+    var scene1 = new Date().getTime();
+    localStorage.setItem('scene1', scene1);
+    console.log("scene1",scene1);
+  }
   return (
     <div>
       <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center'}}>
@@ -82,7 +86,7 @@ export const Container = () => {
         ))}
       </div>
       <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center', visibility: ddd  }}>
-          <a href="scene3">
+          <a href="/scene3">
             <button className="btn btn-primary3">
                 Proceed
             </button>

@@ -9,6 +9,7 @@ import { Html } from 'drei';
 function TouchPoint5({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     // const [showButton, setShowButton] = useState(true);
+    const [CON, setCON] = useState(false);
     const [showMessage, setShowMessage] = useState(false);
 
     const onMouseOver = event => {
@@ -21,6 +22,13 @@ function TouchPoint5({ position, color, onClick }) {
         const el = event.target;
         let black = "transparent";
         el.style.background = black;
+      };
+
+      if(CON){
+        var scene4 = new Date().getTime();
+        localStorage.setItem('scene4', scene4);
+        console.log(localStorage.getItem('scene4'));
+        window.location.href = '/scene6';
       };
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
@@ -59,13 +67,13 @@ function TouchPoint5({ position, color, onClick }) {
                                     onMouseOut={event => onMouseOut(event)}>
                                     DANCE AND SING
                                     </h3>
-                                    <a href='scene6'>
+                                    {/* <a href='scene6'> */}
                                         <h3 onMouseEnter={event => onMouseOver(event)}
-                                            onMouseOut={event => onMouseOut(event)}
+                                            onMouseOut={event => onMouseOut(event)} onClick={() => setCON(true)}
                                             href>
                                             SWITCH OFF THE MUSIC
                                         </h3>
-                                    </a>
+                                    {/* </a> */}
                             </Alert.Heading>
                                 
                             {/* <Button onClick={() => setShowMessage(false)}>

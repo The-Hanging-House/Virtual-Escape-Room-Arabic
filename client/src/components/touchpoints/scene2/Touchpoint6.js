@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { Container } from 'react-bootstrap';
+import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
 
@@ -28,38 +28,20 @@ function TouchPoint6({ position, color, onClick }) {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert2"
+                        classNames="alert4"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
-                                <Telephone />
-                                {/* <p>
-                                Congrats! You have collected all the puzzle pieces.
-                                </p>
-                                <a href='puzzle'>
-                                <h3 onMouseEnter={event => onMouseOver(event)}
-                                    onMouseOut={event => onMouseOut(event)}
-                                    href>
-                                    PLAY THE PUZZLE GAME
-                                </h3>
-                            </a>
-                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
-                                onMouseEnter={event => onMouseOver(event)}
-                                onMouseOut={event => onMouseOut(event)}>
-                                IGNORE IT
-                            </h3> */}
-                            {/* <p onClick={() => {
-                                toggle(); 
-                                setShowMessage(false)}} style={{ fontSize: '1rem'}} >
-                                Pick them up and dispose of them properly.
-                            </p> */}
-                            
-                            {/* <Button onClick={() => setShowMessage(false)}>
-                                Close
-                            </Button> */}
+                        <Alert
+                        className="alert4"
+                        variant="primary"
+                        dismissible
+                        onClose={() => setShowMessage(false)}
+                        >
+                        <Telephone />
+                        </Alert>
                     </CSSTransition>
-                    {/* <h1>{showPopup && <Task1 />}</h1> */}
                 </Container>
             </Html>
         </mesh>

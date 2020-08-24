@@ -6,6 +6,8 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 import { Html } from 'drei';
 
+import Loader from '../../img/loader.gif'
+
 import Logout from '../logout/Logout'
 
 import Task1 from '../popup/Task1';
@@ -27,14 +29,32 @@ extend({ OrbitControls })
 
 var data;
 data = localStorage.getItem('myDataKey');
-  
+var now;  
+var tt = 0;
+
+// window.location.reload(false);
+
+setInterval(function(){
+  now = localStorage.getItem('scene1');
+  // console.log("now: ", now);
+  if(now!='NaN'){
+    Scene3();
+  }
+}, 500);
 
 function obama(){
   
     var datetime = data;
-    console.log("datetime", datetime)
+    // console.log("datetime", datetime)
   
-    var now = new Date().getTime();
+    // var now = new Date().getTime();
+    var now = localStorage.getItem('scene1');
+    // setInterval(function(){
+    //   now = localStorage.getItem('scene1');
+    // }, 500);
+
+
+    
 
     if( isNaN(datetime) )
     {
@@ -46,17 +66,17 @@ function obama(){
     }else{
       var milisec_diff = datetime - now;
     }
-    var final = Math.round(600-(milisec_diff/1000)) -15;
+    var final = Math.round(600-(milisec_diff/1000)) - 10;
     if (final < 0){
       final = 0;
     }
 
-    return final
+    return final;
   }
   
   function Timer() {
     var minutes = obama() //minutes passed since start
-    console.log("minutes", minutes)
+    // console.log("minutes", minutes)
     // const [counter, setCounter] = React.useState(600);
     const [counter, setCounter] = React.useState(minutes);
   
@@ -64,13 +84,24 @@ function obama(){
         counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
     }, [counter]);
   
+    // console.log(counter);
+    var mins = Math.floor(counter/60);
+    var secs = counter - mins * 60;
+    if (secs < 10){
+      secs = "0" + secs;
+    }
+    var arigato = mins + ""+ ":" +secs + " ";
+  
+    if (counter === 0){
+      console.log("Fail");
+      window.location.href = "/timesup"
+    }
+  
     return (
        
-        <div className="bg-text2">
-            <h1>10:00</h1>
-           
+        <div className="bg-text5">
                   
-            <div>Timer: {counter}</div>
+            <div>{arigato}</div>
           
         </div>
     )
@@ -130,7 +161,14 @@ function Scene3() {
         {/* <Timer/> */}
             <Canvas camera={{ position: [0, 0, 0.1] }}>
                 <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
-                    <Suspense fallback={null}>
+                    <Suspense fallback={
+                      <Html center style={{ color: 'white' }}>
+                        <img src={Loader} />
+                        <div>
+                            <h1 style={{ color: '#F8A61F', textAlign: 'center'}}>Loading...</h1>
+                        </div>
+                      </Html>
+                    }>
                         <Dome />
                         <Task />
                         

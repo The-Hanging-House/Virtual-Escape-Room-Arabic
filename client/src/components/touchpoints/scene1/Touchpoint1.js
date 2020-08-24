@@ -41,13 +41,13 @@ function TouchPoint1({ position, color, onClick }) {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert2"
+                        classNames="alert3"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert2" 
+                        className="alert3" 
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
@@ -59,26 +59,6 @@ function TouchPoint1({ position, color, onClick }) {
                                 Litter doesn't belong in the dessert, but it's everywhere. What would you like to do?
                                 </p> */}
                             </Alert.Heading>
-                            {/* <p onClick={() => {
-                                toggle(); 
-                                setShowMessage(false)}} style={{ fontSize: '1rem'}} >
-                                Pick them up and dispose of them properly.
-                            </p> */}
-                            {/* <a href='garbage'>
-                                <h3 onMouseEnter={event => onMouseOver(event)}
-                                    onMouseOut={event => onMouseOut(event)}
-                                    href>
-                                    PICK THEM UP &amp; DISPOSE OF THEM PROPERLY
-                                </h3>
-                            </a>
-                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
-                                onMouseEnter={event => onMouseOver(event)}
-                                onMouseOut={event => onMouseOut(event)}>
-                                IGNORE IT
-                            </h3> */}
-                            {/* <Button onClick={() => setShowMessage(false)}>
-                                Close
-                            </Button> */}
                         </div>
                         </Alert>
                     </CSSTransition>

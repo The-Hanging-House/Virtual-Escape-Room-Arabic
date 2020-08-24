@@ -8,6 +8,7 @@ import { Html } from 'drei';
 function TouchPoint3({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     // const [showButton, setShowButton] = useState(true);
+    const [CON, setCON] = useState(false);
     const [showMessage, setShowMessage] = useState(false);
 
     const onMouseOver = event => {
@@ -20,6 +21,13 @@ function TouchPoint3({ position, color, onClick }) {
         const el = event.target;
         let black = "transparent";
         el.style.background = black;
+      };
+
+      if(CON){
+        var scene6 = new Date().getTime();
+        localStorage.setItem('scene6', scene6);
+        // console.log(localStorage.getItem('scene4'));
+        window.location.href = '/scene5';
       };
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
@@ -58,14 +66,14 @@ function TouchPoint3({ position, color, onClick }) {
                                     onMouseOut={event => onMouseOut(event)}>
                                     LEAVING THE LIGHTS ON
                                 </h3>
-                            <a href='scene5'>
+                            {/* <a href='scene5'> */}
                                 <h3 onMouseEnter={event => onMouseOver(event)}
-                                    onMouseOut={event => onMouseOut(event)}
+                                    onMouseOut={event => onMouseOut(event)}  onClick={() => setCON(true)}
                                     href>
                                     SWITCHING OF THE LIGHTS
                                 </h3>
                             
-                            </a>
+                            {/* </a> */}
                             </Alert.Heading>
                                 
                         </div>

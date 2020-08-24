@@ -16,9 +16,9 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
     <Fragment>
         <div className="bg-image"></div>
         <div className="bg-text1"></div>
-        <img className="bg-text1" src={bg} alt="Dashboard" useMap="#workmap" width="400" height="500" />
+        <img className="bg-text1" src={bg} alt="Dashboard" useMap="#workmap" />
         <map name="workmap">
-            <area shape="rect" coords="150,170,500,425" alt="Intro" href="instruction"/>
+            <area shape="rect" coords="150,170,550,455" alt="Intro" href="instruction"/>
             {/* <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm" /> */}
         </map>
         <div className="lead1">

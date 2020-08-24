@@ -33,12 +33,12 @@ function TouchPoint6({ position, color, onClick }) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert1"
+                        className="alert"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside">
+                        <div className="alert-inside2">
                             <div>
                                 <img src={egg} alt='Trunk2' width='100%' height='100%' />
                             </div>

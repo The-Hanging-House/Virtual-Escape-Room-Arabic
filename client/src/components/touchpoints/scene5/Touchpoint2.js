@@ -47,7 +47,7 @@ function TouchPoint2({ position, color, onClick }) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert1" style={{color : 'white', padding : '5px', width : '40vw'}}
+                        className="alert1"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
@@ -55,7 +55,7 @@ function TouchPoint2({ position, color, onClick }) {
                          <div className="alert-inside2">
                             <Alert.Heading>
                             <App />
-                            <img src={Lock} alt='pinlock' style={{ height: '50%', width: '50%', marginLeft: '25%', right: '50%', left: '50%'}} />
+                            <img src={Lock} alt='pinlock' style={{ height: '20%', width: '30vw'}} />
                                 
                                 
                             </Alert.Heading>

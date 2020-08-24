@@ -38,7 +38,7 @@ function TouchPoint4({ position, color, onClick }) {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside">
+                        <div className="alert-inside2">
                             <div>
                                 <img src={trunk1} alt='Trunk1' width='100%' height='100%' />
                             </div>

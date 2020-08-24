@@ -36,6 +36,8 @@ export default () => {
     console.log("Call Button Pressed")
     if (number.length === callNumber.length && number.localeCompare(callNumber)===0){
       // number.localeCompare(callNumber)? console.log("NO MATCH") : window.location.href = "/end";
+      var scene2 = new Date().getTime();
+      localStorage.setItem('scene2', scene2);
       window.location.href = '/end';
     }
     else if(number.localeCompare(callNumber) !== 0){

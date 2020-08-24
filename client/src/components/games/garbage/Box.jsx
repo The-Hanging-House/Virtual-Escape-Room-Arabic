@@ -4,11 +4,12 @@ import { DragSource } from 'react-dnd'
 
 const backgroundsList = {
   trash:
-    '/trash.png',
-  trash1:
     '/trash1.png',
   trash2:
-    '/trash2.png'
+  '/trash2.png',
+  trash1:
+    '/trash.png'
+  
 };
 
 

@@ -33,14 +33,14 @@ const TouchPoint3 = ({ position, color, onClick }) => {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert1"
+                        className="alert"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside">
+                        <div className="alert-inside2">
                             <div>
-                                <img src={board} alt='board' width='80%' height='80%' />
+                                <img src={board} alt='board' width='100%' height='100%' />
                             </div>
                         </div>
                         </Alert>

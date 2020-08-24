@@ -3,11 +3,11 @@ import React, { Suspense, useRef } from 'react'
 import { Canvas, extend, useFrame, useThree, useLoader } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
-// import Counter from '../counter/Counter'
+import Loader from '../../img/loader.gif'
 
 import Logout from '../logout/Logout'
 
-// import { Html } from 'drei';
+import { Html } from 'drei';
 
 import TouchPoint1 from '../touchpoints/scene1/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene1/Touchpoint2'
@@ -29,7 +29,8 @@ extend({ OrbitControls })
 
 var someData = new Date().getTime();
 
-localStorage.setItem('myDataKey', someData);
+// localStorage.setItem('myDataKey', someData);
+console.log("sets: ", localStorage.getItem('myDataKey', someData));
 
 const Controls = (props) => {
     const { camera, gl } = useThree()
@@ -39,18 +40,6 @@ const Controls = (props) => {
   }
 
 
-
-//   const Task = () => {
-//     const [showPopup] = useState(false);
-     
-//     return (
-//         <mesh>
-//             <Html>
-//                 <div>Hi</div>
-//             </Html>
-//         </mesh>
-//     )
-// }
 
 
 
@@ -74,25 +63,34 @@ if (data===''){
 
 function Timer() {
   var minutes = 600 //minutes passed since start
-  console.log("minutes", minutes)
+//   console.log("minutes", minutes)
   // const [counter, setCounter] = React.useState(600);
   const [counter, setCounter] = React.useState(minutes);
 
   React.useEffect(() => {
       counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
   }, [counter]);
+//   console.log(counter);
+  var mins = Math.floor(counter/60);
+  var secs = counter - mins * 60;
+  if (secs < 10){
+    secs = "0" + secs;
+  }
+  var arigato = mins + ""+ ":" +secs + " ";
+
+  if (counter === 0){
+    console.log("Fail");
+    window.location.href = "/timesup"
+  }
 
   return (
      
-      <div className="bg-text2">
-         
-                
-          <div>Timer: {counter}</div>
+      <div className="bg-text5">
+          <div>{arigato}</div>
         
       </div>
   )
 }
-
 function Counter(){
     return (
         <div className="bg-text3">
@@ -117,7 +115,14 @@ function Scene1() {
         {logout}
             <Canvas camera={{ position: [-1, 0, 0.1] }}>
                 <Controls enableDamping dampingFactor={0.1}  />
-                    <Suspense fallback={null}>
+                    <Suspense fallback={
+                      <Html center style={{ color: 'white' }}>
+                        <img src={Loader} />
+                        <div>
+                            <h1 style={{ color: '#F8A61F', textAlign: 'center'}}>Loading...</h1>
+                        </div>
+                      </Html>
+                    }>
                         <Dome />
                         
                         <TouchPoint1 position={[-4, -4, 0]} args={[3, 2, 1]} color='#F8A61F' />
