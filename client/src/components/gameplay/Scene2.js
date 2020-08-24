@@ -5,6 +5,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 import { Html } from 'drei';
 
+import Logout from '../logout/Logout'
 import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
@@ -52,7 +53,12 @@ import './style.css'
 extend({ OrbitControls })
 
 // Counts the number of boxes
-var x = 0
+var x = 0;
+
+var ccom = 4;
+var ccomValue = 4;
+
+var wawds = 0;
 
 // value of X increments each time a box is collected
 function counter(){
@@ -665,13 +671,19 @@ function TouchPoint5({ position, color, onClick }) {
   const [hovered, set] = useState(false)
   const [showMessage, setShowMessage] = useState(false);
   const [collectedMessage, setCollectedMessage] = useState(false)
+  const [coll, setColl] = useState(false)
   // console.log("TOUCH: ", x) 
 
   // function that checks the number of boxes collected
   setInterval(function(){
-    if(x === 12){
-      setCollectedMessage(true)
+    if(x === 13){
+      setCollectedMessage(true);
+      // ccomCounter();
+    }if(coll){
+      ccom=6;
     }
+   
+
   }, 1000);
 
   
@@ -683,7 +695,7 @@ function TouchPoint5({ position, color, onClick }) {
           position={position}
           onPointerOver={() => set(true)}
           onPointerOut={() => set(false)}
-          onClick={() => setShowMessage(true)}>
+          onClick={() => {setShowMessage(true); setColl(true)}}>
           <sphereGeometry attach="geometry" args={[1, 32, 32]} />
           <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
           <Html center>
@@ -721,7 +733,6 @@ data = localStorage.getItem('myDataKey');
 function obama(){
   
     var datetime = data;
-    console.log("datetime", datetime)
   
     var now = new Date().getTime();
 
@@ -745,8 +756,6 @@ function obama(){
   
   function Timer() {
     var minutes = obama() //minutes passed since start
-    console.log("minutes", minutes)
-    // const [counter, setCounter] = React.useState(600);
     const [counter, setCounter] = React.useState(minutes);
   
     React.useEffect(() => {
@@ -766,21 +775,40 @@ function obama(){
   }
 
 function Counter(){
-return (
-      <div className="bg-text3">
-        <h1>4<span>/7</span></h1>
-        <h3>CHALLENGES</h3>
-      </div>
-)
-}
-const counter1 = <Counter />
+  const [something, setSomething] = useState(4);
+  setInterval(function(){
+      // console.log("ccom: ", ccom);
+      console.log("ccomValue: ", ccomValue);
+      console.log("x: ", x);
+      if(x===12){
+        ccomValue=5;
+        setSomething(5);
+        console.log("ccomValue: ", ccomValue);
+        x = x + 1;
+      }else if(ccom === 6){
+        setSomething(6);
+      }
+      console.log("ccom", ccom)
 
+    
+  }, 1000);
+  return (
+    <div className="bg-text3">
+      <h1>{something}<span>/7</span></h1>
+      <h3>CHALLENGES</h3>
+    </div>
+  )
+}
+
+const counter1 = <Counter />
+const logout = <Logout />
 const elementorso = <Timer/>
 function Scene2(va) {
   return (
       <>
         {elementorso}
         {counter1}
+        {logout}
         {/* <Timer/> */}
           <Canvas camera={{ position: [0, 0, 0.1] }}>
               <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />

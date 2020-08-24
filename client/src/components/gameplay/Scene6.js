@@ -4,6 +4,8 @@ import React, { Suspense, useRef, useState } from 'react'
 import { Canvas, extend, useFrame, useThree, useLoader } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
+import Logout from '../logout/Logout'
+
 import { Html } from 'drei';
 // import Timer from '../timer/Timer'
 import Task1 from '../popup/Task1';
@@ -97,13 +99,15 @@ return (
 )
 }
 const counter = <Counter />
-
+const logout = <Logout />
 const elementorso = <Timer/>
+
 function Scene6() {
     return (
         <>
         {elementorso}
         {counter}
+        {logout}
         {/* <Timer/> */}
             <Canvas camera={{ position: [0, 0, 0.1] }}>
                 <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />

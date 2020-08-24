@@ -22,10 +22,7 @@ class App extends React.PureComponent {
     console.log(value)
     var input1 = "BIRD"
     if (value.length === 4){
-      // console.log("BIG BOYE")
-      value.localeCompare(input1)? console.log("NO MATCH") : console.log("MATCH") //prints yote if string same
-      // Simulate a mouse click:
-      window.location.href = "/scene2";
+      value.localeCompare(input1)? console.log("NO MATCH") : window.location.href = "/scene2";
   }
     return (
       <div className="app">

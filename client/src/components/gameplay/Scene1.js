@@ -5,6 +5,8 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 // import Counter from '../counter/Counter'
 
+import Logout from '../logout/Logout'
+
 // import { Html } from 'drei';
 
 import TouchPoint1 from '../touchpoints/scene1/Touchpoint1'
@@ -102,6 +104,7 @@ function Counter(){
 
 const elementorso = <Timer/>
 const counter = <Counter />
+const logout = <Logout />
 
 function Scene1() {
     return (
@@ -111,6 +114,7 @@ function Scene1() {
         {elementorso}
         {/* <Timer/> */}
         {counter}
+        {logout}
             <Canvas camera={{ position: [-1, 0, 0.1] }}>
                 <Controls enableDamping dampingFactor={0.1}  />
                     <Suspense fallback={null}>
