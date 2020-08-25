@@ -50,7 +50,7 @@ var now;
 setInterval(function(){
     now = localStorage.getItem('scene6');
     // console.log("now: ", now);
-    if(now!='NaN'){
+    if(now!=='NaN'){
       Scene5();
     }
 }, 500);

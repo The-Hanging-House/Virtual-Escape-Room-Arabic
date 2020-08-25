@@ -58,9 +58,9 @@ extend({ OrbitControls })
 var x = 0;
 
 var ccom = 4;
-var ccomValue = 4;
+// var ccomValue = 4;
 
-var wawds = 0;
+// var wawds = 0;
 
 // value of X increments each time a box is collected
 function counter(){
@@ -119,7 +119,7 @@ const Dome = () => {
       <mesh
         {...props}
         ref={mesh}
-        scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
+        // scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
         scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
         // onClick={e => setActive(!active)}
         onPointerOver={e => set(true)}
@@ -187,7 +187,7 @@ const Dome = () => {
   
   function Box2(props) {
     const mesh = useRef()
-    const [hovered, set] = useState(false)
+    // const [hovered, set] = useState(false)
     // const [active, setActive] = useState(false)
     const [collectedMessage, setCollectedMessage] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
@@ -227,11 +227,11 @@ const Dome = () => {
         {...props}
         ref={mesh}
         // scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
-        scale={collectedMessage? [0, 0, 0] : [0.5, 0.5, 0.5]}
+        // scale={collectedMessage? [0, 0, 0] : [0.5, 0.5, 0.5]}
         scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
         // onClick={e => setActive(!active)}
-        onPointerOver={e => set(true)}
-        onPointerOut={e => set(false)}
+        // onPointerOver={e => set(true)}
+        // onPointerOut={e => set(false)}
         onClick={() => setShowMessage(true)}>
         <boxBufferGeometry attach="geometry" args={[1, 1, 1]} style={{visibility: collectedMessage? 'hidden':'visible'}}/>
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
@@ -296,7 +296,7 @@ const Dome = () => {
 
   function Box3(props) {
     const mesh = useRef()
-    const [hovered, set] = useState(false)
+    // const [hovered, set] = useState(false)
     // const [active, setActive] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
     const [collectedMessage, setCollectedMessage] = useState(false)
@@ -326,11 +326,11 @@ const Dome = () => {
       <mesh
         {...props}
         ref={mesh}
-        scale={hovered ? [0.8, 0.8, 0.8] : [0.5, 0.5, 0.5]}
+        // scale={hovered ? [0.8, 0.8, 0.8] : [0.5, 0.5, 0.5]}
         scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
         // onClick={e => setActive(!active)}
-        onPointerOver={e => set(true)}
-        onPointerOut={e => set(false)}
+        // onPointerOver={e => set(true)}
+        // onPointerOut={e => set(false)}
         onClick={() => setShowMessage(true)}>
         <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
@@ -389,7 +389,7 @@ const Dome = () => {
 
   function Box4(props) {
     const mesh = useRef()
-    const [hovered, set] = useState(false)
+    // const [hovered, set] = useState(false)
     // const [active, setActive] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
     const [collectedMessage, setCollectedMessage] = useState(false)
@@ -419,11 +419,11 @@ const Dome = () => {
       <mesh
         {...props}
         ref={mesh}
-        scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
+        // scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
         scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
         // onClick={e => setActive(!active)}
-        onPointerOver={e => set(true)}
-        onPointerOut={e => set(false)}
+        // onPointerOver={e => set(true)}
+        // onPointerOut={e => set(false)}
         onClick={() => setShowMessage(true)}>
         <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
@@ -482,7 +482,7 @@ const Dome = () => {
 
   function Box5(props) {
     const mesh = useRef()
-    const [hovered, set] = useState(false)
+    // const [hovered, set] = useState(false)
     // const [active, setActive] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
     const [collectedMessage, setCollectedMessage] = useState(false)
@@ -512,11 +512,11 @@ const Dome = () => {
       <mesh
         {...props}
         ref={mesh}
-        scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
+        // scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
         scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
         // onClick={e => setActive(!active)}
-        onPointerOver={e => set(true)}
-        onPointerOut={e => set(false)}
+        // onPointerOver={e => set(true)}
+        // onPointerOut={e => set(false)}
         onClick={() => setShowMessage(true)}>
         <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
@@ -575,7 +575,7 @@ const Dome = () => {
 
   function Box6(props) {
     const mesh = useRef()
-    const [hovered, set] = useState(false)
+    // const [hovered, set] = useState(false)
     // const [active, setActive] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
     const [collectedMessage, setCollectedMessage] = useState(false)
@@ -605,11 +605,11 @@ const Dome = () => {
       <mesh
         {...props}
         ref={mesh}
-        scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
+        // scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
         scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
         // onClick={e => setActive(!active)}
-        onPointerOver={e => set(true)}
-        onPointerOut={e => set(false)}
+        // onPointerOver={e => set(true)}
+        // onPointerOut={e => set(false)}
         onClick={() => setShowMessage(true)}>
         <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
@@ -670,7 +670,7 @@ const Dome = () => {
 // var obj
 
 function TouchPoint5({ position, color, onClick }) {
-  const [hovered, set] = useState(false);
+  // const [hovered, set] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [collectedMessage, setCollectedMessage] = useState(false);
   const [coll, setColl] = useState(false);
@@ -692,17 +692,17 @@ function TouchPoint5({ position, color, onClick }) {
   }, 1000);
 
   
-  useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
+  // useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
   return (
       <mesh 
-          scale={hovered ? [0.6, 0.6, 0.6] : [0.4, 0.4, 0.4]}
+          // scale={hovered ? [0.6, 0.6, 0.6] : [0.4, 0.4, 0.4]}
           scale={collectedMessage ? [0.4, 0.4, 0.4] : [0, 0, 0]}
           position={position}
-          onPointerOver={() => set(true)}
-          onPointerOut={() => set(false)}
+          // onPointerOver={() => set(true)}
+          // onPointerOut={() => set(false)}
           onClick={() => setShowMessage(true)}>
           <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-          <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
+          <meshBasicMaterial attach="material" color='orange' /> 
           <Html center>
               <Container>
                   <CSSTransition
@@ -744,7 +744,7 @@ var now;
 setInterval(function(){
     now = localStorage.getItem('scene5');
     // console.log("now: ", now);
-    if(now!='NaN'){
+    if(now!=='NaN'){
       Scene2();
     }
 }, 500);  
@@ -810,7 +810,7 @@ function Counter(){
       // console.log("ccomValue: ", ccomValue);
       // console.log("x: ", x);
       if(x===12){
-        ccomValue=5;
+        // ccomValue=5;
         setSomething(5);
         // console.log("ccomValue: ", ccomValue);
         x = x + 1;

@@ -33,7 +33,7 @@ setInterval(function(){
   now = localStorage.getItem('scene3');
   // console.log("scene3: ", localStorage.getItem('scene3'));
   // console.log("now", now);
-  if(now!='NaN'){
+  if(now!=='NaN'){
     Scene4();
   }
 }, 500);
@@ -85,7 +85,7 @@ function obama(){
     if (secs < 10){
       secs = "0" + secs;
     }
-    var arigato = mins + "" + ":" + secs + "";
+    var arigato = mins + ":" + secs;
 
     if (counter === 0){
       console.log("Fail");
