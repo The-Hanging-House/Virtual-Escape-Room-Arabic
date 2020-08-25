@@ -3,7 +3,22 @@ import Bgend from '../../img/bgend.png'
 import { url } from 'gravatar';
 
 
+var i = 0;
+var refreshTime = 1598355449119;
+
+function myFunction() {
+    var d = new Date();
+    var n = d.getTime();
+    console.log(n)
+}
+
 function Timesup() {
+
+    var arri = ['puzSet', 'scene2', 'scene3', 'scene6', 'scene4', 'scene5', 'scene1', 'myDataKey'];
+    while (i !== arri.length && localStorage.getItem('myDataKey') !== '0') {
+        localStorage.setItem(arri[i], refreshTime); 
+        i++;
+    }
     const onMouseOver = event => {
        
         const el = event.target;

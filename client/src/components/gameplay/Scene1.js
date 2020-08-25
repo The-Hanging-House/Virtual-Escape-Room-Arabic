@@ -69,6 +69,10 @@ function Timer() {
 
   React.useEffect(() => {
       counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+      if(localStorage.getItem('myDataKey') === "1598355449119" || localStorage.getItem('myDataKey') === "0"){
+        localStorage.setItem('myDataKey', "0");
+        window.location.href = "/timesup";
+      }
   }, [counter]);
 //   console.log(counter);
   var mins = Math.floor(counter/60);

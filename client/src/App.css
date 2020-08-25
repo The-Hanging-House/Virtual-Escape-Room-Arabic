@@ -570,12 +570,12 @@ h3 {
   font-family: "Dubai", sans-serif;
   background-color: white;
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 32%;
-  height: 70vh;
+  height: 75vh;
   padding: 20px;
   text-align: center;
 }
@@ -593,14 +593,15 @@ h3 {
 }
 .game-timer-inside {
   position: absolute;
-  left: 20%;
+  left: 12%;
   bottom: 30%;
   line-height: 7vh;
 }
 .game-timer-option {
   position: absolute;
-  left: 35%;
-  bottom: 5%;
+  left: 30%;
+  bottom: 2%;
+  line-height: 5vh;
   color: #171720
 }
 .bg-end1 {

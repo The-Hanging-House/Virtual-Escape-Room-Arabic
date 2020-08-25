@@ -1,9 +1,63 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
-import { logout } from '../../actions/auth'
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+import { Container, Button, Alert } from 'react-bootstrap';
+import { CSSTransition } from 'react-transition-group';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { logout } from '../../actions/auth';
 
-import { ReactComponent as Logo } from './logout.svg'
+import { ReactComponent as Logo } from './logout.svg';
+
+
+// const [showMessage, setShowMessage] = useState(false);
+var ttt = false;
+
+function Example() {
+    const [showButton, setShowButton] = useState(true);
+    const [showMessage, setShowMessage] = useState(false);
+    return (
+      <Container style={{ paddingTop: '2rem' }}>
+        {showButton && (
+          <a
+            onClick={() => setShowMessage(true)}
+            // size="lg"
+          >
+            <Logo/>
+          </a>
+        )}
+        <CSSTransition
+          in={showMessage}
+          timeout={300}
+          classNames="alert"
+          unmountOnExit
+          onEnter={() => setShowButton(false)}
+          onExited={() => setShowButton(true)}
+        >
+          <Alert
+            variant="primary"
+            dismissible
+            onClose={() => setShowMessage(false)}
+          >
+            <Alert.Heading>
+              Animated alert message
+            </Alert.Heading>
+            <p>
+              This alert message is being transitioned in and
+              out of the DOM.
+            </p>
+            <a onClick={logout} href='#!'>
+                <Logo />
+                <h3>EXIT</h3>
+            </a>
+            <Button onClick={() => setShowMessage(false)}>
+              Close
+            </Button>
+          </Alert>
+        </CSSTransition>
+      </Container>
+    );
+  }
+
 
 const Logout = ({ auth: { isAuthenticated, loading }, logout }) => {
 
@@ -16,12 +70,51 @@ const Logout = ({ auth: { isAuthenticated, loading }, logout }) => {
         </div>
     );
 
+    const [showButton, setShowButton] = useState(true);
+    const [showMessage, setShowMessage] = useState(false);
+
     return (
         <div className="bg-text4">
-            <a onClick={logout} href='#!'>
-                <Logo />
-                <h3>EXIT</h3>
-            </a>
+            {/* <Example/> */}
+            <Container style={{ paddingTop: '2rem' }}>
+        {showButton && (
+          <a
+            onClick={() => setShowMessage(true)}
+            // size="lg"
+          >
+            <Logo/>
+          </a>
+        )}
+        <CSSTransition
+          in={showMessage}
+          timeout={300}
+          classNames="alert"
+          unmountOnExit
+          onEnter={() => setShowButton(false)}
+          onExited={() => setShowButton(true)}
+        >
+          <Alert
+            variant="primary"
+            dismissible
+            onClose={() => setShowMessage(false)}
+          >
+            <Alert.Heading>
+              Animated alert message
+            </Alert.Heading>
+            <p>
+              This alert message is being transitioned in and
+              out of the DOM.
+            </p>
+            <Button onClick={() => setShowMessage(false)}>
+              Close
+            </Button>
+            <Button onClick={logout}>
+              Logout
+            </Button>
+          </Alert>
+        </CSSTransition>
+      </Container>
+
         </div>
     )
 }

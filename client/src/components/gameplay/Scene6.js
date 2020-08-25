@@ -41,6 +41,10 @@ const Controls = (props) => {
     if(now!='NaN'){
       Scene6();
     }
+    if(localStorage.getItem('myDataKey') === "1598355449119" || localStorage.getItem('myDataKey') === "0"){
+      localStorage.setItem('myDataKey', "0");
+      window.location.href = "/timesup";
+    }
   }, 500);
 
 
