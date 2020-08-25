@@ -114,6 +114,7 @@ const Logout = ({ auth: { isAuthenticated, loading }, logout }) => {
           </Alert>
         </CSSTransition>
       </Container>
+      
 
         </div>
     )
