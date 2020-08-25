@@ -50,6 +50,7 @@ export default () => {
  
       setTimeout(function(){
         flag = 0;
+        setNumber("");
         setCallValues(number);
       }, 1000);
  

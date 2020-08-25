@@ -48,7 +48,7 @@ data = localStorage.getItem('myDataKey');
 var now;
 
 setInterval(function(){
-    now = localStorage.getItem('scene4');
+    now = localStorage.getItem('scene6');
     // console.log("now: ", now);
     if(now!='NaN'){
       Scene5();
@@ -62,7 +62,7 @@ function obama(){
     console.log("datetime", datetime)
   
     // var now = new Date().getTime();
-    now = localStorage.getItem('scene4');
+    now = localStorage.getItem('scene6');
 
 
     if( isNaN(datetime) )

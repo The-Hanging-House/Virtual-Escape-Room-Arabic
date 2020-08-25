@@ -670,22 +670,25 @@ const Dome = () => {
 // var obj
 
 function TouchPoint5({ position, color, onClick }) {
-  const [hovered, set] = useState(false)
+  const [hovered, set] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
-  const [collectedMessage, setCollectedMessage] = useState(false)
-  const [coll, setColl] = useState(false)
-  // console.log("TOUCH: ", x) 
-
+  const [collectedMessage, setCollectedMessage] = useState(false);
+  const [coll, setColl] = useState(false);
+  const [showProceed, setShowProceed] = useState('hidden');
+  var puzzlePro;
+  
   // function that checks the number of boxes collected
   setInterval(function(){
+    puzzlePro = localStorage.getItem("puzSet");
     if(x === 13){
       setCollectedMessage(true);
-      // ccomCounter();
     }if(coll){
       ccom=6;
-    }
-   
-
+    } 
+    if(puzzlePro === '7'){
+        setShowProceed('visible');
+        localStorage.removeItem("puzSet");
+    } 
   }, 1000);
 
   
@@ -697,7 +700,7 @@ function TouchPoint5({ position, color, onClick }) {
           position={position}
           onPointerOver={() => set(true)}
           onPointerOut={() => set(false)}
-          onClick={() => {setShowMessage(true); setColl(true)}}>
+          onClick={() => setShowMessage(true)}>
           <sphereGeometry attach="geometry" args={[1, 32, 32]} />
           <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
           <Html center>
@@ -718,6 +721,12 @@ function TouchPoint5({ position, color, onClick }) {
                       <div className="alert-inside2">
                           <Alert.Heading>
                             <Puzzle />
+                            <br></br>
+                             <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center' }}>
+                                  <button onClick={() => {setShowMessage(false); setColl(true)}} style={{visibility: showProceed}} className="btn btn-primary3">
+                                      Proceed
+                                  </button>
+                            </div>
                           </Alert.Heading>                       
                       </div>
                       </Alert>
