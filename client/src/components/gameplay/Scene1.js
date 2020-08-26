@@ -23,15 +23,9 @@ import Music1 from '../../audio/Music1'
 
 // import Tp from '../../img/tp.svg'
 
-// comment
-
 
 extend({ OrbitControls })
 
-var someData = new Date().getTime();
-
-// localStorage.setItem('myDataKey', someData);
-console.log("sets: ", localStorage.getItem('myDataKey', someData));
 
 const Controls = (props) => {
     const { camera, gl } = useThree()
@@ -39,9 +33,6 @@ const Controls = (props) => {
     useFrame(() => ref.current.update())
     return <orbitControls ref={ref} target={[0, 0, 0]} {...props} args={[camera, gl.domElement]} />
   }
-
-
-
 
 
 const Dome = () => {
@@ -53,19 +44,10 @@ const Dome = () => {
         </mesh>
     )
   }
-var data;
-if (data===''){
-    setInterval(function(){
-        
-            var data = localStorage.getItem('myDataKey');
-        
-    }, 1000);
-}
+
 
 function Timer() {
   var minutes = 600 //minutes passed since start
-//   console.log("minutes", minutes)
-  // const [counter, setCounter] = React.useState(600);
   const [counter, setCounter] = React.useState(minutes);
 
   React.useEffect(() => {
@@ -75,13 +57,12 @@ function Timer() {
         window.location.href = "/timesup";
       }
   }, [counter]);
-//   console.log(counter);
   var mins = Math.floor(counter/60);
   var secs = counter - mins * 60;
   if (secs < 10){
     secs = "0" + secs;
   }
-  var arigato = mins + ""+ ":" +secs + " ";
+  var arigato = mins + ":" + secs;
 
   if (counter === 0){
     console.log("Fail");

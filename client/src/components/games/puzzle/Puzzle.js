@@ -4,7 +4,6 @@ import './App.css';
 
 var showHint = "Solve the puzzle to get the phone number!";
 var y = 0;
-var puzSet = 0;
 
 class Puzzle extends Component {
   state = {
