@@ -36,7 +36,7 @@ setInterval(function(){
   if(now!='NaN'){
     Scene4();
   }
-  if(localStorage.getItem('myDataKey') === "1598355449119" || localStorage.getItem('myDataKey') === "0"){
+  if(localStorage.getItem('myDataKey') === "1598355449119"){
     localStorage.setItem('myDataKey', "0");
     window.location.href = "/timesup";
   }
