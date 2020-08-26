@@ -19,7 +19,7 @@ import TouchPoint4 from '../touchpoints/scene2/Touchpoint4'
 // import TouchPoint5 from '../touchpoints/scene2/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene2/Touchpoint6'
 
-import Portal from '../touchpoints/scene2/Portal'
+// import Portal from '../touchpoints/scene2/Portal'
 
 import Puzzle from '../games/puzzle/Puzzle'
 
@@ -867,7 +867,7 @@ function Scene2(va) {
                       <TouchPoint4 position={[8, -10, -18]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint5 position={[7, -7, -20]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint6 position={[5, -12, -16]} args={[3, 2, 1]} color='#F8A61F' />
-                      <Portal position={[-10, -12, -20]} args={[3, 2, 1]} color='#fff' />
+                      {/* <Portal position={[-10, -12, -20]} args={[3, 2, 1]} color='#fff' /> */}
                   </Suspense>
           </Canvas>,
       </>

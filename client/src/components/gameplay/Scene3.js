@@ -19,7 +19,7 @@ import TouchPoint5 from '../touchpoints/scene3/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene3/Touchpoint6'
 import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
 
-import Portal from '../touchpoints/scene3/Portal'
+// import Portal from '../touchpoints/scene3/Portal'
 // import Timer from '../timer/Timer'
 import './style.css'
 
@@ -183,7 +183,7 @@ function Scene3() {
                         <TouchPoint5 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint6 position={[6, -9, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint7 position={[0, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <Portal position={[-6, -5, 1]} args={[3, 2, 1]} color='#fff' />
+                        {/* <Portal position={[-6, -5, 1]} args={[3, 2, 1]} color='#fff' /> */}
                         
                     </Suspense>
             </Canvas>,
