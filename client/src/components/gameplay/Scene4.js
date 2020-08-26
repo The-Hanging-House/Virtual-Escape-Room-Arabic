@@ -27,16 +27,13 @@ extend({ OrbitControls })
 var data;
 data = localStorage.getItem('myDataKey');
 var now; 
-// console.log("CT: ", localStorage.getItem('myDataKey'));
 
 setInterval(function(){
   now = localStorage.getItem('scene3');
-  // console.log("scene3: ", localStorage.getItem('scene3'));
-  // console.log("now", now);
-  if(now!='NaN'){
+  if(now!=='NaN'){
     Scene4();
   }
-  if(localStorage.getItem('myDataKey') === "1598355449119" || localStorage.getItem('myDataKey') === "0"){
+  if(localStorage.getItem('myDataKey') === "1598355449119"){
     localStorage.setItem('myDataKey', "0");
     window.location.href = "/timesup";
   }
@@ -47,12 +44,7 @@ function obama(){
     var datetime = data;
     console.log("datetime", datetime)
   
-    // var now = new Date().getTime();
-    // var now = localStorage.getItem('scene3');
-    // setInterval(function(){
     var now = localStorage.getItem('scene3');
-    // }, 500);
-    // console.log("nownow: " , now)
 
     if( isNaN(datetime) )
     {
@@ -75,33 +67,27 @@ function obama(){
   
   function Timer() {
     var minutes = obama() //minutes passed since start
-    // console.log("minutes", minutes)
-    // const [counter, setCounter] = React.useState(600);
     const [counter, setCounter] = React.useState(minutes);
   
     React.useEffect(() => {
         counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
     }, [counter]);
   
-    // console.log(counter);
     var mins = Math.floor(counter/60);
     var secs = counter - mins * 60;
     if (secs < 10){
       secs = "0" + secs;
     }
-    var arigato = mins + "" + ":" + secs + "";
+    var arigato = mins + ":" + secs;
 
     if (counter === 0){
-      console.log("Fail");
       window.location.href = "/timesup"
     }
   
     return (
        
         <div className="bg-text5">
-                  
             <div>{arigato}</div>
-          
         </div>
     )
   }
@@ -112,9 +98,6 @@ const Controls = (props) => {
     useFrame(() => ref.current.update())
     return <orbitControls ref={ref} target={[0, 0, 0]} {...props} args={[camera, gl.domElement]} />
   }
-
-
-
 
 
 const Dome = () => {
@@ -145,7 +128,6 @@ function Scene4() {
         {elementorso}
         {counter}
         {logout}
-        {/* <Timer/> */}
             <Canvas camera={{ position: [0, 0, 0.1] }}>
                 <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
                     <Suspense fallback={
@@ -157,9 +139,7 @@ function Scene4() {
                       </Html>
                     }>
                         <Dome />
-                        {/* <TouchPoint1 position={[-6.5, -4, 5]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         <TouchPoint2 position={[-15, -3.5, -1.5]} args={[3, 2, 1]} color='#F8A61F' />
-                        {/* <TouchPoint3 position={[1, -9, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         <TouchPoint4 position={[-11, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[5, -9, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint6 position={[4, -7, 5]} args={[3, 2, 1]} color='#F8A61F' />

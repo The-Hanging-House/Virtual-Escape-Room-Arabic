@@ -12,9 +12,7 @@ import Briefing2 from './components/dashboard/Briefing2'
 import Profile from './components/dashboard/Profile';
 import PrivateRoute from './components/routing/PrivateRoute';
 import Intro from './components/gameplay/Intro';
-// import Timer from'./components/timer/Timer'
 import Scene1 from './components/gameplay/Scene1';
-// import Telephone from './components/gameplay/Telephone';
 import Scene3 from './components/gameplay/Scene3';
 import Portal1Scene3 from './components/gameplay/Portal1Scene3';
 import Scene4 from './components/gameplay/Scene4';
@@ -27,14 +25,11 @@ import Puzzle from './components/games/puzzle/Puzzle';
 import Portal1Scene2 from './components/gameplay/Portal1Scene2';
 
 
-
 // Redux
 import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
-
-
 
 
 import "./App.css";
@@ -50,13 +45,10 @@ const App = () => {
 
   return (
     <Provider store={store}>
-     
        <BrowserRouter>
           <Route exact path="/" component={Landing} />
-
           <section className="container">
             <Alert />
-           
             <Switch>
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
@@ -67,9 +59,7 @@ const App = () => {
               <PrivateRoute exact path="/briefing2" component={Briefing2} />
               <PrivateRoute exact path="/profile" component={Profile} />
               <PrivateRoute exact path="/intro" component={Intro} />
-               {/* <Timer/> */}
               <PrivateRoute exact path="/scene1" component={Scene1} />
-              {/* <PrivateRoute exact path="/garbage" component={Garbage} /> */}
               <PrivateRoute exact path="/scene3" component={Scene3} />
               <PrivateRoute exact path="/portal1scene3" component={Portal1Scene3} />
               <PrivateRoute exact path="/scene4" component={Scene4} />
@@ -82,10 +72,7 @@ const App = () => {
               <PrivateRoute exact path="/portal1scene2" component={Portal1Scene2} />
             </Switch>
           </section>
-
-          </BrowserRouter>
-      
-     
+        </BrowserRouter>
     </Provider>
   );
 };

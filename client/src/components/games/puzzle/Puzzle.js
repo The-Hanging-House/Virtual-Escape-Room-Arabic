@@ -4,7 +4,6 @@ import './App.css';
 
 var showHint = "Solve the puzzle to get the phone number!";
 var y = 0;
-var puzSet = 0;
 
 class Puzzle extends Component {
   state = {
@@ -32,7 +31,6 @@ class Puzzle extends Component {
 
   handleDrop(e, index, targetName) {
     let target = this.state[targetName];
-    // console.log("targetName",targetName);
     
     if (target[index]) return;
 
@@ -43,11 +41,9 @@ class Puzzle extends Component {
     if (targetName === pieceData.board) target = origin;
     origin[origin.indexOf(pieceData)] = undefined;
     target[index] = pieceData;
-    // console.log("pieceData",pieceData);
     pieceData.board = targetName;
     y++;
     localStorage.setItem("puzSet", y);
-    console.log("y", y);
 
     this.setState({ [pieceData.board]: origin, [targetName]: target })
   }

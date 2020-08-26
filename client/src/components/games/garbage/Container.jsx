@@ -58,7 +58,6 @@ export const Container = () => {
     ddd = canProceed[0]
     var scene1 = new Date().getTime();
     localStorage.setItem('scene1', scene1);
-    console.log("scene1",scene1);
   }
   return (
     <div>

@@ -28,7 +28,6 @@ function TouchPoint3({ position, color, onClick }) {
         console.log(localStorage.getItem('scene3'));
         window.location.href = '/scene4';
       };
-    //   console.log("con", CON);
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
@@ -64,7 +63,7 @@ function TouchPoint3({ position, color, onClick }) {
                                 {/* <a href="scene4"> */}
                                     <h3 onMouseEnter={event => onMouseOver(event)}
                                             onMouseOut={event => onMouseOut(event)} onClick={() => setCON(true)}
-                                            href>
+                                            >
                                             OPEN IT
                                     </h3>
                                 {/* </a> */}

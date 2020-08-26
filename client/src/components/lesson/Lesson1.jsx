@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, Redirect} from "react-router-dom";
+import { Link} from "react-router-dom";
 import './lesson.css'
 import ResponsivePlayer from '../video/ResponsivePlayer1'
 
@@ -15,7 +15,6 @@ const Lesson1 = () => {
             setWatchComplete(true)
             var someData = new Date().getTime();
             localStorage.setItem('myDataKey', someData);
-            console.log("CTSET: ", someData)
         }
     }
     

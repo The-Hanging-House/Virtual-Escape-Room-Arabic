@@ -6,11 +6,6 @@ import { url } from 'gravatar';
 var i = 0;
 var refreshTime = 1598355449119;
 
-function myFunction() {
-    var d = new Date();
-    var n = d.getTime();
-    console.log(n)
-}
 
 function Timesup() {
 

@@ -6,7 +6,6 @@ import { url } from 'gravatar';
 
 var data = localStorage.getItem('myDataKey');
 var now = localStorage.getItem('scene2');
-console.log(now)
 
 if (data < now) {
     var milisec_diff = now - data;
@@ -22,11 +21,11 @@ var secs = final - mins * 60;
 if (secs < 10){
     secs = "0" + secs;
   }
-var pacman = mins + ""+ ":" + secs + " ";
+var pacman = mins + ":" + secs;
 
 setInterval(function(){
     now = localStorage.getItem('scene6');
-    if(now!='NaN'){
+    if(now!=='NaN'){
         End();
     }
 }, 500);
