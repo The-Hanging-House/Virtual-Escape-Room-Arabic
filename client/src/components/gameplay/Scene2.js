@@ -11,13 +11,13 @@ import Logout from '../logout/Logout'
 import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
-
+import Telephone from './Telephone';
 import TouchPoint1 from '../touchpoints/scene2/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene2/Touchpoint2'
 import TouchPoint3 from '../touchpoints/scene2/Touchpoint3'
 import TouchPoint4 from '../touchpoints/scene2/Touchpoint4'
 // import TouchPoint5 from '../touchpoints/scene2/Touchpoint5'
-import TouchPoint6 from '../touchpoints/scene2/Touchpoint6'
+// import TouchPoint6 from '../touchpoints/scene2/Touchpoint6'
 
 import Portal from '../touchpoints/scene2/Portal'
 
@@ -737,6 +737,56 @@ function TouchPoint5({ position, color, onClick }) {
   )
 }
 
+function TouchPoint6({ position, color, onClick }) {
+  const [hovered, set] = useState(false)
+  const [showMessage, setShowMessage] = useState(false);
+
+  const [show, setShow] = useState(false);
+  
+  // function that checks the number of boxes collected
+  setInterval(function(){
+  
+    if(ccom===6){
+      setShow(true);
+    } 
+
+  }, 1000);
+  
+  // useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
+  return (
+      <mesh 
+          scale={show ? [0.5, 0.5, 0.5] : [0, 0, 0]}
+          position={position}
+          onPointerOver={() => set(true)}
+          onPointerOut={() => set(false)}
+          onClick={() => setShowMessage(true)}>
+          <sphereGeometry attach="geometry" args={[1, 32, 32]} />
+          <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
+          <Html center>
+              <Container>
+                  <CSSTransition
+                      in={showMessage}
+                      timeout={300}
+                      classNames="alert4"
+                      unmountOnExit
+                      // onEnter={() => setShowButton(false)}
+                      // onExited={() => setShowButton(true)}
+                  >
+                      <Alert
+                      className="alert4"
+                      variant="primary"
+                      dismissible
+                      onClose={() => setShowMessage(false)}
+                      >
+                      <Telephone />
+                      </Alert>
+                  </CSSTransition>
+              </Container>
+          </Html>
+      </mesh>
+  )
+}
+
 var data;
 data = localStorage.getItem('myDataKey');
 var now;
@@ -807,31 +857,31 @@ function obama(){
     )
   }
 
-function Counter(){
-  const [something, setSomething] = useState(4);
-  setInterval(function(){
-      // console.log("ccom: ", ccom);
-      // console.log("ccomValue: ", ccomValue);
-      // console.log("x: ", x);
-      if(x===12){
-        ccomValue=5;
-        setSomething(5);
-        // console.log("ccomValue: ", ccomValue);
-        x = x + 1;
-      }else if(ccom === 6){
-        setSomething(6);
-      }
-      // console.log("ccom", ccom)
-
+  function Counter(){
+    const [something, setSomething] = useState(4);
+    const [pieceCollected, setPieceCollected] = useState(0);
     
-  }, 500);
-  return (
-    <div className="bg-text3">
-      <h1>{something}<span>/7</span></h1>
-      <h3>CHALLENGES</h3>
-    </div>
-  )
-}
+    setInterval(function(){
+        if(x===12){
+          setSomething(5);
+          x = x + 1;
+        }else if(ccom === 6){
+          setSomething(6);
+        }  
+        console.log("x: ", x)
+        setPieceCollected(Math.floor(x/2));
+    }, 500);
+  
+  
+    return (
+      <div className="bg-text3">
+        <h1>{something}<span>/7</span></h1>
+        <h3>CHALLENGES</h3>
+        <h1>{pieceCollected}<span>/6</span></h1>
+        <h3>Puzzle Pieces Collected</h3>
+      </div>
+    )
+  }
 
 const counter1 = <Counter />
 const logout = <Logout />
