@@ -6,7 +6,6 @@ import { url } from 'gravatar';
 
 var data = localStorage.getItem('myDataKey');
 var now = localStorage.getItem('scene2');
-console.log(now)
 
 if (data < now) {
     var milisec_diff = now - data;

@@ -112,7 +112,6 @@ const Dome = () => {
       mesh.current.rotation.x = mesh.current.rotation.y += 0.01
     })
   
-    // console.log(collectedMessage)
     return (
     
     //   <div style={{visibility: collectedMessage? 'hidden':'visible'}}>
@@ -213,7 +212,6 @@ const Dome = () => {
       mesh.current.rotation.x = mesh.current.rotation.y += 0.01
     })
   
-    // console.log("What: ", collectedMessage)
     if(collectedMessage){
         Scene2(1)
     }
@@ -791,7 +789,6 @@ var now;
 
 setInterval(function(){
     now = localStorage.getItem('scene5');
-    // console.log("now: ", now);
     if(now!=='NaN'){
       Scene2();
     }
@@ -833,7 +830,6 @@ function obama(){
     React.useEffect(() => {
         counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
     }, [counter]);
-    console.log(counter);
     var mins = Math.floor(counter/60);
     var secs = counter - mins * 60;
     if (secs < 10){
@@ -842,7 +838,6 @@ function obama(){
     var arigato = mins + ":" + secs ;
 
     if (counter === 0){
-      console.log("Fail");
       window.location.href = "/timesup"
     }
   
@@ -866,7 +861,6 @@ function obama(){
         }else if(ccom === 6){
           setSomething(6);
         }  
-        console.log("x: ", x)
         setPieceCollected(Math.floor(x/2));
     }, 500);
   
