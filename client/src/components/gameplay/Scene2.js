@@ -868,7 +868,7 @@ function obama(){
     return (
       <div className="bg-text3">
         <h1>{something}<span>/7</span></h1>
-        <h3>CHALLENGES</h3>
+        <h3>CHALLENGESsssssss</h3>
         <h1>{pieceCollected}<span>/6</span></h1>
         <h3>Puzzle Pieces Collected</h3>
       </div>
