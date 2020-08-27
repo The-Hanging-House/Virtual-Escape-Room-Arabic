@@ -20,7 +20,7 @@ import TouchPoint4 from '../touchpoints/scene2/Touchpoint4'
 import TouchPoint6 from '../touchpoints/scene2/Touchpoint6'
 
 // import Portal from '../touchpoints/scene2/Portal'
-
+import Telephone from './Telephone';
 import Puzzle from '../games/puzzle/Puzzle'
 
 
@@ -736,7 +736,55 @@ function TouchPoint5({ position, color, onClick }) {
       </mesh>
   )
 }
+function TouchPoint6({ position, color, onClick }) {
+  const [hovered, set] = useState(false)
+  const [showMessage, setShowMessage] = useState(false);
 
+  const [show, setShow] = useState(false);
+  
+  // function that checks the number of boxes collected
+  setInterval(function(){
+  
+    if(ccom===6){
+      setShow(true);
+    } 
+
+  }, 1000);
+  
+  // useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
+  return (
+      <mesh 
+          scale={show ? [0.5, 0.5, 0.5] : [0, 0, 0]}
+          position={position}
+          onPointerOver={() => set(true)}
+          onPointerOut={() => set(false)}
+          onClick={() => setShowMessage(true)}>
+          <sphereGeometry attach="geometry" args={[1, 32, 32]} />
+          <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
+          <Html center>
+              <Container>
+                  <CSSTransition
+                      in={showMessage}
+                      timeout={300}
+                      classNames="alert4"
+                      unmountOnExit
+                      // onEnter={() => setShowButton(false)}
+                      // onExited={() => setShowButton(true)}
+                  >
+                      <Alert
+                      className="alert4"
+                      variant="primary"
+                      dismissible
+                      onClose={() => setShowMessage(false)}
+                      >
+                      <Telephone />
+                      </Alert>
+                  </CSSTransition>
+              </Container>
+          </Html>
+      </mesh>
+  )
+}
 var data;
 data = localStorage.getItem('myDataKey');
 var now;
