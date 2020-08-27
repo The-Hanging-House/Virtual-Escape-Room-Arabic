@@ -257,11 +257,13 @@ body {
   background-color:  #171720;
 }
 .bg-image {
+  display: block;
   background-image: url("./img/image1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   filter: blur(8px);
   -webkit-filter: blur(8px);
-  z-index: -9999;
-  
   /* Full height */
   height: 100%; 
   
@@ -326,8 +328,8 @@ body {
   background-color: transparent;
   color: white;
   position: absolute;
-  top: 10%;
-  left: 7%;
+  top: 15%;
+  left: 8%;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 30%;

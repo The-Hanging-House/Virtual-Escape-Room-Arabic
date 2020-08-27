@@ -65,7 +65,7 @@ function Timer() {
   var arigato = mins + ":" + secs;
 
   if (counter === 0){
-    console.log("Fail");
+    
     window.location.href = "/timesup"
   }
 

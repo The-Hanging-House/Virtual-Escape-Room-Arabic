@@ -807,31 +807,31 @@ function obama(){
     )
   }
 
-function Counter(){
-  const [something, setSomething] = useState(4);
-  setInterval(function(){
-      // console.log("ccom: ", ccom);
-      // console.log("ccomValue: ", ccomValue);
-      // console.log("x: ", x);
-      if(x===12){
-        // ccomValue=5;
-        setSomething(5);
-        // console.log("ccomValue: ", ccomValue);
-        x = x + 1;
-      }else if(ccom === 6){
-        setSomething(6);
-      }
-      // console.log("ccom", ccom)
-
+  function Counter(){
+    const [something, setSomething] = useState(4);
+    const [pieceCollected, setPieceCollected] = useState(0);
     
-  }, 500);
-  return (
-    <div className="bg-text3">
-      <h1>{something}<span>/7</span></h1>
-      <h3>CHALLENGES</h3>
-    </div>
-  )
-}
+    setInterval(function(){
+        if(x===12){
+          setSomething(5);
+          x = x + 1;
+        }else if(ccom === 6){
+          setSomething(6);
+        }  
+        console.log("x: ", x)
+        setPieceCollected(Math.floor(x/2));
+    }, 500);
+  
+  
+    return (
+      <div className="bg-text3">
+        <h1>{something}<span>/7</span></h1>
+        <h3>CHALLENGES</h3>
+        <h1>{pieceCollected}<span>/6</span></h1>
+        <h3>Puzzle Pieces Collected</h3>
+      </div>
+    )
+  }
 
 const counter1 = <Counter />
 const logout = <Logout />
