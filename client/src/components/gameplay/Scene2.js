@@ -19,8 +19,8 @@ import TouchPoint4 from '../touchpoints/scene2/Touchpoint4'
 // import TouchPoint5 from '../touchpoints/scene2/Touchpoint5'
 // import TouchPoint6 from '../touchpoints/scene2/Touchpoint6'
 
-import Portal from '../touchpoints/scene2/Portal'
-
+// import Portal from '../touchpoints/scene2/Portal'
+import Telephone from './Telephone';
 import Puzzle from '../games/puzzle/Puzzle'
 
 
@@ -112,7 +112,6 @@ const Dome = () => {
       mesh.current.rotation.x = mesh.current.rotation.y += 0.01
     })
   
-    // console.log(collectedMessage)
     return (
     
     //   <div style={{visibility: collectedMessage? 'hidden':'visible'}}>
@@ -213,7 +212,6 @@ const Dome = () => {
       mesh.current.rotation.x = mesh.current.rotation.y += 0.01
     })
   
-    // console.log("What: ", collectedMessage)
     if(collectedMessage){
         Scene2(1)
     }
@@ -736,6 +734,9 @@ function TouchPoint5({ position, color, onClick }) {
       </mesh>
   )
 }
+function TouchPoint6({ position, color, onClick }) {
+  const [hovered, set] = useState(false)
+  const [showMessage, setShowMessage] = useState(false);
 
 function TouchPoint6({ position, color, onClick }) {
   const [hovered, set] = useState(false)
@@ -786,7 +787,6 @@ function TouchPoint6({ position, color, onClick }) {
       </mesh>
   )
 }
-
 var data;
 data = localStorage.getItem('myDataKey');
 var now;
@@ -835,7 +835,6 @@ function obama(){
     React.useEffect(() => {
         counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
     }, [counter]);
-    console.log(counter);
     var mins = Math.floor(counter/60);
     var secs = counter - mins * 60;
     if (secs < 10){
@@ -844,7 +843,6 @@ function obama(){
     var arigato = mins + ":" + secs ;
 
     if (counter === 0){
-      console.log("Fail");
       window.location.href = "/timesup"
     }
   
@@ -886,6 +884,7 @@ function obama(){
 const counter1 = <Counter />
 const logout = <Logout />
 const elementorso = <Timer/>
+
 function Scene2(va) {
   return (
       <>
