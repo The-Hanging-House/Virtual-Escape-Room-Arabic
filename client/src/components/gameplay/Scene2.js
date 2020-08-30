@@ -11,7 +11,6 @@ import Logout from '../logout/Logout'
 import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
-import Telephone from './Telephone';
 import TouchPoint1 from '../touchpoints/scene2/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene2/Touchpoint2'
 import TouchPoint3 from '../touchpoints/scene2/Touchpoint3'
