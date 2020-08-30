@@ -923,5 +923,6 @@ function Scene2(va) {
   );
 
 }
+}
 
 export default Scene2;

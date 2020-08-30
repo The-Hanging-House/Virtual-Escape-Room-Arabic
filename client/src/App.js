@@ -23,8 +23,8 @@ import Scene5 from './components/gameplay/Scene5';
 import Scene2 from './components/gameplay/Scene2';
 import End from './components/gameplay/End';
 import Timesup from './components/gameplay/Timesup';
-import Puzzle from './components/games/puzzle/Puzzle';
-import Portal1Scene2 from './components/gameplay/Portal1Scene2';
+// import Puzzle from './components/games/puzzle/Puzzle';
+// import Portal1Scene2 from './components/gameplay/Portal1Scene2';
 
 
 
@@ -78,8 +78,8 @@ const App = () => {
               <PrivateRoute exact path="/scene2" component={Scene2} />
               <PrivateRoute exact path="/end" component={End} />
               <PrivateRoute exact path="/timesup" component={Timesup} />
-              <PrivateRoute exact path="/puzzle" component={Puzzle} />
-              <PrivateRoute exact path="/portal1scene2" component={Portal1Scene2} />
+              {/* <PrivateRoute exact path="/puzzle" component={Puzzle} />
+              <PrivateRoute exact path="/portal1scene2" component={Portal1Scene2} /> */}
             </Switch>
           </section>
 
