@@ -56,6 +56,7 @@
     height: 64px;
     position: absolute;
     cursor: grab;
+    border-radius: 0px;
     transition: transform 200ms ease, box-shadow 200ms ease;
   }
   

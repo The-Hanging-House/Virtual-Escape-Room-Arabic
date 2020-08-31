@@ -33,7 +33,7 @@ const Lesson = () => {
                                 </Link>
                                 <Link to="dashboard2" className="btn btn-primary1">
                                     <img src={RejectLogo} className="reject" alt="reject logo" /><br />
-                                    DON'T
+                                    NOPE
                                 </Link>
                             </div>
                         </div>

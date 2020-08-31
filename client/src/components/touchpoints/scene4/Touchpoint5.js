@@ -68,7 +68,7 @@ function TouchPoint5({ position, color, onClick }) {
                                     DANCE AND SING
                                     </h3>
                                     {/* <a href='scene6'> */}
-                                        <h3 onMouseEnter={event => onMouseOver(event)}
+                                        <h3 onMouseEnter={event => onMouseOver(event)} style={{ fontSize: '1rem'}}
                                             onMouseOut={event => onMouseOut(event)} onClick={() => setCON(true)}
                                             href>
                                             SWITCH OFF THE MUSIC

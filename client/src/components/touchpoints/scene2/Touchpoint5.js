@@ -25,6 +25,7 @@ function TouchPoint5({ position, color, onClick }) {
         let black = "transparent";
         el.style.background = black;
       };
+
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
@@ -32,7 +33,7 @@ function TouchPoint5({ position, color, onClick }) {
             scale={hovered ? [0.6, 0.6, 0.6] : [0.4, 0.4, 0.4]}
             position={position}
             onPointerOver={() => set(true)}
-            onPointerOut={() => set(false)}
+            onPointerOut={() => setShowMessage(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
             <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
@@ -47,12 +48,12 @@ function TouchPoint5({ position, color, onClick }) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert" 
+                        className="alert1" 
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside2">
+                        <div className="alert-inside3">
                             <Alert.Heading>
                                 <Puzzle />
                                 {/* <p>

@@ -11,7 +11,7 @@ const Lesson1 = () => {
     const [watchComplete, setWatchComplete] = useState(false)
 
     const handleWatchComplete = ({ played }) => {
-        if(played >= 1 && !watchComplete) {
+        if(played >= 0.9 && !watchComplete) {
             setWatchComplete(true)
             var someData = new Date().getTime();
             localStorage.setItem('myDataKey', someData);
@@ -28,8 +28,8 @@ const Lesson1 = () => {
                         onProgress={handleWatchComplete} />
                         <div className={watchComplete ? "marker marker--is-complete" : "marker marker--not-complete"}>
                             <div className="buttons1">
-                                <Link to="scene1" className="btn btn-primary" style={{ right: '-10px' }}>
-                                    PROCEED
+                                <Link to="scene1" className="btn btn-primary" style={{ right: '-20vh' }}>
+                                   GO INSIDE
                                 </Link>
                                 
                             </div>

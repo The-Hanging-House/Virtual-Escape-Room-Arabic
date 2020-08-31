@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React, { Suspense, useRef, useState, useEffect} from 'react'
+import React, { Suspense, useRef, useState} from 'react'
 import { Canvas, extend, useFrame, useThree, useLoader } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
@@ -11,15 +11,19 @@ import Logout from '../logout/Logout'
 import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
+
 import TouchPoint1 from '../touchpoints/scene2/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene2/Touchpoint2'
 import TouchPoint3 from '../touchpoints/scene2/Touchpoint3'
 import TouchPoint4 from '../touchpoints/scene2/Touchpoint4'
 // import TouchPoint5 from '../touchpoints/scene2/Touchpoint5'
 // import TouchPoint6 from '../touchpoints/scene2/Touchpoint6'
+// import Telephone from '../../gameplay/Telephone';
+import Telephone from './Telephone';
+
 
 // import Portal from '../touchpoints/scene2/Portal'
-import Telephone from './Telephone';
+
 import Puzzle from '../games/puzzle/Puzzle'
 
 
@@ -55,11 +59,8 @@ extend({ OrbitControls })
 
 // Counts the number of boxes
 var x = 0;
-
 var ccom = 4;
-// var ccomValue = 4;
 
-// var wawds = 0;
 
 // value of X increments each time a box is collected
 function counter(){
@@ -86,8 +87,6 @@ const Dome = () => {
 
   function Box1(props) {
     const mesh = useRef()
-    const [hovered, set] = useState(false)
-    // const [active, setActive] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
     const [collectedMessage, setCollectedMessage] = useState(false)
     if(collectedMessage){
@@ -113,15 +112,10 @@ const Dome = () => {
   
     return (
     
-    //   <div style={{visibility: collectedMessage? 'hidden':'visible'}}>
       <mesh
         {...props}
         ref={mesh}
-        // scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
         scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
-        // onClick={e => setActive(!active)}
-        onPointerOver={e => set(true)}
-        onPointerOut={e => set(false)}
         onClick={() => setShowMessage(true)}>
         <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
@@ -132,8 +126,6 @@ const Dome = () => {
                         timeout={300}
                         classNames="alert"
                         unmountOnExit
-                        // onEnter={() => setShowButton(false)}
-                        // onExited={() => setShowButton(true)}
                     >
                         <Alert
                         className="alert1" 
@@ -147,46 +139,28 @@ const Dome = () => {
                                   <img src={egg} alt='egg' width='100%' height='100%' />
                                 </div>
                             </Alert.Heading>
-                            {/* <p onClick={() => {
-                                toggle(); 
-                                setShowMessage(false)}} style={{ fontSize: '1rem'}} >
-                                Pick them up and dispose of them properly.
-                            </p> */}
-                            {/* <button onClick={() => {setCollectedMessage(true); setShowMessage(false)}}> */}
                                 <h3 onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            {/* </button> */}
-                            {/* </a> */}
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
                             </h3>
-                            {/* <Button onClick={() => setShowMessage(false)}>
-                                Close
-                            </Button> */}
                         </div>
-                        {/* <div style={{visibility: collectedMessage? 'visible':'hidden'}}>
-                            <p>Collected</p>
-                        </div> */}
                         </Alert>
                     </CSSTransition>
-                    {/* <h1>{showPopup && <Task1 />}</h1> */}
                 </Container>
             </Html>
       </mesh>
-    //   </div>
     )
   }
 
   
   function Box2(props) {
     const mesh = useRef()
-    // const [hovered, set] = useState(false)
-    // const [active, setActive] = useState(false)
     const [collectedMessage, setCollectedMessage] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
     if(collectedMessage){
@@ -211,24 +185,18 @@ const Dome = () => {
       mesh.current.rotation.x = mesh.current.rotation.y += 0.01
     })
   
-    if(collectedMessage){
-        Scene2(1)
-    }
+    // if(collectedMessage){
+    //     Scene2(1)
+    // }
 
-    // if(!collectedMessage){
 
-        return (        
+    return (        
             
 
         <mesh
         {...props}
         ref={mesh}
-        // scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
-        // scale={collectedMessage? [0, 0, 0] : [0.5, 0.5, 0.5]}
         scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
-        // onClick={e => setActive(!active)}
-        // onPointerOver={e => set(true)}
-        // onPointerOut={e => set(false)}
         onClick={() => setShowMessage(true)}>
         <boxBufferGeometry attach="geometry" args={[1, 1, 1]} style={{visibility: collectedMessage? 'hidden':'visible'}}/>
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
@@ -239,8 +207,6 @@ const Dome = () => {
                         timeout={300}
                         classNames="alert"
                         unmountOnExit
-                        // onEnter={() => setShowButton(false)}
-                        // onExited={() => setShowButton(true)}
                     >
                         <Alert
                         className="alert1" 
@@ -254,47 +220,28 @@ const Dome = () => {
                                 <img src={egg} alt='egg' width='100%' height='100%' />
                                 </div>
                             </Alert.Heading>
-                            {/* <p onClick={() => {
-                                toggle(); 
-                                setShowMessage(false)}} style={{ fontSize: '1rem'}} >
-                                Pick them up and dispose of them properly.
-                            </p> */}
-                            
-                            {/* <a href='garbage'> */}
-                            {/* <button onClick={() => {setCollectedMessage(true); setShowMessage(false)}}> */}
                                 <h3 onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            {/* </button> */}
-                            {/* </a> */}
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
                             </h3>
-                            {/* <Button onClick={() => setShowMessage(false)}>
-                                Close
-                            </Button> */}
                         </div>
-                        {/* <div style={{visibility: collectedMessage? 'visible':'hidden'}}>
-                        <p>Collected</p>
-                        </div> */}
                         </Alert>
                     </CSSTransition>
-                    {/* <h1>{showPopup && <Task1 />}</h1> */}
                 </Container>
             </Html>
     </mesh>
-        )
+    )
   }
   
 
   function Box3(props) {
     const mesh = useRef()
-    // const [hovered, set] = useState(false)
-    // const [active, setActive] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
     const [collectedMessage, setCollectedMessage] = useState(false)
     if(collectedMessage){
@@ -323,11 +270,7 @@ const Dome = () => {
       <mesh
         {...props}
         ref={mesh}
-        // scale={hovered ? [0.8, 0.8, 0.8] : [0.5, 0.5, 0.5]}
         scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
-        // onClick={e => setActive(!active)}
-        // onPointerOver={e => set(true)}
-        // onPointerOut={e => set(false)}
         onClick={() => setShowMessage(true)}>
         <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
@@ -338,8 +281,6 @@ const Dome = () => {
                         timeout={300}
                         classNames="alert"
                         unmountOnExit
-                        // onEnter={() => setShowButton(false)}
-                        // onExited={() => setShowButton(true)}
                     >
                         <Alert
                         className="alert1" 
@@ -353,31 +294,19 @@ const Dome = () => {
                                   <img src={egg3} alt='egg' width='100%' height='100%' />
                                 </div>
                             </Alert.Heading>
-                            {/* <p onClick={() => {
-                                toggle(); 
-                                setShowMessage(false)}} style={{ fontSize: '1rem'}} >
-                                Pick them up and dispose of them properly.
-                            </p> */}
-                            {/* <button onClick={() => {setCollectedMessage(true); setShowMessage(false)}}> */}
                                 <h3 onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            {/* </button> */}
-                            {/* </a> */}
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
                             </h3>
-                            {/* <Button onClick={() => setShowMessage(false)}>
-                                Close
-                            </Button> */}
                         </div>
                         </Alert>
                     </CSSTransition>
-                    {/* <h1>{showPopup && <Task1 />}</h1> */}
                 </Container>
             </Html>
       </mesh>
@@ -386,8 +315,6 @@ const Dome = () => {
 
   function Box4(props) {
     const mesh = useRef()
-    // const [hovered, set] = useState(false)
-    // const [active, setActive] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
     const [collectedMessage, setCollectedMessage] = useState(false)
     if(collectedMessage){
@@ -416,11 +343,7 @@ const Dome = () => {
       <mesh
         {...props}
         ref={mesh}
-        // scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
         scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
-        // onClick={e => setActive(!active)}
-        // onPointerOver={e => set(true)}
-        // onPointerOut={e => set(false)}
         onClick={() => setShowMessage(true)}>
         <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
@@ -431,8 +354,6 @@ const Dome = () => {
                         timeout={300}
                         classNames="alert"
                         unmountOnExit
-                        // onEnter={() => setShowButton(false)}
-                        // onExited={() => setShowButton(true)}
                     >
                         <Alert
                         className="alert1" 
@@ -446,31 +367,19 @@ const Dome = () => {
                                   <img src={egg4} alt='egg' width='100%' height='100%' />
                                 </div>
                             </Alert.Heading>
-                            {/* <p onClick={() => {
-                                toggle(); 
-                                setShowMessage(false)}} style={{ fontSize: '1rem'}} >
-                                Pick them up and dispose of them properly.
-                            </p> */}
-                            {/* <button onClick={() => {setCollectedMessage(true); setShowMessage(false)}}> */}
                                 <h3 onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            {/* </button> */}
-                            {/* </a> */}
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
                             </h3>
-                            {/* <Button onClick={() => setShowMessage(false)}>
-                                Close
-                            </Button> */}
                         </div>
                         </Alert>
                     </CSSTransition>
-                    {/* <h1>{showPopup && <Task1 />}</h1> */}
                 </Container>
             </Html>
       </mesh>
@@ -479,8 +388,6 @@ const Dome = () => {
 
   function Box5(props) {
     const mesh = useRef()
-    // const [hovered, set] = useState(false)
-    // const [active, setActive] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
     const [collectedMessage, setCollectedMessage] = useState(false)
     if(collectedMessage){
@@ -509,11 +416,7 @@ const Dome = () => {
       <mesh
         {...props}
         ref={mesh}
-        // scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
         scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
-        // onClick={e => setActive(!active)}
-        // onPointerOver={e => set(true)}
-        // onPointerOut={e => set(false)}
         onClick={() => setShowMessage(true)}>
         <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
@@ -524,8 +427,6 @@ const Dome = () => {
                         timeout={300}
                         classNames="alert"
                         unmountOnExit
-                        // onEnter={() => setShowButton(false)}
-                        // onExited={() => setShowButton(true)}
                     >
                         <Alert
                         className="alert1" 
@@ -539,31 +440,19 @@ const Dome = () => {
                                   <img src={egg5} alt='egg' width='100%' height='100%' />
                                 </div>
                             </Alert.Heading>
-                            {/* <p onClick={() => {
-                                toggle(); 
-                                setShowMessage(false)}} style={{ fontSize: '1rem'}} >
-                                Pick them up and dispose of them properly.
-                            </p> */}
-                            {/* <button onClick={() => {setCollectedMessage(true); setShowMessage(false)}}> */}
                                 <h3 onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            {/* </button> */}
-                            {/* </a> */}
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
                             </h3>
-                            {/* <Button onClick={() => setShowMessage(false)}>
-                                Close
-                            </Button> */}
                         </div>
                         </Alert>
                     </CSSTransition>
-                    {/* <h1>{showPopup && <Task1 />}</h1> */}
                 </Container>
             </Html>
       </mesh>
@@ -572,8 +461,6 @@ const Dome = () => {
 
   function Box6(props) {
     const mesh = useRef()
-    // const [hovered, set] = useState(false)
-    // const [active, setActive] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
     const [collectedMessage, setCollectedMessage] = useState(false)
     if(collectedMessage){
@@ -602,11 +489,7 @@ const Dome = () => {
       <mesh
         {...props}
         ref={mesh}
-        // scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
         scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
-        // onClick={e => setActive(!active)}
-        // onPointerOver={e => set(true)}
-        // onPointerOut={e => set(false)}
         onClick={() => setShowMessage(true)}>
         <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
@@ -617,8 +500,6 @@ const Dome = () => {
                         timeout={300}
                         classNames="alert"
                         unmountOnExit
-                        // onEnter={() => setShowButton(false)}
-                        // onExited={() => setShowButton(true)}
                     >
                         <Alert
                         className="alert1" 
@@ -632,31 +513,19 @@ const Dome = () => {
                                   <img src={egg6} alt='egg' width='100%' height='100%' />
                                 </div>
                             </Alert.Heading>
-                            {/* <p onClick={() => {
-                                toggle(); 
-                                setShowMessage(false)}} style={{ fontSize: '1rem'}} >
-                                Pick them up and dispose of them properly.
-                            </p> */}
-                            {/* <button onClick={() => {setCollectedMessage(true); setShowMessage(false)}}> */}
                                 <h3 onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            {/* </button> */}
-                            {/* </a> */}
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
                             </h3>
-                            {/* <Button onClick={() => setShowMessage(false)}>
-                                Close
-                            </Button> */}
                         </div>
                         </Alert>
                     </CSSTransition>
-                    {/* <h1>{showPopup && <Task1 />}</h1> */}
                 </Container>
             </Html>
       </mesh>
@@ -664,10 +533,7 @@ const Dome = () => {
   }
 
 
-// var obj
-
 function TouchPoint5({ position, color, onClick }) {
-  // const [hovered, set] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [collectedMessage, setCollectedMessage] = useState(false);
   const [coll, setColl] = useState(false);
@@ -689,17 +555,13 @@ function TouchPoint5({ position, color, onClick }) {
   }, 1000);
 
   
-  // useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
   return (
       <mesh 
-          // scale={hovered ? [0.6, 0.6, 0.6] : [0.4, 0.4, 0.4]}
           scale={collectedMessage ? [0.4, 0.4, 0.4] : [0, 0, 0]}
           position={position}
-          // onPointerOver={() => set(true)}
-          // onPointerOut={() => set(false)}
           onClick={() => setShowMessage(true)}>
           <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-          <meshBasicMaterial attach="material" color='orange' /> 
+          <meshBasicMaterial attach="material" color="orange" /> 
           <Html center>
               <Container>
                   <CSSTransition
@@ -707,7 +569,6 @@ function TouchPoint5({ position, color, onClick }) {
                       timeout={300}
                       classNames="alert2"
                       unmountOnExit
-            
                   >
                       <Alert
                       className="alert2" 
@@ -733,9 +594,6 @@ function TouchPoint5({ position, color, onClick }) {
       </mesh>
   )
 }
-function TouchPoint6({ position, color, onClick }) {
-  const [hovered, set] = useState(false)
-  const [showMessage, setShowMessage] = useState(false);
 
 function TouchPoint6({ position, color, onClick }) {
   const [hovered, set] = useState(false)
@@ -786,17 +644,18 @@ function TouchPoint6({ position, color, onClick }) {
       </mesh>
   )
 }
+
+
 var data;
 data = localStorage.getItem('myDataKey');
 var now;
 
 setInterval(function(){
     now = localStorage.getItem('scene5');
-    // console.log("now: ", now);
     if(now!=='NaN'){
       Scene2();
     }
-    if(localStorage.getItem('myDataKey') === "1598355449119"){
+    if(localStorage.getItem('myDataKey') === "1598355449119" ){
       localStorage.setItem('myDataKey', "0");
       window.location.href = "/timesup";
     }
@@ -854,43 +713,41 @@ function obama(){
     )
   }
 
-  function Counter(){
-    const [something, setSomething] = useState(4);
-    const [pieceCollected, setPieceCollected] = useState(0);
-    
-    setInterval(function(){
-        if(x===12){
-          setSomething(5);
-          x = x + 1;
-        }else if(ccom === 6){
-          setSomething(6);
-        }  
-        console.log("x: ", x)
-        setPieceCollected(Math.floor(x/2));
-    }, 500);
+function Counter(){
+  const [something, setSomething] = useState(4);
+  const [pieceCollected, setPieceCollected] = useState(0);
   
-  
-    return (
-      <div className="bg-text3">
-        <h1>{something}<span>/7</span></h1>
-        <h3>CHALLENGES</h3>
-        <h1>{pieceCollected}<span>/6</span></h1>
-        <h3>Puzzle Pieces Collected</h3>
-      </div>
-    )
-  }
+  setInterval(function(){
+      if(x===12){
+        setSomething(5);
+        x = x + 1;
+      }else if(ccom === 6){
+        setSomething(6);
+      }  
+      console.log("x: ", x)
+      setPieceCollected(Math.floor(x/2));
+  }, 500);
+
+
+  return (
+    <div className="bg-text6">
+      <h1>{something}<span>/7</span></h1>
+      <h3>CHALLENGES</h3>
+      <h1>{pieceCollected}<span>/6</span></h1>
+      <h3 style={{fontSize: '1.3rem'}}>Puzzle Pieces Collected</h3>
+    </div>
+  )
+}
 
 const counter1 = <Counter />
 const logout = <Logout />
 const elementorso = <Timer/>
-
-function Scene2(va) {
+function Scene2() {
   return (
       <>
         {elementorso}
         {counter1}
         {logout}
-        {/* <Timer/> */}
           <Canvas camera={{ position: [0, 0, 0.1] }}>
               <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
                   <Suspense fallback={
@@ -921,7 +778,6 @@ function Scene2(va) {
       </>
   );
 
-}
 }
 
 export default Scene2;

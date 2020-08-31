@@ -36,7 +36,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     <Fragment>
       <div className="bg-image"></div>
       <div className="bg-text">
-      <h1 className="large text-primary">SIGN UP</h1>
+      <h1 className="large text-primary">SIGN UP<hr /></h1>
       <form className="form" onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
           <input
@@ -74,11 +74,13 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             onChange={(e) => onChange(e)}
           />
         </div>
-        <input type="submit" value="CONTINUE" className="btn btn-primary" />
+        <div style={{ marginTop: '2rem' }}>
+          <input type="submit" value="CONTINUE" style={{ margin: '1rem', padding: '1rem', fontWeight: '700', letterSpacing: '6px' }} className="btn btn-primary" />
+        </div>
       </form>
 
       <p className="my-1">
-        ALREADY HAVE AN ACCOUNT? <Link to="/login" className='link'>LOG IN</Link>
+        Already Registered? <Link to="/login" className='link'>Log In</Link>
       </p>
       </div>
     </Fragment>

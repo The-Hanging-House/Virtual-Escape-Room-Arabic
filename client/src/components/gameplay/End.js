@@ -59,7 +59,7 @@ function End() {
                     <p>CONNECTED WITH NATURE.</p>
                 </div>
                 <div className="game-timer">
-                    <div className="game-timer-inside">
+                    <div className="gametime">
                         <h1 style={{ fontSize: '2rem', letterSpacing: '4px' }}>
                             YOU SURVIVED WITH
                         </h1>
@@ -71,7 +71,7 @@ function End() {
                             TO SPARE
                         </h1>
                     </div>
-                    <div className="game-timer-option">
+                    <div className="option1">
                         <a href="briefing">
                             <h3 style={{ color: 'black', fontSize: '2rem' }}
                                     onMouseEnter={event => onMouseOver(event)}

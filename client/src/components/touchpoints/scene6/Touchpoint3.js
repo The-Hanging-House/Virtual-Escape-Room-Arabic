@@ -59,7 +59,7 @@ function TouchPoint3({ position, color, onClick }) {
                         <div className="alert-inside">
                             <Alert.Heading>
                                 <p>
-                                Glare from artificial lights make it hard for wildlife to see, lets help the wildlife by 
+                                Glare from artificial lights makes it hard for wildlife to see, let's help the wildlife by 
                                 </p>
                                 <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                     onMouseEnter={event => onMouseOver(event)}
@@ -67,10 +67,10 @@ function TouchPoint3({ position, color, onClick }) {
                                     LEAVING THE LIGHTS ON
                                 </h3>
                             {/* <a href='scene5'> */}
-                                <h3 onMouseEnter={event => onMouseOver(event)}
+                                <h3 onMouseEnter={event => onMouseOver(event)} style={{ fontSize: '1rem'}}
                                     onMouseOut={event => onMouseOut(event)}  onClick={() => setCON(true)}
                                     href>
-                                    SWITCHING OF THE LIGHTS
+                                    SWITCHING THE LIGHTS OFF
                                 </h3>
                             
                             {/* </a> */}

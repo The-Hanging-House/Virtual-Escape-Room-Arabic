@@ -5,10 +5,10 @@ import ToggleDialer from "./components/ToggleDialer";
 import Dialer from "./components/Dialer";
 import "./styles.css";
 
-const initialState = { dialerOpened: false };
+const initialState = { dialerOpened: true };
 const TeravozDialer = () => (
   <StoreProvider initialState={initialState} reducer={reducer}>
-    <ToggleDialer />
+    {/* <ToggleDialer /> */}
     <Dialer />
   </StoreProvider>
 );

@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Dubai W23';
+  src: url('./fonts/DubaiW23-Regular.woff') format('woff2'),
+       url('./fonts/DubaiW23-Regular.woff') format('woff'),
+       url('./fonts/PermanentMarker-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 .m-1 {
   margin: 1rem;
   font-size: 1rem;
@@ -77,10 +86,18 @@
   word-wrap: break-word;
 }
 .large {
-  font-size: 2.2rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: bold;
   letter-spacing: 2px;
   line-height: 2;
+}
+hr {
+  max-width: 35%;
+  margin: auto;
+  height: 12px;
+  background: #ffb300;
+  border: none;
+
 }
 .lead1 {
   font-family: "Permanent Marker", sans-serif;
@@ -88,8 +105,8 @@
   font-weight: bold;
   font-size: 1.5rem;
   position: absolute;
-  top: 25%;
-  left: 30%;
+  left: 30vh;
+  top: 14vh;
   transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
@@ -175,7 +192,35 @@
   text-align: center;
   position: absolute;
   bottom: 5%;
-  left: 46%;
+  left: 91vh;
+}
+.button-1 {
+  background-color: transparent;
+  color: black;
+  border-radius: 20px;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+}
+.button-2 {
+  background-color: transparent;
+  color: black;
+  border-radius: 20px;
+  position: absolute;
+  top: 57%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  -ms-transform: rotate(-1deg); /* IE 9 */
+  transform: rotate(-1deg); /* Standard syntax */
 }
 .btn.btn-primary1 {
   background-color: rgb(255,0,0,0);
@@ -251,10 +296,10 @@
   padding: 0;
 }
 body {
-  font-family: "Dubai", sans-serif;
+  font-family: "Dubai W23", sanns-serif;
   font-size: 0.8rem;
   line-height: 1.6;
-  background-color:  #171720;
+  background-color:  #1e1e1f;
 }
 .bg-image {
   display: block;
@@ -301,12 +346,16 @@ body {
   text-align: center;
 }
 .bg-text1 {
-  /* background: url("./img/component.png") no-repeat center/cover; */
+  background: url("./../src//img/component1.png") no-repeat center/cover;
   position: absolute;
   transform: translate(50%, -100%);
   z-index: 2;
   height: 100vh;
   width: 100vh;
+}
+.bg-text1 image {
+  position: absolute;
+  left: 10%;
 }
 .bg-text2 {
   background-color: white;
@@ -324,12 +373,12 @@ body {
   text-align: center;
 }
 .bg-text3 {
-  font-family: "Dubai", sans-serif;
+  font-family: "Dubai W23", sans-serif;
   background-color: transparent;
   color: white;
   position: absolute;
-  top: 15%;
-  left: 8%;
+  top: 8vh;
+  left: 12vh;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 30%;
@@ -353,8 +402,8 @@ h1 span {
 }
 .bg-text4 {
   position: absolute;
-  top: 12%;
-  right: -24%;
+  top: 8vh;
+  right: -50vh;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 30%;
@@ -366,7 +415,7 @@ h1 span {
   width: 90px;
 }
 .bg-text4 h3 {
-  font-family: "Dubai", sans-serif;
+  font-family: "Dubai W23", sans-serif;
   background-color: transparent;
   color: white;
   font-size: 1.5rem;
@@ -376,26 +425,58 @@ h1 span {
   letter-spacing: 1px;
 }
 .bg-text5 {
-  font-family: "Dubai", sans-serif;
+  font-family: "Dubai W23", sans-serif;
   color: white;
+  background-color: rgb(220,220,220, 0.3);
   border-radius: 20px;
   font-weight: bold;
   font-size: 3rem;
-  border: 3px solid #f1f1f1;
+  border: 1px solid #f1f1f1;
   position: absolute;
-  top: 7%;
+  top: 8vh;
   left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 30%;
+  padding: 5px;
+  text-align: center;
+}
+.bg-text6 {
+  font-family: "Dubai W23", sans-serif;
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  top: 16vh;
+  left: 17vh;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 30%;
   padding: 20px;
   text-align: center;
 }
+.bg-text6 h1 {
+  font-size: 2rem;
+}
+.bg-text6 h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0%;
+  position: relative;
+  top: -10px;
+  letter-spacing: 1px;
+}
 .bg-text
 .login {
   position: relative;
   height: 100vh;
   z-index: 9999
+}
+.btn-dashboard {
+  /* background: url("./img/component.png") no-repeat center/cover; */
+  position: absolute;
+  z-index: 2;
+  top: 60%;
+  right: 60%;
 }
 .landing-inner {
   color: #fff;
@@ -452,7 +533,19 @@ h1 span {
   top: -270px;
   left: -20px;
 }
-
+.alert-danger {
+  font-family: "Dubai W23", sans-serif;
+  color: red;
+  font-size: 1rem;
+  position: absolute;
+  top: 22vh;
+  left: 36%;
+  z-index: 9999;
+  width: 100%;
+}
+.alert1 span {
+  display: none;
+}
 .alert2 {
   /* background-image: url(../src/img/popup.svg); */
   display: inline-block;
@@ -493,16 +586,45 @@ h1 span {
     top: -100px;
     left: -20px;
 }
+.alert5 {
+  /* background-image: url(../src/img/popup.svg); */
+  display: inline-block;
+  color: white;
+  padding: 5px;
+  width: 30vw;
+  height: 35vh;
+  position: absolute;
+}
 .alert-inside2 {
   background-color: rgba(230, 206, 166, 0.9);
   position: absolute;
   left: -200px;
-  top: 30px;
+  top: -20px;
   border-radius: 20px;
   border-style: solid;
   border-width: thick;
   border-color: #F8A61F;
-  
+}
+.alert-inside3 {
+  position: absolute;
+  left: -200px;
+  top: -20px;
+  border-radius: 20px;
+}
+.alert-inside5 {
+  background-color: rgba(230, 206, 166, 0.9);
+  padding: 1rem;
+  position: absolute;
+  font-size: 1rem;
+  left: -38vw;
+  top: 70vh;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #F8A61F;
+}
+.alert-inside5 button {
+  margin: 1rem
 }
 .alert-inside {
   background-image: url(../src/img/popup.svg);
@@ -511,12 +633,12 @@ h1 span {
   background-size: 100%;
   border-radius: 30px;
   color: white;
-  padding: 5px;
-  width: 25vw;
+  padding: 1rem;
+  width: 30vw;
   height: 35vh;
   position: absolute;
-  top: -20px;
-  left: -20px
+  top: -10vh;
+  left: -30px
 }
 .alert-inside3 {
   position: absolute;
@@ -542,8 +664,18 @@ h1 span {
 .alert-inside2 h3 {
   margin-bottom: 0.5rem
 }
+.alert-inside2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
 .alert-heading {
   margin: 1rem;
+}
+.close {
+  position: absolute;
+  right: -8vh;
+  top: -6vh;
 }
 a {
   text-decoration: none;
@@ -555,6 +687,7 @@ h3 {
 }
 .link {
   color: #111;
+  letter-spacing: 2px;
 }
 .app {
   position: absolute;
@@ -569,14 +702,14 @@ h3 {
   font-size: 1rem;
 }
 .bg-end {
-  font-family: "Dubai", sans-serif;
+  font-family: "Dubai W23", sans-serif;
   background-color: white;
   position: absolute;
   top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 45vh;
+  transform: translate(15vh, -35vh);
   z-index: 2;
-  width: 32%;
+  width: 70vh;
   height: 75vh;
   padding: 20px;
   text-align: center;
@@ -591,34 +724,85 @@ h3 {
   background-repeat: no-repeat;
   height: 100vh;
   background-size: 100%;
-  
 }
-.game-timer-inside {
+.gametime {
   position: absolute;
-  left: 12%;
-  bottom: 30%;
+  top: 55%;
+  left: 40%;
+  transform: translate(-30%, -50%);
   line-height: 7vh;
 }
-.game-timer-option {
-  position: absolute;
-  left: 30%;
-  bottom: 2%;
-  line-height: 5vh;
-  color: #171720
+.option {
+  position: relative;
+  top: 15vh;
+}
+.option1 {
+  position: relative;
+  top: 35vh;
+  line-height: 4vh;
 }
 .bg-end1 {
-  font-family: "Dubai", sans-serif;
+  font-family: "Dubai W23", sans-serif;
   background-color: white;
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 32%;
-  height: 50vh;
+  width: 70vh;
+  height: 70vh;
   padding: 20px;
   text-align: center;
 }
+
+@media screen and (max-width: 1200px) {
+  .game-timer-inside {
+    position: absolute;
+    left: 5vw;
+    bottom: 30%;
+    line-height: 7vh;
+  }
+  .game-timer-option {
+    position: absolute;
+    left: 10vw;
+    bottom: 2%;
+    line-height: 5vh;
+    color: #171720
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .game-timer-inside {
+    position: absolute;
+    left: 7vw;
+    bottom: 30%;
+    line-height: 7vh;
+  }
+  .game-timer-option {
+    position: absolute;
+    left: 10vw;
+    bottom: 2%;
+    line-height: 5vh;
+    color: #171720
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .game-timer-inside {
+    position: absolute;
+    left: 5vw;
+    bottom: 30%;
+    line-height: 7vh;
+  }
+  .game-timer-option {
+    position: absolute;
+    left: 10vw;
+    bottom: 2%;
+    line-height: 5vh;
+    color: #171720
+  }
+}
+
 @media(max-width:767px)
 {
   .bg-text
@@ -644,10 +828,6 @@ h3 {
     height: auto;
     margin-top: -100px;
     width: 60vh;
-  }
-  .lead1
-  {
-    left: 5%;
   }
   .landing-inner
   {
@@ -681,3 +861,4 @@ h3 {
     bottom: 19%;
   }
 }
+

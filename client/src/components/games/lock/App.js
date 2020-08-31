@@ -39,7 +39,7 @@ class App extends React.PureComponent {
           type="string"
           onChange={this.onChange}
         />
-        <div>{value}</div>
+        {/* <div>{value}</div> */}
         {/* <button onClick={this.onClear}>Clear</button> */}
       </div>
     );

@@ -16,13 +16,20 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
     <Fragment>
         <div className="bg-image"></div>
         <div className="bg-text1"></div>
-        <img className="bg-text1" src={bg} alt="Dashboard" useMap="#workmap" />
+        <img className="bg-text1" src={bg} alt="Dashboard" useMap="#workmap" width="600" height="420" />
+        {/* <div className="btn-dashboard" style={{zIndex: '1'}}>
+            <a href="/tutorial">
+                    <button className="btn btn-light">
+                        LOG IN
+                    </button>
+                </a>
+        </div> */}
         <map name="workmap">
-            <area shape="rect" coords="150,170,550,455" alt="Intro" href="instruction"/>
-            {/* <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm" /> */}
+            <area shape="rect" coords="150,70,570,550" alt="Intro" href="instruction"/>
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm" />
         </map>
         <div className="lead1">
-            <p className="lead1">Welcome <br /> { user && user.username }</p>
+            <p className="lead1">Hello <br /> { user && user.username }</p>
         </div>
         
     </Fragment>

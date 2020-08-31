@@ -62,6 +62,7 @@ export const Container = () => {
   }
   return (
     <div>
+      
       <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center'}}>
         {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
           <Dustbin

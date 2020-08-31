@@ -38,9 +38,9 @@ export const Dustbin = ({
   const isActive = isOver && canDrop
   let backgroundColor = 'transparent'
   if (isActive) {
-    backgroundColor = 'darkgreen'
+    backgroundColor = 'transparent'
   } else if (canDrop) {
-    backgroundColor = 'darkkhaki'
+    backgroundColor = 'transparent'
   }
   let backgroundImage = `url(${backgroundsList[bgImageName]})`; 
   return connectDropTarget(

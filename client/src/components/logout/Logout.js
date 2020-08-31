@@ -88,29 +88,28 @@ const Logout = ({ auth: { isAuthenticated, loading }, logout }) => {
         <CSSTransition
           in={showMessage}
           timeout={300}
-          classNames="alert"
+          classNames="alert5"
           unmountOnExit
           onEnter={() => setShowButton(false)}
           onExited={() => setShowButton(true)}
         >
           <Alert
+            classNames="alert5"
             variant="primary"
             dismissible
             onClose={() => setShowMessage(false)}
           >
+           <div className="alert-inside5"> 
             <Alert.Heading>
-              Animated alert message
+              Are you sure you want to logout?
             </Alert.Heading>
-            <p>
-              This alert message is being transitioned in and
-              out of the DOM.
-            </p>
             <Button onClick={() => setShowMessage(false)}>
               Close
             </Button>
             <Button onClick={logout}>
               Logout
             </Button>
+            </div>
           </Alert>
         </CSSTransition>
       </Container>

@@ -56,7 +56,7 @@ function Box1(props) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert1" 
+                        className="alert3" 
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}

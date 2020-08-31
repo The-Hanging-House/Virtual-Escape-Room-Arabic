@@ -29,7 +29,7 @@ const Login = ({ login, isAuthenticated }) => {
     <Fragment>
     <div className="bg-image"></div>
     <div className="bg-text">
-    <h1 className="large text-primary">SIGN IN</h1>
+    <h1 className="large text-primary">LOG IN<hr /></h1>
       <form className="form" onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
           <input
@@ -52,11 +52,13 @@ const Login = ({ login, isAuthenticated }) => {
             minLength="6"
           />
         </div>
-        <input type="submit" value="CONTINUE" className="btn btn-primary" />
+        <div style={{ marginTop: '2rem' }}>
+          <input type="submit" value="CONTINUE" style={{ margin: '1rem', padding: '1rem', fontWeight: '700', letterSpacing: '6px' }} className="btn btn-primary" />
+        </div>
       </form>
 
       <p className="my-1">
-        DON'T HAVE AN ACCOUNT? PLEASE <Link to="/register" className='link'>REGISTER</Link>
+        DON'T HAVE AN ACCOUNT? <Link to="/register" className='link'>REGISTER</Link>
       </p>
     </div>  
     <section className="login">

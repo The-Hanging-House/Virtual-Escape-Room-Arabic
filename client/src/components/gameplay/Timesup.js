@@ -43,7 +43,7 @@ function Timesup() {
                     <p>WE KNOW YOU TRIED YOUR BEST.</p>
                     <p>TRY AGAIN AND HOPEFULLY YOU'LL MAKE</p>
                     <p>IT OUT NEXT TIME.</p>
-                    <div className="game-timer-option">
+                    <div className="option">
                         <a href="briefing">
                             <h3 style={{ color: 'black', fontSize: '2rem' }}
                                     onMouseEnter={event => onMouseOver(event)}

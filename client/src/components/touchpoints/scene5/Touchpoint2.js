@@ -14,17 +14,17 @@ function TouchPoint2({ position, color, onClick }) {
     // const [showButton, setShowButton] = useState(true);
     const [showMessage, setShowMessage] = useState(false);
 
-    // const onMouseOver = event => {
-    //     const el = event.target;
-    //     let colorhex = "#F8A61F"
-    //     el.style.background = colorhex;
-    //   };
+    const onMouseOver = event => {
+        const el = event.target;
+        let colorhex = "#F8A61F"
+        el.style.background = colorhex;
+      };
 
-    //   const onMouseOut = event => {
-    //     const el = event.target;
-    //     let black = "transparent";
-    //     el.style.background = black;
-    //   };
+      const onMouseOut = event => {
+        const el = event.target;
+        let black = "transparent";
+        el.style.background = black;
+      };
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
@@ -57,7 +57,11 @@ function TouchPoint2({ position, color, onClick }) {
                             <App />
                             <img src={Lock} alt='pinlock' style={{ height: '20%', width: '30vw'}} />
                                 
-                                
+                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', textAlign: 'center'}}
+                                onMouseEnter={event => onMouseOver(event)}
+                                onMouseOut={event => onMouseOut(event)}>
+                                CLOSE
+                            </h3>    
                             </Alert.Heading>
                                 
                             

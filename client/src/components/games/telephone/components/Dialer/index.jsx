@@ -9,17 +9,17 @@ export default () => {
   const [callButton, setCallButton] = React.useState(false);
   const [callValues, setCallValues] = React.useState(number);
   const [state, dispatch] = useStore();
-  const buttons = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"];
+  const buttons = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0"];
  
   // ComponentDidMount & ComponentWillUnmount
-  React.useEffect(() => {
-    document.addEventListener("click", onOuterClick);
-    return () => document.removeEventListener("click", onOuterClick);
-  });
+  // React.useEffect(() => {
+  //   document.addEventListener("click", onOuterClick);
+  //   return () => document.removeEventListener("click", onOuterClick);
+  // });
  
-  const onOuterClick = () => {
-    dispatch({ type: "DIALER_CLOSE" });
-  };
+  // const onOuterClick = () => {
+  //   dispatch({ type: "DIALER_CLOSE" });
+  // };
  
   const onDialerClick = e => {
     e.stopPropagation();
@@ -30,16 +30,17 @@ export default () => {
   const callNumber = "800296";
  
   if(callButton){
-    if (number.length === callNumber.length && number.localeCompare(callNumber)===0){
+    var strNumber = String(number)
+    if (strNumber.length === callNumber.length && strNumber.localeCompare(callNumber)===0){
       var scene2 = new Date().getTime();
       localStorage.setItem('scene2', scene2);
       window.location.href = '/end';
     }
-    else if(number.localeCompare(callNumber) !== 0){
+    else if(strNumber.localeCompare(callNumber) !== 0){
  
       flag = 1;
  
-      setCallValues("Wrong number try again!")
+      setCallValues("Wrong number!")
  
       setTimeout(function(){
         flag = 0;
@@ -57,7 +58,15 @@ export default () => {
     }, 100);
   }
  
- 
+  function eraser() {
+    var phone = Math.floor(number/10);
+    if (phone !==0 ){
+      setNumber(phone);
+    }
+    else{
+      setNumber("");
+    }
+   }
  
  
   return (
@@ -67,7 +76,7 @@ export default () => {
         value={callValues}
         onChange={e => setNumber(e.target.value)}
       />
- 
+      
       <ButtonsContainer>
         {buttons.map(char => (
           <Button key={char} onClick={() => setNumber(number + char)}>
@@ -75,7 +84,7 @@ export default () => {
           </Button>
         ))}
       </ButtonsContainer>
- 
+      <button style={{position: 'absolute', background: 'transparent', bottom: '66px', right: '27px', padding: '2px', color: 'white', border: 'green'}}  onClick={() => eraser()}>Del</button>
       <CallButton onClick={() => setCallButton(true)}>Call</CallButton>
     </Box>
   );

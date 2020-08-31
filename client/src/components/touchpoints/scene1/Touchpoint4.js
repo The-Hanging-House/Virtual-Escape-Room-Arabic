@@ -33,7 +33,7 @@ function TouchPoint4({ position, color, onClick }) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert1" style={{color : 'white', padding : '5px', width : '40vw'}}
+                        className="alert" style={{color : 'white', padding : '5px', width : '40vw'}}
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
