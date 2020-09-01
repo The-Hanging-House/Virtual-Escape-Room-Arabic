@@ -27,8 +27,8 @@ const Lesson1 = () => {
                         url={briefing1}
                         onProgress={handleWatchComplete} />
                         <div className={watchComplete ? "marker marker--is-complete" : "marker marker--not-complete"}>
-                            <div className="buttons1">
-                                <Link to="scene1" className="btn btn-primary" style={{ right: '-20vh' }}>
+                            <div className="buttons4">
+                                <Link to="scene1" className="btn btn-primary">
                                    GO INSIDE
                                 </Link>
                                 

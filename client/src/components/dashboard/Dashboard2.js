@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Spinner from '../layout/Spinner'
 import { getCurrentProfile } from '../../actions/profile'
+import bg from '../../img/component1.png'
 
 const Dashboard2 = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
     useEffect(() => {
@@ -13,7 +14,8 @@ const Dashboard2 = ({ getCurrentProfile, auth: { user }, profile: { profile, loa
     return loading && profile === null ? <Spinner /> : 
     <Fragment>
         <div className="bg-image"></div>
-        <img className="bg-text1" useMap="#workmap" />
+        <div className="bg-text1"></div>
+        <img className="bg-text1" src={bg} alt="Dashboard" useMap="#workmap" width="600" height="420" />
         <a href="instruction">
             <div className="button-1"></div>
         </a>

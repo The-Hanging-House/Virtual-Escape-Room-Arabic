@@ -53,7 +53,7 @@ function End() {
                 <div className="congrats">
                     <h1>CONGRATULATIONS</h1>
                 </div>
-                <div style={{ fontSize: '1.7rem', fontWeight: 'bolder', lineHeight: '3vh', letterSpacing: '2px', margin: '1rem' }}>
+                <div style={{ fontSize: '1.7rem', fontWeight: 'bolder', lineHeight: '5vh', letterSpacing: '2px', margin: '1rem' }}>
                     <p>THAT WAS GOOD!</p>
                     <p>YOU MUST'VE REALLY</p>
                     <p>CONNECTED WITH NATURE.</p>

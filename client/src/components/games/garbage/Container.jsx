@@ -4,7 +4,7 @@ import Box from "./Box";
 import { ItemTypes } from "./ItemTypes";
 import update from "immutability-helper";
 
-
+var showHint = "Drag and drop the trash to its designated trash bins.";
 var count = 0
 var ddd = 'hidden'
 
@@ -62,7 +62,7 @@ export const Container = () => {
   }
   return (
     <div>
-      
+      <div style={{ textAlign: 'center' }}>{showHint}</div>
       <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center'}}>
         {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
           <Dustbin

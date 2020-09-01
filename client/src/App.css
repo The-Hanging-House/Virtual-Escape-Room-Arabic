@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Dubai W23';
+  font-family: 'Dubai W23', ;
   src: url('./fonts/DubaiW23-Regular.woff') format('woff2'),
        url('./fonts/DubaiW23-Regular.woff') format('woff'),
        url('./fonts/PermanentMarker-Regular.ttf') format('truetype');
@@ -100,13 +100,13 @@ hr {
 
 }
 .lead1 {
-  font-family: "Permanent Marker", sans-serif;
+  font-family: 'Permanent Marker', cursive;
   color: black;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   position: absolute;
-  left: 30vh;
-  top: 14vh;
+  left: 29.5vh;
+  top: 13vh;
   transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
@@ -186,13 +186,20 @@ hr {
   text-align: center;
   position: absolute;
   bottom: 10%;
-  left: 38%;
+  left: 40vw;
+  column-gap: 3rem;  
 }
 .buttons1 {
   text-align: center;
   position: absolute;
   bottom: 5%;
-  left: 91vh;
+  left: 94vh;
+}
+.buttons4 {
+  text-align: center;
+  position: absolute;
+  bottom: 5%;
+  left: 90.5vh;
 }
 .button-1 {
   background-color: transparent;
@@ -229,8 +236,7 @@ hr {
   margin-left: 2rem;
 }
 .accept {
-  height: 60%;
-  width: 60%;
+  width: 50%;
 }
 .btn.btn-light1 {
   background-color:	rgba(0, 128, 0, 0);
@@ -239,8 +245,7 @@ hr {
   margin-right: 2rem;
 }
 .reject {
-  height: 60%;
-  width: 60%;
+  width: 50%;
 }
 .btn-primary3 {
   background-color: #ffb300;
@@ -378,7 +383,7 @@ body {
   color: white;
   position: absolute;
   top: 8vh;
-  left: 12vh;
+  left: 14vh;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 30%;
@@ -538,8 +543,8 @@ h1 span {
   color: red;
   font-size: 1rem;
   position: absolute;
-  top: 22vh;
-  left: 36%;
+  top: 52vh;
+  left: 92vh;
   z-index: 9999;
   width: 100%;
 }
@@ -692,7 +697,7 @@ h3 {
 .app {
   position: absolute;
   background-color: white;
-  right: 31%;
+  right: 17.5vh;
 }
 .PhoneInput {
   font-size: 1rem;
@@ -705,12 +710,12 @@ h3 {
   font-family: "Dubai W23", sans-serif;
   background-color: white;
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 45vh;
   transform: translate(15vh, -35vh);
   z-index: 2;
-  width: 70vh;
-  height: 75vh;
+  width: 80vh;
+  height: 90vh;
   padding: 20px;
   text-align: center;
 }
@@ -727,10 +732,10 @@ h3 {
 }
 .gametime {
   position: absolute;
-  top: 55%;
+  top: 52vh;
   left: 40%;
   transform: translate(-30%, -50%);
-  line-height: 7vh;
+  line-height: 9vh;
 }
 .option {
   position: relative;
@@ -738,19 +743,19 @@ h3 {
 }
 .option1 {
   position: relative;
-  top: 35vh;
+  top: 40vh;
   line-height: 4vh;
 }
 .bg-end1 {
   font-family: "Dubai W23", sans-serif;
   background-color: white;
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 70vh;
-  height: 70vh;
+  width: 80vh;
+  height: 80vh;
   padding: 20px;
   text-align: center;
 }
