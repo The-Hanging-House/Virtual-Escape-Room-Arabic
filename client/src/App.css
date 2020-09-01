@@ -233,7 +233,8 @@ hr {
   background-color: rgb(255,0,0,0);
   color: #fff;
   border-radius: 20px;
-  margin-left: 2rem;
+  font-size: 1.1rem;
+  /* margin-left: 2rem; */
 }
 .accept {
   width: 50%;
@@ -245,7 +246,7 @@ hr {
   margin-right: 2rem;
 }
 .reject {
-  width: 50%;
+  width: 27%;
 }
 .btn-primary3 {
   background-color: #ffb300;
@@ -452,7 +453,7 @@ h1 span {
   color: white;
   position: absolute;
   top: 16vh;
-  left: 17vh;
+  left: 17.5vh;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 30%;
@@ -732,7 +733,7 @@ h3 {
 }
 .gametime {
   position: absolute;
-  top: 53.5vh;
+  top: 54vh;
   left: 40%;
   transform: translate(-30%, -50%);
   line-height: 9vh;

@@ -29,7 +29,7 @@ const Lesson = () => {
                             <div className="buttons2">
                                 <Link to="dashboard2" className="btn btn-primary1">
                                     <img src={RejectLogo} className="reject" alt="reject logo" /><br />
-                                    NOPE
+                                    NO, LEAVE ME HERE
                                 </Link>
                                 <Link to="briefing2" className="btn btn-light1">
                                     <img src={AnswerLogo} className="accept" alt="answer logo" /><br />
