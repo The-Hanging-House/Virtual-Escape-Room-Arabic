@@ -409,12 +409,13 @@ h1 span {
 .bg-text4 {
   position: absolute;
   top: 8vh;
-  right: -50vh;
+  right: -25vw;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 30%;
   padding: 20px;
   text-align: center;
+  padding-top: 2rem;
 }
 .bg-text4 svg {
   height: 90px;
@@ -452,7 +453,7 @@ h1 span {
   background-color: transparent;
   color: white;
   position: absolute;
-  top: 16vh;
+  top: 10%;
   left: 17.5vh;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -604,8 +605,8 @@ h1 span {
 .alert-inside2 {
   background-color: rgba(230, 206, 166, 0.9);
   position: absolute;
-  left: -200px;
-  top: -20px;
+  left: -15vw;
+  top: -2vh;
   border-radius: 20px;
   border-style: solid;
   border-width: thick;
@@ -644,8 +645,8 @@ h1 span {
   width: 30vw;
   height: 35vh;
   position: absolute;
-  top: -10vh;
-  left: -30px
+  top: -5.5vh;
+  left: -40px
 }
 .alert-inside3 {
   position: absolute;
@@ -681,8 +682,8 @@ h1 span {
 }
 .close {
   position: absolute;
-  right: -8vh;
-  top: -6vh;
+  right: -7vh;
+  top: -5vh;
 }
 a {
   text-decoration: none;
@@ -762,37 +763,19 @@ h3 {
   text-align: center;
 }
 
-
-
-@media(max-width:767px)
-{
-  .bg-text
-  {
-    width:95%;
-  }
-}
-
-@media(min-width:768px)
-{
-  .bg-text2
-  {
-    top: 130px !important;
-  }
-}
-
-@media(max-width: 767px)
+@media screen and (min-width: 767px)
 {
   .bg-text1
   {
-    transform: translate(0, -120%) !important;
+    transform: translate(15%, -120%) !important;
     /* position: none !important; */
     height: auto;
-    margin-top: -100px;
-    width: 60vh;
+    margin-top: 140px;
+    width: 100vh;
   }
   .landing-inner
   {
-    color: #000;
+    color: white;
   }
   .bg-image
   {
@@ -818,8 +801,188 @@ h3 {
   }
   .buttons
   {
-    left: 10%;
+    left: 30%;
     bottom: 19%;
+  }
+  .bg-text
+  {
+    width: 50%;
+  }
+  .lead1
+  {
+    left: 12vh;
+  }
+  .bg-text4
+  {
+    right: -23vw;
+  }
+  .bg-text4 svg 
+  {
+    height: 70px;
+    width: 70px;
+  }
+  .buttons1 {
+    bottom: 12%;
+    left: 42%;
+    right: 40%;
+  }
+  .buttons2 {
+    position: absolute;
+    bottom: 20%;
+    left: 20vw;
+    column-gap: 3rem;  
+  }
+  .buttons4 {
+    position: absolute;
+    bottom: 18%;
+    left: 39%;
+    z-index: 10;
+  }
+  .bg-text6 {
+    top: 20vh;
+  }
+  .bg-end {
+    left: 5vh;
+  }
+  .gametime {
+    position: absolute;
+    top: 54vh;
+    left: 37.5%;
+  }
+}
+
+@media screen and (min-width: 1024px)
+{
+  .bg-text1
+  {
+    transform: translate(33%, -120%) !important;
+    /* position: none !important; */
+    height: auto;
+    margin-top: 140px;
+    width: 100vh;
+  }
+  .buttons
+  {
+    left: 35%;
+    bottom: 19%;
+  }
+  .bg-text
+  {
+    width: 50%;
+  }
+  .lead1
+  {
+    left: 21vh;
+  }
+  .bg-text4
+  {
+    right: -23vw;
+  }
+  .bg-text4 svg 
+  {
+    height: 70px;
+    width: 70px;
+  }
+  .buttons1 {
+    bottom: 12%;
+    left: 42%;
+    right: 40%;
+  }
+  .buttons2 {
+    position: absolute;
+    bottom: 15%;
+    left: 27vw;
+    column-gap: 3rem;  
+  }
+  .buttons4 {
+    position: absolute;
+    bottom: 10%;
+    left: 41.5%;
+  }
+  .bg-text6 {
+    top: 18vh;
+    left: 13.5vw;
+  }
+  .bg-end {
+    left: 23.5vh;
+  }
+  .gametime {
+    position: absolute;
+    top: 54vh;
+    left: 37.5%;
+  }
+}
+
+@media screen and (min-width: 1200px)
+{
+  .x-large
+  {
+     font-size: 6rem;
+    color: #fff;
+    letter-spacing: 34px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+  }
+  .bg-text1
+  {
+    transform: translate(60%, -120%) !important;
+    /* position: none !important; */
+    height: auto;
+    margin-top: 140px;
+    width: 100vh;
+  }
+  .buttons
+  {
+    left: 40%;
+    bottom: 19%;
+  }
+  .bg-text
+  {
+    width: 30%;
+  }
+  .lead1
+  {
+    font-size: 1.7rem;
+    left: 35vh;
+  }
+  .bg-text4
+  {
+    right: -23vw;
+  }
+  .bg-text4 svg 
+  {
+    height: 70px;
+    width: 70px;
+  }
+  .buttons1 {
+    bottom: 12%;
+    left: 42%;
+    right: 40%;
+  }
+  .buttons2 {
+    position: absolute;
+    bottom: 10%;
+    left: 35vw;
+    column-gap: 3rem;  
+  }
+  .buttons4 {
+    position: absolute;
+    bottom: 6%;
+    left: 44%;
+  }
+  .bg-text6 {
+    top: 15vh;
+    left: 10vw;
+  }
+  .bg-end {
+    position: absolute;
+    left: 50vh;
+  }
+  .gametime {
+    position: absolute;
+    top: 54vh;
+    left: 37.5%;
   }
 }
 

@@ -3,7 +3,7 @@ import React, { Suspense, useRef, useState } from 'react'
 
 import { Canvas, extend, useFrame, useThree, useLoader } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-
+import Music1 from '../../audio/Music1'
 import { Html } from 'drei';
 
 import Loader from '../../img/loader.gif'
@@ -23,7 +23,7 @@ import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
 // import Timer from '../timer/Timer'
 import './style.css'
 
-import Music1 from '../../audio/Music1'
+
 
 extend({ OrbitControls })
 

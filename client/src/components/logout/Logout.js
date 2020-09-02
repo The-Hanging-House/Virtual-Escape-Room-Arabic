@@ -76,7 +76,7 @@ const Logout = ({ auth: { isAuthenticated, loading }, logout }) => {
     return (
         <div className="bg-text4">
             {/* <Example/> */}
-            <Container style={{ paddingTop: '2rem' }}>
+            <Container>
         {showButton && (
           <a
             onClick={() => setShowMessage(true)}

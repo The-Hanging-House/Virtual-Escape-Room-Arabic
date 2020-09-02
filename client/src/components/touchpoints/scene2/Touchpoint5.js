@@ -56,31 +56,7 @@ function TouchPoint5({ position, color, onClick }) {
                         <div className="alert-inside3">
                             <Alert.Heading>
                                 <Puzzle />
-                                {/* <p>
-                                Congrats! You have collected all the puzzle pieces.
-                                </p>
-                                <a href='puzzle'>
-                                <h3 onMouseEnter={event => onMouseOver(event)}
-                                    onMouseOut={event => onMouseOut(event)}
-                                    href>
-                                    PLAY THE PUZZLE GAME
-                                </h3>
-                            </a>
-                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
-                                onMouseEnter={event => onMouseOver(event)}
-                                onMouseOut={event => onMouseOut(event)}>
-                                IGNORE IT
-                            </h3> */}
                             </Alert.Heading>
-                            {/* <p onClick={() => {
-                                toggle(); 
-                                setShowMessage(false)}} style={{ fontSize: '1rem'}} >
-                                Pick them up and dispose of them properly.
-                            </p> */}
-                            
-                            {/* <Button onClick={() => setShowMessage(false)}>
-                                Close
-                            </Button> */}
                         </div>
                         </Alert>
                     </CSSTransition>
