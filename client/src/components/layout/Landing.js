@@ -13,6 +13,7 @@ const Landing = ({ isAuthenticated}) => {
 
   return (
     <section className="landing">
+      <div className="lock-up"></div>
       <div className="orange-overlay">
         <div className="landing-inner">
           <h1 className="x-large">

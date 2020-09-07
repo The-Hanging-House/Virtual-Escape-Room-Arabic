@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, Component } from "react";
 import { connect } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
 import { setAlert } from "../../actions/alert";
@@ -6,53 +6,109 @@ import { register } from "../../actions/auth";
 import PropTypes from "prop-types";
 // import { register } from "../../actions/auth";
 
+var runOnce = 0;
+var runTwice = 0;
+var userSave = "a";
+var emiratesSelect;
+
+
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
     password2: "",
+    emirates: "",
+    selectValue: "",
+    name: "",
+    school: ""
   });
 
-  const { username, email, password, password2 } = formData;
+
+  var { username, email, password, password2, emirates, selectValue, name, school } = formData;
+  
+  if (username !== "undefined"){
+    userSave = username;
+  }
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
+
   const onSubmit = async (e) => {
+    
+    if (number <= 14){
+
+      email = username+"@gmail.com";
+    } 
+
+    if (selectValue === ""){
+      setFormData({ ...formData, selectValue: "Dubai" })
+      console.log("ChANGE")
+    }
+
+    console.log("FormData: ", formData);
+    console.log("number", number);
+
     e.preventDefault();
-    if (password !== password2) {
+    if(selectValue === ""){
+      setAlert("Select an Emirate", "danger");
+    }
+    else if (password !== password2) {
       setAlert("Passwords do not match!", "danger");
     } else {
       register({ username, email, password });
     }
   };
 
+  
+  const [textInput, setTextInput] = useState("");
+  const [number, setNumber] = useState("");
+  const [textIs, setTextIs] = useState(true);
+  const [disability, setDisability] = useState("");
+  const [isVisible, setVisibile] = useState(true);
+
+  function checkers(){
+    console.log("age: ", number);
+  }
+
+if (number !== "" && number > 14){
+  if (runOnce === 0){
+    setVisibile(false);
+    setTextIs(true);
+    setDisability("")
+    runOnce = 1;
+    runTwice = 0
+  }
+}
+if (number !== "" && number <= 14 ){
+  if (runTwice === 0){
+    setVisibile(true);
+    setTextIs(false);
+    setDisability("disabled")
+    runTwice = 1;
+    runOnce = 0;
+  }
+}
+
   if (isAuthenticated) {
     return <Redirect to="/dashboard" />;
   }
 
+  
   return (
     <Fragment>
-      <div className="bg-image"></div>
+      <div className="bg-image"><div className="lock-up"></div></div>
       <div className="bg-text">
-      <h1 className="large text-primary">SIGN UP<hr /></h1>
+      <h1 className="large text-primary">SIGN UP</h1>
       <form className="form" onSubmit={(e) => onSubmit(e)}>
+
         <div className="form-group">
           <input
             type="text"
             placeholder="Username"
             name="username"
             value={username}
-            onChange={(e) => onChange(e)}
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="email"
-            placeholder="Email Address"
-            name="email"
-            value={email}
             onChange={(e) => onChange(e)}
           />
         </div>
@@ -74,13 +130,66 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             onChange={(e) => onChange(e)}
           />
         </div>
-        <div style={{ marginTop: '2rem' }}>
-          <input type="submit" value="CONTINUE" style={{ margin: '1rem', padding: '1rem', fontWeight: '700', letterSpacing: '6px' }} className="btn btn-primary" />
+
+        <div className="form-group">
+            <select id="dropdown" style={{ color: '#717171' }} value={selectValue} onChange={(e) => onChange(e)} name="selectValue" placeholder="Select Emirates" >
+              <option value="" disabled selected>Select Emirates</option>
+              <option value="Dubai">Dubai</option>
+              <option value="Sharjah">Sharjah</option>
+              <option value="Abu Dhabi">Abu Dhabi</option>
+              <option value="Ajman">Ajman</option>
+              <option value="Ras Al-khaimah">Ras Al-khaimah</option>
+              <option value="Umm al Quwain">Umm al Quwain</option>
+              <option value="Fujairah">Fujairah</option>
+              <option value="Other">Other</option>
+            </select >
+          </div>
+        <div className="form-group">
+            <input
+              type="number"
+              placeholder="Enter Your Age"
+              name="age"
+              value={number}
+              onChange={e => {setNumber(e.target.value); checkers()}}
+            />
+        </div>
+        <div className="form-group" style={{display: isVisible? 'none' : 'inline'}}>
+          <input
+            disability
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            value={textIs? textInput : username + "@e.com"}
+            onChange={(e) => {setTextInput(e.target.value); onChange(e) }}
+          />
+        </div>
+        <div className="form-group" style={{display: isVisible? 'none' : 'inline'}}>
+          <input
+            disability
+            type="text"
+            placeholder="Name"
+            name="name"
+            value={name}
+            onChange={(e) => onChange(e)}
+          />
+        </div>
+        <div className="form-group" style={{display: isVisible? 'none' : 'inline'}}>
+          <input
+            disability
+            type="text"
+            placeholder="School / Company"
+            name="school"
+            value={school}
+            onChange={(e) => onChange(e)}
+          />
+        </div>
+        <div style={{ marginTop: '1rem' }}>
+          <input type="submit" value="CONTINUE" style={{ fontWeight: '700', letterSpacing: '6px' }} className="btn btn-primary" />
         </div>
       </form>
 
       <p className="my-1">
-        Already Registered? <Link to="/login" className='link'>Log In</Link>
+        ALREADY REGISTERED? <Link to="/login" className='link'>LOG IN</Link>
       </p>
       </div>
     </Fragment>

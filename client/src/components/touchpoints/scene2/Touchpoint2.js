@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import tools from '../../../img/tools.jpg'
+import tools from '../../../img/tools.png'
 
 
 const TouchPoint2 = ({ position, color, onClick }) => {
@@ -16,13 +16,13 @@ const TouchPoint2 = ({ position, color, onClick }) => {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [0.7, 0.7, 0.7] : [0.5, 0.5, 0.5]}
+        scale={hovered ? [0.6, 0.6, 0.6, 0.6] : [0.6, 0.6, 0.6, 0.6]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
+            <meshBasicMaterial attach="material" transparent opacity={0} /> 
             <Html center>
             <Container>
                     <CSSTransition

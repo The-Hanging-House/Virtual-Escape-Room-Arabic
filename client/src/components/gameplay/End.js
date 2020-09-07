@@ -12,7 +12,7 @@ if (data < now) {
 }else{
     var milisec_diff = data - now;
 }
-var final = Math.round(600-(milisec_diff/1000));
+var final = Math.round(900-(milisec_diff/1000));
 if (final < 0){
   final = 0;
 }
@@ -48,12 +48,12 @@ function End() {
 
     return (
         <>
-        <div className="bg-image"></div>
+        <div className="bg-image1"></div>
             <div className="bg-end">
                 <div className="congrats">
                     <h1>CONGRATULATIONS</h1>
                 </div>
-                <div style={{ fontSize: '1.7rem', fontWeight: 'bolder', lineHeight: '5vh', letterSpacing: '2px', margin: '1rem' }}>
+                <div style={{ fontSize: '1.7rem', fontWeight: 'bolder', lineHeight: '5vh', letterSpacing: '2px' }}>
                     <p>THAT WAS GOOD!</p>
                     <p>YOU MUST'VE REALLY</p>
                     <p>CONNECTED WITH NATURE.</p>
@@ -79,7 +79,7 @@ function End() {
                                         PLAY AGAIN?
                             </h3>
                         </a>
-                        <a href="dashboard">
+                        <a href="dashboard2">
                             <h3 style={{ color: 'black', fontSize: '2rem' }}     
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>

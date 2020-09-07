@@ -29,19 +29,19 @@ function TouchPoint2({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [0.08, 0.08, 0.08] : [0.04, 0.04, 0.04]}
+            scale={hovered ? [0.1, 0.1, 0.1] : [0.1, 0.1, 0.1]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
+            <meshBasicMaterial attach="material" transparent opacity={0} /> 
             <Html center>
             <Container>
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert1"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
@@ -52,10 +52,10 @@ function TouchPoint2({ position, color, onClick }) {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                         <div className="alert-inside2">
+                         <div className="alert-inside6">
                             <Alert.Heading>
                             <App />
-                            <img src={Lock} alt='pinlock' style={{ height: '20%', width: '30vw'}} />
+                            <img src={Lock} alt='pinlock'/>
                                 
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', textAlign: 'center'}}
                                 onMouseEnter={event => onMouseOver(event)}

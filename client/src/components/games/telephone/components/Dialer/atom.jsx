@@ -6,7 +6,7 @@ export const Box = styled.div
   bottom: 70px;
   right: 15px;
   width: 100vh;
-  max-width: 200px;
+  max-width: 220px;
   padding: 15px;
   background: #263238;
   border-radius: 22.5px;
@@ -32,10 +32,12 @@ export const Box = styled.div
 
 export const Input = styled.input`
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
   border: none;
   background: #37474f;
-  height: 35px;
+  height: 40px;
+  top: 50px;
   padding: 0 15px;
   border-radius: 4px;
   color: #cfd8dc;
@@ -48,7 +50,7 @@ export const ButtonsContainer = styled.div`
 export const Button = styled.button`
   display: inline-block;
   width: calc(33.33% - 10px);
-  font-size: 14px;
+  font-size: 18px;
   background: transparent;
   border: none;
   color: #cfd8dc;

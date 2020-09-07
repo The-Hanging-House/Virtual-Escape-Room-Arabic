@@ -28,7 +28,7 @@ export default () => {
  
  
   const callNumber = "800296";
- 
+  const callNumber2 = "8004432";
   if(callButton){
     var strNumber = String(number)
     if (strNumber.length === callNumber.length && strNumber.localeCompare(callNumber)===0){
@@ -36,6 +36,13 @@ export default () => {
       localStorage.setItem('scene2', scene2);
       window.location.href = '/end';
     }
+    
+ 
+    else if(number.length === callNumber2.length && number.localeCompare(callNumber2)===0){
+        var scene2 = new Date().getTime();
+        localStorage.setItem('scene2', scene2);
+        window.location.href = '/end';
+        }	
     else if(strNumber.localeCompare(callNumber) !== 0){
  
       flag = 1;
@@ -84,7 +91,7 @@ export default () => {
           </Button>
         ))}
       </ButtonsContainer>
-      <button style={{position: 'absolute', background: 'transparent', bottom: '66px', right: '27px', padding: '2px', color: 'white', border: 'green'}}  onClick={() => eraser()}>Del</button>
+      <button style={{position: 'absolute', backgroundColor: 'transparent', height: '20px' , top: '70%', left: '75%', padding: '2px', color: 'white', border: 'green'}}  onClick={() => eraser()}>Del</button>
       <CallButton onClick={() => setCallButton(true)}>Call</CallButton>
     </Box>
   );

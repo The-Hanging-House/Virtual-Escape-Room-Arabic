@@ -83,6 +83,7 @@ const Logout = ({ auth: { isAuthenticated, loading }, logout }) => {
             // size="lg"
           >
             <Logo/>
+            <h3>EXIT</h3>
           </a>
         )}
         <CSSTransition
@@ -101,7 +102,10 @@ const Logout = ({ auth: { isAuthenticated, loading }, logout }) => {
           >
            <div className="alert-inside5"> 
             <Alert.Heading>
-              Are you sure you want to logout?
+              <h1 className="large text-primary" style={{ fontSize: '1.4rem' }}>LOG OUT</h1>
+              <p style={{ marginTop: '2rem' }}>
+              ARE YOU SURE YOU WANT TO LOGOUT?
+              </p>
             </Alert.Heading>
             <Button onClick={() => setShowMessage(false)}>
               Close

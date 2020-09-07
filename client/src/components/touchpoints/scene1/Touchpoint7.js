@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import egg from '../../../img/feather.jpg'
+import egg from '../../../img/feather.png'
 
 function TouchPoint7({ position, color, onClick }) {
     const [hovered, set] = useState(false)
@@ -15,13 +15,13 @@ function TouchPoint7({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [0.2, 0.2, 0.2] : [0.1, 0.1, 0.1]}
+            scale={hovered ? [1, 1, 1, 1] : [1, 1, 1, 1]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
+            <meshBasicMaterial attach="material" transparent opacity={0} /> 
             <Html center>
                 <Container>
                     <CSSTransition
@@ -42,12 +42,6 @@ function TouchPoint7({ position, color, onClick }) {
                             <div>
                                 <img src={egg} alt='Trunk2' />
                             </div>
-                            {/* <p onClick={() => setShowMessage(false)} style={{ fontSize: '2rem'}}>
-                                Ok.
-                            </p> */}
-                            {/* <Button onClick={() => setShowMessage(false)}>
-                                Close
-                            </Button> */}
                         </div>
                         </Alert>
                     </CSSTransition>

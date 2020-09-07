@@ -65,7 +65,7 @@ const Controls = (props) => {
       }else{
         var milisec_diff = datetime - now;
       }
-      var final = Math.round(600-(milisec_diff/1000));
+      var final = Math.round(900-(milisec_diff/1000));
       if (final < 0){
         final = 0;
       }
@@ -76,7 +76,7 @@ const Controls = (props) => {
     function Timer() {
       var minutes = obama() //minutes passed since start
       console.log("minutes", minutes)
-      // const [counter, setCounter] = React.useState(600);
+      // const [counter, setCounter] = React.useState(900);
       const [counter, setCounter] = React.useState(minutes);
     
       React.useEffect(() => {
@@ -132,9 +132,6 @@ const elementorso = <Timer/>
 function Scene6() {
     return (
         <>
-        {elementorso}
-        {counter}
-        {logout}
         {/* <Timer/> */}
             <Canvas camera={{ position: [0, 0, 0.1] }}>
                 <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
@@ -157,6 +154,9 @@ function Scene6() {
                     </Suspense>
             </Canvas>,
             <Music2 />
+            {elementorso}
+            {counter}
+            {logout}
         </>
     );
 }

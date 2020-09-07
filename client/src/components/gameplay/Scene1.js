@@ -20,6 +20,7 @@ import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
 import './style.css'
 
 import Music1 from '../../audio/Music1'
+import hint from '../../img/click.svg'
 
 // import Tp from '../../img/tp.svg'
 
@@ -47,7 +48,7 @@ const Dome = () => {
 
 
 function Timer() {
-  var minutes = 600 //minutes passed since start
+  var minutes = 900 //minutes passed since start
   const [counter, setCounter] = React.useState(minutes);
 
   React.useEffect(() => {
@@ -79,12 +80,32 @@ function Timer() {
 }
 function Counter(){
     return (
-        <div className="bg-text3">
+        <div className="bg-text6">
             <h1>0<span>/7</span></h1>
             <h3>CHALLENGES</h3>
         </div>
     )
 }
+
+function Initimg(){
+  const [displayProp, setDisplayProp] = React.useState(false);
+
+  setTimeout(function(){
+    setDisplayProp(true);
+    console.log("TEXT")
+  }, 6000);
+
+    return (
+    <>
+    <div style={{display: displayProp? 'none' : 'block', position: "absolute", zIndex: "200", left: "50%", top: "50%", transform: "translate(-50%, -50%)"}}>
+        <img src = {hint} style={{width: "150%", height: "150%"}}/>
+    </div>
+    </>
+    )
+}
+ 
+ 
+const intiImage = <Initimg/>
 
 const elementorso = <Timer/>
 const counter = <Counter />
@@ -94,13 +115,9 @@ function Scene1() {
     return (
       
         <>
-        {/* <Task /> */}
-        {elementorso}
-        {/* <Timer/> */}
-        {counter}
-        {logout}
-            <Canvas camera={{ position: [-1, 0, 0.1] }}>
-                <Controls enableDamping dampingFactor={0.1}  />
+          
+            <Canvas camera={{ position: [2, 0, 0.1] }}>
+                <Controls enableDamping dampingFactor={0.1} enableZoom={false} />
                     <Suspense fallback={
                       <Html center style={{ color: 'white' }}>
                         <img src={Loader} />
@@ -120,8 +137,12 @@ function Scene1() {
                         <TouchPoint7 position={[0, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         
                     </Suspense>
-            </Canvas>,
+            </Canvas>
             <Music1 />
+            {intiImage} 
+            {elementorso}
+            {counter}
+            {logout},
         </>
     );
 }

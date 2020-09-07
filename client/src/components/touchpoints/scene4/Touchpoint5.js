@@ -34,25 +34,25 @@ function TouchPoint5({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [0.5, 0.5, 0.5] : [0.4, 0.4, 0.4]}
+        scale={hovered ? [1, 1, 1, 1] : [1, 1, 1, 1]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
+            <meshBasicMaterial attach="material" transparent opacity={0} /> 
             <Html center>
                 <Container>
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert2"
+                        classNames="alert1"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert2"
+                        className="alert"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}

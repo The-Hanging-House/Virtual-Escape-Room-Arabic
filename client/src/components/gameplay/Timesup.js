@@ -33,16 +33,10 @@ function Timesup() {
       };
     return (
         <>
-        <div className="bg-image"></div>
+        <div className="bg-image2"></div>
             <div className="bg-end1">
-                <div className="congrats">
-                    <h1>TIME'S UP</h1>
-                </div>
                 <div style={{ fontSize: '1.7rem', fontWeight: 'bolder', lineHeight: '5vh', letterSpacing: '2px', margin: '1rem' }}>
-                    <p style={{ paddingBottom: '2rem' }}>UH OH!</p>
-                    <p>WE KNOW YOU TRIED YOUR BEST.</p>
-                    <p>TRY AGAIN AND HOPEFULLY YOU'LL MAKE</p>
-                    <p>IT OUT NEXT TIME.</p>
+                    
                     <div className="option">
                         <a href="briefing">
                             <h3 style={{ color: 'black', fontSize: '2rem' }}
@@ -51,7 +45,7 @@ function Timesup() {
                                         PLAY AGAIN?
                             </h3>
                         </a>
-                        <a href="dashboard">
+                        <a href="dashboard2">
                             <h3 style={{ color: 'black', fontSize: '2rem' }}     
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>

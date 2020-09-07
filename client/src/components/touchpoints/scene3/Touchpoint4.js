@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import trunk1 from '../../../img/trunk1.jpg'
+import trunk1 from '../../../img/trunk1.png'
 
 function TouchPoint4({ position, color, onClick }) {
     const [hovered, set] = useState(false)
@@ -15,13 +15,13 @@ function TouchPoint4({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [0.5, 0.5, 0.5] : [0.4, 0.4, 0.4]}
+        scale={hovered ? [2, 2, 2, 2] : [2, 2, 2, 2]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
+            <meshBasicMaterial attach="material" transparent opacity={0} /> 
             <Html center>
                 <Container>
                     <CSSTransition
@@ -38,7 +38,7 @@ function TouchPoint4({ position, color, onClick }) {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside2">
+                        <div className="alert-inside2" style={{ left: '-3vw' }}>
                             <div>
                                 <img src={trunk1} alt='Trunk1' width='100%' height='100%' />
                             </div>

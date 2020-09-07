@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import board from '../../../img/trap.jpg'
+import board from '../../../img/trap.png'
 
 const TouchPoint4 = ({ position, color, onClick }) => {
     const [hovered, set] = useState(false)
@@ -15,13 +15,13 @@ const TouchPoint4 = ({ position, color, onClick }) => {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [0.5, 0.5, 0.5] : [0.3, 0.3, 0.3]}
+        scale={hovered ? [0.3, 0.3, 0.3, 0.3] : [0.3, 0.3, 0.3, 0.3]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
+            <meshBasicMaterial attach="material" transparent opacity={0} /> 
             <Html center>
                 <Container>
                     <CSSTransition

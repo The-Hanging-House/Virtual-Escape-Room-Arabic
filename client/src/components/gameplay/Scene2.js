@@ -11,27 +11,25 @@ import Logout from '../logout/Logout'
 import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
+import Map from '../../img/map.svg'
+
 
 import TouchPoint1 from '../touchpoints/scene2/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene2/Touchpoint2'
 import TouchPoint3 from '../touchpoints/scene2/Touchpoint3'
 import TouchPoint4 from '../touchpoints/scene2/Touchpoint4'
-// import TouchPoint5 from '../touchpoints/scene2/Touchpoint5'
-// import TouchPoint6 from '../touchpoints/scene2/Touchpoint6'
-// import Telephone from '../../gameplay/Telephone';
 import Telephone from './Telephone';
 
 
-// import Portal from '../touchpoints/scene2/Portal'
+import hint from '../../img/welcome.svg'
 
-import Puzzle from '../games/puzzle/Puzzle'
+import Music2 from '../../audio/Music2'
+
+import Puzzle from '../games/puzzle/index'
 
 
 import egg from '../../img/pp1.png'
 import img from './../../img/pp1.png'
-
-// import egg2 from '../../img/pp2.png'
-// import img2 from './../../img/pp2.png'
 
 import egg3 from '../../img/pp3.png'
 import img3 from './../../img/pp3.png'
@@ -44,15 +42,6 @@ import img5 from './../../img/pp5.png'
 
 import egg6 from '../../img/pp6.png'
 import img6 from './../../img/pp6.png'
-
-// import Timer from '../timer/Timer'
-
-// import Box1 from '../3dobjects/Box1'
-// import Box2 from '../3dobjects/Box2'
-// import Box3 from '../3dobjects/Box3'
-// import Box4 from '../3dobjects/Box4'
-// import Box5 from '../3dobjects/Box5'
-// import Box6 from '../3dobjects/Box6'
 
 import './style.css'
 extend({ OrbitControls })
@@ -133,7 +122,7 @@ const Dome = () => {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible'}}>
+                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%'}}>
                             <Alert.Heading>
                                 <div>
                                   <img src={egg} alt='egg' width='100%' height='100%' />
@@ -214,7 +203,7 @@ const Dome = () => {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible'}}>
+                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%'}}>
                             <Alert.Heading>
                                 <div>
                                 <img src={egg} alt='egg' width='100%' height='100%' />
@@ -288,7 +277,7 @@ const Dome = () => {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible'}}>
+                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%'}}>
                             <Alert.Heading>
                                 <div>
                                   <img src={egg3} alt='egg' width='100%' height='100%' />
@@ -361,7 +350,7 @@ const Dome = () => {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible'}}>
+                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%'}}>
                             <Alert.Heading>
                                 <div>
                                   <img src={egg4} alt='egg' width='100%' height='100%' />
@@ -434,7 +423,7 @@ const Dome = () => {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible'}}>
+                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%'}}>
                             <Alert.Heading>
                                 <div>
                                   <img src={egg5} alt='egg' width='100%' height='100%' />
@@ -507,7 +496,7 @@ const Dome = () => {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible'}}>
+                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%'}}>
                             <Alert.Heading>
                                 <div>
                                   <img src={egg6} alt='egg' width='100%' height='100%' />
@@ -542,16 +531,17 @@ function TouchPoint5({ position, color, onClick }) {
   
   // function that checks the number of boxes collected
   setInterval(function(){
-    puzzlePro = localStorage.getItem("puzSet");
+    puzzlePro = localStorage.getItem("puzzleComplete");
     if(x === 13){
       setCollectedMessage(true);
     }if(coll){
       ccom=6;
     } 
-    if(puzzlePro === '7'){
+    if(puzzlePro === '1'){
         setShowProceed('visible');
-        localStorage.removeItem("puzSet");
+        localStorage.removeItem("puzzleComplete");
     } 
+    console.log(puzzlePro)
   }, 1000);
 
   
@@ -567,22 +557,21 @@ function TouchPoint5({ position, color, onClick }) {
                   <CSSTransition
                       in={showMessage}
                       timeout={300}
-                      classNames="alert2"
+                      classNames="alert1"
                       unmountOnExit
                   >
                       <Alert
-                      className="alert2" 
+                      className="alert" 
                       variant="primary"
                       dismissible
                       onClose={() => setShowMessage(false)}
                       >
-                      <div className="alert-inside2">
+                      <div className="alert-inside20">
                           <Alert.Heading>
                             <Puzzle />
-                            <br></br>
-                             <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center' }}>
-                                  <button onClick={() => {setShowMessage(false); setColl(true)}} style={{visibility: showProceed}} className="btn btn-primary3">
-                                      Proceed
+                             <div>
+                                  <button onClick={() => {setShowMessage(false); setColl(true)}} style={{visibility: showProceed, position: 'relative', left: '40%'}} className="btn btn-primary3">
+                                      CALL NOW
                                   </button>
                             </div>
                           </Alert.Heading>                       
@@ -594,6 +583,27 @@ function TouchPoint5({ position, color, onClick }) {
       </mesh>
   )
 }
+
+
+function Initimg(){
+  const [displayProp, setDisplayProp] = React.useState(false);
+
+  setTimeout(function(){
+    setDisplayProp(true);
+    console.log("TEXT")
+  }, 6000);
+
+    return (
+    <>
+    <div className="welcomedcc" style={{display: displayProp? 'none' : 'block', position: "absolute", zIndex: "200", left: "50%", top: "50%", transform: "translate(-50%, -50%)"}}>
+        <img src = {hint} width='100%' height='100%' />
+    </div>
+    </>
+    )
+}
+ 
+ 
+const intiImage = <Initimg/>
 
 function TouchPoint6({ position, color, onClick }) {
   const [hovered, set] = useState(false)
@@ -625,13 +635,13 @@ function TouchPoint6({ position, color, onClick }) {
                   <CSSTransition
                       in={showMessage}
                       timeout={300}
-                      classNames="alert4"
+                      classNames="alert7"
                       unmountOnExit
                       // onEnter={() => setShowButton(false)}
                       // onExited={() => setShowButton(true)}
                   >
                       <Alert
-                      className="alert4"
+                      className="alert7"
                       variant="primary"
                       dismissible
                       onClose={() => setShowMessage(false)}
@@ -665,7 +675,7 @@ function obama(){
   
     var datetime = data;
   
-    // var now = new Date().getTime();
+    var now = new Date().getTime();
     now = localStorage.getItem('scene5');
 
     if( isNaN(datetime) )
@@ -678,7 +688,7 @@ function obama(){
     }else{
       var milisec_diff = datetime - now;
     }
-    var final = Math.round(600-(milisec_diff/1000));
+    var final = Math.round(900-(milisec_diff/1000));
     if (final < 0){
       final = 0;
     }
@@ -730,12 +740,17 @@ function Counter(){
 
 
   return (
-    <div className="bg-text6">
-      <h1>{something}<span>/7</span></h1>
-      <h3>CHALLENGES</h3>
-      <h1>{pieceCollected}<span>/6</span></h1>
-      <h3 style={{fontSize: '1.3rem'}}>Puzzle Pieces Collected</h3>
-    </div>
+    <>
+      <div className="bg-text6">
+        <h1 style={{ letterSpacing: '4px' }}>{something}/<span>7</span></h1>
+        <h3>CHALLENGES</h3>
+      </div>
+      <div className="bg-text7">
+        <img src={Map} height="45%" width="45%" />
+        <h1>{pieceCollected}/<span>6</span></h1>
+        <h3>PIECES</h3> 
+      </div>    
+    </>
   )
 }
 
@@ -745,9 +760,6 @@ const elementorso = <Timer/>
 function Scene2() {
   return (
       <>
-        {elementorso}
-        {counter1}
-        {logout}
           <Canvas camera={{ position: [0, 0, 0.1] }}>
               <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
                   <Suspense fallback={
@@ -759,22 +771,27 @@ function Scene2() {
                       </Html>
                     }>
                       <Dome />  
-                      <pointLight position={[10, 10, 10]} />
-                      <Box1 position={[-10, -5, -11]} />
-                      <Box2 position={[10, 1, -13]}/>
-                      <Box3 position={[10, -12, -20]} />
-                      <Box4 position={[10, -9, 3]} />
-                      <Box5 position={[10, -2, -30]} />
-                      <Box6 position={[-10, 2.8, -18]} />
-                      <TouchPoint1 position={[25, 1, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                      <TouchPoint2 position={[25, -27, -30]} args={[3, 2, 1]} color='#F8A61F' />
-                      <TouchPoint3 position={[-5, -2, -8]} args={[3, 2, 1]} color='#F8A61F' />
-                      <TouchPoint4 position={[8, -10, -18]} args={[3, 2, 1]} color='#F8A61F' />
-                      <TouchPoint5 position={[7, -7, -20]} args={[3, 2, 1]} color='#F8A61F' />
-                      <TouchPoint6 position={[5, -12, -16]} args={[3, 2, 1]} color='#F8A61F' />
+                      <pointLight position={[-10, 10, 10]} />
+                      <Box1 position={[-12, -6, 10]} />
+                      <Box2 position={[10, -10, -13]}/>
+                      <Box3 position={[10, -4, 12]} />
+                      <Box4 position={[-8, -1, -13]} />
+                      <Box5 position={[10, 10, 2]} />
+                      <Box6 position={[-5, 3, 10]} />
+                      <TouchPoint1 position={[-17, 1, -10]} args={[3, 2, 1]} color='#F8A61F' />
+                      <TouchPoint2 position={[-17, -7, -5]} args={[3, 2, 1]} color='#F8A61F' />
+                      <TouchPoint3 position={[1, 0, 2]} args={[3, 2, 1]} color='#F8A61F' />
+                      <TouchPoint4 position={[-5, -2, 0]} args={[3, 2, 1]} color='#F8A61F' />
+                      <TouchPoint5 position={[-25, -10, 10]} args={[3, 2, 1]} color='#F8A61F' />
+                      <TouchPoint6 position={[-25, -15, -6]} args={[3, 2, 1]} color='#F8A61F' />
                       {/* <Portal position={[-10, -12, -20]} args={[3, 2, 1]} color='#fff' /> */}
                   </Suspense>
-          </Canvas>,
+          </Canvas>
+          <Music2 />
+          {intiImage} 
+          {elementorso}
+          {counter1}
+          {logout},
       </>
   );
 

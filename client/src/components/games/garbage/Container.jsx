@@ -4,7 +4,8 @@ import Box from "./Box";
 import { ItemTypes } from "./ItemTypes";
 import update from "immutability-helper";
 
-var showHint = "Drag and drop the trash to its designated trash bins.";
+var showHint = "SEGREGATE THE TRASH TO THE CORRECT BINS IN THE LEAST TIME POSSIBLE.";
+
 var count = 0
 var ddd = 'hidden'
 
@@ -54,15 +55,17 @@ export const Container = () => {
     },
     [droppedBoxNames, dustbins]
   );
-  if(count > 1){
+  if(count > 2){
     ddd = canProceed[0]
     var scene1 = new Date().getTime();
     localStorage.setItem('scene1', scene1);
-    console.log("scene1",scene1);
+    
+    window.location.href = '/scene3';
   }
+  console.log("scene1",count);
   return (
     <div>
-      <div style={{ textAlign: 'center' }}>{showHint}</div>
+      <div style={{ textAlign: 'center', fontSize: '1rem' }}>{showHint}</div>
       <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center'}}>
         {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
           <Dustbin
@@ -86,13 +89,13 @@ export const Container = () => {
           />
         ))}
       </div>
-      <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center', visibility: ddd  }}>
+      {/* <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center', visibility: ddd  }}>
           <a href="/scene3">
             <button className="btn btn-primary3">
                 Proceed
             </button>
           </a>
-      </div>
+      </div> */}
     </div>
   );
 };

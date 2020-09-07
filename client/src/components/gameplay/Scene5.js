@@ -79,7 +79,7 @@ function obama(){
     }else{
       var milisec_diff = datetime - now;
     }
-    var final = Math.round(600-(milisec_diff/1000)) - 5;
+    var final = Math.round(900-(milisec_diff/1000)) - 5;
     if (final < 0){
       final = 0;
     }
@@ -147,12 +147,9 @@ const elementorso = <Timer/>
 function Scene5() {
     return (
         <>
-        {elementorso}
-        {counter}
-        {logout}
         {/* <Timer/> */}
             <Canvas camera={{ position: [-0, 0, 0.01] }}>
-                <Controls enableDamping dampingFactor={0.2}  />
+                <Controls enableDamping dampingFactor={0.2} enableZoom={false} />
                     <Suspense fallback={
                       <Html center style={{ color: 'white' }}>
                         <img src={Loader} />
@@ -171,6 +168,9 @@ function Scene5() {
                     </Suspense>
             </Canvas>,
             <Music2 />
+            {elementorso}
+            {counter}
+            {logout}
         </>
     );
 }

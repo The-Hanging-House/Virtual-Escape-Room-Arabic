@@ -27,9 +27,10 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <Fragment>
-    <div className="bg-image"></div>
-    <div className="bg-text">
-    <h1 className="large text-primary">LOG IN<hr /></h1>
+    <div className="bg-image"><div className="lock-up"></div></div>
+    
+    <div className="bg-text" style={{ borderRadius: '40px' }}>
+    <h1 className="large text-primary" style={{ fontSize: '1.4rem' }}>LOG IN</h1>
       <form className="form" onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
           <input
@@ -52,17 +53,16 @@ const Login = ({ login, isAuthenticated }) => {
             minLength="6"
           />
         </div>
-        <div style={{ marginTop: '2rem' }}>
-          <input type="submit" value="CONTINUE" style={{ margin: '1rem', padding: '1rem', fontWeight: '700', letterSpacing: '6px' }} className="btn btn-primary" />
+        <div style={{ marginTop: '1rem' }}>
+          <input type="submit" value="CONTINUE" style={{ margin: '2rem', padding: '1rem 3rem', fontWeight: '700', letterSpacing: '3px', borderRadius: '30px' }} className="btn btn-primary" />
         </div>
       </form>
 
-      <p className="my-1">
-        DON'T HAVE AN ACCOUNT? <Link to="/register" className='link'>REGISTER</Link>
+      <p style={{ letterSpacing: '2px' }} className="my-1">
+        DON'T HAVE AN ACCOUNT? <Link to="/register" className='link'>SIGN UP</Link>
       </p>
     </div>  
     <section className="login">
-      
     </section>
     </Fragment>
   );

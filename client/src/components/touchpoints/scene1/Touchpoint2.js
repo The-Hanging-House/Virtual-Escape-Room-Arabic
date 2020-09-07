@@ -28,13 +28,13 @@ function TouchPoint2({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [0.3, 0.3, 0.3] : [0.2, 0.2, 0.2]}
+            scale={hovered ? [1, 1, 1, 1] : [1, 1, 1, 1]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
+            <meshBasicMaterial attach="material" transparent opacity={0} /> 
             <Html center>
                 <Container>
                     <CSSTransition
@@ -51,16 +51,11 @@ function TouchPoint2({ position, color, onClick }) {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside">
+                        <div className="alert-inside4" style={{ left: '-2.5%' }}>
                             <Alert.Heading>
-                                <p>
+                            <p style={{ fontSize: '1.2rem' }}>
                                 Opps! You should see your sorroundings first!
                                 </p>
-                                <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
-                                onMouseEnter={event => onMouseOver(event)}
-                                onMouseOut={event => onMouseOut(event)}>
-                                OK
-                            </h3>
                             </Alert.Heading>
                             
                             {/* <Button onClick={() => setShowMessage(false)}>
