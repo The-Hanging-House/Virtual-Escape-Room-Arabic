@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e9c4875bd17b0393caf4a1e8463ffdd4",
+    "revision": "f9ccd95a92f836478f0734f1c224c265",
     "url": "/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.1f156bdb.chunk.css"
   },
   {
-    "revision": "7204b18139b9c93ea9e5",
+    "revision": "c147bf3c94e8cba2c208",
     "url": "/static/css/main.523be390.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.a513e287.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7204b18139b9c93ea9e5",
-    "url": "/static/js/main.3c17a262.chunk.js"
+    "revision": "c147bf3c94e8cba2c208",
+    "url": "/static/js/main.3fbcab68.chunk.js"
   },
   {
     "revision": "9b4e396c183e42c1fa5c",
@@ -84,8 +84,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/click.535112c2.svg"
   },
   {
-    "revision": "218a404003ed1535498b9589d647a7be",
-    "url": "/static/media/completedPuzzle1.218a4040.png"
+    "revision": "393232c296e86617455c16a43dc12168",
+    "url": "/static/media/completedPuzzle1.393232c2.png"
   },
   {
     "revision": "914e68157632310ac10a3e4ad733fb5d",
