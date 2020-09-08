@@ -1,6 +1,6 @@
 import React from "react";
 import { useStore } from "../../store";
-import { Box, Button, Input, ButtonsContainer, CallButton } from "./atom";
+import { Box, Button, Button1, Input, ButtonsContainer, CallButton } from "./atom";
  
 var flag = 0;
  
@@ -10,6 +10,7 @@ export default () => {
   const [callValues, setCallValues] = React.useState(number);
   const [state, dispatch] = useStore();
   const buttons = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0"];
+  const buttonAlphabets = [" ", "(abc)", "(def)", "‏‏‎ ‎(ghi)", "‏‏‎ ‏‏‎ ‎‎(jkl)", "‏‏‎ ‎(mno)", "‏‏‎ ‎(pqrs)", "‏‏‎ ‎(tuv)", "‏‏‎ ‎(wxyz)", " ", " ", " "];
  
   // ComponentDidMount & ComponentWillUnmount
   // React.useEffect(() => {
@@ -84,6 +85,7 @@ export default () => {
         onChange={e => setNumber(e.target.value)}
       />
       
+ 
       <ButtonsContainer>
         {buttons.map(char => (
           <Button key={char} onClick={() => setNumber(number + char)}>
@@ -91,6 +93,15 @@ export default () => {
           </Button>
         ))}
       </ButtonsContainer>
+
+      <ButtonsContainer style={{position: 'absolute', top: '33%', left: '7%', zIndex: '-2'}}>
+        {buttonAlphabets.map(char => (
+          <Button1 key={char} onClick={() => setNumber(number)}>
+            {char}
+          </Button1>
+        ))}
+      </ButtonsContainer>
+
       <button style={{position: 'absolute', backgroundColor: 'transparent', height: '20px' , top: '70%', left: '75%', padding: '2px', color: 'white', border: 'green'}}  onClick={() => eraser()}>Del</button>
       <CallButton onClick={() => setCallButton(true)}>Call</CallButton>
     </Box>

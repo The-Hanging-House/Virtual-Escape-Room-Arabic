@@ -67,6 +67,25 @@ export const Button = styled.button`
   }
 `;
 
+export const Button1 = styled.button`
+  display: inline-block;
+  // line-height: 50%
+  width: calc(33.33% - 15px);
+  // top: 10%
+  font-size: 12px;
+  background: transparent;
+  border: none;
+  color: #969696;
+  padding: 8px 15px;
+  text-align: center;
+  // cursor: pointer;
+  // left: 100%;
+
+  &:nth-child(3n - 1) {
+    margin: 0 15px;
+  }
+`;
+
 export const CallButton = styled.button`
   margin-top: 5px;
   background: #8bc34a;

@@ -54,14 +54,14 @@ function TouchPoint3({ position, color, onClick }) {
                                 </p>
                             </Alert.Heading>
                             <a href='scene5'>
-                                <h3 onMouseEnter={event => onMouseOver(event)}
+                                <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     href>
                                     OPEN
                                 </h3>
                             
                             </a>
-                                <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                                <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
                                     IGNORE IT

@@ -62,13 +62,13 @@ function TouchPoint5({ position, color, onClick }) {
                                     <p>
                                     Did you know noise disturbs nature? How would you like to help in this situation ?
                                     </p>
-                                    <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                                    <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
                                     DANCE AND SING
                                     </h3>
                                     {/* <a href='scene6'> */}
-                                        <h3 onMouseEnter={event => onMouseOver(event)} style={{ fontSize: '1rem'}}
+                                        <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)} style={{ fontSize: '1rem'}}
                                             onMouseOut={event => onMouseOut(event)} onClick={() => setCON(true)}
                                             href>
                                             SWITCH OFF THE MUSIC

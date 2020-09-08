@@ -61,13 +61,13 @@ function TouchPoint3({ position, color, onClick }) {
                                 <p>
                                 Glare from artificial lights makes it hard for wildlife to see, let's help the wildlife by 
                                 </p>
-                                <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                                <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
                                     LEAVING THE LIGHTS ON
                                 </h3>
                             {/* <a href='scene5'> */}
-                                <h3 onMouseEnter={event => onMouseOver(event)} style={{ fontSize: '1rem'}}
+                                <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)} style={{ fontSize: '1rem'}}
                                     onMouseOut={event => onMouseOut(event)}  onClick={() => setCON(true)}
                                     href>
                                     SWITCHING THE LIGHTS OFF

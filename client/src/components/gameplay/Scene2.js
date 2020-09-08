@@ -128,12 +128,12 @@ const Dome = () => {
                                   <img src={egg} alt='egg' width='100%' height='100%' />
                                 </div>
                             </Alert.Heading>
-                                <h3 onMouseEnter={event => onMouseOver(event)}
+                                <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                            <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
@@ -209,12 +209,12 @@ const Dome = () => {
                                 <img src={egg} alt='egg' width='100%' height='100%' />
                                 </div>
                             </Alert.Heading>
-                                <h3 onMouseEnter={event => onMouseOver(event)}
+                                <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                            <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
@@ -283,12 +283,12 @@ const Dome = () => {
                                   <img src={egg3} alt='egg' width='100%' height='100%' />
                                 </div>
                             </Alert.Heading>
-                                <h3 onMouseEnter={event => onMouseOver(event)}
+                                <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                            <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
@@ -356,12 +356,12 @@ const Dome = () => {
                                   <img src={egg4} alt='egg' width='100%' height='100%' />
                                 </div>
                             </Alert.Heading>
-                                <h3 onMouseEnter={event => onMouseOver(event)}
+                                <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                            <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
@@ -429,12 +429,12 @@ const Dome = () => {
                                   <img src={egg5} alt='egg' width='100%' height='100%' />
                                 </div>
                             </Alert.Heading>
-                                <h3 onMouseEnter={event => onMouseOver(event)}
+                                <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                            <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
@@ -502,12 +502,12 @@ const Dome = () => {
                                   <img src={egg6} alt='egg' width='100%' height='100%' />
                                 </div>
                             </Alert.Heading>
-                                <h3 onMouseEnter={event => onMouseOver(event)}
+                                <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                            <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
@@ -523,7 +523,7 @@ const Dome = () => {
 
 
 function TouchPoint5({ position, color, onClick }) {
-  const [showMessage, setShowMessage] = useState(true);
+  const [showMessage, setShowMessage] = useState(false);
   const [collectedMessage, setCollectedMessage] = useState(false);
   const [coll, setColl] = useState(false);
   const [showProceed, setShowProceed] = useState('hidden');
@@ -557,11 +557,11 @@ function TouchPoint5({ position, color, onClick }) {
                   <CSSTransition
                       in={showMessage}
                       timeout={300}
-                      classNames="alert1"
+                      classNames="alert5"
                       unmountOnExit
                   >
                       <Alert
-                      className="alert" 
+                      className="alert5" 
                       variant="primary"
                       dismissible
                       onClose={() => setShowMessage(false)}

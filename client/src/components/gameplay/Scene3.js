@@ -193,13 +193,13 @@ function Box1(props) {
                                 Woah! It looks like you found a crowbar. What would you like to do with it?
                                 </p>
                             </Alert.Heading>
-                              <h3 onMouseEnter={event => onMouseOver(event)}
+                              <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                   onMouseOut={event => onMouseOut(event)}
                                   onClick={() => {setCollectedMessage(true); setShowMessage(false)}}
                                   style={{ paddingLeft: '1rem'}}>
                                   COLLECT
                               </h3>
-                          <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                          <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                               onMouseEnter={event => onMouseOver(event)}
                               onMouseOut={event => onMouseOut(event)}
                               style={{ paddingLeft: '1rem'}}>
@@ -286,7 +286,7 @@ function TouchPoint3({ position, color, onClick }) {
                               {innerText}
                               </p>
                               {/* <a href="scene4"> */}
-                                  <h3 onMouseEnter={event => onMouseOver(event)}
+                                  <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                           onMouseOut={event => onMouseOut(event)} onClick={() => setCON(true)}
                                           >
                                           {show? 'OPEN IT' : ""}

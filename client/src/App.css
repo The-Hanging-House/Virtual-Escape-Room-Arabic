@@ -810,6 +810,9 @@ h1 span {
 .alert-inside4 p {
   font-size: 1.2rem;
 }
+.alert-inside h3 {
+  cursor: pointer;
+}
 .alert-inside {
   background-image: url(../src/img/popup.svg);
   display: inline-block;
@@ -951,6 +954,10 @@ h3 {
   position: absolute;
   right: 20%;
 }
+.sc-AxhUy .bvwlKu {
+  z-index: 2;
+}
+
 
 @media screen and (min-width: 767px)
 {
@@ -1470,6 +1477,10 @@ h3 {
   .alert3 button {
     left: 86%;
   }
+  .alert5 button {
+    top: -17px;
+    right: -190px;
+  }
   .alert-inside {
     width: 30vw;
     height: 35vh;
@@ -1575,6 +1586,10 @@ h3 {
   .alert button {
     top: -5px;
     right: 25px;
+  }
+  .alert5 button {
+    top: -22px;
+    right: -230px;
   }
   .alert-inside4 {
     width: 30vw;
