@@ -358,6 +358,21 @@ body {
   background: url("./img/image1.png") no-repeat center/cover;
   height: 100vh;
 }
+.landing2 {
+  position: relative;
+  background: url("./img/image2.jpg") no-repeat center/cover;
+  height: 100vh;
+}
+.landing3 {
+  position: relative;
+  background: url("./img/image3.jpg") no-repeat center/cover;
+  height: 100vh;
+}
+.landing4 {
+  position: relative;
+  background: url("./img/image4.jpg") no-repeat center/cover;
+  height: 100vh;
+}
 .lock-up {
   background: url("./img/lockup.png") no-repeat right top;
   background-size: 80vh;
@@ -1035,15 +1050,19 @@ h3 {
     left: 37.5%;
     line-height: 3.5rem;
   }
-  .app {
-    position: absolute;
-    background-color: white;
-    right: 26%;
-    bottom: 50%;
+  .app-text {
+    position: relative;
+    width: 100%;
+    left: 0%;
+    text-align: center;
+  }
+  .alert button {
+    top: -12px;
+    right: 7px;
   }
   .alert1 button {
-    top: -5px;
-    right: -120px;
+    top: -1px;
+    right: -150px;
     z-index: 2;
   }
   .alert-inside5 {
@@ -1054,21 +1073,79 @@ h3 {
     margin-top: 5rem;
   }
   .alert-inside4 {
-    background-image: url(../src/img/popup1.svg);
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 30px;
-    color: white;
-    padding: 1rem;
-    width: 30vw;
+    width: 60vw;
     height: 35vh;
-    position: absolute;
-    top: 14vh;
+    top: 55%;
+    position: relative;
+    left: -100%;
   }
   .alert-inside4 p {
     font-size: 0.7rem;
   }
+  .alert2 button {
+    position: absolute;
+    left: 192%;
+    top: 65%;
+  }
+  .icons {
+    position: relative;
+    bottom: -55%;
+    left: -13%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 50%;
+  }
+  .option1 {
+    line-height: 5vh;
+  }
+  .icons img {
+    width: 150px;
+  }
+  .icons .cwn {
+    position: relative;
+    bottom: -25%;
+    left: 20%;
+  }
+  .alert3 button {
+    left: 206%;
+  }
+  .alert6 button {
+    top: 1px;
+    right: -170px;
+  }
+  .alert-inside6 {
+    position: absolute;
+    left: -21.5vw;
+    top: -1.5vh;
+    width: 80vh;
+  }
+  .app {
+    position: absolute;
+    background-color: white;
+    right: 31%;
+    bottom: 50%;
+  }
+  .dustbin {
+    position: relative;
+    left: -23%;
+    width: 150%;
+    height: 40vh;
+  }
+  .garbage {
+    position: relative;
+    width: 100%;
+  }
+  .alert-inside {
+    width: 55vw;
+    height: 35vh;
+    position: absolute;
+    top: -7.5vh;
+    left: -32px
+  }
+  /* .alert button {
+    left: 165%;
+    top: 1%;
+  } */
 }
 
 @media screen and (min-width: 1024px)
@@ -1136,29 +1213,53 @@ h3 {
     top: 54vh;
     left: 37.5%;
   }
+  .alert-inside6 {
+    position: absolute;
+    left: -21.5vw;
+    top: -1.5vh;
+    width: 80vh;
+  }
   .app {
     position: absolute;
     background-color: white;
-    right: 26%;
-    bottom: 30vh;
+    right: 30%;
+    bottom: 32vh;
   }
   .app input {
     font-size: 1rem;
   }
+  .app-text {
+    position: relative;
+    width: 100%;
+    left: 0%;
+    text-align: center;
+  }
+  .alert1 button {
+    top: 1px;
+    right: -100px;
+  }
+  .alert6 button {
+    top: 1px;
+    right: -80px;
+  }
   .alert-inside4 {
-    background-image: url(../src/img/popup1.svg);
-    display: inline-block;
-    background-repeat: no-repeat;
-    border-radius: 30px;
-    color: white;
-    width: 40vw;
+    width: 60vw;
     height: 35vh;
-    top: 59%;
-    position: absolute;
-    top: 70%;
+    top: 50%;
+    position: relative;
+    left: -100%;
   }
   .alert-inside4 p {
-    font-size: 1rem;
+    padding: 1rem;
+    font-size: 0.7rem;
+  }
+  .alert-inside4 h3 {
+    padding-left: 1rem;
+  }
+  .alert2 button {
+    position: absolute;
+    left: 190%;
+    top: 62%;
   }
   .bg-text7 {
     position: absolute;
@@ -1169,6 +1270,43 @@ h3 {
     position: absolute;
     right: 55%;
     top: 30%;
+  }
+  .option1 {
+    line-height: 5vh;
+  }
+  .icons {
+    position: relative;
+    bottom: -55%;
+    left: -13%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 50%;
+  }
+  .icons img {
+    width: 150px;
+  }
+  .icons .cwn {
+    position: relative;
+    bottom: -25%;
+    left: 20%;
+  }
+  .alert3 button {
+    left: 137%;
+  }
+  .alert-inside {
+    width: 40vw;
+    height: 35vh;
+    position: absolute;
+    top: -7.5vh;
+    left: -32px
+  }
+  .alert-inside20 {
+    left: -10vw;
+    top: -3vh;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: thick;
+    border-color: #F8A61F;
   }
 }
 
@@ -1263,29 +1401,50 @@ h3 {
     top: 54vh;
     left: 37.5%;
   }
+  .alert-inside6 {
+    position: absolute;
+    left: -21.5vw;
+    top: -1.5vh;
+    width: 90vh;
+  }
   .app {
     position: absolute;
     background-color: white;
-    right: 32%;
+    right: 40%;
     bottom: 32vh;
   }
   .app input {
     font-size: 1.5rem;
   }
+  .app-text {
+    position: relative;
+    width: 100%;
+    left: 0%;
+    text-align: center;
+  }
+  .alert button {
+    top: -5px;
+    right: 20px;
+  }
+  .alert1 button {
+    top: -5px;
+    right: -5px;
+  }
   .alert-inside4 {
-    background-image: url(../src/img/popup1.svg);
-    display: inline-block;
-    background-repeat: no-repeat;
-    border-radius: 30px;
-    color: white;
     width: 40vw;
     height: 35vh;
-    top: 59%;
-    position: absolute;
-    top: 50%;
+    top: 30%;
+    position: relative;
+    left: -100%;
   }
   .alert-inside4 p {
-    font-size: 1rem;
+    padding: 1rem;
+    font-size: 0.7rem;
+  }
+  .alert2 button {
+    position: absolute;
+    left: 128%;
+    top: 44%;
   }
   .bg-text7 {
     position: absolute;
@@ -1294,9 +1453,31 @@ h3 {
   }
   .bg-text7 img {
     position: absolute;
-    right: 52%;
+    right: 45%;
     top: 30%;
   }
+  .option1 {
+    line-height: 5vh;
+  }
+  .icons {
+    position: relative;
+    bottom: -55%;
+    left: -10%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 50%;
+  }
+  .alert3 button {
+    left: 86%;
+  }
+  .alert-inside {
+    width: 30vw;
+    height: 35vh;
+    position: absolute;
+    top: -7.5vh;
+    left: -32px
+  }
+  
 }
 @media screen and (min-width: 1920px)
 {
@@ -1318,7 +1499,7 @@ h3 {
   }
   .bg-text1
   {
-    transform: translate(60%, -114%) !important;
+    transform: translate(50%, -114%) !important;
     height: auto;
     margin-top: 140px;
     width: 100vh;
@@ -1345,7 +1526,7 @@ h3 {
   {
     font-size: 2rem;
     top: 14vh;
-    left: 35vh;
+    left: 30.5vh;
   }
   .lead1 p {
     font-size: 1.8rem;
@@ -1377,7 +1558,7 @@ h3 {
   }
   .bg-text6 {
     top: 8vh;
-    left: 10vw;
+    left: 8vw;
   }
   .bg-end {
     position: absolute;
@@ -1388,45 +1569,83 @@ h3 {
     top: 50vh;
     left: 37.5%;
   }
-  .app {
-    position: absolute;
-    background-color: white;
-    right: 37.5%;
-    bottom: 37vh;
-  }
   .app input {
     font-size: 2rem;
   }
+  .alert button {
+    top: -5px;
+    right: 25px;
+  }
   .alert-inside4 {
-    background-image: url(../src/img/popup1.svg);
-    display: inline-block;
-    background-repeat: no-repeat;
-    border-radius: 30px;
-    color: white;
-    width: 40vw;
+    width: 30vw;
     height: 35vh;
-    top: 59%;
-    position: absolute;
-    top: 50%;
+    top: 30%;
+    position: relative;
+    left: -100%;
   }
   .alert-inside4 p {
-    font-size: 1rem;
+    padding: 1rem;
+    font-size: 0.7rem;
+  }
+  .alert2 button {
+    position: absolute;
+    left: 95%;
+    top: 40%;
+  }
+  .alert-inside6 {
+    position: absolute;
+    left: -21.5vw;
+    top: -1.5vh;
+    width: 90vh;
   }
   .app {
     position: absolute;
     background-color: white;
-    right: 32%;
-    bottom: 34vh;
+    right: 40%;
+    bottom: 31vh;
+  }
+  .app-text {
+    position: relative;
+    width: 100%;
+    left: 0%;
+    text-align: center;
   }
   .bg-text7 {
     position: absolute;
     top: 25%;
-    left: 35vh;
+    left: 20vh;
   }
   .bg-text7 img {
     position: absolute;
     right: 44%;
     top: 30%;
+  }
+  .gametime {
+    line-height: 10vh;
+  }
+  .option1 {
+    line-height: 5vh;
+  }
+  .icons {
+    position: relative;
+    bottom: -60%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 50%;
+  }
+  .alert3 button {
+    left: 91%;
+  }
+  .alert6 button {
+    top: -18px;
+    right: 137px;
+  }
+  .alert-inside {
+    width: 24vw;
+    height: 35vh;
+    position: absolute;
+    top: -7.5vh;
+    left: -32px
   }
 }
 

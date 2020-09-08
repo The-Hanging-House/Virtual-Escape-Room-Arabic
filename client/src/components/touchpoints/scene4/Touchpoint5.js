@@ -52,7 +52,7 @@ function TouchPoint5({ position, color, onClick }) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert"
+                        className="alert1"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}

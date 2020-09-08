@@ -53,7 +53,7 @@ function TouchPoint3({ position, color, onClick }) {
                         >
                         <div className="alert-inside4" style={{ left: '-2.5%' }}>
                             <Alert.Heading>
-                                <p>
+                                <p style={{ fontSize: '1.2rem' }}>
                                 Seems like the trunk is locked, but you left the lights and music on.
                                 </p>
                             </Alert.Heading>

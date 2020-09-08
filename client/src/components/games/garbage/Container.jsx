@@ -64,9 +64,9 @@ export const Container = () => {
   }
   console.log("scene1",count);
   return (
-    <div>
+    <div className="garbage">
       <div style={{ textAlign: 'center', fontSize: '1rem' }}>{showHint}</div>
-      <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center'}}>
+      <div className="dustbin" style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center'}}>
         {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
           <Dustbin
             accepts={accepts}
@@ -78,7 +78,7 @@ export const Container = () => {
         ))}
       </div>
 
-      <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center' }}>
+      <div className="garbage" style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center' }}>
         {boxes.map(({ name, type, bgImageName }, index) => (
           <Box
             name={name}

@@ -523,7 +523,7 @@ const Dome = () => {
 
 
 function TouchPoint5({ position, color, onClick }) {
-  const [showMessage, setShowMessage] = useState(false);
+  const [showMessage, setShowMessage] = useState(true);
   const [collectedMessage, setCollectedMessage] = useState(false);
   const [coll, setColl] = useState(false);
   const [showProceed, setShowProceed] = useState('hidden');

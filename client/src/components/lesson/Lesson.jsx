@@ -21,6 +21,7 @@ const Lesson = () => {
     }
     
     return (
+        <section className="landing3">
             <div className="orange-overlay">
                     <ResponsivePlayer
                         url={briefing}
@@ -38,6 +39,7 @@ const Lesson = () => {
                             </div>
                         </div>
             </div>
+        </section>
     )
 }
 

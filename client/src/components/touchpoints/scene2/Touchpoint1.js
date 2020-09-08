@@ -38,9 +38,9 @@ const TouchPoint1 = ({ position, color, onClick }) => {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside6" style={{ left: '-10vw' }}>
+                        <div className="alert-inside6">
                             <div>
-                                <img src={board} alt='board' width='200%' height='200%' />
+                                <img src={board} alt='board' style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '100%' }} />
                             </div>
                         </div>
                         </Alert>

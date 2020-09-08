@@ -169,7 +169,7 @@ function Box1(props) {
     <mesh
       {...props}
       ref={mesh}
-      scale={collectedMessage ? [0, 0, 0, 0] : [1, 1, 1, 1]}
+      scale={collectedMessage ? [0, 0, 0, 0] : [1.5, 1.5, 1.5, 1.5]}
       onClick={() => setShowMessage(true)}>
       <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
       <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
@@ -178,11 +178,11 @@ function Box1(props) {
                   <CSSTransition
                       in={showMessage}
                       timeout={300}
-                      classNames="alert"
+                      classNames="alert1"
                       unmountOnExit
                   >
                       <Alert
-                      className="alert" 
+                      className="alert1" 
                       variant="primary"
                       dismissible
                       onClose={() => setShowMessage(false)}
@@ -346,6 +346,7 @@ function Scene3() {
                     }>
                         <Dome />
                         <Task />
+                        <ambientLight intensity={1.2} />
                         <Box1 position={[10, -10, -10]} />
                         {/* <TouchPoint1 position={[-4, -3, 5]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         <TouchPoint2 position={[-6, -1.5, 1]} args={[3, 2, 1]} color='#F8A61F' />

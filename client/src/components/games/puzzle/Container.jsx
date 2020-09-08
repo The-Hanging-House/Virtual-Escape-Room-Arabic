@@ -13,12 +13,14 @@ var ddd = 'hidden'
 // var boxDisplay = 'block'
 var text = 'Conservationists are tracking Houbara #324 but the pieces of the map are missing.'
 var flag = 0;
+var flag2 = 0;
 
 export const Container = () => {
   var canProceed = ['visible', 'hidden']
   var stateText = ["Conservationists are tracking Houbara #324 but the pieces of the map are missing.", "Thank you for helping us identify the Houbara's migrating pattern. We wish you all the best in your endeavors. Call 800-CWN for help."]
 
   const [boxDisplay, setBoxDisplay] = useState(false)
+  const [checkAfter, setCheckAfter] = useState(false)
 
   const [dustbins, setDustbins] = useState([
     { accepts: [ItemTypes.GLASS], lastDroppedItem: null, bgImageName: "bin1"},
@@ -62,15 +64,26 @@ export const Container = () => {
   if(count > 4){
     ddd = canProceed[0];
     text = stateText[1];
-  if(flag === 0){
-    setBoxDisplay(true);
-    flag = 1;
-    localStorage.setItem('puzzleComplete', "1");
-  }
+    localStorage.setItem('forCheck', "1");
+    if(flag === 0){
+      setBoxDisplay(true);
+      flag = 1;
+      localStorage.setItem('puzzleComplete', "1");
+    }
+    setInterval(function(){
+      if(localStorage.getItem('forCheck')==="1"){
+        setCheckAfter(true);
+        console.log("KK");
+      }
+    }, 500);
   }
   return (
     <>
-    <div className="puzzle">
+    <div style={{ display: checkAfter? 'block' : 'none'}}>
+      <img src={completedPuzzle} style={{height: "60vh", width: "50vw", position: 'relative', left: '-10%'}} />
+    </div>
+    <div style={{ display: checkAfter? 'none' : 'block'}}>
+    <div className="puzzle" >
       <div>
         <div className="solvedboard" style={{ display: boxDisplay? 'none' : 'block'}}>
         {/* <div className="solvedboard" > */}
@@ -105,6 +118,7 @@ export const Container = () => {
             bgImageName={bgImageName}
           />
         ))}
+      </div>
       </div>
     {/* </div> */}
     </>
