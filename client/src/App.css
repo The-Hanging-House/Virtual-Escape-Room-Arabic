@@ -13,6 +13,7 @@
   font-size: 1rem;
 }
 .my-1 {
+  font-family: "Dubai W23", sans-serif;
   margin: 0.5rem 0;
   font-size: 0.8rem;
   color: rgb(0,0,0, 0.5)
@@ -110,6 +111,7 @@
   letter-spacing: 1rem
 }
 .text-primary {
+  font-family: "Dubai W23", sans-serif; ;
   color: #111;
   letter-spacing: 3px;
   border-bottom: 8px solid #ffb300;
@@ -876,7 +878,10 @@ h1 span {
   margin-bottom: 0.5rem;
   line-height: 1.1rem;
   cursor: pointer;
+  font-size: 1rem;
+  padding-left: 1rem;
   /* padding-left: 1rem; */
+
 }
 .alert-inside2 p {
   color: #FFFFFFC7;
@@ -1054,7 +1059,7 @@ h3 {
   }
 }  */
 
-@media(max-width: 768px)
+/* @media(max-width: 768px)
 {
   .bg-text1
   {
@@ -1145,9 +1150,9 @@ h3 {
     left: 2%;
     width: 100%;
   }
-}
+} */
 
-@media only screen and (max-width: 1599px)
+/* @media only screen and (max-width: 1599px)
 {
   .bg-text {
     position: absolute;
@@ -1211,9 +1216,9 @@ h3 {
     left: 2%;
     width: 100%;
   }
-}
+} */
 
-@media only screen and (min-width: 1600px)
+@media(min-width: 1200px)
 {
   .bg-text {
     position: absolute;
@@ -1223,6 +1228,10 @@ h3 {
     height: 40vh;
     padding: 20px;
     text-align: center;
+  }
+  .bg-text .text-primary {
+    position: absolute;
+    transform: translate(-50%, 30%);
   }
   .form input[type="text"],
   .form input[type="email"],
@@ -1240,6 +1249,22 @@ h3 {
     border-radius: 20px;
     background-color: #eeeeee;
     letter-spacing: 2px;
+    position: relative;
+    bottom: -150%;
+  }
+  .bg-text .btn {
+    font-weight: 600;
+    letter-spacing: 3px;
+    border-radius: 30px;
+    position: relative;
+    bottom: -100px;
+    height: 5vh;
+    width: 60%;
+    font-size: 1.1rem;
+  }
+  .bg-text p {
+    position: relative;
+    top: -30%;
   }
   .bg-text1
   {

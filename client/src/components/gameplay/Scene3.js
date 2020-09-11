@@ -192,17 +192,17 @@ function Box1(props) {
                                 Woah! It looks like you found a crowbar. What would you like to do with it?
                                 </p>
                             </Alert.Heading>
-                              <h3 style={{ cursor: 'pointer', fontSize: '1rem', paddingLeft: '1rem' }} onMouseEnter={event => onMouseOver(event)}
+                              <h3  onMouseEnter={event => onMouseOver(event)}
                                   onMouseOut={event => onMouseOut(event)}
                                   onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                   PICK IT UP
                               </h3>
-                          <h3 style={{ cursor: 'pointer', fontSize: '1rem', paddingLeft: '1rem' }} onClick={() => setShowMessage(false)}
+                          <h3 onClick={() => setShowMessage(false)}
                               onMouseEnter={event => onMouseOver(event)}
                               onMouseOut={event => onMouseOut(event)}>
                               IGNORE IT
                           </h3>
-                          <h3 style={{ cursor: 'pointer', fontSize: '1rem', paddingLeft: '1rem' }} onClick={() => setShowMessage(false)}
+                          <h3 onClick={() => setShowMessage(false)}
                               onMouseEnter={event => onMouseOver(event)}
                               onMouseOut={event => onMouseOut(event)}>
                               LOOKS USELESS, LEAVE IT

@@ -34,7 +34,7 @@ const Login = ({ login, isAuthenticated }) => {
     <Fragment>
     <div className="bg-image"><div className="lock-up"></div></div>
     
-    <div className="bg-text" style={{ borderRadius: '40px' }}>
+    <div className="bg-text">
     <h1 className="large text-primary" style={{ fontSize: '1.4rem' }}>LOG IN</h1>
       <form className="form" onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
@@ -59,11 +59,11 @@ const Login = ({ login, isAuthenticated }) => {
           />
         </div>
         <div style={{ marginTop: '1rem' }}>
-          <input type="submit" value="CONTINUE" style={{ fontWeight: '700', letterSpacing: '3px', borderRadius: '30px' }} className="btn btn-primary" />
+          <input type="submit" value="CONTINUE" className="btn btn-primary" />
         </div>
       </form>
 
-      <p style={{ letterSpacing: '2px' }} className="my-1">
+      <p className="my-1">
         DON'T HAVE AN ACCOUNT? <Link to="/register" className='link'>SIGN UP</Link>
       </p>
     </div>  

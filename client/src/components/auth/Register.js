@@ -135,7 +135,7 @@ if (number !== "" && number <= 14 ){
 
         <div className="form-group">
             <select id="dropdown" style={{ color: '#717171' }} value={selectValue} onChange={(e) => onChange(e)} name="selectValue" placeholder="Select Emirates" >
-              <option value="" disabled selected>Select Emirates</option>
+              <option value="" disabled selected>Select Emirate</option>
               <option value="Dubai">Dubai</option>
               <option value="Sharjah">Sharjah</option>
               <option value="Abu Dhabi">Abu Dhabi</option>
