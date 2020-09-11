@@ -15,7 +15,7 @@ function TouchPoint4({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-        scale={hovered ? [2, 2, 2, 2] : [2, 2, 2, 2]}
+        scale={hovered ? [10, 8, 0.1, 0.1] : [10, 8, 0.1, 0.1]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
@@ -33,12 +33,12 @@ function TouchPoint4({ position, color, onClick }) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert" style={{color : 'white', padding : '5px', width : '40vw'}}
+                        className="alert" 
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside2" style={{ left: '-3vw' }}>
+                        <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
                             <div>
                                 <img src={trunk1} alt='Trunk1' width='100%' height='100%' />
                             </div>

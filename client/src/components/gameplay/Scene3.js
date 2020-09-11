@@ -11,7 +11,7 @@ import { Html } from 'drei';
 
 import Loader from '../../img/loader.gif'
 
-import img from './../../img/crowbar.jpg'
+import img from './../../img/crowbar.png'
 
 import Logout from '../logout/Logout'
 
@@ -47,7 +47,7 @@ setInterval(function(){
   }
   if(localStorage.getItem('myDataKey') === "1598355449119"){
     localStorage.setItem('myDataKey', "0");
-    window.location.href = "/timesup";
+    // window.location.href = "/timesup";
   }
 }, 500);
 
@@ -103,7 +103,7 @@ function obama(){
   
     if (counter === 0){
       console.log("Fail");
-      window.location.href = "/timesup"
+      // window.location.href = "/timesup"
     }
   
     return (
@@ -160,19 +160,18 @@ function Box1(props) {
     el.style.background = black;
   };
 
-  useFrame(({ camera, mouse }) => {
-    mesh.current.rotation.x = mesh.current.rotation.y += 0.01
-  })
+ 
 
   return (
   
     <mesh
       {...props}
       ref={mesh}
+      rotation={[2, 10, 0]}
       scale={collectedMessage ? [0, 0, 0, 0] : [1.5, 1.5, 1.5, 1.5]}
       onClick={() => setShowMessage(true)}>
-      <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
-      <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
+      <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
+      <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
       <Html center>
               <Container>
                   <CSSTransition
@@ -189,21 +188,24 @@ function Box1(props) {
                       >
                       <div className="alert-inside" style={{visibility: collectedMessage? 'hidden':'visible'}}>
                             <Alert.Heading>
-                                <p>
+                            <p>
                                 Woah! It looks like you found a crowbar. What would you like to do with it?
                                 </p>
                             </Alert.Heading>
-                              <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
+                              <h3 style={{ cursor: 'pointer', fontSize: '1rem', paddingLeft: '1rem' }} onMouseEnter={event => onMouseOver(event)}
                                   onMouseOut={event => onMouseOut(event)}
-                                  onClick={() => {setCollectedMessage(true); setShowMessage(false)}}
-                                  style={{ paddingLeft: '1rem'}}>
-                                  COLLECT
+                                  onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
+                                  PICK IT UP
                               </h3>
-                          <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                          <h3 style={{ cursor: 'pointer', fontSize: '1rem', paddingLeft: '1rem' }} onClick={() => setShowMessage(false)}
                               onMouseEnter={event => onMouseOver(event)}
-                              onMouseOut={event => onMouseOut(event)}
-                              style={{ paddingLeft: '1rem'}}>
-                              IGNORE
+                              onMouseOut={event => onMouseOut(event)}>
+                              IGNORE IT
+                          </h3>
+                          <h3 style={{ cursor: 'pointer', fontSize: '1rem', paddingLeft: '1rem' }} onClick={() => setShowMessage(false)}
+                              onMouseEnter={event => onMouseOver(event)}
+                              onMouseOut={event => onMouseOut(event)}>
+                              LOOKS USELESS, LEAVE IT
                           </h3>
                       </div>
                       </Alert>
@@ -220,7 +222,7 @@ function TouchPoint3({ position, color, onClick }) {
   const [CON, setCON] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [innerText, setInnerText] = useState("Seems like the trunk is locked, but you left the lights and music on.");
-
+  
   const [show, setShow] = useState(false);
 
   // function that checks the number of boxes collected
@@ -228,7 +230,7 @@ function TouchPoint3({ position, color, onClick }) {
 
     if(toolCollected === 1){
       setShow(true);
-      setInnerText("The car door is now unlocked! What should I do?")
+      setInnerText("You now have a crowbar. What would you like to do with it?")
     } 
 
   }, 1000);
@@ -268,28 +270,38 @@ function TouchPoint3({ position, color, onClick }) {
                   <CSSTransition
                       in={showMessage}
                       timeout={300}
-                      classNames="alert2"
+                      className={ show? "alert1" : "alert2"}
                       unmountOnExit
                       // onEnter={() => setShowButton(false)}
                       // onExited={() => setShowButton(true)}
                   >
                       <Alert
-                      className="alert2"
+                      className={ show? "alert1" : "alert2"}
                       variant="primary"
                       dismissible
                       onClose={() => setShowMessage(false)}
                       >
-                      <div className="alert-inside4" style={{ left: '-2.5%' }}>
+                      <div className={ show? "alert-inside" : "alert-inside4" }>
                           <Alert.Heading>
-                          <p style={{ fontSize: '1rem' }}>
+                          <p style={{ fontSize: '1.2rem', fontFamily: 'Dubai W23, sans-serif' }}>
                               {/* The car door is not locked, what should I do? */}
                               {innerText}
                               </p>
                               {/* <a href="scene4"> */}
-                                  <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
+                              <h3 style={{ cursor: 'pointer', fontSize: '1rem' }} onClick={() => setShowMessage(false)}
+                                      onMouseEnter={event => onMouseOver(event)}
+                                      onMouseOut={event => onMouseOut(event)}>
+                                      {show? 'THROW IT AWAY' : ""}
+                                  </h3>
+                                  <h3 style={{ cursor: 'pointer', fontSize: '1rem' }} onClick={() => setShowMessage(false)}
+                                      onMouseEnter={event => onMouseOver(event)}
+                                      onMouseOut={event => onMouseOut(event)}>
+                                      {show? 'TAKE IT HOME' : ""}
+                                  </h3>
+                                  <h3 style={{ cursor: 'pointer', fontSize: '1rem' }} onMouseEnter={event => onMouseOver(event)}
                                           onMouseOut={event => onMouseOut(event)} onClick={() => setCON(true)}
                                           >
-                                          {show? 'OPEN IT' : ""}
+                                          {show? 'USE IT TO OPEN THE TRUNK' : ""}
                                   </h3>
                               {/* </a> */}
                               <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
@@ -308,6 +320,7 @@ function TouchPoint3({ position, color, onClick }) {
 }
 
 
+
 const Dome = () => {
     const texture = useLoader(THREE.TextureLoader, 'clean.jpg')
     return (
@@ -320,7 +333,7 @@ const Dome = () => {
 
 function Counter(){
   return (
-      <div className="bg-text3">
+      <div className="bg-text6">
           <h1>1<span>/7</span></h1>
           <h3>CHALLENGES</h3>
       </div>
@@ -352,7 +365,11 @@ function Scene3() {
                         <TouchPoint2 position={[-6, -1.5, 1]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-11, -5, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint4 position={[-11, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint4 position={[1, -18, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[3, -5.5, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[9.5, -7, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[-10, -32, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint6 position={[6, -9, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint7 position={[0, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         {/* <Portal position={[-6, -5, 1]} args={[3, 2, 1]} color='#fff' /> */}

@@ -5,34 +5,35 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
+import trunk2 from '../../../img/plant.png'
 
 function TouchPoint5({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     // const [showButton, setShowButton] = useState(true);
     const [showMessage, setShowMessage] = useState(false);
 
-    const onMouseOver = event => {
-        const el = event.target;
-        let colorhex = "#F8A61F"
-        el.style.background = colorhex;
-      };
+    // const onMouseOver = event => {
+    //     const el = event.target;
+    //     let colorhex = "#F8A61F"
+    //     el.style.background = colorhex;
+    //   };
 
-      const onMouseOut = event => {
-        const el = event.target;
-        let black = "transparent";
-        el.style.background = black;
-      };
+    //   const onMouseOut = event => {
+    //     const el = event.target;
+    //     let black = "transparent";
+    //     el.style.background = black;
+    //   };
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [0.5, 0.5, 0.5] : [0.4, 0.4, 0.4]}
+        scale={hovered ? [1, 1, 1, 1] : [1, 1, 1, 1]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" color={color} /> 
+            <meshBasicMaterial attach="material" transparent opacity={0} /> 
             <Html center>
                 <Container>
                     <CSSTransition
@@ -44,37 +45,15 @@ function TouchPoint5({ position, color, onClick }) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert1" style={{color : 'white', padding : '5px', width : '40vw', backgroundColor: 'rgba(230, 206, 166, 0.9)'}}
+                        className="alert"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside">
-                            <Alert.Heading>
-                                    <p>
-                                    Did you know noise disturbs wildlife and nature how would you like to help in this situation ?
-                                    </p>
-                            </Alert.Heading>
-                                <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
-                                    onMouseEnter={event => onMouseOver(event)}
-                                    onMouseOut={event => onMouseOut(event)}>
-                                    DANCE AND SING
-                                </h3>
-                                <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
-                                    onMouseEnter={event => onMouseOver(event)}
-                                    onMouseOut={event => onMouseOut(event)}>
-                                    IGNORE
-                                </h3>
-                                <a href='scene6'>
-                                    <h3 onMouseEnter={event => onMouseOver(event)}
-                                        onMouseOut={event => onMouseOut(event)}
-                                        href>
-                                        SWITCH OFF THE MUSIC
-                                    </h3>
-                            </a>
-                            {/* <Button onClick={() => setShowMessage(false)}>
-                                Close
-                            </Button> */}
+                        <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
+                            <div>
+                                <img src={trunk2} alt='Trunk2' width='100%' height='100%' />
+                            </div>
                         </div>
                         </Alert>
                     </CSSTransition>

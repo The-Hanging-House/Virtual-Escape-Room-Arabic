@@ -21,6 +21,10 @@ import TouchPoint4 from '../touchpoints/scene2/Touchpoint4'
 import Telephone from './Telephone';
 
 
+import ding from '../../audio/ding.mp3'
+import paper from '../../audio/paper.mp3'
+import door from '../../audio/door.mp3'
+
 import hint from '../../img/welcome.svg'
 
 import Music2 from '../../audio/Music2'
@@ -54,7 +58,16 @@ var ccom = 4;
 // value of X increments each time a box is collected
 function counter(){
   x = x + 1;
+  if (x%2 === 0){
+    new Audio(ding).play();
+  }
 }
+
+function Door(){
+  new Audio(door).play();
+  return null
+}
+
 
 const Controls = (props) => {
     const { camera, gl } = useThree()
@@ -113,19 +126,19 @@ const Dome = () => {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert4"
                         unmountOnExit
                     >
                         <Alert
-                        className="alert1" 
+                        className="alert4" 
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%'}}>
+                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
                             <Alert.Heading>
                                 <div>
-                                  <img src={egg} alt='egg' width='100%' height='100%' />
+                                  <img src={egg} alt='egg' />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -133,7 +146,7 @@ const Dome = () => {
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
@@ -187,26 +200,26 @@ const Dome = () => {
         ref={mesh}
         scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
         onClick={() => setShowMessage(true)}>
-        <boxBufferGeometry attach="geometry" args={[1, 1, 1]} style={{visibility: collectedMessage? 'hidden':'visible'}}/>
+        <boxBufferGeometry attach="geometry" args={[1, 1, 1]} style={{visibility: collectedMessage? 'hidden':'visible', }}/>
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
         <Html center>
                 <Container>
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert4"
                         unmountOnExit
                     >
                         <Alert
-                        className="alert1" 
+                        className="alert4" 
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%'}}>
+                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
                             <Alert.Heading>
                                 <div>
-                                <img src={egg} alt='egg' width='100%' height='100%' />
+                                <img src={egg} alt='egg' />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -214,7 +227,7 @@ const Dome = () => {
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
@@ -268,19 +281,19 @@ const Dome = () => {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert4"
                         unmountOnExit
                     >
                         <Alert
-                        className="alert1" 
+                        className="alert4" 
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%'}}>
+                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
                             <Alert.Heading>
                                 <div>
-                                  <img src={egg3} alt='egg' width='100%' height='100%' />
+                                  <img src={egg3} alt='egg' />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -288,7 +301,7 @@ const Dome = () => {
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
@@ -341,19 +354,19 @@ const Dome = () => {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert4"
                         unmountOnExit
                     >
                         <Alert
-                        className="alert1" 
+                        className="alert4" 
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%'}}>
+                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
                             <Alert.Heading>
                                 <div>
-                                  <img src={egg4} alt='egg' width='100%' height='100%' />
+                                  <img src={egg4} alt='egg' />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -361,7 +374,7 @@ const Dome = () => {
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
@@ -414,19 +427,19 @@ const Dome = () => {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert4"
                         unmountOnExit
                     >
                         <Alert
-                        className="alert1" 
+                        className="alert4" 
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%'}}>
+                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
                             <Alert.Heading>
                                 <div>
-                                  <img src={egg5} alt='egg' width='100%' height='100%' />
+                                  <img src={egg5} alt='egg' />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -434,7 +447,7 @@ const Dome = () => {
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
@@ -487,19 +500,19 @@ const Dome = () => {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert4"
                         unmountOnExit
                     >
                         <Alert
-                        className="alert1" 
+                        className="alert4" 
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%'}}>
+                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
                             <Alert.Heading>
                                 <div>
-                                  <img src={egg6} alt='egg' width='100%' height='100%' />
+                                  <img src={egg6} alt='egg' />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -507,7 +520,7 @@ const Dome = () => {
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                     COLLECT
                                 </h3>
-                            <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 IGNORE
@@ -524,7 +537,7 @@ const Dome = () => {
 
 function TouchPoint5({ position, color, onClick }) {
   const [showMessage, setShowMessage] = useState(false);
-  const [collectedMessage, setCollectedMessage] = useState(false);
+  const [collectedMessage, setCollectedMessage] = useState(true);
   const [coll, setColl] = useState(false);
   const [showProceed, setShowProceed] = useState('hidden');
   var puzzlePro;
@@ -549,7 +562,7 @@ function TouchPoint5({ position, color, onClick }) {
       <mesh 
           scale={collectedMessage ? [0.4, 0.4, 0.4] : [0, 0, 0]}
           position={position}
-          onClick={() => setShowMessage(true)}>
+          onClick={() => {setShowMessage(true); new Audio(paper).play()}}>
           <sphereGeometry attach="geometry" args={[1, 32, 32]} />
           <meshBasicMaterial attach="material" color="orange" /> 
           <Html center>
@@ -557,11 +570,11 @@ function TouchPoint5({ position, color, onClick }) {
                   <CSSTransition
                       in={showMessage}
                       timeout={300}
-                      classNames="alert5"
+                      classNames="alert1"
                       unmountOnExit
                   >
                       <Alert
-                      className="alert5" 
+                      className="alert1" 
                       variant="primary"
                       dismissible
                       onClose={() => setShowMessage(false)}
@@ -635,13 +648,13 @@ function TouchPoint6({ position, color, onClick }) {
                   <CSSTransition
                       in={showMessage}
                       timeout={300}
-                      classNames="alert7"
+                      classNames="alert"
                       unmountOnExit
                       // onEnter={() => setShowButton(false)}
                       // onExited={() => setShowButton(true)}
                   >
                       <Alert
-                      className="alert7"
+                      className="alert"
                       variant="primary"
                       dismissible
                       onClose={() => setShowMessage(false)}
@@ -757,9 +770,11 @@ function Counter(){
 const counter1 = <Counter />
 const logout = <Logout />
 const elementorso = <Timer/>
+const doors = <Door/>
 function Scene2() {
   return (
       <>
+          {doors}
           <Canvas camera={{ position: [0, 0, 0.1] }}>
               <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
                   <Suspense fallback={

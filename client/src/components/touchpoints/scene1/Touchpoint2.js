@@ -3,9 +3,11 @@ import React, { useState, useEffect } from 'react'
 import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
-
-
 import { Html } from 'drei';
+
+import Lock from '../../../img/lock.png'
+
+import App from '../../games/lock/App2'
 
 function TouchPoint2({ position, color, onClick }) {
     const [hovered, set] = useState(false)
@@ -13,7 +15,6 @@ function TouchPoint2({ position, color, onClick }) {
     const [showMessage, setShowMessage] = useState(false);
 
     const onMouseOver = event => {
-       
         const el = event.target;
         let colorhex = "#F8A61F"
         el.style.background = colorhex;
@@ -28,7 +29,7 @@ function TouchPoint2({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [2, 2, 2, 2] : [2, 2, 2, 2]}
+            scale={hovered ? [1, 1, 1] : [1, 1, 1]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
@@ -36,31 +37,34 @@ function TouchPoint2({ position, color, onClick }) {
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
             <meshBasicMaterial attach="material" transparent opacity={0} /> 
             <Html center>
-                <Container>
+            <Container>
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert2"
+                        classNames="alert3"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert2"
+                        className="alert3"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside4" style={{ left: '-2.5%' }}>
+                         <div className="alert-inside6">
                             <Alert.Heading>
-                            <p style={{ fontSize: '1.2rem' }}>
-                                Opps! You should see your sorroundings first!
-                                </p>
+                            <App />
+                            <img src={Lock} alt='pinlock'/>
+                                
+                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', textAlign: 'center', cursor: 'pointer'}}
+                                onMouseEnter={event => onMouseOver(event)}
+                                onMouseOut={event => onMouseOut(event)}>
+                                CLOSE
+                            </h3>    
                             </Alert.Heading>
+                                
                             
-                            {/* <Button onClick={() => setShowMessage(false)}>
-                                Close
-                            </Button> */}
                         </div>
                         </Alert>
                     </CSSTransition>

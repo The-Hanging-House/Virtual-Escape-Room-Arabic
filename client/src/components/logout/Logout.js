@@ -83,7 +83,7 @@ const Logout = ({ auth: { isAuthenticated, loading }, logout }) => {
             // size="lg"
           >
             <Logo/>
-            <h3>EXIT</h3>
+            <h3 styl={{ fontSize: '1.3rem' }}>EXIT</h3>
           </a>
         )}
         <CSSTransition

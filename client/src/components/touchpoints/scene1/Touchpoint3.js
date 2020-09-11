@@ -28,7 +28,7 @@ function TouchPoint3({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [2, 2, 2, 2] : [2, 2, 2, 2]}
+            scale={hovered ? [3, 3, 3, 3] : [3, 3, 3, 3]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
@@ -51,9 +51,9 @@ function TouchPoint3({ position, color, onClick }) {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside4" style={{ left: '-2.5%' }}>
+                        <div className="alert-inside4">
                             <Alert.Heading>
-                                <p style={{ fontSize: '1.2rem' }}>
+                                <p style={{ fontSize: '1.1rem' }}>
                                 Seems like the trunk is locked, but you left the lights and music on.
                                 </p>
                             </Alert.Heading>

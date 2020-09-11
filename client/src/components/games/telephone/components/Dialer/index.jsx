@@ -1,7 +1,8 @@
 import React from "react";
 import { useStore } from "../../store";
 import { Box, Button, Button1, Input, ButtonsContainer, CallButton } from "./atom";
- 
+import phoneCall from '../../../../../audio/phoneCall.mp3'
+
 var flag = 0;
  
 export default () => {
@@ -35,7 +36,10 @@ export default () => {
     if (strNumber.length === callNumber.length && strNumber.localeCompare(callNumber)===0){
       var scene2 = new Date().getTime();
       localStorage.setItem('scene2', scene2);
-      window.location.href = '/end';
+      new Audio(phoneCall).play();
+      setTimeout(function(){
+        window.location.href = '/end';
+      }, 15000);
     }
     
  

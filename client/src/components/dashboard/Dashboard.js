@@ -8,6 +8,8 @@ import bg from '../../img/01.png'
 
 import Logout from './../logout/Logout'
 
+import Music4 from '../../audio/Music4'
+
 const logout = <Logout />
 
 const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
@@ -21,7 +23,7 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
         {logout}
         <div className="bg-image"></div>
         <div className="bg-text1"></div>
-        <img className="bg-text1" src={bg} alt="Dashboard" useMap="#workmap" width="600" height="420" />
+        <img className="bg-text1" src={bg} width='100%' height='auto' alt="Dashboard"  />
         <a href="instruction">
             <div className="button-1"></div>
         </a>
@@ -29,7 +31,7 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
         <div className="lead1">
             <p className="lead1">Hello <br /> { user && user.username }</p>
         </div>
-        
+        <Music4 />  
     </Fragment>
 
 }

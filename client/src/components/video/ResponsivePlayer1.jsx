@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactPlayer from 'react-player'
-// import './responsive-player.css'
+import './responsive-player.css'
 
 const ResponsivePlayer1 = ({ url, onProgress }) => {
       return (
@@ -9,7 +9,7 @@ const ResponsivePlayer1 = ({ url, onProgress }) => {
             className='react-player'
             url={url}
             width='100%'
-            height='100%'
+            height='95%'
             // controls={true}
             playing={true}
             onProgress={onProgress}

@@ -15,7 +15,7 @@ function TouchPoint6({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-        scale={hovered ? [0.4, 0.4, 0.4] : [0.4, 0.4, 0.4]}
+        scale={hovered ? [1, 1, 1, 1] : [1, 1, 1, 1]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
@@ -38,7 +38,7 @@ function TouchPoint6({ position, color, onClick }) {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside2">
+                        <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
                             <div>
                                 <img src={egg} alt='Trunk2' width='100%' height='100%' />
                             </div>

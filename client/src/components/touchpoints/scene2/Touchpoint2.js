@@ -28,7 +28,7 @@ const TouchPoint2 = ({ position, color, onClick }) => {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert"
+                        classNames="alert1"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
@@ -39,9 +39,9 @@ const TouchPoint2 = ({ position, color, onClick }) => {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside2">
+                        <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
                             <div>
-                                <img src={tools} alt='tools' width='100%' height='100%' />
+                                <img src={tools}/>
                             </div>
                         </div>
                         </Alert>

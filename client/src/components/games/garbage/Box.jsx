@@ -8,6 +8,12 @@ const backgroundsList = {
   trash2:
   '/trash2.png',
   trash1:
+    '/trash.png',
+  trash3:
+    '/trash1.png',
+  trash4:
+  '/trash2.png',
+  trash5:
     '/trash.png'
   
 };
@@ -15,14 +21,17 @@ const backgroundsList = {
 
 const style = {
   backgroundSize: 'cover',
-  height: '160px',
-  width: '180px',
+  backgroundRepeat: 'no-repeat',
+  height: '100px',
   backgroundColor: 'transparent',
   padding: '0.5rem 1rem',
-  marginRight: '1.5rem',
-  marginBottom: '1.5rem',
+  marginRight: '1rem',
+  marginLeft: '1rem',
+  marginTop: '1rem',
+  marginBottom: '1px',
   cursor: 'move',
   float: 'left',
+  width: "calc((20% - 60px) - 1px)" 
 }
 export const Box = ({ name, isDropped, isDragging, connectDragSource, bgImageName }) => {
   const opacity = isDragging ? 0.4 : 1

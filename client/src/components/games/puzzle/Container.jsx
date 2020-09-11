@@ -80,7 +80,7 @@ export const Container = () => {
   return (
     <>
     <div style={{ display: checkAfter? 'block' : 'none'}}>
-      <img src={completedPuzzle} style={{height: "60vh", width: "50vw", position: 'relative', left: '-10%'}} />
+      <img src={completedPuzzle} style={{height: "60vh", width: "50vw", position: 'relative'}} />
     </div>
     <div style={{ display: checkAfter? 'none' : 'block'}}>
     <div className="puzzle" >
@@ -108,7 +108,7 @@ export const Container = () => {
           {text}
         </p>
       </div> */}
-      <div style={{ overflow: 'hidden', clear: 'both', top: '100%', display: boxDisplay? 'none' : 'block', position: 'relative', left: '12%'}}>
+      <div style={{ overflow: 'hidden', clear: 'both', top: '100%', display: boxDisplay? 'none' : 'block', position: 'relative'}}>
         {boxes.map(({ name, type, bgImageName }, index) => (
           <Box
             name={name}

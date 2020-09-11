@@ -45,7 +45,7 @@ class App extends React.PureComponent {
       {/* <div>{value}</div> */}
       {/* <button onClick={this.onClear}>Clear</button> */}
     </div>
-    <div className="app-text" style={{ display: tryAgain, position: 'absolute', right: '20%', color: 'black', bottom: '20%' }}>
+    <div className="app-text" style={{ display: tryAgain, position: 'absolute', right: '31%', color: 'black', bottom: '20%', fontFamily: 'Dubai W23, sans-serif', zIndex: '5', textAlign: 'center' }}>
       <h3>
         OOPS! That's not the right word.
       </h3>

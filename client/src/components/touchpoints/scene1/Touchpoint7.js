@@ -27,7 +27,7 @@ function TouchPoint7({ position, color, onClick }) {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert1"
+                        classNames="alert"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
@@ -38,9 +38,9 @@ function TouchPoint7({ position, color, onClick }) {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside2">
+                        <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
                             <div>
-                                <img src={egg} alt='Trunk2' />
+                                <img src={egg} alt='feather'  />
                             </div>
                         </div>
                         </Alert>

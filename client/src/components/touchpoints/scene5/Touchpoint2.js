@@ -41,13 +41,13 @@ function TouchPoint2({ position, color, onClick }) {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert1"
+                        classNames="alert3"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert1"
+                        className="alert3"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
@@ -57,7 +57,7 @@ function TouchPoint2({ position, color, onClick }) {
                             <App />
                             <img src={Lock} alt='pinlock'/>
                                 
-                            <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', textAlign: 'center'}}
+                            <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', textAlign: 'center', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 CLOSE

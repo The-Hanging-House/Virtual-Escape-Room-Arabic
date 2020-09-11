@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import trunk1 from '../../../img/trunk1.jpg'
+import egg from '../../../img/trunk1.png'
 
 function TouchPoint4({ position, color, onClick }) {
     const [hovered, set] = useState(false)
@@ -15,13 +15,13 @@ function TouchPoint4({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [0.5, 0.5, 0.5] : [0.4, 0.4, 0.4]}
+            scale={hovered ? [10, 4, 0.1, 0.1] : [10, 4, 0.1, 0.1]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" color={color} /> 
+            <meshBasicMaterial attach="material" transparent opacity={0} /> 
             <Html center>
                 <Container>
                     <CSSTransition
@@ -33,18 +33,15 @@ function TouchPoint4({ position, color, onClick }) {
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert" style={{color : 'white', padding : '5px', width : '40vw', backgroundColor: 'rgba(230, 206, 166, 0.9)'}}
+                        className="alert" 
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside2">
+                       <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
                             <div>
-                                <img src={trunk1} alt='Trunk1' width='100%' height='100%' />
+                                <img src={egg} alt='Trunk2' width='100%' height='100%' />
                             </div>
-                            {/* <Button onClick={() => setShowMessage(false)}>
-                                Close
-                            </Button> */}
                         </div>
                         </Alert>
                     </CSSTransition>

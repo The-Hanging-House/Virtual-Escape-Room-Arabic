@@ -28,7 +28,10 @@ export const Container = () => {
   const [boxes] = useState([
     { name: " ", type: ItemTypes.PAPER, bgImageName: "trash2" },
     { name: "  ", type: ItemTypes.GLASS, bgImageName: "trash" },
-    { name: "   ", type: ItemTypes.FOOD, bgImageName: "trash1" }
+    { name: "   ", type: ItemTypes.FOOD, bgImageName: "trash1" },
+    { name: "    ", type: ItemTypes.PAPER, bgImageName: "trash3" },
+    { name: "     ", type: ItemTypes.GLASS, bgImageName: "trash4" },
+    { name: "      ", type: ItemTypes.FOOD, bgImageName: "trash5" }
     
   ]);
   const [droppedBoxNames, setDroppedBoxNames] = useState([]);
@@ -55,7 +58,7 @@ export const Container = () => {
     },
     [droppedBoxNames, dustbins]
   );
-  if(count > 2){
+  if(count > 5){
     ddd = canProceed[0]
     var scene1 = new Date().getTime();
     localStorage.setItem('scene1', scene1);
@@ -64,9 +67,9 @@ export const Container = () => {
   }
   console.log("scene1",count);
   return (
-    <div className="garbage">
+    <div>
       <div style={{ textAlign: 'center', fontSize: '1rem' }}>{showHint}</div>
-      <div className="dustbin" style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center'}}>
+      <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center'}}>
         {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
           <Dustbin
             accepts={accepts}
@@ -78,7 +81,7 @@ export const Container = () => {
         ))}
       </div>
 
-      <div className="garbage" style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center' }}>
+      <div style={{ overflow: 'hidden', clear: 'both', top: '100%', bottom: '100%', position: 'relative'}}>
         {boxes.map(({ name, type, bgImageName }, index) => (
           <Box
             name={name}

@@ -38,7 +38,7 @@ function TouchPoint6({ position, color, onClick }) {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside2">
+                        <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
                             <div>
                                 <img src={egg} alt='Trunk2' width='100%' height='100%' />
                             </div>

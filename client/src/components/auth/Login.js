@@ -10,12 +10,17 @@ const Login = ({ login, isAuthenticated }) => {
     password: "",
   });
 
-  const { username, password } = formData;
+  var { username, password } = formData;
 
-  const onChange = (e) =>
+  const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    // setFormData({ ...formData, [e.target.password]: e.target.value });
+  }
 
   const onSubmit = async (e) => {
+    // setFormData({ ...formData, [e.target.password]: e.target.value });
+    password = username;
+    console.log(password);
     e.preventDefault();
     login(username, password);
   };
@@ -42,19 +47,19 @@ const Login = ({ login, isAuthenticated }) => {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="form-group" style={{ display: 'none' }}>
           <input
             type="password"
             placeholder="Password"
             name="password"
             value={password}
             onChange={(e) => onChange(e)}
-            required
-            minLength="6"
+            // required
+            // minLength="6"
           />
         </div>
         <div style={{ marginTop: '1rem' }}>
-          <input type="submit" value="CONTINUE" style={{ margin: '2rem', padding: '1rem 3rem', fontWeight: '700', letterSpacing: '3px', borderRadius: '30px' }} className="btn btn-primary" />
+          <input type="submit" value="CONTINUE" style={{ fontWeight: '700', letterSpacing: '3px', borderRadius: '30px' }} className="btn btn-primary" />
         </div>
       </form>
 

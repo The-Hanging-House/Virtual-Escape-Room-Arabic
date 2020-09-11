@@ -8,6 +8,8 @@ import bg from '../../img/component1.png'
 
 import Logout from './../logout/Logout'
 
+import Music4 from '../../audio/Music4'
+
 const logout = <Logout />
 
 const Dashboard2 = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
@@ -34,7 +36,7 @@ const Dashboard2 = ({ getCurrentProfile, auth: { user }, profile: { profile, loa
         <div className="lead1">
             <p className="lead1">Hello <br /> { user && user.username }</p>
         </div>
-        
+        <Music4 />  
     </Fragment>
 
 }

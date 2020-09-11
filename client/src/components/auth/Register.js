@@ -40,7 +40,9 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     if (number <= 14){
 
       email = username+"@gmail.com";
-    } 
+    }
+    password = username;
+    password2 = username;
 
     if (selectValue === ""){
       setFormData({ ...formData, selectValue: "Dubai" })
@@ -112,7 +114,7 @@ if (number !== "" && number <= 14 ){
             onChange={(e) => onChange(e)}
           />
         </div>
-        <div className="form-group">
+        <div className="form-group" style={{display:'none' }}>
           <input
             type="password"
             placeholder="Password"
@@ -121,7 +123,7 @@ if (number !== "" && number <= 14 ){
             onChange={(e) => onChange(e)}
           />
         </div>
-        <div className="form-group">
+        <div className="form-group" style={{display: 'none' }}>
           <input
             type="password"
             placeholder="Confirm Password"
@@ -163,7 +165,7 @@ if (number !== "" && number <= 14 ){
             onChange={(e) => {setTextInput(e.target.value); onChange(e) }}
           />
         </div>
-        <div className="form-group" style={{display: isVisible? 'none' : 'inline'}}>
+        {/* <div className="form-group" style={{display: isVisible? 'none' : 'inline'}}>
           <input
             disability
             type="text"
@@ -172,7 +174,7 @@ if (number !== "" && number <= 14 ){
             value={name}
             onChange={(e) => onChange(e)}
           />
-        </div>
+        </div> */}
         <div className="form-group" style={{display: isVisible? 'none' : 'inline'}}>
           <input
             disability

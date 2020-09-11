@@ -16,6 +16,7 @@ import TouchPoint4 from '../touchpoints/scene1/Touchpoint4'
 import TouchPoint5 from '../touchpoints/scene1/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene1/Touchpoint6'
 import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
+// import TouchPoint8 from '../touchpoints/scene1/Touchpoint8'
 // import Timer from '../timer/Timer'
 import './style.css'
 
@@ -128,16 +129,23 @@ function Scene1() {
                     }>
                         <Dome />
                         
-                        <TouchPoint1 position={[-4, -4, 0]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint2 position={[-10, -1, 1]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint1 position={[-4, -7, 0]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint2 position={[-10, -0.4, 1]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-11, -5, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint4 position={[-11, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint4 position={[-16, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint4 position={[12, -18, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        {/* <TouchPoint4 position={[-18, -25, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
+                        {/* <TouchPoint4 position={[-8, -25, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         <TouchPoint5 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint6 position={[6, -9, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[4, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[11, -7, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[-10, -40, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint6 position={[7, -9, 4]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint7 position={[0, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        {/* <TouchPoint8 position={[-10, -1, 1]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         
                     </Suspense>
-            </Canvas>
+            </Canvas> 
             <Music1 />
             {intiImage} 
             {elementorso}

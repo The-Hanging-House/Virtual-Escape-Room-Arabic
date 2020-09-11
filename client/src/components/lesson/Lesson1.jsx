@@ -23,7 +23,6 @@ const Lesson1 = () => {
 
     return (
         <section className="landing4">
-            <div className="orange-overlay">
                     <ResponsivePlayer
                         url={briefing1}
                         onProgress={handleWatchComplete} />
@@ -35,7 +34,6 @@ const Lesson1 = () => {
                                 
                             </div>
                         </div> */}
-                </div>
         </section>
     )
 }

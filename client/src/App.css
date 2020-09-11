@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Dubai W23', ;
   src: url('./fonts/DubaiW23-Regular.woff') format('woff2'),
@@ -94,9 +95,9 @@
   font-family: 'Permanent Marker', cursive;
   color: black;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2rem;
   position: absolute;
-  left: 29.5vh;
+  left: 32vh;
   top: 13vh;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -176,6 +177,7 @@
   left: 12%;
 }
 .buttons2 {
+  font-family: "Dubai W23", sans-serif;
   text-align: center;
   position: absolute;
   bottom: 10%;
@@ -195,20 +197,19 @@
   left: 44.5%;
 }
 .button-1 {
-  background-color: transparent;
+  background-color: white;
   color: black;
   border-radius: 20px;
   position: absolute;
-  top: 52%;
-  left: 50%;
+  top: 53vh;
+  left: 47.5vw;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 20%;
+  width: 18%;
   padding: 20px;
-  text-align: center;
 }
 .button-2 {
-  background-color: transparent;
+  background-color: white;
   color: black;
   border-radius: 20px;
   position: absolute;
@@ -226,7 +227,7 @@
   background-color: rgb(255,0,0,0);
   color: #fff;
   border-radius: 20px;
-  font-size: 1.1rem;
+  font-size: 19.2px;
   /* margin-left: 2rem; */
 }
 .accept {
@@ -239,7 +240,7 @@
   margin-right: 2rem;
 }
 .reject {
-  width: 27%;
+  width: 25.5%;
 }
 .btn-primary3 {
   background-color: #ffb300;
@@ -396,22 +397,17 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -43%);
-  z-index: 9999;
+  z-index: 2;
   width: 30%;
   padding: 20px;
   text-align: center;
 }
 .bg-text1 {
-  background: url("./../src//img/component1.png") no-repeat center/cover;
-  position: absolute;
-  transform: translate(50%, -100%);
+  /* background: url("./../src//img/01.png") no-repeat center/cover; */
+  transform: translate(55%, -100%);
   z-index: 1;
   height: 100vh;
   width: 100vh;
-}
-.bg-text1 image {
-  position: absolute;
-  left: 10%;
 }
 .bg-text2 {
   background-color: white;
@@ -462,7 +458,7 @@ h1 span {
   top: 10vh;
   right: -25vw;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 5;
   width: 30%;
   padding: 20px;
   text-align: center;
@@ -476,11 +472,11 @@ h1 span {
   font-family: "Dubai W23", sans-serif;
   background-color: transparent;
   color: white;
-  font-size: 1.5rem;
-  font-weight: normal;
+  font-size: 1.3rem;
+  font-weight: bold;
   margin: 0%;
   position: relative;
-  letter-spacing: 1px;
+  letter-spacing: 4px;
 }
 .bg-text5 {
   font-family: "Dubai W23", sans-serif;
@@ -627,10 +623,10 @@ h1 span {
   color: red;
   font-size: 1rem;
   position: absolute;
-  top: 52vh;
+  top: 50vh;
   left: 92vh;
-  z-index: 9999;
   width: 100%;
+  z-index: 10;
 }
 .alert1 {
   /* background-image: url(../src/img/popup1.svg); */
@@ -645,14 +641,12 @@ h1 span {
   position: absolute;
 }
 .alert button {
-  top: -2px;
-  right: 20px;
+  top: 2%;
+  right: -59%;
   z-index: 2;
 }
-.alert1 button {
-  top: -5px;
-  right: 195px;
-  z-index: 2;
+.alert1 .close {
+  display: none;
 }
 .alert2 {
   /* background-image: url(../src/img/popup1.svg); */
@@ -667,9 +661,10 @@ h1 span {
   position: absolute;
 }
 .alert2 button {
-  top: 130px;
-  left: 405px;
+  top: 13.2vh;
+  left: 57.6vh;
 }
+
 .alert3 {
   background-color: 'rgba(230, 206, 166, 0.9)';
   display: inline-block;
@@ -713,8 +708,7 @@ h1 span {
   left: -30px;
 }
 .alert4 button {
-  top: -5px;
-  left: 360px;
+  display: none;
 }
 .alert5 {
   /* background-image: url(../src/img/popup.svg); */
@@ -735,6 +729,10 @@ h1 span {
   position: absolute;
   top: -250px;
   left: -30px;
+}
+.alert6 button {
+  top: -3vh;
+  right: 3vh;
 }
 .alert-inside2 {
   /* background-color: rgba(230, 206, 166, 0.9); */
@@ -758,21 +756,57 @@ h1 span {
 }
 .alert-inside6 {
   background-color: rgba(230, 206, 166, 0.9);
-  position: absolute;
-  left: -21.5vw;
-  top: -1.5vh;
   border-radius: 20px;
   border-style: solid;
   border-width: thick;
   border-color: #F8A61F;
+  position: relative;
+  left: -75%;
+  width: 100vh;
+  margin-right: auto;
+  margin-left: auto;
 }
 .alert-inside6 img {
-  width: 70vh;
+  position: relative;
+  width: 80%;
+  left: 11vh;
+}
+.garbage {
+  position: relative;
+  left: 11.2vh;
+}
+.dustbin {
+  overflow: hidden;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 220%;
+}
+.garbage1 {
+  overflow: hidden;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 220%;
+}
+.alert-inside4 {
+  background-image: url(../src/img/popup1.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 30px;
+  color: white;
+  width: 32vw;
+  height: 35vh;
+  position: absolute;
+  top: 10vh;
+}
+.alert3 button {
+  top: 1.5vh;
+  right: 3.5vh;
 }
 .alert-inside3 {
-  position: absolute;
-  left: -200%;
-  top: -20px;
+  position: relative;
   border-radius: 20px;
 }
 .alert-inside5 {
@@ -794,24 +828,18 @@ h1 span {
   margin: 1rem;
   margin-top: 10rem;
 }
-.alert-inside4 {
-  background-image: url(../src/img/popup1.svg);
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  border-radius: 30px;
-  color: white;
-  padding: 1rem;
-  width: 30vw;
-  height: 35vh;
-  position: absolute;
-  top: 14vh;
-}
 .alert-inside4 p {
+  color: #FFFFFFC7;
   font-size: 1.2rem;
+  position: relative;
+  padding: 2rem;
 }
-.alert-inside h3 {
-  cursor: pointer;
+.alert-inside4 h3 {
+  font-family: "Dubai W23", sans-serif;;
+  position: relative;
+  top: -3vh;
+  line-height: 2rem;
+  padding-left: 2rem;
 }
 .alert-inside {
   background-image: url(../src/img/popup.svg);
@@ -820,28 +848,34 @@ h1 span {
   background-size: 100%;
   border-radius: 30px;
   color: white;
-  padding: 1rem;
+  padding: 2rem;
   width: 30vw;
   height: 35vh;
   position: absolute;
-  top: -7.5vh;
+  top: -10vh;
   left: -32px
 }
+
 .alert-inside3 {
   position: absolute;
   top: 20px;
   left: 30px;
 }
 .alert-inside3 h3 {
+  font-family: "Dubai W23", sans-serif;
   margin-bottom: 0.5rem
 }
 .alert-inside p {
+  font-family: "Dubai W23", sans-serif;;
   color: #FFFFFFC7;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 1rem 0rem;
 }
 .alert-inside h3 {
+  font-family: "Dubai W23", sans-serif;
   margin-bottom: 0.5rem;
+  line-height: 1.1rem;
+  cursor: pointer;
   /* padding-left: 1rem; */
 }
 .alert-inside2 p {
@@ -907,15 +941,9 @@ h3 {
   color: #44C8F5;
   font-size: 3rem;
 }
-/* .game-timer {
-  background-image: url(../src/img/rectangle.svg);
-  background-repeat: no-repeat;
-  height: 100vh;
-  background-size: 100%;
-} */
 .gametime {
   position: absolute;
-  transform: translate(-30%, -55%);
+  transform: translate(40%, 50%);
 }
 .option {
   position: relative;
@@ -924,7 +952,7 @@ h3 {
 .option1 {
   position: relative;
   top: 50vh;
-  line-height: 8vh;
+  line-height: 5vh;
 }
 .bg-end1 {
   font-family: "Dubai W23", sans-serif;
@@ -940,9 +968,10 @@ h3 {
 }
 .app {
   position: absolute;
-  background-color: transparent;
-  right: 36%;
-  bottom: 40vh;
+  background-color: white;
+  right: 37vh;
+  top: 29vh;
+  z-index: 1;
 }
 .puzzle {
   position: relative;
@@ -957,710 +986,296 @@ h3 {
 .sc-AxhUy .bvwlKu {
   z-index: 2;
 }
+.icons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.icons img {
+  position: absolute;
+  bottom: -50px;                  /* center link horizontally */
+  transform: translateX(-50%);
+}
 
 
-@media screen and (min-width: 767px)
+/* @media(max-width: 480px)
 {
   .bg-text1
   {
-    transform: translate(15%, -120%) !important;
-    /* position: none !important; */
+    transform: translate(-5.5%, -100%) !important;
     height: auto;
-    margin-top: 140px;
-    width: 100vh;
-  }
-  .landing-inner
-  {
-    color: white;
-  }
-  .bg-image
-  {
-   width: 100% ;
-  }
-  .checkbox
-  {
-    color: #161616;
-    font-size: 1rem;
-    text-align: center;
-    position: absolute;
-    left: 26%;
-    bottom: 36%;
-  }
-  .x-large
-  {
-    font-size: 3rem;
-    letter-spacing: 10px;
-  }
-  .lead
-  {
-    letter-spacing: 12px;
-  }
-  .buttons
-  {
-    left: 30%;
-    bottom: 19%;
-  }
-  .bg-text
-  {
-    width: 50%;
-    border-radius: 30px;
+    margin-top: -100px;
+    width: 60vh;
   }
   .lead1
   {
-    left: 12vh;
+    left: 5%;
+    top: 41%;
+    font-size: 1.3rem;
   }
-  .bg-text4
-  {
-    right: -23vw;
+  .button-1 {
+    background-color: white;
+    position: absolute;
+    top: 59vh;
+    left: 22vh;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
   }
-  .bg-text4 svg 
+}  */
+
+/* @media(min-width: 481px)
+{
+  .bg-text1
   {
-    height: 70px;
-    width: 70px;
+    transform: translate(7.5%, -100%) !important;
+    height: auto;
+    margin-top: -100px;
+    width: 70vh;
+  }
+  .lead1
+  {
+    left: 5%;
+    top: 41%;
+    font-size: 1.3rem;
+  }
+  .button-1 {
+    background-color: white;
+    position: absolute;
+    top: 59vh;
+    left: 22vh;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+  }
+}  */
+
+@media(max-width: 768px)
+{
+  .bg-text1
+  {
+    transform: translate(7.5%, -94%) !important;
+    height: auto;
+    margin-top: -100px;
+    width: 70vh;
+  }
+  .lead1
+  {
+    left: 16%;
+    top: 31%;
+    font-size: 1.8rem;
+  }
+  .button-1 {
+    position: absolute;
+    top: 52vh;
+    left: 35vh;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 32%;
+    padding: 20px;
   }
   .buttons1 {
     bottom: 12%;
     left: 2%;
     width: 100%;
   }
-  .buttons2 {
+}
+
+@media(min-width: 1024px)
+{
+  .bg-text1
+  {
+    transform: translate(15%, -75%) !important;
+    height: auto;
+    margin-top: -100px;
+    width: 80vh;
+  }
+  .lead1
+  {
+    left: 19.5%;
+    top: 39.5%;
+    font-size: 2rem;
+  }
+  .button-1 {
     position: absolute;
-    bottom: 20%;
-    left: 20vw;
-    column-gap: 3rem;  
-  }
-  .buttons4 {
-    position: absolute;
-    bottom: 18%;
-    left: 39%;
-    z-index: 10;
-  }
-  .bg-text6 {
-    top: 8vh;
-  }
-  .bg-text7 {
-    position: absolute;
-    top: 25%;
-    left: 22vh;
-  }
-  .bg-text7 img {
-    position: absolute;
-    right: 65%;
-    top: 30%;
-  }
-  .bg-end {
-    left: 5vh;
-  }
-  .gametime {
-    position: absolute;
-    top: 54vh;
-    left: 37.5%;
-    line-height: 3.5rem;
-  }
-  .app-text {
-    position: relative;
-    width: 100%;
-    left: 0%;
-    text-align: center;
-  }
-  .alert button {
-    top: -12px;
-    right: 7px;
-  }
-  .alert1 button {
-    top: -1px;
-    right: -150px;
+    top: 63vh;
+    left: 45vh;
+    transform: translate(-50%, -50%);
     z-index: 2;
-  }
-  .alert-inside5 {
-    left: -47vw;
-  }
-  .alert-inside5 button {
-    margin: 1rem;
-    margin-top: 5rem;
-  }
-  .alert-inside4 {
-    width: 60vw;
-    height: 35vh;
-    top: 55%;
-    position: relative;
-    left: -100%;
-  }
-  .alert-inside4 p {
-    font-size: 0.7rem;
-  }
-  .alert2 button {
-    position: absolute;
-    left: 192%;
-    top: 65%;
-  }
-  .icons {
-    position: relative;
-    bottom: -55%;
-    left: -13%;
-    display: grid;
-    grid-auto-flow: column;
-    grid-column-gap: 50%;
-  }
-  .option1 {
-    line-height: 5vh;
-  }
-  .icons img {
-    width: 150px;
-  }
-  .icons .cwn {
-    position: relative;
-    bottom: -25%;
-    left: 20%;
-  }
-  .alert3 button {
-    left: 206%;
-  }
-  .alert6 button {
-    top: 1px;
-    right: -170px;
-  }
-  .alert-inside6 {
-    position: absolute;
-    left: -21.5vw;
-    top: -1.5vh;
-    width: 80vh;
-  }
-  .app {
-    position: absolute;
-    background-color: white;
-    right: 31%;
-    bottom: 50%;
-  }
-  .dustbin {
-    position: relative;
-    left: -23%;
-    width: 150%;
-    height: 40vh;
-  }
-  .garbage {
-    position: relative;
-    width: 100%;
-  }
-  .alert-inside {
-    width: 55vw;
-    height: 35vh;
-    position: absolute;
-    top: -7.5vh;
-    left: -32px
-  }
-  /* .alert button {
-    left: 165%;
-    top: 1%;
-  } */
-}
-
-@media screen and (min-width: 1024px)
-{
-  .bg-text1
-  {
-    transform: translate(33%, -120%) !important;
-    /* position: none !important; */
-    height: auto;
-    margin-top: 140px;
-    width: 100vh;
-  }
-  .buttons
-  {
-    left: 35%;
-    bottom: 19%;
-  }
-  .bg-text
-  {
-    width: 40%;
-    border-radius: 30px;
-  }
-  .lead
-  {
-    letter-spacing: 12px;
-  }
-  .lead1
-  {
-    left: 21vh;
-  }
-  .bg-text4
-  {
-    right: -23vw;
-  }
-  .bg-text4 svg 
-  {
-    height: 70px;
-    width: 70px;
+    width: 29%;
+    padding: 20px;
   }
   .buttons1 {
     bottom: 12%;
-    left: 1%;
+    left: 2%;
     width: 100%;
-  }
-  .buttons2 {
-    position: absolute;
-    bottom: 15%;
-    left: 27vw;
-    column-gap: 3rem;  
-  }
-  .buttons4 {
-    position: absolute;
-    bottom: 10%;
-    left: 41.5%;
-  }
-  .bg-text6 {
-    top: 8vh;
-    left: 13.5vw;
-  }
-  .bg-end {
-    left: 23.5vh;
-  }
-  .gametime {
-    position: absolute;
-    top: 54vh;
-    left: 37.5%;
-  }
-  .alert-inside6 {
-    position: absolute;
-    left: -21.5vw;
-    top: -1.5vh;
-    width: 80vh;
-  }
-  .app {
-    position: absolute;
-    background-color: white;
-    right: 30%;
-    bottom: 32vh;
-  }
-  .app input {
-    font-size: 1rem;
-  }
-  .app-text {
-    position: relative;
-    width: 100%;
-    left: 0%;
-    text-align: center;
-  }
-  .alert1 button {
-    top: 1px;
-    right: -100px;
-  }
-  .alert6 button {
-    top: 1px;
-    right: -80px;
-  }
-  .alert-inside4 {
-    width: 60vw;
-    height: 35vh;
-    top: 50%;
-    position: relative;
-    left: -100%;
-  }
-  .alert-inside4 p {
-    padding: 1rem;
-    font-size: 0.7rem;
-  }
-  .alert-inside4 h3 {
-    padding-left: 1rem;
-  }
-  .alert2 button {
-    position: absolute;
-    left: 190%;
-    top: 62%;
-  }
-  .bg-text7 {
-    position: absolute;
-    top: 25%;
-    left: 25vh;
-  }
-  .bg-text7 img {
-    position: absolute;
-    right: 55%;
-    top: 30%;
-  }
-  .option1 {
-    line-height: 5vh;
-  }
-  .icons {
-    position: relative;
-    bottom: -55%;
-    left: -13%;
-    display: grid;
-    grid-auto-flow: column;
-    grid-column-gap: 50%;
-  }
-  .icons img {
-    width: 150px;
-  }
-  .icons .cwn {
-    position: relative;
-    bottom: -25%;
-    left: 20%;
-  }
-  .alert3 button {
-    left: 137%;
-  }
-  .alert-inside {
-    width: 40vw;
-    height: 35vh;
-    position: absolute;
-    top: -7.5vh;
-    left: -32px
-  }
-  .alert-inside20 {
-    left: -10vw;
-    top: -3vh;
-    border-radius: 20px;
-    border-style: solid;
-    border-width: thick;
-    border-color: #F8A61F;
   }
 }
 
-@media screen and (min-width: 1200px)
+@media only screen and (min-width: 1200px)
 {
-  .x-large
-  {
-     font-size: 6rem;
-    color: #fff;
-    letter-spacing: 34px;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    word-wrap: break-word;
-  }
-  .alert-inside5 {
-    left: -40vw;
-  }
-  .alert-inside5 button {
-    margin: 1rem;
-    margin-top: 5rem;
-  }
   .bg-text1
   {
-    transform: translate(60%, -114%) !important;
+    transform: translate(12%, -80%) !important;
     height: auto;
-    margin-top: 140px;
+    margin-top: -100px;
     width: 100vh;
   }
-  .buttons
+  .lead1
   {
-    left: 40%;
-    bottom: 19%;
+    left: 11vh;
+    top: 25%;
+    font-size: 2.5rem;
   }
-  .button-1
-  {
-    top: 57%;
-  }
-  .button-2
-  {
-    top: 61%;
-  }
-  .bg-text
-  {
+  .button-1 {
+    position: absolute;
+    top: 53vh;
+    left: 54vh;
+    transform: translate(-50%, -50%);
+    z-index: 2;
     width: 30%;
-    border-radius: 50px;
-  }
-  .lead
-  {
-    letter-spacing: 14px;
-  }
-  .lead1
-  {
-    font-size: 1.7rem;
-    left: 35vh;
-    top: 16vh;
-  }
-  .bg-text4
-  {
-    right: -25vw;
-  }
-  .bg-text4 svg 
-  {
-    height: 70px;
-    width: 70px;
+    padding: 20px;
   }
   .buttons1 {
     bottom: 12%;
-    left: 1%;
+    left: 2%;
     width: 100%;
-  }
-  .buttons2 {
-    position: absolute;
-    bottom: 10%;
-    left: 35vw;
-    column-gap: 3rem;  
-  }
-  .buttons4 {
-    position: absolute;
-    bottom: 6%;
-    left: 44.5%;
-  }
-  .bg-text6 {
-    top: 10vh;
-    left: 9vw;
-  }
-  .bg-end {
-    position: absolute;
-    left: 47vh;
-  }
-  .gametime {
-    position: absolute;
-    top: 54vh;
-    left: 37.5%;
-  }
-  .alert-inside6 {
-    position: absolute;
-    left: -21.5vw;
-    top: -1.5vh;
-    width: 90vh;
-  }
-  .app {
-    position: absolute;
-    background-color: white;
-    right: 40%;
-    bottom: 32vh;
-  }
-  .app input {
-    font-size: 1.5rem;
-  }
-  .app-text {
-    position: relative;
-    width: 100%;
-    left: 0%;
-    text-align: center;
-  }
-  .alert button {
-    top: -5px;
-    right: 20px;
-  }
-  .alert1 button {
-    top: -5px;
-    right: -5px;
-  }
-  .alert-inside4 {
-    width: 40vw;
-    height: 35vh;
-    top: 30%;
-    position: relative;
-    left: -100%;
-  }
-  .alert-inside4 p {
-    padding: 1rem;
-    font-size: 0.7rem;
-  }
-  .alert2 button {
-    position: absolute;
-    left: 128%;
-    top: 44%;
-  }
-  .bg-text7 {
-    position: absolute;
-    top: 25%;
-    left: 22vh;
-  }
-  .bg-text7 img {
-    position: absolute;
-    right: 45%;
-    top: 30%;
-  }
-  .option1 {
-    line-height: 5vh;
-  }
-  .icons {
-    position: relative;
-    bottom: -55%;
-    left: -10%;
-    display: grid;
-    grid-auto-flow: column;
-    grid-column-gap: 50%;
-  }
-  .alert3 button {
-    left: 86%;
-  }
-  .alert5 button {
-    top: -17px;
-    right: -190px;
-  }
-  .alert-inside {
-    width: 30vw;
-    height: 35vh;
-    position: absolute;
-    top: -7.5vh;
-    left: -32px
-  }
-  
-}
-@media screen and (min-width: 1920px)
-{
-  .x-large
-  {
-     font-size: 6rem;
-    color: #fff;
-    letter-spacing: 34px;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    word-wrap: break-word;
-  }
-  .alert-inside5 {
-    left: -40vw;
-  }
-  .alert-inside5 button {
-    margin: 1rem;
-    margin-top: 5rem;
-  }
-  .bg-text1
-  {
-    transform: translate(50%, -114%) !important;
-    height: auto;
-    margin-top: 140px;
-    width: 100vh;
-  }
-  .buttons
-  {
-    left: 40%;
-    bottom: 19%;
-  }
-  .button-1
-  {
-    top: 53%;
-  }
-  .button-2
-  {
-    top: 58%;
-  }
-  .bg-text
-  {
-    width: 25%;
-    border-radius: 50px;
-  }
-  .lead1
-  {
-    font-size: 2rem;
-    top: 14vh;
-    left: 30.5vh;
-  }
-  .lead1 p {
-    font-size: 1.8rem;
-  }
-  .bg-text4
-  {
-    right: -26vw;
-  }
-  .bg-text4 svg 
-  {
-    height: 70px;
-    width: 70px;
-  }
-  .buttons1 {
-    bottom: 12%;
-    left: 1%;
-    width: 100%;
-  }
-  .buttons2 {
-    position: absolute;
-    bottom: 10%;
-    left: 37.5vw;
-    column-gap: 3rem;  
-  }
-  .buttons4 {
-    position: absolute;
-    bottom: 6%;
-    left: 45.5%;
-  }
-  .bg-text6 {
-    top: 8vh;
-    left: 8vw;
-  }
-  .bg-end {
-    position: absolute;
-    left: 45vh; 
-  }
-  .gametime {
-    position: absolute;
-    top: 50vh;
-    left: 37.5%;
-  }
-  .app input {
-    font-size: 2rem;
-  }
-  .alert button {
-    top: -5px;
-    right: 25px;
-  }
-  .alert5 button {
-    top: -22px;
-    right: -230px;
-  }
-  .alert-inside4 {
-    width: 30vw;
-    height: 35vh;
-    top: 30%;
-    position: relative;
-    left: -100%;
-  }
-  .alert-inside4 p {
-    padding: 1rem;
-    font-size: 0.7rem;
-  }
-  .alert2 button {
-    position: absolute;
-    left: 95%;
-    top: 40%;
-  }
-  .alert-inside6 {
-    position: absolute;
-    left: -21.5vw;
-    top: -1.5vh;
-    width: 90vh;
-  }
-  .app {
-    position: absolute;
-    background-color: white;
-    right: 40%;
-    bottom: 31vh;
-  }
-  .app-text {
-    position: relative;
-    width: 100%;
-    left: 0%;
-    text-align: center;
-  }
-  .bg-text7 {
-    position: absolute;
-    top: 25%;
-    left: 20vh;
-  }
-  .bg-text7 img {
-    position: absolute;
-    right: 44%;
-    top: 30%;
-  }
-  .gametime {
-    line-height: 10vh;
-  }
-  .option1 {
-    line-height: 5vh;
-  }
-  .icons {
-    position: relative;
-    bottom: -60%;
-    display: grid;
-    grid-auto-flow: column;
-    grid-column-gap: 50%;
-  }
-  .alert3 button {
-    left: 91%;
-  }
-  .alert6 button {
-    top: -18px;
-    right: 137px;
-  }
-  .alert-inside {
-    width: 24vw;
-    height: 35vh;
-    position: absolute;
-    top: -7.5vh;
-    left: -32px
   }
 }
 
+@media only screen and (max-width: 1599px)
+{
+  .bg-text {
+    position: absolute;
+    transform: translate(-50%, -43%);
+    z-index: 2;
+    width: 25%;
+    padding: 20px;
+    text-align: center;
+  }
+  .form input[type="text"],
+  .form input[type="email"],
+  .form input[type="password"],
+  .form input[type="number"],
+  .form select,
+  .form textarea {
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    color: #111;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.8rem;
+    border: 1px solid #c9c9c9;
+    border-radius: 20px;
+    background-color: #eeeeee;
+    letter-spacing: 2px;
+  }
+  .bg-text1
+  {
+    transform: translate(57%, -70%) !important;
+    height: auto;
+    margin-top: -100px;
+    width: 100vh;
+  }
+  .lead1
+  {
+    left: 15.7vw;
+    top: 15vh;
+    font-size: 1.6rem;
+  }
+  .button-1 {
+    position: absolute;
+    top: 56vh;
+    left: 49vw;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 18%;
+    height: 6vh;
+    padding: 20px;
+  }
+  .button-2 {
+    position: absolute;
+    top: 63.5vh;
+    left: 55vw;
+    height: 5vh;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 16%;
+  }
+  .buttons1 {
+    bottom: 12%;
+    left: 2%;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1600px)
+{
+  .bg-text {
+    position: absolute;
+    transform: translate(-50%, -43%);
+    z-index: 2;
+    width: 22%;
+    height: 40vh;
+    padding: 20px;
+    text-align: center;
+  }
+  .form input[type="text"],
+  .form input[type="email"],
+  .form input[type="password"],
+  .form input[type="number"],
+  .form select,
+  .form textarea {
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    color: #111;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.8rem;
+    border: 1px solid #c9c9c9;
+    border-radius: 20px;
+    background-color: #eeeeee;
+    letter-spacing: 2px;
+  }
+  .bg-text1
+  {
+    transform: translate(53%, -78%) !important;
+    height: auto;
+    margin-top: -100px;
+    width: 100vh;
+  }
+  .lead1
+  {
+    left: 15.2vw;
+    top: 14vh;
+    font-size: 2rem;
+  }
+  .button-1 {
+    position: absolute;
+    top: 54vh;
+    left: 48vw;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 18%;
+    height: 5vh;
+    padding: 20px;
+  }
+  .button-2 {
+    position: absolute;
+    top: 61vh;
+    left: 53vw;
+    height: 5vh;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 18%;
+  }
+  .buttons1 {
+    bottom: 12%;
+    left: 2%;
+    width: 100%;
+  }
+}
