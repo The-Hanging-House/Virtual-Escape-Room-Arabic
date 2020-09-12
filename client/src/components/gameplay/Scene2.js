@@ -537,7 +537,7 @@ const Dome = () => {
 
 function TouchPoint5({ position, color, onClick }) {
   const [showMessage, setShowMessage] = useState(false);
-  const [collectedMessage, setCollectedMessage] = useState(true);
+  const [collectedMessage, setCollectedMessage] = useState(false);
   const [coll, setColl] = useState(false);
   const [showProceed, setShowProceed] = useState('hidden');
   var puzzlePro;
@@ -648,18 +648,20 @@ function TouchPoint6({ position, color, onClick }) {
                   <CSSTransition
                       in={showMessage}
                       timeout={300}
-                      classNames="alert"
+                      classNames="alert8"
                       unmountOnExit
                       // onEnter={() => setShowButton(false)}
                       // onExited={() => setShowButton(true)}
                   >
                       <Alert
-                      className="alert"
+                      className="alert8"
                       variant="primary"
-                      dismissible
+                      // dismissible
                       onClose={() => setShowMessage(false)}
                       >
+                      <button className="close" onClick={() => setShowMessage(false)}>×</button>
                       <Telephone />
+                      
                       </Alert>
                   </CSSTransition>
               </Container>

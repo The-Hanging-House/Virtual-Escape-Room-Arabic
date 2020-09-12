@@ -59,10 +59,12 @@ function TouchPoint3({ position, color, onClick }) {
                         <Alert
                         className="alert6"
                         variant="primary"
-                        dismissible
+                        // dismissible
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-inside">
+                        <button className="close" onClick={() => setShowMessage(false)}>×</button>
+
                             <Alert.Heading>
                                 <p>
                                 Glare from artificial lights makes it hard for wildlife to see, let's help the wildlife by 

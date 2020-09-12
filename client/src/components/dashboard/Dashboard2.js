@@ -21,20 +21,22 @@ const Dashboard2 = ({ getCurrentProfile, auth: { user }, profile: { profile, loa
     <Fragment>
         {logout}
         <div className="bg-image"></div>
-        <div className="bg-text1"></div>
-        <img className="bg-text1" src={bg} alt="Dashboard" useMap="#workmap" width="600" height="420" />
-        <a href="instruction">
-            <div className="button-1"></div>
-        </a>
-        <a href="briefing">
-            <div className="button-2"></div>
-        </a>
-        {/* <map name="workmap">
-            <area shape="rect" coords="240,460,600,530" alt="Intro" href="instruction"/>
-            <area  shape="rect" coords="400,550,680,600" alt="Game" href="briefing" />
-        </map> */}
-        <div className="lead1">
-            <p className="lead1">Hello <br /> { user && user.username }</p>
+        <div className="dashblock">
+            <div className="bg-text1"></div>
+            <img className="bg-text1" src={bg} alt="Dashboard" useMap="#workmap" width="600" height="420" />
+            <a href="instruction">
+                <div className="button-1"></div>
+            </a>
+            <a href="briefing">
+                <div className="button-2"></div>
+            </a>
+            {/* <map name="workmap">
+                <area shape="rect" coords="240,460,600,530" alt="Intro" href="instruction"/>
+                <area  shape="rect" coords="400,550,680,600" alt="Game" href="briefing" />
+            </map> */}
+            <div className="lead1">
+                <p className="lead1">Hello <br /> { user && user.username }</p>
+            </div>
         </div>
         <Music4 />  
     </Fragment>

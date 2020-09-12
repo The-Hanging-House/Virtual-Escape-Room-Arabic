@@ -47,10 +47,11 @@ function TouchPoint5({ position, color, onClick }) {
                         <Alert
                         className="alert"
                         variant="primary"
-                        dismissible
+                        // dismissible
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
+                        <button className="close" onClick={() => setShowMessage(false)}>×</button>
                             <div>
                                 <img src={trunk2} alt='Trunk2' width='100%' height='100%' />
                             </div>

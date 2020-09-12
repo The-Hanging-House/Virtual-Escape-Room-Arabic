@@ -165,16 +165,6 @@ if (number !== "" && number <= 14 ){
             onChange={(e) => {setTextInput(e.target.value); onChange(e) }}
           />
         </div>
-        {/* <div className="form-group" style={{display: isVisible? 'none' : 'inline'}}>
-          <input
-            disability
-            type="text"
-            placeholder="Name"
-            name="name"
-            value={name}
-            onChange={(e) => onChange(e)}
-          />
-        </div> */}
         <div className="form-group" style={{display: isVisible? 'none' : 'inline'}}>
           <input
             disability
@@ -186,13 +176,14 @@ if (number !== "" && number <= 14 ){
           />
         </div>
         <div style={{ marginTop: '1rem' }}>
-          <input type="submit" value="CONTINUE" style={{ fontWeight: '700', letterSpacing: '6px' }} className="btn btn-primary" />
+          <input type="submit" value="CONTINUE"  className="btn btn-primary" />
         </div>
-      </form>
-
-      <p className="my-1">
+        <p className="my-1">
         ALREADY REGISTERED? <Link to="/login" className='link'>LOG IN</Link>
       </p>
+      </form>
+
+      
       </div>
     </Fragment>
   );

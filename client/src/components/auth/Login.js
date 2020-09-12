@@ -57,18 +57,18 @@ const Login = ({ login, isAuthenticated }) => {
             // required
             // minLength="6"
           />
+          
         </div>
-        <div style={{ marginTop: '1rem' }}>
+        <div>
           <input type="submit" value="CONTINUE" className="btn btn-primary" />
         </div>
-      </form>
-
-      <p className="my-1">
+        <p className="my-1">
         DON'T HAVE AN ACCOUNT? <Link to="/register" className='link'>SIGN UP</Link>
       </p>
+      </form>
+
+      
     </div>  
-    <section className="login">
-    </section>
     </Fragment>
   );
 };

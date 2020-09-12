@@ -22,14 +22,16 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
     <Fragment>
         {logout}
         <div className="bg-image"></div>
-        <div className="bg-text1"></div>
-        <img className="bg-text1" src={bg} width='100%' height='auto' alt="Dashboard"  />
-        <a href="instruction">
-            <div className="button-1"></div>
-        </a>
-        
-        <div className="lead1">
-            <p className="lead1">Hello <br /> { user && user.username }</p>
+        <div className="dashblock">
+            <div className="bg-text1"></div>
+            <img className="bg-text1" src={bg} width='100%' height='auto' alt="Dashboard"  />
+            <a href="instruction">
+                <div className="button-1"></div>
+            </a>
+            
+            <div className="lead1">
+                <p className="lead1">Hello <br /> { user && user.username }</p>
+            </div>
         </div>
         <Music4 />  
     </Fragment>

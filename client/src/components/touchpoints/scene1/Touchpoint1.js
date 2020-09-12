@@ -24,7 +24,7 @@ function TouchPoint1({ position, color, onClick }) {
             <meshBasicMaterial attach="material" transparent opacity={hovered? 0.2 : 0} /> 
             <Html center>
                 <Container>
-                    <CSSTransition
+                <CSSTransition
                         in={showMessage}
                         timeout={300}
                         classNames="alert3"
@@ -35,10 +35,10 @@ function TouchPoint1({ position, color, onClick }) {
                         <Alert
                         className="alert3" 
                         variant="primary"
-                        dismissible
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-inside6">
+                        <button className="close" onClick={() => setShowMessage(false)}>×</button>
                             <Alert.Heading>
                                 <Index />
                                 {/* <p>

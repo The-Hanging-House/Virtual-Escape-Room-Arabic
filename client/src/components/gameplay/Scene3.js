@@ -278,10 +278,11 @@ function TouchPoint3({ position, color, onClick }) {
                       <Alert
                       className={ show? "alert1" : "alert2"}
                       variant="primary"
-                      dismissible
+                      // dismissible
                       onClose={() => setShowMessage(false)}
                       >
                       <div className={ show? "alert-inside" : "alert-inside4" }>
+                      <button className="close" onClick={() => setShowMessage(false)}>×</button>
                           <Alert.Heading>
                           <p style={{ fontSize: '1.2rem', fontFamily: 'Dubai W23, sans-serif' }}>
                               {/* The car door is not locked, what should I do? */}

@@ -53,10 +53,11 @@ function TouchPoint3({ position, color, onClick }) {
                         <Alert
                         className="alert2"
                         variant="primary"
-                        dismissible
+                        // dismissible
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-inside" style={{ left: '-2.5%' }}>
+                        <button className="close" onClick={() => setShowMessage(false)}>×</button>
                             <Alert.Heading>
                                 <p>
                                 The car door is not locked, what should I do?

@@ -34,11 +34,12 @@ function TouchPoint7({ position, color, onClick }) {
                     >
                         <Alert
                         className="alert"
-                        variant="primary"
+                        // variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
+                        {/* <button className="close" onClick={() => setShowMessage(false)}>×</button> */}
                             <div>
                                 <img src={egg} alt='feather'  />
                             </div>

@@ -48,10 +48,11 @@ function TouchPoint3({ position, color, onClick }) {
                         <Alert
                         className="alert2"
                         variant="primary"
-                        dismissible
+                        // dismissible
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-inside4">
+                        <button className="close" onClick={() => setShowMessage(false)}>×</button>
                             <Alert.Heading>
                                 <p style={{ fontSize: '1.1rem' }}>
                                 Seems like the trunk is locked, but you left the lights and music on.
