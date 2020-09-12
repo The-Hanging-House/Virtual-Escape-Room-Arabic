@@ -200,7 +200,7 @@
   left: 44.5%;
 }
 .button-1 {
-  background-color: white;
+  background-color: transparent;
   color: black;
   border-radius: 20px;
   position: absolute;
@@ -212,7 +212,7 @@
   padding: 20px;
 }
 .button-2 {
-  background-color: white;
+  background-color: transparent;
   color: black;
   border-radius: 20px;
   position: absolute;
