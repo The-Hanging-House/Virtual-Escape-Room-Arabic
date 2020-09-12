@@ -35,7 +35,7 @@ function TouchPoint6({ position, color, onClick }) {
                         <Alert
                         className="alert"
                         variant="primary"
-                        // dismissible
+                        dismissible
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>

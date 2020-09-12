@@ -626,8 +626,8 @@ h1 span {
   color: red;
   font-size: 1rem;
   position: absolute;
-  top: 50vh;
-  left: 92vh;
+  top: 35%;
+  left: 45.5%;
   width: 100%;
   z-index: 10;
 }
@@ -721,9 +721,9 @@ h1 span {
   display: inline-block;
   color: white;
   padding: 5px;
-  width: 30vw;
-  height: 35vh;
+  width: 100%;
   position: absolute;
+  text-align: center;
 }
 .alert6 {
   /* background-image: url(../src/img/popup.svg); */
@@ -735,6 +735,9 @@ h1 span {
   position: absolute;
   top: -250px;
   left: -30px;
+}
+.alert6 .close {
+  width: 20px;
 }
 .alert6 button {
   top: 6%;
@@ -831,11 +834,11 @@ h1 span {
   background-color: white;
   padding: 1rem;
   color: #707070;
-  height: 50vh;
   position: absolute;
   font-size: 1rem;
-  left: -39vw;
-  top: 50vh;
+  right: 150%;
+  top: 370px;
+  width: 400px;
   z-index: 5;
   border-radius: 20px;
   border-style: solid;
@@ -1067,7 +1070,7 @@ h3 {
     /*left: 15.2vw;*/
     /*top: 14vh;*/
     font-size: 2rem;
-    left: 25px;
+    left: 34px;
     top: 105px;
   }
   .button-1 {
@@ -1104,6 +1107,11 @@ h3 {
     right: 45%;
     top: 30%;
 }
+  /* .alert-inside5 {
+    right: 700px;
+    top: 370px;
+    width: 59px;
+  } */
 }
 
 @media(min-width: 1200px)
@@ -1170,7 +1178,7 @@ h3 {
     /*left: 15.2vw;*/
     /*top: 14vh;*/
     font-size: 2rem;
-    left: 35px;
+    left: 50px;
     top: 125px;
   }
   .button-1 {
@@ -1208,12 +1216,17 @@ h3 {
     width: 70vw;
     height: 90%;
   }
+  /* .alert-inside5 {
+    right: 700px;
+    top: 370px;
+    width: 399px;
+  } */
 }
 
 @media(max-width: 1599px) {
   .dashblock {
-    left: 18%;
-    bottom: 12%;
+    left: 22%;
+    bottom: 21%;
   }
 }
 @media(max-width: 1199px) {
@@ -1234,12 +1247,23 @@ h3 {
     left: 39%;
     width: 25%;
   }
+  /* .alert-inside5 {
+    right: 700px;
+    top: 370px;
+    width: 399px;
+  } */
 }
 
 @media(max-width: 991px){
   .bg-text {
     width: 400px;
     height: 468px;
+  }
+  .alert-danger {
+    position: absolute;
+    top: 30%;
+    left: 45.5%;
+    width: 100%;
   }
   .bg-text .btn {
     font-weight: 600;
@@ -1251,6 +1275,7 @@ h3 {
     width: 60%;
     font-size: 1.1rem;
   }
+  
   .dashblock {
     left: 13%;
     bottom: 6%;
@@ -1272,7 +1297,7 @@ h3 {
     /*left: 15.2vw;*/
     /*top: 14vh;*/
     font-size: 2rem;
-    left: 15px;
+    left: 34px;
     top: 85px;
   }
   .button-1 {
@@ -1297,4 +1322,9 @@ h3 {
     height: 5vh;
     padding: 20px;
   }
+  /* .alert-inside5 {
+    right: 700px;
+    top: 370px;
+    width: 399px;
+  } */
 }
