@@ -58,13 +58,15 @@ export const Container = () => {
     },
     [droppedBoxNames, dustbins]
   );
-  if(count > 5){
-    ddd = canProceed[0]
-    var scene1 = new Date().getTime();
-    localStorage.setItem('scene1', scene1);
-    
-    window.location.href = '/scene3';
-  }
+  setInterval(() => {
+    if(count > 5){
+      ddd = canProceed[0]
+      var scene1 = new Date().getTime();
+      localStorage.setItem('scene1', scene1);
+      
+      window.location.href = '/scene3';
+    }
+  }, 2000);
   console.log("scene1",count);
   return (
     <div>

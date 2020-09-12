@@ -142,6 +142,7 @@ function Box1(props) {
   const mesh = useRef()
   const [showMessage, setShowMessage] = useState(false);
   const [collectedMessage, setCollectedMessage] = useState(false)
+  const [hovered, set] = useState(false)
   const texture = useLoader(THREE.TextureLoader, img)
   if(collectedMessage){
     toolCollected = 1;
@@ -160,7 +161,10 @@ function Box1(props) {
     el.style.background = black;
   };
 
- 
+  // useFrame(({ camera, mouse }) => {
+  //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+  // })
+  useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
 
   return (
   
@@ -256,17 +260,19 @@ function TouchPoint3({ position, color, onClick }) {
   
   useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
   return (
-      <mesh 
-          // scale={show ? [0.5, 0.5, 0.5] : [0, 0, 0]}
-          scale={hovered ? [1, 1, 1, 1] : [1, 1, 1, 1]}
-          position={position}
-          onPointerOver={() => set(true)}
-          onPointerOut={() => set(false)}
-          onClick={() => setShowMessage(true)}>
-          <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-          <meshBasicMaterial attach="material" transparent opacity={0} /> 
-          <Html center>
-          <Container>
+    <mesh 
+    // scale={show ? [0.5, 0.5, 0.5] : [0, 0, 0]}
+    scale={hovered ? [1, 1, 1, 1] : [1, 1, 1, 1]}
+    position={position}
+    // ref={mesh}
+    rotation={[3, 3, 0]}
+    onPointerOver={() => set(true)}
+    onPointerOut={() => set(false)}
+    onClick={() => setShowMessage(true)}>
+    <planeGeometry attach="geometry" args={[12, 10, 10]} />
+    <meshBasicMaterial attach="material" transparent  opacity={hovered? 0.1 : 0} /> 
+    <Html center>
+    <Container>
                   <CSSTransition
                       in={showMessage}
                       timeout={300}

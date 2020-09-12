@@ -28,13 +28,15 @@ function TouchPoint3({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [3, 3, 3, 3] : [3, 3, 3, 3]}
+            scale={hovered ? [1, 1, 1, 1] : [1, 1, 1, 1]}
             position={position}
+            // ref={mesh}
+            rotation={[3, 3, 0]}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
-            <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" transparent opacity={0} /> 
+            <planeGeometry attach="geometry" args={[12, 10, 10]} />
+            <meshBasicMaterial attach="material" transparent opacity={hovered? 0.1 : 0} /> 
             <Html center>
                 <Container>
                     <CSSTransition
