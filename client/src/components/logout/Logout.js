@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
 import { Container, Button, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
@@ -9,66 +8,14 @@ import { logout } from '../../actions/auth';
 import { ReactComponent as Logo } from './logout.svg';
 
 
-// const [showMessage, setShowMessage] = useState(false);
-var ttt = false;
-
-function Example() {
-    const [showButton, setShowButton] = useState(true);
-    const [showMessage, setShowMessage] = useState(false);
-    return (
-      <Container style={{ paddingTop: '2rem' }}>
-        {showButton && (
-          <a
-            onClick={() => setShowMessage(true)}
-            // size="lg"
-          >
-            <Logo/>
-          </a>
-        )}
-        <CSSTransition
-          in={showMessage}
-          timeout={300}
-          classNames="alert"
-          unmountOnExit
-          onEnter={() => setShowButton(false)}
-          onExited={() => setShowButton(true)}
-        >
-          <Alert
-            variant="primary"
-            dismissible
-            onClose={() => setShowMessage(false)}
-          >
-            <Alert.Heading>
-              Animated alert message
-            </Alert.Heading>
-            <p>
-              This alert message is being transitioned in and
-              out of the DOM.
-            </p>
-            <a onClick={logout} href='#!'>
-                <Logo />
-                <h3>EXIT</h3>
-            </a>
-            <Button onClick={() => setShowMessage(false)}>
-              Close
-            </Button>
-          </Alert>
-        </CSSTransition>
-      </Container>
-    );
-  }
-
-
 const Logout = ({ auth: { isAuthenticated, loading }, logout }) => {
 
-    const guestLinks = (
-        <div className="bg-text4">
-            {/* <a onClick={logout} href='#!'> */}
-                <Logo />
-                <h3>EXIT</h3>
-            {/* </a> */}
-        </div>
-    );
+    // const guestLinks = (
+    //     <div className="bg-text4">
+    //             <Logo />
+    //             <h3>EXIT</h3>
+    //     </div>
+    // );
 
     const [showButton, setShowButton] = useState(true);
     const [showMessage, setShowMessage] = useState(false);
@@ -80,7 +27,6 @@ const Logout = ({ auth: { isAuthenticated, loading }, logout }) => {
         {showButton && (
           <a
             onClick={() => setShowMessage(true)}
-            // size="lg"
           >
             <Logo/>
             <h3 styl={{ fontSize: '1.3rem' }}>EXIT</h3>
@@ -117,10 +63,8 @@ const Logout = ({ auth: { isAuthenticated, loading }, logout }) => {
           </Alert>
         </CSSTransition>
       </Container>
-      
-
-        </div>
-    )
+    </div>
+  )
 }
 
  Logout.propTypes = {

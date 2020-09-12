@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, Redirect} from "react-router-dom";
+import { Link} from "react-router-dom";
 import './lesson.css'
 import ResponsivePlayer from '../video/ResponsivePlayer1'
 

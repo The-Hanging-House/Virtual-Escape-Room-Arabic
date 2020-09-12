@@ -16,7 +16,6 @@ import img from './../../img/crowbar.png'
 import Logout from '../logout/Logout'
 
 import Task1 from '../popup/Task1';
-// import TouchPoint1 from '../touchpoints/scene3/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene3/Touchpoint2'
 // import TouchPoint3 from '../touchpoints/scene3/Touchpoint3'
 import TouchPoint4 from '../touchpoints/scene3/Touchpoint4'
@@ -41,8 +40,7 @@ var toolCollected = 0;
 
 setInterval(function(){
   now = localStorage.getItem('scene1');
-  // console.log("now: ", now);
-  if(now!='NaN'){
+  if(now!=='NaN'){
     Scene3();
   }
   if(localStorage.getItem('myDataKey') === "1598355449119"){
@@ -54,16 +52,8 @@ setInterval(function(){
 function obama(){
   
     var datetime = data;
-    // console.log("datetime", datetime)
-  
-    // var now = new Date().getTime();
     var now = localStorage.getItem('scene1');
-    // setInterval(function(){
-    //   now = localStorage.getItem('scene1');
-    // }, 500);
-
-
-    
+   
 
     if( isNaN(datetime) )
     {
@@ -93,13 +83,12 @@ function obama(){
         counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
     }, [counter]);
   
-    // console.log(counter);
     var mins = Math.floor(counter/60);
     var secs = counter - mins * 60;
     if (secs < 10){
       secs = "0" + secs;
     }
-    var arigato = mins + ""+ ":" +secs + " ";
+    var arigato = mins + ":" + secs;
   
     if (counter === 0){
       console.log("Fail");
@@ -109,9 +98,7 @@ function obama(){
     return (
        
         <div className="bg-text5">
-                  
             <div>{arigato}</div>
-          
         </div>
     )
   }

@@ -24,11 +24,11 @@ var secs = final - mins * 60;
 if (secs < 10){
     secs = "0" + secs;
   }
-var pacman = mins + ""+ ":" + secs + " ";
+var pacman = mins + ":" + secs;
 
 setInterval(function(){
     now = localStorage.getItem('scene6');
-    if(now!='NaN'){
+    if(now!=='NaN'){
         End();
     }
 }, 500);

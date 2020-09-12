@@ -23,14 +23,11 @@ import Scene2 from './components/gameplay/Scene2';
 import End from './components/gameplay/End';
 import Timesup from './components/gameplay/Timesup';
 
-
 // Redux
 import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
-
-
 
 
 import "./App.css";
@@ -46,13 +43,10 @@ const App = () => {
 
   return (
     <Provider store={store}>
-     
        <BrowserRouter>
           <Route exact path="/" component={Landing} />
-
           <section className="container">
             <Alert />
-           
             <Switch>
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
@@ -63,7 +57,6 @@ const App = () => {
               <PrivateRoute exact path="/briefing2" component={Briefing2} />
               <PrivateRoute exact path="/profile" component={Profile} />
               <PrivateRoute exact path="/intro" component={Intro} />
-               {/* <Timer/> */}
               <PrivateRoute exact path="/scene1" component={Scene1} />
               <PrivateRoute exact path="/garbage" component={Garbage} />
               <PrivateRoute exact path="/scene3" component={Scene3} />
@@ -76,10 +69,7 @@ const App = () => {
               <PrivateRoute exact path="/timesup" component={Timesup} />
             </Switch>
           </section>
-
-          </BrowserRouter>
-      
-     
+        </BrowserRouter>
     </Provider>
   );
 };
