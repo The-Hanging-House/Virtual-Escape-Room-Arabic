@@ -27,7 +27,6 @@ extend({ OrbitControls })
 var data;
 data = localStorage.getItem('myDataKey');
 var now; 
-// console.log("CT: ", localStorage.getItem('myDataKey'));
 
 setInterval(function(){
   now = localStorage.getItem('scene3');
@@ -47,12 +46,7 @@ function obama(){
     var datetime = data;
     console.log("datetime", datetime)
   
-    // var now = new Date().getTime();
-    // var now = localStorage.getItem('scene3');
-    // setInterval(function(){
     var now = localStorage.getItem('scene3');
-    // }, 500);
-    // console.log("nownow: " , now)
 
     if( isNaN(datetime) )
     {
@@ -75,15 +69,12 @@ function obama(){
   
   function Timer() {
     var minutes = obama() //minutes passed since start
-    // console.log("minutes", minutes)
-    // const [counter, setCounter] = React.useState(600);
     const [counter, setCounter] = React.useState(minutes);
   
     React.useEffect(() => {
         counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
     }, [counter]);
   
-    // console.log(counter);
     var mins = Math.floor(counter/60);
     var secs = counter - mins * 60;
     if (secs < 10){
@@ -92,16 +83,13 @@ function obama(){
     var arigato = mins + ":" + secs;
 
     if (counter === 0){
-      console.log("Fail");
       window.location.href = "/timesup"
     }
   
     return (
        
         <div className="bg-text5">
-                  
             <div>{arigato}</div>
-          
         </div>
     )
   }
@@ -112,9 +100,6 @@ const Controls = (props) => {
     useFrame(() => ref.current.update())
     return <orbitControls ref={ref} target={[0, 0, 0]} {...props} args={[camera, gl.domElement]} />
   }
-
-
-
 
 
 const Dome = () => {
@@ -154,7 +139,6 @@ function Scene4() {
                       </Html>
                     }>
                         <Dome />
-                        {/* <TouchPoint1 position={[-6.5, -4, 5]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         <TouchPoint2 position={[-15, -3.5, -1.5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-20, -60, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[5, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />

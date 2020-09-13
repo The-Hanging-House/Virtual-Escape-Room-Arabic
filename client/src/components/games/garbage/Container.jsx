@@ -58,7 +58,7 @@ export const Container = () => {
     },
     [droppedBoxNames, dustbins]
   );
-  setInterval(() => {
+  setInterval(function(){
     if(count > 5){
       ddd = canProceed[0]
       var scene1 = new Date().getTime();
@@ -66,7 +66,7 @@ export const Container = () => {
       
       window.location.href = '/scene3';
     }
-  }, 2000);
+  }, 5000);
   console.log("scene1",count);
   return (
     <div>

@@ -54,7 +54,6 @@ extend({ OrbitControls })
 var x = 0;
 var ccom = 4;
 
-
 // value of X increments each time a box is collected
 function counter(){
   x = x + 1;

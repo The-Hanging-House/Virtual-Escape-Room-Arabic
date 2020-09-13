@@ -35,7 +35,7 @@ function TouchPoint2({ position, color, onClick }) {
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" transparent opacity={0} /> 
+            <meshBasicMaterial attach="material" transparent opacity={hovered? 0.2 : 0} /> 
             <Html center>
             <Container>
                     <CSSTransition

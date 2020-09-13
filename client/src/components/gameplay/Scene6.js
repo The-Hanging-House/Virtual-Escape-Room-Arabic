@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React, { Suspense, useRef, useState } from 'react'
+import React, { Suspense, useRef } from 'react'
 
 import { Canvas, extend, useFrame, useThree, useLoader } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
@@ -30,15 +30,11 @@ const Controls = (props) => {
 
   var data;
   data = localStorage.getItem('myDataKey');
-    
   var now; 
-  // console.log("CT: ", localStorage.getItem('myDataKey'));
 
   setInterval(function(){
     now = localStorage.getItem('scene4');
-    // console.log("scene3: ", localStorage.getItem('scene3'));
-    // console.log("now", now);
-    if(now!='NaN'){
+    if(now!=='NaN'){
       Scene6();
     }
     if(localStorage.getItem('myDataKey') === "1598355449119"){
@@ -50,9 +46,7 @@ const Controls = (props) => {
 
   function obama(){
     
-      var datetime = data;
-      console.log("datetime", datetime)
-    
+      var datetime = data;    
       var now = localStorage.getItem('scene4');
   
       if( isNaN(datetime) )
@@ -89,19 +83,16 @@ const Controls = (props) => {
       if (secs < 10){
         secs = "0" + secs;
       }
-      var arigato = mins + "" + ":" +secs + "";
+      var arigato = mins + ":" +secs;
   
       if (counter === 0){
-        console.log("Fail");
         window.location.href = "/timesup"
       }
     
       return (
          
           <div className="bg-text5">
-                    
               <div>{arigato}</div>
-            
           </div>
       )
     }

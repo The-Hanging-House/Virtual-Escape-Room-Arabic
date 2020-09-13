@@ -10,7 +10,7 @@ export default () => {
   const [callButton, setCallButton] = React.useState(false);
   const [callValues, setCallValues] = React.useState(number);
   const [state, dispatch] = useStore();
-  const buttons = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0"];
+  const buttons = ["1", "2", "3", "4", "5", "6", "7", "8", "9", " ", "0"];
   const buttonAlphabets = [" ", "(abc)", "(def)", "‏‏‎ ‎(ghi)", "‏‏‎ ‏‏‎ ‎‎(jkl)", "‏‏‎ ‎(mno)", "‏‏‎ ‎(pqrs)", "‏‏‎ ‎(tuv)", "‏‏‎ ‎(wxyz)", " ", " ", " "];
  
   // ComponentDidMount & ComponentWillUnmount
@@ -28,6 +28,10 @@ export default () => {
     e.nativeEvent.stopImmediatePropagation();
   };
  
+  if(number === NaN){
+    setNumber("");
+    setCallValues("");
+  }
  
   const callNumber = "800296";
   const callNumber2 = "8004432";
