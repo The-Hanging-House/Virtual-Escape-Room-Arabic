@@ -69,8 +69,8 @@ export const Container = () => {
   }, 5000);
   console.log("scene1",count);
   return (
-    <div>
-      <div style={{ textAlign: 'center', fontSize: '1rem' }}>{showHint}</div>
+    <div >
+      <div style={{ textAlign: 'center', fontSize: '1rem', fontFamily: 'Dubai W23, sans-serif' }}>{showHint}</div>
       <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center'}}>
         {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
           <Dustbin

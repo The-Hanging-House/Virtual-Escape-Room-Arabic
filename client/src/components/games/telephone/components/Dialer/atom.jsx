@@ -35,16 +35,16 @@ export const Box = styled.div
 
 export const Input = styled.input`
   width: 70%;
-  // float: right;
   margin-bottom: 15px;
   margin-top: 15px;
   border: none;
-  background: #37474f;
-  height: 40px;
+  background: transparent;
+  height: 57px;
+  font-size: 1rem;
   top: 50px;
   padding: 0 15px;
   border-radius: 4px;
-  color: #cfd8dc;
+  color: white; 
 `;
 
 export const ButtonsContainer = styled.div`
@@ -97,7 +97,7 @@ export const CallButton = styled.button`
   margin-top: 5px;
   background: #8bc34a;
   color: #fff;
-  width: 100%;
+  width: 50%;
   height: 40px;
   border-radius: 20px;
   text-align: center;

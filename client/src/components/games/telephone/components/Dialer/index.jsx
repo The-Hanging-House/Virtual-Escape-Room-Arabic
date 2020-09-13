@@ -76,6 +76,7 @@ export default () => {
   return (
     <Box opened={state.dialerOpened} onClick={onDialerClick}>
       <Input
+        style={{paddingLeft: '1rem'}}
         placeholder={"000-000"}
         value={callValues}
         onChange={e => setNumber(e.target.value)}
@@ -101,7 +102,7 @@ export default () => {
 
         {/* <button style={{position: 'absolute', backgroundColor: 'transparent', height: '20px' , top: '70%', left: '75%', padding: '2px', color: 'white', border: 'green'}}  onClick={() => eraser()}>Del</button> */}
         {/* <a style={{background:`url(${Backgrounds})`}}  onClick={() => eraser()}></a> */}
-        <a><img src={Backgrounds} alt="my image" style={{position: 'absolute', backgroundColor: 'transparent', height: '20px' , top: '70%', left: '75%', padding: '2px', border: 'green'}} onClick={() => eraser()} /></a>
+        <a><img src={Backgrounds} alt="my image" style={{position: 'absolute', backgroundColor: 'transparent', height: '30px' , top: '63%', left: '46%', padding: '2px', border: 'green'}} onClick={() => eraser()} /></a>
       </div>
       <CallButton onClick={() => setCallButton(true)}>Call</CallButton>
     </Box>
