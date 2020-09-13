@@ -8,7 +8,10 @@ export const Box = styled.div
   width: 100vh;
   max-width: 220px;
   padding: 15px;
-  background: #263238;
+  // background: #263238;
+  background-image: url("./telephone2.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
   border-radius: 22.5px;
   visibility: hidden;
   opacity: 0;
@@ -31,7 +34,8 @@ export const Box = styled.div
 `;
 
 export const Input = styled.input`
-  width: 100%;
+  width: 70%;
+  // float: right;
   margin-bottom: 15px;
   margin-top: 15px;
   border: none;
@@ -45,25 +49,28 @@ export const Input = styled.input`
 
 export const ButtonsContainer = styled.div`
   font-size: 0;
+  width: 70%;
+  // float: right;
 `;
 
 export const Button = styled.button`
+  // visibility: hidden;
   display: inline-block;
   width: calc(33.33% - 10px);
   font-size: 18px;
   background: transparent;
   border: none;
-  color: #cfd8dc;
-  padding: 10px 0;
+  color:  transparent;
+  padding: 9px 0;
   text-align: center;
   cursor: pointer;
 
-  &:hover {
-    color: #fff;
-  }
+  // &:hover {
+  //   color: #fff;
+  // }
 
   &:nth-child(3n - 1) {
-    margin: 0 15px;
+    margin: 0 10px;
   }
 `;
 

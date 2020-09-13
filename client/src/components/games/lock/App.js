@@ -45,11 +45,11 @@ class App extends React.PureComponent {
       {/* <div>{value}</div> */}
       {/* <button onClick={this.onClear}>Clear</button> */}
     </div>
-    <div className="app-text" style={{ display: tryAgain, position: 'absolute', right: '31%', color: 'black', bottom: '20%', fontFamily: 'Dubai W23, sans-serif', zIndex: '5', textAlign: 'center' }}>
-      <h3>
+    <div className="app-text" style={{ display: tryAgain, position: 'absolute', right: '27%', color: 'black', bottom: '20%', fontFamily: 'Dubai W23, sans-serif', zIndex: '5' }}>
+      <h3 style={{ textAlign: 'center' }}>
         OOPS! That's not the right word.
       </h3>
-      <h3>
+      <h3 style={{ textAlign: 'center' }}>
         Look around, maybe there's a clue somewhere.
       </h3>
     </div>
