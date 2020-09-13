@@ -32,7 +32,12 @@ class App extends React.PureComponent {
   }
   return (
     <>
-    <div className="app">
+    <div className="app-text" style={{ textAlign: 'center', color: 'black', position: 'absolute', fontFamily: 'Dubai W23, sans-serif', zIndex: '5'}}>
+    {/* <div className="app-text" style={{ textAlign: 'center', color: 'black'}}> */}
+      <h3>The door is locked!</h3>
+      <h3>Explore the environment around you to find the code that will let you inside the Desert Conservation Centre.</h3>
+    </div>
+    <div className="app" style={{alignContent: 'center'}}>
       <PinInput
         length={4}
         focus
@@ -45,12 +50,9 @@ class App extends React.PureComponent {
       {/* <div>{value}</div> */}
       {/* <button onClick={this.onClear}>Clear</button> */}
     </div>
-    <div className="app-text" style={{ display: tryAgain, position: 'absolute', right: '177px', color: 'black', bottom: '20%', fontFamily: 'Dubai W23, sans-serif', zIndex: '5' }}>
+    <div className="app-text" style={{ display: tryAgain, position: 'absolute', right: '255px', color: 'black', bottom: '20%', fontFamily: 'Dubai W23, sans-serif', zIndex: '5' }}>
       <h3 style={{ textAlign: 'center' }}>
-        OOPS! That's not the right word.
-      </h3>
-      <h3 style={{ textAlign: 'center' }}>
-        Look around, maybe there's a clue somewhere.
+        Code incorrect. Try again!
       </h3>
     </div>
     </>

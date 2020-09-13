@@ -12,9 +12,10 @@ import switchButtonOFF from '../../../img/key.png'
 
 function TouchPoint3({ position, color, onClick }) {
     const [hovered, set] = useState(false)
-    const [CON, setCON] = useState(false);
+    // const [CON, setCON] = useState(false);
     const [showMessage, setShowMessage] = useState(false);
     const [switchState, setSwitchState] = useState(false);
+    const [wrongAlert, setWrongAlert] = useState(true);
 
     const onMouseOver = event => {
         const el = event.target;
@@ -35,6 +36,17 @@ function TouchPoint3({ position, color, onClick }) {
             window.location.href = '/scene5';
         }, 2000);            
       };
+
+    setInterval(function(){   
+        if(!wrongAlert){
+          setTimeout(function(){
+            // console.log("false");
+            setWrongAlert(true);
+            // setSwitchState(true);
+          }, 3000);
+        }
+        console.log(wrongAlert);
+     }, 1000);
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
@@ -67,24 +79,33 @@ function TouchPoint3({ position, color, onClick }) {
 
                             <Alert.Heading>
                                 <p>
-                                Glare from artificial lights makes it hard for wildlife to see, let's help the wildlife by 
+                                    Which of the following actions would you like to take?
                                 </p>
-                                <div>
+                                {/* <div>
                                     <img src={switchState? switchButtonON : switchButtonOFF} onClick={() => setSwitchState(true)} alt='switch' width='100%' height='100%' />
-                                </div>
-                                {/* <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                                </div> */}
+                                <h3 onClick={() => setSwitchState(true)} style={{ fontSize: '1rem', display: wrongAlert? 'block' : 'none'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
-                                    LEAVING THE LIGHTS ON
-                                </h3> */}
-                            {/* <a href='scene5'>
-                                <h3 onMouseEnter={event => onMouseOver(event)} style={{ fontSize: '1rem'}}
-                                    onMouseOut={event => onMouseOut(event)}  onClick={() => setCON(true)}
-                                    href>
-                                    SWITCHING THE LIGHTS OFF
+                                    Turn off the lights as you do not need them.
+                                </h3>
+                                <h3 onMouseEnter={event => onMouseOver(event)} style={{ fontSize: '1rem', display: wrongAlert? 'block' : 'none'}}
+                                    onMouseOut={event => onMouseOut(event)}  onClick={() => setWrongAlert(false)}
+                                    >
+                                    Leave the lights on so that we can see nearby wildlife.
                                 </h3> 
+                                {/* <h3 onClick={() => setWrongAlert(false)} style={{ fontSize: '1rem', display: wrongAlert? 'block' : 'none'}}
+                                    onMouseEnter={event => onMouseOver(event)}
+                                    onMouseOut={event => onMouseOut(event)}>
+                                    Reduce the brightness as you will try to enter the conservation centre.
+                                </h3> */}
+                                <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', display: wrongAlert? 'block' : 'none'}}
+                                    onMouseEnter={event => onMouseOver(event)}
+                                    onMouseOut={event => onMouseOut(event)}>
+                                    Ignore and explore other items in the trunk.
+                                </h3>
+                                <h3 style={{ display: wrongAlert? 'none' : 'block' }}>Try Again! Glaring light can disturb wildlife. Generally, you should switch off any lights, if they are not needed.</h3>
                             
-                            {/* </a> */}
                             </Alert.Heading>
                                 
                         </div>
