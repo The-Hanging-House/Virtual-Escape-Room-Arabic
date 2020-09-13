@@ -1,9 +1,9 @@
 import React from 'react';
-import Bgend from '../../img/bgend.png';
-import { url } from 'gravatar';
+// import Bgend from '../../img/bgend.png';
+// import { url } from 'gravatar';
 
-import CWN from '../../img/cwn.svg'
-import H from '../../img/h.png'
+// import CWN from '../../img/cwn.svg'
+// import H from '../../img/h.png'
 
 
 
@@ -34,18 +34,7 @@ setInterval(function(){
 }, 500);
 
 function End() {
-    const onMouseOver = event => {
-       
-        const el = event.target;
-        let colorhex = "#F8A61F"
-        el.style.background = colorhex;
-    };
-
-    const onMouseOut = event => {
-        const el = event.target;
-        let black = "transparent";
-        el.style.background = black;
-    };
+    
 
 
 
@@ -76,29 +65,25 @@ function End() {
                     </div>
                     <div className="option1">
                         <a href="briefing">
-                            <h3 style={{ color: 'black', fontSize: '2rem' }}
-                                    onMouseEnter={event => onMouseOver(event)}
-                                    onMouseOut={event => onMouseOut(event)}>
+                            <h3 style={{ color: 'black', fontSize: '2rem' }}>
                                         PLAY AGAIN?
                             </h3>
                         </a>
                         <a href="dashboard2">
-                            <h3 style={{ color: 'black', fontSize: '2rem' }}     
-                                    onMouseEnter={event => onMouseOver(event)}
-                                    onMouseOut={event => onMouseOut(event)}>
+                            <h3 style={{ color: 'black', fontSize: '2rem' }}>
                                         HOME
                             </h3>
                         </a>
                     </div>
                 </div>
-              <div className="icons">
+              {/* <div className="icons">
                   <a target="_blank" href="https://connectwithnature.ae/">
                       <img className="cwn" src={CWN} alt="CWN Logo" />
                   </a>
                   <a target="_blank" href="https://houbarafund.gov.ae/en/home">
                       <img className="h" src={H} alt="Houbara Fund" />
                   </a>
-              </div>      
+              </div>       */}
             </div>
         </>
         

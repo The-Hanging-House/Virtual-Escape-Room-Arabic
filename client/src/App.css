@@ -331,7 +331,8 @@ body {
   /* filter: blur(8px);
   -webkit-filter: blur(8px); */
   /* Full height */
-  height: 100%; 
+  width: auto;
+  height: 1000px; 
   z-index: -9999;
   
   /* Center and scale the image nicely */
@@ -624,11 +625,14 @@ h1 span {
 .alert-danger {
   font-family: "Dubai W23", sans-serif;
   color: red;
-  font-size: 1rem;
+  /* background-color: white; */
+  font-size: 1.5rem;
   position: absolute;
-  top: 35%;
-  left: 45.5%;
+  top: 670px;
+  left: 2px;
   width: 100%;
+  height: 38px;
+  text-align: center;
   z-index: 10;
 }
 .alert1 {
@@ -954,12 +958,12 @@ h3 {
 .bg-end {
   font-family: "Dubai W23", sans-serif;
   position: absolute;
-  top: 35%;
-  left: 45vh;
-  transform: translate(15vh, -35vh);
+  /* top: 5%; */
+  /* left: 37%; */
+  transform: translate(1%, -297%);
   z-index: 2;
-  width: 80vh;
-  height: 90vh;
+  width: 100%;
+  height: 320px;
   padding: 20px;
   text-align: center;
 }
@@ -969,7 +973,9 @@ h3 {
 }
 .gametime {
   position: absolute;
-  transform: translate(40%, 50%);
+  transform: translate(180%, 50%);
+  width: 21.06%;
+  height: 51%;
 }
 .option {
   position: relative;
