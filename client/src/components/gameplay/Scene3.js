@@ -359,7 +359,7 @@ function Scene3() {
                         <TouchPoint2 position={[-6, -1.5, 1]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-11, -10, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint4 position={[-11, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint4 position={[1, -18, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        {/* <TouchPoint4 position={[1, -18, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         <TouchPoint5 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[3, -5.5, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[9.5, -7, 5]} args={[3, 2, 1]} color='#F8A61F' />

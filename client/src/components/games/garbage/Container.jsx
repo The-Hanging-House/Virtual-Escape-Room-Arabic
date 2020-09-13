@@ -89,7 +89,7 @@ export const Container = () => {
           ))}
         </div>
 
-        <div style={{ overflow: 'hidden', clear: 'both', top: '100%', bottom: '100%', position: 'relative', display: garbageDone? 'none' : 'block'}}>
+        <div style={{ overflow: 'hidden', clear: 'both', top: '100%', bottom: '100%', position: 'relative', display: garbageDone? 'none' : 'block', left: '70px'}}>
           {boxes.map(({ name, type, bgImageName }, index) => (
             <Box
               name={name}
