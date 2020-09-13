@@ -73,6 +73,7 @@ export const Container = () => {
   }
   console.log("scene1",count);
   return (
+
     <div>
       <div style={{ dispaly: 'none'}}>
         <div style={{ textAlign: 'center', fontSize: '1rem', display: garbageDone? 'none' : 'block' }}>{showHint}</div>

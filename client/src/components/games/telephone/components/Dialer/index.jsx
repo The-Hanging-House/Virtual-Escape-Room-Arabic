@@ -2,6 +2,7 @@ import React from "react";
 import { useStore } from "../../store";
 import { Box, Button, Button1, Input, ButtonsContainer, CallButton } from "./atom";
 import phoneCall from '../../../../../audio/phoneCall.mp3'
+import Backgrounds from '../../../../../img/delete.png'
 
 var flag = 0;
  
@@ -13,25 +14,12 @@ export default () => {
   const buttons = ["1", "2", "3", "4", "5", "6", "7", "8", "9", " ", "0"];
   const buttonAlphabets = [" ", "(abc)", "(def)", "‏‏‎ ‎(ghi)", "‏‏‎ ‏‏‎ ‎‎(jkl)", "‏‏‎ ‎(mno)", "‏‏‎ ‎(pqrs)", "‏‏‎ ‎(tuv)", "‏‏‎ ‎(wxyz)", " ", " ", " "];
  
-  // ComponentDidMount & ComponentWillUnmount
-  // React.useEffect(() => {
-  //   document.addEventListener("click", onOuterClick);
-  //   return () => document.removeEventListener("click", onOuterClick);
-  // });
- 
-  // const onOuterClick = () => {
-  //   dispatch({ type: "DIALER_CLOSE" });
-  // };
  
   const onDialerClick = e => {
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
   };
  
-  if(number === NaN){
-    setNumber("");
-    setCallValues("");
-  }
  
   const callNumber = "800296";
   const callNumber2 = "8004432";
@@ -88,29 +76,34 @@ export default () => {
   return (
     <Box opened={state.dialerOpened} onClick={onDialerClick}>
       <Input
+        style={{paddingLeft: '1rem'}}
         placeholder={"000-000"}
         value={callValues}
         onChange={e => setNumber(e.target.value)}
       />
       
- 
-      <ButtonsContainer>
-        {buttons.map(char => (
-          <Button key={char} onClick={() => setNumber(number + char)}>
-            {char}
-          </Button>
-        ))}
-      </ButtonsContainer>
+      <div className="Yeet" style={{float: "right"}}>
+        <ButtonsContainer>
+          {buttons.map(char => (
+            <Button key={char} onClick={() => setNumber(number + char)}>
+              {char}
+            </Button>
+          ))}
+        </ButtonsContainer>
+        
+        {/* 
+        <ButtonsContainer style={{position: 'absolute', top: '33%', left: '7%', zIndex: '-2'}}>
+          {buttonAlphabets.map(char => (
+            <Button1 key={char} onClick={() => setNumber(number)}>
+              {char}
+            </Button1>
+          ))}
+        </ButtonsContainer> */}
 
-      <ButtonsContainer style={{position: 'absolute', top: '33%', left: '7%', zIndex: '-2'}}>
-        {buttonAlphabets.map(char => (
-          <Button1 key={char} onClick={() => setNumber(number)}>
-            {char}
-          </Button1>
-        ))}
-      </ButtonsContainer>
-
-      <button style={{position: 'absolute', backgroundColor: 'transparent', height: '20px' , top: '70%', left: '75%', padding: '2px', color: 'white', border: 'green'}}  onClick={() => eraser()}>Del</button>
+        {/* <button style={{position: 'absolute', backgroundColor: 'transparent', height: '20px' , top: '70%', left: '75%', padding: '2px', color: 'white', border: 'green'}}  onClick={() => eraser()}>Del</button> */}
+        {/* <a style={{background:`url(${Backgrounds})`}}  onClick={() => eraser()}></a> */}
+        <a><img src={Backgrounds} alt="my image" style={{position: 'absolute', backgroundColor: 'transparent', height: '30px' , top: '63%', left: '46%', padding: '2px', border: 'green'}} onClick={() => eraser()} /></a>
+      </div>
       <CallButton onClick={() => setCallButton(true)}>Call</CallButton>
     </Box>
   );
