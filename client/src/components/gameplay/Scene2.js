@@ -681,7 +681,7 @@ setInterval(function(){
     }
     if(localStorage.getItem('myDataKey') === "1598355449119" ){
       localStorage.setItem('myDataKey', "0");
-      window.location.href = "/timesup";
+      // window.location.href = "/timesup";
     }
 }, 500);  
 
@@ -725,7 +725,7 @@ function obama(){
     var arigato = mins + ":" + secs ;
 
     if (counter === 0){
-      window.location.href = "/timesup"
+      // window.location.href = "/timesup"
     }
   
     return (
