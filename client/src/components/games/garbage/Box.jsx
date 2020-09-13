@@ -31,7 +31,9 @@ const style = {
   marginBottom: '1px',
   cursor: 'move',
   float: 'left',
-  width: "calc((20% - 60px) - 1px)" 
+  // width: "calc((28% - 60px) - 1px)" ,
+  width: "120px" ,
+  alignItems: 'center'
 }
 export const Box = ({ name, isDropped, isDragging, connectDragSource, bgImageName }) => {
   const opacity = isDragging ? 0.4 : 1
