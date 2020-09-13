@@ -11,7 +11,7 @@ import { Html } from 'drei';
 
 import Loader from '../../img/loader.gif'
 
-import img from './../../img/crowbar.png'
+import img from './../../img/key.png'
 
 import Logout from '../logout/Logout'
 
@@ -148,6 +148,12 @@ function Box1(props) {
     el.style.background = black;
   };
 
+  if(showMessage){
+    setTimeout(function(){
+      setCollectedMessage(true);
+    }, 6000);
+  }
+
   // useFrame(({ camera, mouse }) => {
   //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
   // })
@@ -177,27 +183,27 @@ function Box1(props) {
                       dismissible
                       onClose={() => setShowMessage(false)}
                       >
-                      <div className="alert-inside" style={{visibility: collectedMessage? 'hidden':'visible'}}>
+                      <div className="alert-inside" style={{visibility: collectedMessage? 'hidden':'visible', top: "0", width: '366px', height: "208px" }}>
                             <Alert.Heading>
                             <p>
-                                Woah! It looks like you found a crowbar. What would you like to do with it?
-                                </p>
+                              Great! You found your keys.
+                            </p>
                             </Alert.Heading>
-                              <h3  onMouseEnter={event => onMouseOver(event)}
+                              {/* <h3  onMouseEnter={event => onMouseOver(event)}
                                   onMouseOut={event => onMouseOut(event)}
                                   onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
                                   PICK IT UP
                               </h3>
-                          <h3 onClick={() => setShowMessage(false)}
-                              onMouseEnter={event => onMouseOver(event)}
-                              onMouseOut={event => onMouseOut(event)}>
-                              IGNORE IT
-                          </h3>
-                          <h3 onClick={() => setShowMessage(false)}
-                              onMouseEnter={event => onMouseOver(event)}
-                              onMouseOut={event => onMouseOut(event)}>
-                              LOOKS USELESS, LEAVE IT
-                          </h3>
+                              <h3 onClick={() => setShowMessage(false)}
+                                  onMouseEnter={event => onMouseOver(event)}
+                                  onMouseOut={event => onMouseOut(event)}>
+                                  IGNORE IT
+                              </h3>
+                              <h3 onClick={() => setShowMessage(false)}
+                                  onMouseEnter={event => onMouseOver(event)}
+                                  onMouseOut={event => onMouseOut(event)}>
+                                  LOOKS USELESS, LEAVE IT
+                              </h3> */}
                       </div>
                       </Alert>
                   </CSSTransition>
@@ -213,6 +219,7 @@ function TouchPoint3({ position, color, onClick }) {
   const [CON, setCON] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [innerText, setInnerText] = useState("Seems like the trunk is locked, but you left the lights and music on.");
+  const [wrongAlert, setWrongAlert] = useState(true);
   
   const [show, setShow] = useState(false);
 
@@ -221,10 +228,17 @@ function TouchPoint3({ position, color, onClick }) {
 
     if(toolCollected === 1){
       setShow(true);
-      setInnerText("You now have a crowbar. What would you like to do with it?")
+      setInnerText("Which of the following actions would you like to take?")
     } 
 
+    if(!wrongAlert){
+      setTimeout(function(){
+        // console.log("false");
+        setWrongAlert(true);
+      }, 2000);
+    }
   }, 1000);
+
   
   const onMouseOver = event => {
       const el = event.target;
@@ -282,20 +296,21 @@ function TouchPoint3({ position, color, onClick }) {
                               {innerText}
                               </p>
                               {/* <a href="scene4"> */}
-                              <h3 style={{ cursor: 'pointer', fontSize: '1rem' }} onClick={() => setShowMessage(false)}
+                              <h3 style={{ display: wrongAlert? 'block' : 'none', cursor: 'pointer', fontSize: '1rem' }} onClick={() => setShowMessage(false)}
                                       onMouseEnter={event => onMouseOver(event)}
-                                      onMouseOut={event => onMouseOut(event)}>
-                                      {show? 'THROW IT AWAY' : ""}
+                                      onMouseOut={event => onMouseOut(event)}
+                                      onClick={() => setWrongAlert(false)}>
+                                      {show? 'Break the trunk door open in order to search for more clues.' : ""}
                                   </h3>
-                                  <h3 style={{ cursor: 'pointer', fontSize: '1rem' }} onClick={() => setShowMessage(false)}
-                                      onMouseEnter={event => onMouseOver(event)}
-                                      onMouseOut={event => onMouseOut(event)}>
-                                      {show? 'TAKE IT HOME' : ""}
-                                  </h3>
-                                  <h3 style={{ cursor: 'pointer', fontSize: '1rem' }} onMouseEnter={event => onMouseOver(event)}
+                                  <h3 style={{ display: wrongAlert? 'block' : 'none', cursor: 'pointer', fontSize: '1rem' }} onMouseEnter={event => onMouseOver(event)}
                                           onMouseOut={event => onMouseOut(event)} onClick={() => setCON(true)}
                                           >
-                                          {show? 'USE IT TO OPEN THE TRUNK' : ""}
+                                      {show? 'Open the trunk with your keys to reach the radio.' : ""}
+                                  </h3>
+                                  <h3 style={{ display: wrongAlert? 'block' : 'none', cursor: 'pointer', fontSize: '1rem' }} onClick={() => setShowMessage(false)}
+                                      onMouseEnter={event => onMouseOver(event)}
+                                      onMouseOut={event => onMouseOut(event)}>
+                                      {show? 'Put the keys in your pocket and continue exploring your surroundings for more clues.' : ""}
                                   </h3>
                               {/* </a> */}
                               <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
@@ -303,6 +318,7 @@ function TouchPoint3({ position, color, onClick }) {
                               onMouseOut={event => onMouseOut(event)}>
                                   {/* {show? 'CLOSE' : "IGNORE IT"} */}
                               </h3>
+                              <h3 style={{ display: wrongAlert? 'none' : 'block' }}>Try Again!</h3>
                           </Alert.Heading>
                       </div>
                       </Alert>

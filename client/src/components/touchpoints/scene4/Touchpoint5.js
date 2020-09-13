@@ -5,30 +5,42 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
+import switchButtonON from '../../../img/telephone.png'
+import switchButtonOFF from '../../../img/key.png'
+
 
 function TouchPoint5({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     // const [showButton, setShowButton] = useState(true);
     const [CON, setCON] = useState(false);
     const [showMessage, setShowMessage] = useState(false);
+    const [switchState, setSwitchState] = useState(false);
 
     const onMouseOver = event => {
         const el = event.target;
         let colorhex = "#F8A61F"
         el.style.background = colorhex;
-      };
+    };
 
-      const onMouseOut = event => {
+    const onMouseOut = event => {
         const el = event.target;
         let black = "transparent";
         el.style.background = black;
-      };
+    };
 
-      if(CON){
-        var scene4 = new Date().getTime();
-        localStorage.setItem('scene4', scene4);
-        console.log(localStorage.getItem('scene4'));
-        window.location.href = '/scene6';
+    // if(CON){
+    //     var scene4 = new Date().getTime();
+    //     localStorage.setItem('scene4', scene4);
+    //     console.log(localStorage.getItem('scene4'));
+    //     window.location.href = '/scene6';
+    // };
+
+    if(switchState){
+        setTimeout(function(){
+            var scene4 = new Date().getTime();
+            localStorage.setItem('scene4', scene4);
+            window.location.href = '/scene6';
+        }, 2000);            
       };
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
@@ -60,20 +72,21 @@ function TouchPoint5({ position, color, onClick }) {
                         <div className="alert-inside">
                             <Alert.Heading>
                                     <p>
-                                    Did you know noise disturbs nature? How would you like to help in this situation ?
+                                        Did you know that noise is also a type of pollution?
                                     </p>
-                                    <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
+                                    <div>
+                                        <img src={switchState? switchButtonON : switchButtonOFF} onClick={() => setSwitchState(true)} alt='switch' width='100%' height='100%' />
+                                    </div>
+                                    {/* <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
                                     DANCE AND SING
                                     </h3>
-                                    {/* <a href='scene6'> */}
                                         <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)} style={{ fontSize: '1rem'}}
                                             onMouseOut={event => onMouseOut(event)} onClick={() => setCON(true)}
                                             href>
                                             SWITCH OFF THE MUSIC
-                                        </h3>
-                                    {/* </a> */}
+                                        </h3> */}
                             </Alert.Heading>
                                 
                             {/* <Button onClick={() => setShowMessage(false)}>
