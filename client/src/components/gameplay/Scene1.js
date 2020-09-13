@@ -16,7 +16,7 @@ import TouchPoint4 from '../touchpoints/scene1/Touchpoint4'
 import TouchPoint5 from '../touchpoints/scene1/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene1/Touchpoint6'
 import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
-// import TouchPoint8 from '../touchpoints/scene1/Touchpoint8'
+import TouchPoint8 from '../touchpoints/scene1/Touchpoint8'
 // import Timer from '../timer/Timer'
 import './style.css'
 
@@ -56,7 +56,7 @@ function Timer() {
       counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
       if(localStorage.getItem('myDataKey') === "1598355449119" || localStorage.getItem('myDataKey') === "0"){
         localStorage.setItem('myDataKey', "0");
-        window.location.href = "/timesup";
+        // window.location.href = "/timesup";
       }
   }, [counter]);
   var mins = Math.floor(counter/60);
@@ -68,7 +68,7 @@ function Timer() {
 
   if (counter === 0){
     
-    window.location.href = "/timesup"
+    // window.location.href = "/timesup"
   }
 
   return (
@@ -130,19 +130,25 @@ function Scene1() {
                         <Dome />
                         
                         <TouchPoint1 position={[-4, -7, 0]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint2 position={[-10, -0.4, 1]} args={[3, 2, 1]} color='#F8A61F' />
+
+                        <TouchPoint2 position={[-10, -3, 1.5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-11, -10, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint4 position={[-16, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint4 position={[12, -18, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint4 position={[-10, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        {/* <TouchPoint4 position={[12, -18, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
+
+
                         {/* <TouchPoint4 position={[-18, -25, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         {/* <TouchPoint4 position={[-8, -25, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
-                        <TouchPoint5 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        {/* <TouchPoint5 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
+                        {/* v Mid plant touchpoint v */}
                         <TouchPoint5 position={[4, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint5 position={[11, -7, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        {/* v Far left plant touchpoint v */}
+                        <TouchPoint5 position={[11, -7, 4.5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[-10, -40, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint6 position={[7, -9, 4]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint7 position={[0, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                        {/* <TouchPoint8 position={[-10, -1, 1]} args={[3, 2, 1]} color='#F8A61F' /> */}
+                        {/* v far right touchpoint v */}
+                        <TouchPoint8 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' /> 
                         
                     </Suspense>
             </Canvas> 

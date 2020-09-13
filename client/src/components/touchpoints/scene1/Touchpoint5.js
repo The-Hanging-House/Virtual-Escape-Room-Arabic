@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import trunk2 from '../../../img/plant.png'
+import plant from '../../../img/plant.png'
 
 function TouchPoint5({ position, color, onClick }) {
     const [hovered, set] = useState(false)
@@ -27,7 +27,7 @@ function TouchPoint5({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [1, 1, 1, 1] : [1, 1, 1, 1]}
+            scale={[1, 1, 1, 1]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
@@ -52,7 +52,7 @@ function TouchPoint5({ position, color, onClick }) {
                         >
                         <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
                             <div>
-                                <img src={trunk2} alt='Trunk2' width='100%' height='100%' />
+                                <img src={plant} alt='plant' width='100%' height='100%' />
                             </div>
                         </div>
                         </Alert>

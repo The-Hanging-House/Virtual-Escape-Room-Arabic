@@ -5,31 +5,29 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import Lock from '../../../img/lock.png'
+import plant from '../../../img/plant.png'
 
-import App from '../../games/lock/App2'
-
-function TouchPoint2({ position, color, onClick }) {
+function TouchPoint5({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     // const [showButton, setShowButton] = useState(true);
     const [showMessage, setShowMessage] = useState(false);
 
-    const onMouseOver = event => {
-        const el = event.target;
-        let colorhex = "#F8A61F"
-        el.style.background = colorhex;
-      };
+    // const onMouseOver = event => {
+    //     const el = event.target;
+    //     let colorhex = "#F8A61F"
+    //     el.style.background = colorhex;
+    //   };
 
-      const onMouseOut = event => {
-        const el = event.target;
-        let black = "transparent";
-        el.style.background = black;
-      };
+    //   const onMouseOut = event => {
+    //     const el = event.target;
+    //     let black = "transparent";
+    //     el.style.background = black;
+    //   };
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={[2, 2, 2]}
+            scale={[2, 2, 2, 2]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
@@ -37,28 +35,25 @@ function TouchPoint2({ position, color, onClick }) {
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
             <meshBasicMaterial attach="material" transparent opacity={hovered? 0.2 : 0} /> 
             <Html center>
-            <Container>
+                <Container>
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert3"
+                        classNames="alert1"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert3"
+                        className="alert"
                         variant="primary"
+                        dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                         <div className="alert-inside6">
-                         <button className="close" onClick={() => setShowMessage(false)}>×</button>
-                            <Alert.Heading>
-                            <App />
-                            <img src={Lock} alt='pinlock'/>
-                            </Alert.Heading>
-                                
-                            
+                        <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
+                            <div>
+                                <img src={plant} alt='plant' width='100%' height='100%' />
+                            </div>
                         </div>
                         </Alert>
                     </CSSTransition>
@@ -68,4 +63,4 @@ function TouchPoint2({ position, color, onClick }) {
     )
 }
 
-export default TouchPoint2;
+export default TouchPoint5;
