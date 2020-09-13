@@ -15,12 +15,13 @@ function TouchPoint4({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-        scale={hovered ? [10, 8, 0.1, 0.1] : [10, 8, 0.1, 0.1]}
+        scale={[25, 0.1, 0.1]}
             position={position}
+            rotation={[0, 0.1, 0.1]}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
-            <sphereGeometry attach="geometry" args={[1, 32, 32]} />
+            <planeGeometry attach="geometry" args={[1, 32, 32]} />
             <meshBasicMaterial attach="material" transparent opacity={hovered? 0.2 : 0} /> 
             <Html center>
                 <Container>
