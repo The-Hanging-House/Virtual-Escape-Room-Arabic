@@ -44,7 +44,7 @@ export default () => {
  
       flag = 1;
  
-      setCallValues("Wrong number!")
+      setCallValues("Try Again!")
  
       setTimeout(function(){
         flag = 0;
@@ -102,9 +102,10 @@ export default () => {
 
         {/* <button style={{position: 'absolute', backgroundColor: 'transparent', height: '20px' , top: '70%', left: '75%', padding: '2px', color: 'white', border: 'green'}}  onClick={() => eraser()}>Del</button> */}
         {/* <a style={{background:`url(${Backgrounds})`}}  onClick={() => eraser()}></a> */}
-        <a><img src={Backgrounds} alt="my image" style={{position: 'absolute', backgroundColor: 'transparent', height: '30px' , top: '63%', left: '46%', padding: '2px', border: 'green'}} onClick={() => eraser()} /></a>
+        <a><img src={Backgrounds} alt="my image" style={{ opacity: '0', position: 'absolute', backgroundColor: 'transparent', height: '30px' , top: '77%', left: '46%', padding: '2px', border: 'green'}} onClick={() => eraser()} /></a>
+        <a><img src={Backgrounds} onClick={() => setCallButton(true)} alt="my image" style={{ opacity: '0', position: 'absolute', backgroundColor: 'transparent', height: '30px' , top: '77%', left: '11%', padding: '2px', border: 'green'}} /></a>
       </div>
-      <CallButton onClick={() => setCallButton(true)}>Call</CallButton>
+      {/* <CallButton onClick={() => setCallButton(true)}>Call</CallButton> */}
     </Box>
   );
 };

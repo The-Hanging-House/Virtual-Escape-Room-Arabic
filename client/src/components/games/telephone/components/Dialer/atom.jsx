@@ -9,7 +9,7 @@ export const Box = styled.div
   max-width: 220px;
   padding: 15px;
   // background: #263238;
-  background-image: url("./telephone2.png");
+  background-image: url("./telephone.png");
   background-size: 100%;
   background-repeat: no-repeat;
   border-radius: 22.5px;
@@ -35,7 +35,7 @@ export const Box = styled.div
 
 export const Input = styled.input`
   width: 70%;
-  margin-bottom: 15px;
+  // margin-bottom: 15px;
   margin-top: 15px;
   border: none;
   background: transparent;
@@ -61,6 +61,7 @@ export const Button = styled.button`
   background: transparent;
   border: none;
   color:  transparent;
+  top: -50px;
   padding: 9px 0;
   text-align: center;
   cursor: pointer;
