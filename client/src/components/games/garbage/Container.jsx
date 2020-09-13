@@ -10,7 +10,8 @@ var count = 0
 var ddd = 'hidden'
 
 export const Container = () => {
-  var canProceed = ['visible', 'hidden']
+  const [garbageDone, setGarbageDone] = useState(false)
+  // var canProceed = ['visible', 'hidden']
 
   const [dustbins, setDustbins] = useState([
     { accepts: [ItemTypes.GLASS], lastDroppedItem: null, bgImageName: "bin1" },
@@ -60,47 +61,58 @@ export const Container = () => {
   );
   setInterval(function(){
     if(count > 5){
-      ddd = canProceed[0]
-      var scene1 = new Date().getTime();
-      localStorage.setItem('scene1', scene1);
-      
-      window.location.href = '/scene3';
+      // ddd = canProceed[0]
+      setGarbageDone(true);
     }
   }, 5000);
+  function Tset(){
+    var scene1 = new Date().getTime();
+    localStorage.setItem('scene1', scene1);
+    
+    window.location.href = '/scene3';  
+  }
   console.log("scene1",count);
   return (
     <div>
-      <div style={{ textAlign: 'center', fontSize: '1rem' }}>{showHint}</div>
-      <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center'}}>
-        {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
-          <Dustbin
-            accepts={accepts}
-            lastDroppedItem={lastDroppedItem}
-            onDrop={(item) => handleDrop(index, item)}
-            key={index}
-            bgImageName={bgImageName}
-          />
-        ))}
-      </div>
+      <div style={{ dispaly: 'none'}}>
+        <div style={{ textAlign: 'center', fontSize: '1rem', display: garbageDone? 'none' : 'block' }}>{showHint}</div>
+        <div style={{ overflow: "hidden", clear: "both", display: garbageDone? 'none' : 'flex', justifyContent: 'center'}}>
+          {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
+            <Dustbin
+              accepts={accepts}
+              lastDroppedItem={lastDroppedItem}
+              onDrop={(item) => handleDrop(index, item)}
+              key={index}
+              bgImageName={bgImageName}
+            />
+          ))}
+        </div>
 
-      <div style={{ overflow: 'hidden', clear: 'both', top: '100%', bottom: '100%', position: 'relative'}}>
-        {boxes.map(({ name, type, bgImageName }, index) => (
-          <Box
-            name={name}
-            type={type}
-            isDropped={isDropped(name)}
-            key={index}
-            bgImageName={bgImageName}
-          />
-        ))}
+        <div style={{ overflow: 'hidden', clear: 'both', top: '100%', bottom: '100%', position: 'relative', display: garbageDone? 'none' : 'block'}}>
+          {boxes.map(({ name, type, bgImageName }, index) => (
+            <Box
+              name={name}
+              type={type}
+              isDropped={isDropped(name)}
+              key={index}
+              bgImageName={bgImageName}
+            />
+          ))}
+        </div>
       </div>
-      {/* <div style={{ overflow: "hidden", clear: "both", display: 'flex', justifyContent: 'center', visibility: ddd  }}>
-          <a href="/scene3">
-            <button className="btn btn-primary3">
-                Proceed
-            </button>
-          </a>
-      </div> */}
+      <div style={{display: garbageDone? 'block' : 'none'}}>
+        <div>
+          <h2 style={{textAlign: 'center'}}>Thank you for cleaning up the litter and helping the environment!</h2>
+          <br/>
+        </div>
+        <div style={{  clear: "both", display: 'flex', justifyContent: 'center' }}>
+            {/* <a href="/scene3"> */}
+              <button className="btn btn-primary3" onClick={Tset} style={{ width: "auto", height: "auto", textAlign: 'center'}}>
+                  Proceed
+              </button>
+            {/* </a> */}
+        </div>
+      </div>
     </div>
   );
 };
