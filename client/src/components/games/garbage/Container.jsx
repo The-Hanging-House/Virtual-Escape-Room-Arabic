@@ -4,7 +4,7 @@ import Box from "./Box";
 import { ItemTypes } from "./ItemTypes";
 import update from "immutability-helper";
 
-var showHint = "SEGREGATE THE TRASH TO THE CORRECT BINS IN THE LEAST TIME POSSIBLE.";
+var showHint = "Leaving trash behind in nature pollutes the environment and is harmful to wildlife.";
 
 var count = 0
 var ddd = 'hidden'
@@ -65,13 +65,19 @@ export const Container = () => {
       setGarbageDone(true);
     }
   }, 5000);
-  function Tset(){
-    var scene1 = new Date().getTime();
-    localStorage.setItem('scene1', scene1);
-    
-    window.location.href = '/scene3';  
+  
+  if(garbageDone){
+
+    setTimeout(function(){
+      var scene1 = new Date().getTime();
+      localStorage.setItem('scene1', scene1);
+      
+      window.location.href = '/scene3';  
+    }, 6000)
   }
-  console.log("scene1",count);
+  // function Tset(){
+  // }
+  // console.log("scene1",count);
   return (
 
     <div>
@@ -103,16 +109,14 @@ export const Container = () => {
       </div>
       <div style={{display: garbageDone? 'block' : 'none'}}>
         <div>
-          <h2 style={{textAlign: 'center', fontFamily: 'Dubai W23, sans-serif'}}>Thank you for cleaning up the litter and helping the environment!</h2>
+          <h2 style={{textAlign: 'center', fontFamily: 'Dubai W23, sans-serif'}}>Good job not leaving any trash behind! Have you found your keys?</h2>
           <br/>
         </div>
-        <div style={{  clear: "both", display: 'flex', justifyContent: 'center' }}>
-            {/* <a href="/scene3"> */}
+        {/* <div style={{  clear: "both", display: 'flex', justifyContent: 'center' }}>
               <button className="btn btn-primary3" onClick={Tset} style={{ width: "auto", height: "auto", textAlign: 'center'}}>
                   Proceed
               </button>
-            {/* </a> */}
-        </div>
+        </div> */}
       </div>
     </div>
   );
