@@ -159,7 +159,7 @@ function Box1(props) {
       {...props}
       ref={mesh}
       rotation={[2, 10, 0]}
-      scale={collectedMessage ? [0, 0, 0, 0] : [1.5, 1.5, 1.5, 1.5]}
+      scale={collectedMessage ? [0, 0, 0, 0] : [5, 5, 5, 5]}
       onClick={() => setShowMessage(true)}>
       <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
       <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
@@ -354,7 +354,7 @@ function Scene3() {
                         <Dome />
                         <Task />
                         <ambientLight intensity={1.2} />
-                        <Box1 position={[10, -10, -10]} />
+                        <Box1 position={[-12, -35, -5]} />
                         {/* <TouchPoint1 position={[-4, -3, 5]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         <TouchPoint2 position={[-6, -1.5, 1]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-11, -10, -15]} args={[3, 2, 1]} color='#F8A61F' />

@@ -103,7 +103,7 @@ export const Container = () => {
       </div>
       <div style={{display: garbageDone? 'block' : 'none'}}>
         <div>
-          <h2 style={{textAlign: 'center'}}>Thank you for cleaning up the litter and helping the environment!</h2>
+          <h2 style={{textAlign: 'center', fontFamily: 'Dubai W23, sans-serif'}}>Thank you for cleaning up the litter and helping the environment!</h2>
           <br/>
         </div>
         <div style={{  clear: "both", display: 'flex', justifyContent: 'center' }}>
