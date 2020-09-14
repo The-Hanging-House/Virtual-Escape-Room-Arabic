@@ -5,31 +5,18 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import trunk2 from '../../../img/plant.png'
+import egg from '../../../img/feather.png'
 
-function TouchPoint5({ position, color, onClick }) {
+function TouchPoint7({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     // const [showButton, setShowButton] = useState(true);
     const [showMessage, setShowMessage] = useState(false);
-
-    // const onMouseOver = event => {
-    //     const el = event.target;
-    //     let colorhex = "#F8A61F"
-    //     el.style.background = colorhex;
-    //   };
-
-    //   const onMouseOut = event => {
-    //     const el = event.target;
-    //     let black = "transparent";
-    //     el.style.background = black;
-    //   };
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-        scale={hovered ? [1, 1, 1, 1] : [1, 1, 1, 1]}
+            scale={[2, 2, 2, 2]}
             position={position}
-            rotation={[0, 0.1, 0.1]}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>
@@ -40,20 +27,21 @@ function TouchPoint5({ position, color, onClick }) {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert1"
+                        classNames="alert"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
                         className="alert"
-                        variant="primary"
+                        // variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
+                        {/* <button className="close" onClick={() => setShowMessage(false)}>×</button> */}
                             <div>
-                                <img src={trunk2} alt='Trunk2' width='100%' height='100%' />
+                                <img src={egg} alt='feather'  />
                             </div>
                         </div>
                         </Alert>
@@ -64,4 +52,4 @@ function TouchPoint5({ position, color, onClick }) {
     )
 }
 
-export default TouchPoint5;
+export default TouchPoint7;

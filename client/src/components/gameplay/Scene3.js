@@ -137,17 +137,6 @@ function Box1(props) {
   }
   
 
-  const onMouseOver = event => {
-    const el = event.target;
-    let colorhex = "#F8A61F"
-    el.style.background = colorhex;
-  };
-
-  const onMouseOut = event => {
-    const el = event.target;
-    let black = "transparent";
-    el.style.background = black;
-  };
 
   if(showMessage){
     setTimeout(function(){
@@ -155,9 +144,6 @@ function Box1(props) {
     }, 5000);
   }
 
-  // useFrame(({ camera, mouse }) => {
-  //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
-  // })
   useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
 
   return (
@@ -190,21 +176,7 @@ function Box1(props) {
                               Great! You found your keys.
                             </p>
                             </Alert.Heading>
-                              {/* <h3  onMouseEnter={event => onMouseOver(event)}
-                                  onMouseOut={event => onMouseOut(event)}
-                                  onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
-                                  PICK IT UP
-                              </h3>
-                              <h3 onClick={() => setShowMessage(false)}
-                                  onMouseEnter={event => onMouseOver(event)}
-                                  onMouseOut={event => onMouseOut(event)}>
-                                  IGNORE IT
-                              </h3>
-                              <h3 onClick={() => setShowMessage(false)}
-                                  onMouseEnter={event => onMouseOver(event)}
-                                  onMouseOut={event => onMouseOut(event)}>
-                                  LOOKS USELESS, LEAVE IT
-                              </h3> */}
+                              
                       </div>
                       </Alert>
                   </CSSTransition>

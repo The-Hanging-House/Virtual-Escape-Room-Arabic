@@ -904,7 +904,7 @@ h1 span {
   padding: 2rem;
   /*width: 30vw;
   height: 35vh;*/
-  width: 590px;
+  width: 650px;
   height: 442px;
   position: absolute;
   top: -10vh;
@@ -926,7 +926,7 @@ h1 span {
 .alert-inside h3 {
   font-family: "Dubai W23", sans-serif;
   margin-bottom: 0.5rem;
-  line-height: 1.3rem;
+  line-height: 1.5rem;
   cursor: pointer;
   font-size: 1rem;
   /* padding-left: 1rem; */
@@ -1106,6 +1106,10 @@ h3 {
     position: relative;
     top: 19%;
   }
+  .dashblock {
+    left: 5%;
+    bottom: 5%;
+}
   .bg-text1
   {
     /*transform: translate(53%, -78%) !important;*/
@@ -1123,7 +1127,7 @@ h3 {
     /*left: 15.2vw;*/
     /*top: 14vh;*/
     font-size: 2rem;
-    left: 34px;
+    left: 42px;
     top: 105px;
   }
   .button-1 {
@@ -1286,8 +1290,8 @@ h3 {
 
   .dashblock {
     position: absolute;
-    bottom: 0;
-    left: 23%;
+    bottom: 105px;
+    left: 19%;
     width: 70vw;
     height: 90%;
   }
@@ -1300,8 +1304,8 @@ h3 {
 
 @media(max-width: 1599px) {
   .dashblock {
-    left: 8%;
-    bottom: 12%;
+    left: 14%;
+    bottom: 9%;
   }
 }
 @media(max-width: 1199px) {
@@ -1324,7 +1328,8 @@ h3 {
   }
   .dashblock {
     left: 5%;
-    bottom: 1%;
+    bottom: 5%;
+
   }
 }
 
@@ -1373,8 +1378,8 @@ h3 {
   }
   
   .dashblock {
-    left: 13%;
-    top: 22%;
+    left: 12%;
+    top: 14%;
   }
   .bg-text1
   {

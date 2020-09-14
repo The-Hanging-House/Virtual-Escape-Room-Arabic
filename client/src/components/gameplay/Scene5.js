@@ -13,7 +13,7 @@ import TouchPoint5 from '../touchpoints/scene5/Touchpoint5'
 import TouchPoint2 from '../touchpoints/scene5/Touchpoint2'
 import TouchPoint4 from '../touchpoints/scene5/Touchpoint4'
 import TouchPoint6 from '../touchpoints/scene1/Touchpoint6'
-import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
+import TouchPoint7 from '../touchpoints/scene5/Touchpoint7'
 
 // import Timer from '../timer/Timer'
 import './style.css'
