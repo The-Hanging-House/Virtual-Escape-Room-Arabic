@@ -30,12 +30,12 @@ export const Container = () => {
     }
   ]);
   const [boxes] = useState([
-    { name: " ", type: ItemTypes.PAPER, bgImageName: "trash2" },
-    { name: "  ", type: ItemTypes.GLASS, bgImageName: "trash" },
-    { name: "   ", type: ItemTypes.FOOD, bgImageName: "trash1" },
-    { name: "    ", type: ItemTypes.PAPER, bgImageName: "trash3" },
-    { name: "     ", type: ItemTypes.GLASS, bgImageName: "trash4" },
-    { name: "      ", type: ItemTypes.FOOD, bgImageName: "trash5" }
+    { name: " ", type: ItemTypes.GLASS, bgImageName: "trash" },
+    { name: "  ", type: ItemTypes.GLASS, bgImageName: "trash1" },
+    { name: "   ", type: ItemTypes.PAPER, bgImageName: "trash4" },
+    { name: "    ", type: ItemTypes.FOOD, bgImageName: "trash2" },
+    { name: "     ", type: ItemTypes.FOOD, bgImageName: "trash3" },
+    { name: "      ", type: ItemTypes.GLASS, bgImageName: "trash5" },
     
   ]);
   const [droppedBoxNames, setDroppedBoxNames] = useState([]);
