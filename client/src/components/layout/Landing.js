@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 
-import hint from '../../img/click.svg'
+import hint from '../../img/hint.svg'
 
 const Landing = ({ isAuthenticated}) => {
   if(isAuthenticated) {
@@ -22,8 +22,8 @@ function Initimg(){
 
     return (
     <>
-    <div style={{display: displayProp? 'none' : 'block', position: "absolute", zIndex: "200", left: "50%", top: "50%", transform: "translate(-100%, -180%)"}}>
-        <img src = {hint} style={{width: "150%", height: "150%"}}/>
+    <div style={{display: displayProp? 'none' : 'block', zIndex: "200", left: "50%", top: "50%"}}>
+        <img src = {hint} style={{width: "100%", height: "100%"}}/>
     </div>
     </>
     )
@@ -37,12 +37,12 @@ const intiImage = <Initimg/>
       <div className="orange-overlay">
         <div className="landing-inner">
         {intiImage}
-          <h1 className="x-large">
+          {/* <h1 className="x-large">
             DESERT
             <br />
             SURVIVAL
-          </h1>
-          <p className="lead">A VIRTUAL ESCAPE ROOM</p>
+          </h1> */}
+          {/* <p className="lead">A VIRTUAL ESCAPE ROOM</p> */}
           <div className="buttons">
             <Link to="login" className="btn btn-light">
               LOG IN
