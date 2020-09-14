@@ -905,9 +905,9 @@ function Scene2() {
                       <Box2 position={[-14, 5.3, -13]}/>
                       <Box3 position={[10, -4.8, 12]} />
                       <Box4 position={[-12, 0.7, 2]} />
-                      <Box5 position={[-20, -8, 10]} />
-                      {/* <Box6 position={[-5, 3, 10]} /> */}
-                      {/* <Box7 position={[-20, -10, 4]} /> */}
+                      <Box5 position={[-12, -13, 5.5]} />
+                      <Box6 position={[-5, -1.6, 15]} />
+                      <Box7 position={[-20, -10, 4]} />
                       <TouchPoint1 position={[-17, 1, -10]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint2 position={[-18, -7.5, -4.5]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint3 position={[1, -1, 2]} args={[3, 2, 1]} color='#F8A61F' />
