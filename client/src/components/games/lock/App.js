@@ -2,6 +2,7 @@ import React from "react";
 import PinInput from "react-pin-input";
 
 var tryAgain = 'none';
+var rightAnswer = 'none';
 
 class App extends React.PureComponent {
   state = {
@@ -18,9 +19,12 @@ class App extends React.PureComponent {
     var input1 = "BIRD"
     if (value.length === 4 && value.localeCompare(input1)===0){
       // value.localeCompare(input1)? console.log("NO MATCH") : window.location.href = "/scene2";
-      var scene5 = new Date().getTime();
-      localStorage.setItem('scene5', scene5);
-      window.location.href = '/scene2';
+      rightAnswer = 'block';
+      setTimeout(() => {
+        var scene5 = new Date().getTime();
+        localStorage.setItem('scene5', scene5);
+        window.location.href = '/scene2';
+      }, 3000);
 
   }
   else if(value.length === 4 && value.localeCompare(input1)!==0){
@@ -53,6 +57,11 @@ class App extends React.PureComponent {
     <div className="app-text" style={{ display: tryAgain, position: 'absolute', right: '255px', color: 'black', bottom: '20%', fontFamily: 'Dubai W23, sans-serif', zIndex: '5' }}>
       <h3 style={{ textAlign: 'center' }}>
         Code incorrect. Try again!
+      </h3>
+    </div>
+    <div className="app-text" style={{ display: rightAnswer, position: 'absolute', right: '219px', color: 'black', bottom: '20%', fontFamily: 'Dubai W23, sans-serif', zIndex: '5' }}>
+      <h3 style={{ textAlign: 'center' }}>
+        Great job! You found your way inside.
       </h3>
     </div>
     </>

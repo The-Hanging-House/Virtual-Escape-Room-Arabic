@@ -139,7 +139,7 @@ function Scene4() {
                       </Html>
                     }>
                         <Dome />
-                        <TouchPoint2 position={[-15, -3.5, -1.5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint2 position={[-15, -2.9, -1.5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-20, -60, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[5, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[1, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
