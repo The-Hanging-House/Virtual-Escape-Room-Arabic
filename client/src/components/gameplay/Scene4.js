@@ -21,12 +21,19 @@ import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
 import './style.css'
 
 import Music1 from '../../audio/Music1'
+import carDoor from '../../audio/carDoor.mp3'
 
 extend({ OrbitControls })
 
 var data;
 data = localStorage.getItem('myDataKey');
 var now; 
+
+
+function Cardoor(){
+  new Audio(carDoor).play();
+  return null
+}
 
 setInterval(function(){
   now = localStorage.getItem('scene3');
@@ -123,11 +130,12 @@ function Counter(){
 const counter = <Counter />
 const logout = <Logout />
 var elementorso = <Timer/>
-
+var carDoors = <Cardoor/>
 function Scene4() {
     return (
         <>
         {/* <Timer/> */}
+        {carDoors}
             <Canvas camera={{ position: [0, 0, 0.1] }}>
                 <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2} />
                     <Suspense fallback={

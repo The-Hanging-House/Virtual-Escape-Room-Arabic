@@ -1,5 +1,7 @@
 import React from "react";
 import PinInput from "react-pin-input";
+import wrong from '../../../audio/wrong.mp3';
+import correct from '../../../audio/correct.mp3';
 
 var tryAgain = 'none';
 var rightAnswer = 'none';
@@ -20,6 +22,7 @@ class App extends React.PureComponent {
     if (value.length === 4 && value.localeCompare(input1)===0){
       // value.localeCompare(input1)? console.log("NO MATCH") : window.location.href = "/scene2";
       rightAnswer = 'block';
+      new Audio(correct).play();
       setTimeout(() => {
         var scene5 = new Date().getTime();
         localStorage.setItem('scene5', scene5);
@@ -30,6 +33,7 @@ class App extends React.PureComponent {
   else if(value.length === 4 && value.localeCompare(input1)!==0){
       
     tryAgain = 'block';
+    new Audio(wrong).play();
     setTimeout(function(){
       tryAgain = 'none';
     }, 1000);

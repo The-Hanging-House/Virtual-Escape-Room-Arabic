@@ -2,6 +2,8 @@ import React from "react";
 import { useStore } from "../../store";
 import { Box, Button, Button1, Input, ButtonsContainer, CallButton } from "./atom";
 import phoneCall from '../../../../../audio/phoneCall.mp3'
+import dialpad from '../../../../../audio/dialpad.mp3'
+import wrong from '../../../../../audio/wrong.mp3'
 import Backgrounds from '../../../../../img/delete.png'
 
 var flag = 0;
@@ -18,6 +20,7 @@ export default () => {
   const onDialerClick = e => {
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
+    new Audio(dialpad).play();
   };
  
  
@@ -44,7 +47,10 @@ export default () => {
  
       flag = 1;
  
-      setCallValues("Try Again!")
+      setCallValues("Try Again!");
+      setTimeout(function(){
+        new Audio(wrong).play();
+      }, 200);
  
       setTimeout(function(){
         flag = 0;
