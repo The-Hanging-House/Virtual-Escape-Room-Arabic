@@ -573,10 +573,12 @@ const Dome = () => {
     const mesh = useRef()
     const [showMessage, setShowMessage] = useState(false);
     const [collectedMessage, setCollectedMessage] = useState(false)
-    if(collectedMessage){
-      counter();
-       
-    }
+
+    setInterval(() => {
+      if(ccom===6){
+        setCollectedMessage(true);       
+      }
+    }, 2000);
     const texture = useLoader(THREE.TextureLoader, note)
 
     const onMouseOver = event => {
@@ -600,7 +602,8 @@ const Dome = () => {
         {...props}
         ref={mesh}
         rotation={[2, 2, 2]}
-        scale={collectedMessage ? [0, 0, 0] : [2, 2, 2, 2]}
+        scale={collectedMessage ? [2, 2, 2, 2] : [0, 0, 0]}
+        // scale={[0, 0, 0]}
         onClick={() => setShowMessage(true)}>
         <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
@@ -709,7 +712,7 @@ function Initimg(){
 
   setTimeout(function(){
     setDisplayProp(true);
-    console.log("TEXT")
+    // console.log("TEXT")
   }, 6000);
 
     return (
@@ -855,7 +858,7 @@ function Counter(){
       }else if(ccom === 6){
         setSomething(6);
       }  
-      console.log("x: ", x)
+      // console.log("x: ", x)
       setPieceCollected(Math.floor(x/2));
   }, 500);
 

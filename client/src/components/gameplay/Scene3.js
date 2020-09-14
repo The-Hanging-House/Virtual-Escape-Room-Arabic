@@ -152,7 +152,7 @@ function Box1(props) {
     <mesh
       {...props}
       ref={mesh}
-      rotation={[2, 10, 0]}
+      rotation={[2, 15, 0]}
       scale={collectedMessage ? [0, 0, 0, 0] : [5, 5, 5, 5]}
       onClick={() => {setShowMessage(true); new Audio(keyPickup).play()}}>
       <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />

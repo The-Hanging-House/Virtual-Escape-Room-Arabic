@@ -6,15 +6,15 @@ const backgroundsList = {
   trash:
     '/trash1.png',
   trash2:
-  '/trash2.png',
+    '/trash2.png',
   trash1:
-    '/trash.png',
+    '/trash3.png',
   trash3:
-    '/trash1.png',
+    '/trash4.png',
   trash4:
-  '/trash2.png',
+    '/trash5.png',
   trash5:
-    '/trash.png'
+    '/trash6.png'
   
 };
 
@@ -22,7 +22,7 @@ const backgroundsList = {
 const style = {
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
-  height: '100px',
+  height: '108px',
   backgroundColor: 'transparent',
   padding: '0.5rem 1rem',
   marginRight: '1rem',
