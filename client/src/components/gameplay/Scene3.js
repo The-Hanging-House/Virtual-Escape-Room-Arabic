@@ -7,6 +7,7 @@ import { CSSTransition } from 'react-transition-group';
 import { Canvas, extend, useFrame, useThree, useLoader } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import Music1 from '../../audio/Music1'
+import keyPickup from '../../audio/keyPickup.mp3'
 import { Html } from 'drei';
 
 import Loader from '../../img/loader.gif'
@@ -140,7 +141,7 @@ function Box1(props) {
   if(showMessage){
     setTimeout(function(){
       setCollectedMessage(true);
-    }, 6000);
+    }, 5000);
   }
 
   useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
@@ -152,7 +153,7 @@ function Box1(props) {
       ref={mesh}
       rotation={[2, 10, 0]}
       scale={collectedMessage ? [0, 0, 0, 0] : [5, 5, 5, 5]}
-      onClick={() => setShowMessage(true)}>
+      onClick={() => {setShowMessage(true); new Audio(keyPickup).play()}}>
       <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
       <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
       <Html center>

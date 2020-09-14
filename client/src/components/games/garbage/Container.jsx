@@ -3,11 +3,14 @@ import Dustbin from "./Dustbin";
 import Box from "./Box";
 import { ItemTypes } from "./ItemTypes";
 import update from "immutability-helper";
+import correct from '../../../audio/correct.mp3';
+import drop from '../../../audio/drop.mp3';
 
 var showHint = "Leaving trash behind in nature pollutes the environment and is harmful to wildlife.";
 
 var count = 0
 var ddd = 'hidden'
+var flag = 0;
 
 export const Container = () => {
   const [garbageDone, setGarbageDone] = useState(false)
@@ -54,6 +57,7 @@ export const Container = () => {
           }
         })
       );
+      new Audio(drop).play();
       count = count + 1;
 
     },
@@ -63,6 +67,10 @@ export const Container = () => {
     if(count > 5){
       // ddd = canProceed[0]
       setGarbageDone(true);
+      if(flag === 0){
+        new Audio(correct).play();
+        flag = 1;
+      }
     }
   }, 5000);
   

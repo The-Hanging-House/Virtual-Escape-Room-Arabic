@@ -26,6 +26,7 @@ import Telephone from './Telephone';
 import ding from '../../audio/ding.mp3'
 import paper from '../../audio/paper.mp3'
 import door from '../../audio/door.mp3'
+import correct from '../../audio/correct.mp3'
 
 import hint from '../../img/welcome.svg'
 
@@ -657,8 +658,9 @@ function TouchPoint5({ position, color, onClick }) {
     if(puzzlePro === '1'){
         setShowProceed('visible');
         localStorage.removeItem("puzzleComplete");
+        new Audio(correct).play();
     } 
-    console.log(puzzlePro)
+    // console.log(puzzlePro)
   }, 1000);
 
   
