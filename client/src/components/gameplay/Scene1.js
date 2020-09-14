@@ -17,6 +17,7 @@ import TouchPoint5 from '../touchpoints/scene1/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene1/Touchpoint6'
 import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
 import TouchPoint8 from '../touchpoints/scene1/Touchpoint8'
+import TouchPoint9 from '../touchpoints/scene1/Touchpoint9'
 // import Timer from '../timer/Timer'
 import './style.css'
 
@@ -134,7 +135,7 @@ function Scene1() {
                         <TouchPoint2 position={[-10, -2, 1.5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-11, -10, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint4 position={[-10, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint4 position={[-10, -23, 15]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint9 position={[11, -16.7, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         {/* <TouchPoint4 position={[12, -18, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
 
 
@@ -145,7 +146,7 @@ function Scene1() {
                         <TouchPoint5 position={[4, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         {/* v Far left plant touchpoint v */}
                         <TouchPoint5 position={[11, -7, 4.5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint5 position={[-10, -40, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[0, -2, 1]  } args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint6 position={[7, -9, 4]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint7 position={[0, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         {/* v far right touchpoint v */}
