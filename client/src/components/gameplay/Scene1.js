@@ -13,7 +13,7 @@ import TouchPoint1 from '../touchpoints/scene1/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene1/Touchpoint2'
 import TouchPoint3 from '../touchpoints/scene1/Touchpoint3'
 import TouchPoint4 from '../touchpoints/scene1/Touchpoint4'
-import TouchPoint5 from '../touchpoints/scene1/Touchpoint5'
+import TouchPoint5 from '../touchpoints/scene5/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene1/Touchpoint6'
 import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
 import TouchPoint8 from '../touchpoints/scene1/Touchpoint8'
@@ -146,7 +146,7 @@ function Scene1() {
                         <TouchPoint5 position={[3.2, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         {/* v Far left plant touchpoint v */}
                         <TouchPoint5 position={[9.2, -7.1, 4.5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint5 position={[-8, -30, 4 ]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[-1, -3.2, 0.4]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint6 position={[6, -8, 4]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint7 position={[-1, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         {/* v far right touchpoint v */}
