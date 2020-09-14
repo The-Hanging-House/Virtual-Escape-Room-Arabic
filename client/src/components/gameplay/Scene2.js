@@ -88,10 +88,11 @@ const Dome = () => {
 
   function Box1(props) {
     const mesh = useRef()
-    const [showMessage, setShowMessage] = useState(false);
     const [collectedMessage, setCollectedMessage] = useState(false)
+    const [showMessage, setShowMessage] = useState(false);
     if(collectedMessage){
       counter();
+       
     }
     const texture = useLoader(THREE.TextureLoader, img)
 
@@ -118,7 +119,7 @@ const Dome = () => {
         ref={mesh}
         scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
         onClick={() => setShowMessage(true)}>
-        <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
+        <boxBufferGeometry attach="geometry" args={[1, 1, 1]} style={{visibility: collectedMessage? 'hidden':'visible', }}/>
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
         <Html center>
                 <Container>
@@ -136,6 +137,9 @@ const Dome = () => {
                         >
                         <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
                             <Alert.Heading>
+                            <p>
+                            Which of the following actions would you like to take?
+                                </p>
                                 <div>
                                   <img src={egg} alt='egg' />
                                 </div>
@@ -143,12 +147,14 @@ const Dome = () => {
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
-                                    COLLECT
+                                    Collect the piece of the migration map.
+
                                 </h3>
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
-                                IGNORE
+                                Look for other clues.
+
                             </h3>
                         </div>
                         </Alert>
@@ -217,19 +223,24 @@ const Dome = () => {
                         >
                         <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
                             <Alert.Heading>
+                            <p>
+                            Which of the following actions would you like to take?
+                                </p>
                                 <div>
-                                <img src={egg} alt='egg' />
+                                  <img src={egg} alt='egg' />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
-                                    COLLECT
+                                    Collect the piece of the migration map.
+
                                 </h3>
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
-                                IGNORE
+                                Look for other clues.
+
                             </h3>
                         </div>
                         </Alert>
@@ -291,19 +302,24 @@ const Dome = () => {
                         >
                         <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
                             <Alert.Heading>
+                            <p>
+                            Which of the following actions would you like to take?
+                                </p>
                                 <div>
-                                  <img src={egg3} alt='egg' />
+                                  <img src={egg} alt='egg' />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
-                                    COLLECT
+                                    Collect the piece of the migration map.
+
                                 </h3>
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
-                                IGNORE
+                                Look for other clues.
+
                             </h3>
                         </div>
                         </Alert>
@@ -364,19 +380,24 @@ const Dome = () => {
                         >
                         <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
                             <Alert.Heading>
+                            <p>
+                            Which of the following actions would you like to take?
+                                </p>
                                 <div>
-                                  <img src={egg4} alt='egg' />
+                                  <img src={egg} alt='egg' />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
-                                    COLLECT
+                                    Collect the piece of the migration map.
+
                                 </h3>
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
-                                IGNORE
+                                Look for other clues.
+
                             </h3>
                         </div>
                         </Alert>
@@ -437,19 +458,24 @@ const Dome = () => {
                         >
                         <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
                             <Alert.Heading>
+                            <p>
+                            Which of the following actions would you like to take?
+                                </p>
                                 <div>
-                                  <img src={egg5} alt='egg' />
+                                  <img src={egg} alt='egg' />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
-                                    COLLECT
+                                    Collect the piece of the migration map.
+
                                 </h3>
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
-                                IGNORE
+                                Look for other clues.
+
                             </h3>
                         </div>
                         </Alert>
@@ -510,19 +536,24 @@ const Dome = () => {
                         >
                         <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
                             <Alert.Heading>
+                            <p>
+                            Which of the following actions would you like to take?
+                                </p>
                                 <div>
-                                  <img src={egg6} alt='egg' />
+                                  <img src={egg} alt='egg' />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
                                     onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
-                                    COLLECT
+                                    Collect the piece of the migration map.
+
                                 </h3>
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
-                                IGNORE
+                                Look for other clues.
+
                             </h3>
                         </div>
                         </Alert>
@@ -681,7 +712,7 @@ setInterval(function(){
     }
     if(localStorage.getItem('myDataKey') === "1598355449119" ){
       localStorage.setItem('myDataKey', "0");
-      // window.location.href = "/timesup";
+      window.location.href = "/timesup";
     }
 }, 500);  
 
@@ -725,7 +756,7 @@ function obama(){
     var arigato = mins + ":" + secs ;
 
     if (counter === 0){
-      // window.location.href = "/timesup"
+      window.location.href = "/timesup"
     }
   
     return (
