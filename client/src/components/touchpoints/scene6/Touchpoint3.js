@@ -16,6 +16,7 @@ function TouchPoint3({ position, color, onClick }) {
     const [showMessage, setShowMessage] = useState(false);
     const [switchState, setSwitchState] = useState(false);
     const [wrongAlert, setWrongAlert] = useState(true);
+    const [correctAlert, setCorrectAlert] = useState(false);
 
     const onMouseOver = event => {
         const el = event.target;
@@ -34,7 +35,7 @@ function TouchPoint3({ position, color, onClick }) {
             var scene6 = new Date().getTime();
             localStorage.setItem('scene6', scene6);
             window.location.href = '/scene5';
-        }, 2000);            
+        }, 4000);            
       };
 
     setInterval(function(){   
@@ -84,7 +85,8 @@ function TouchPoint3({ position, color, onClick }) {
                                 {/* <div>
                                     <img src={switchState? switchButtonON : switchButtonOFF} onClick={() => setSwitchState(true)} alt='switch' width='100%' height='100%' />
                                 </div> */}
-                                <h3 onClick={() => setSwitchState(true)} style={{ fontSize: '1.2rem', display: wrongAlert? 'block' : 'none', fontWeight: 'lighter'}}
+                                <div style={{ display: correctAlert? 'none' : 'block'}}>
+                                <h3 onClick={() => {setSwitchState(true); setCorrectAlert(true)}} style={{ fontSize: '1.2rem', display: wrongAlert? 'block' : 'none', fontWeight: 'lighter'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
                                     Turn off the lights as you do not need them.
@@ -94,18 +96,23 @@ function TouchPoint3({ position, color, onClick }) {
                                     >
                                     Leave the lights on so that we can see nearby wildlife.
                                 </h3> 
-                                <h3 onClick={() => setWrongAlert(false)} style={{ fontSize: '1rem', display: wrongAlert? 'block' : 'none'}}
+                                <h3 onClick={() => setWrongAlert(false)} style={{ fontSize: '1.2rem', display: wrongAlert? 'block' : 'none', fontWeight: 'lighter'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
                                     Reduce the brightness as you will try to enter the conservation centre.
-                                </h3> */}
+                                </h3>
                                 <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1.2rem', display: wrongAlert? 'block' : 'none', fontWeight: 'lighter'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
                                     Ignore and explore other items in the trunk.
                                 </h3>
                                 <h3 style={{ display: wrongAlert? 'none' : 'block' }}>Try Again! Glaring light can disturb wildlife. Generally, you should switch off any lights, if they are not needed.</h3>
-                            
+                                </div>
+                                <div>
+                                    <h3 style={{ fontSize: '1.2rem', display: correctAlert? 'block' : 'none', fontWeight: 'lighter'}}>
+                                        Correct! Glaring light can disturb wildlife. Generally, you should switch off any lights, if they are not needed. 
+                                    </h3>
+                                </div>
                             </Alert.Heading>
                                 
                         </div>

@@ -5,6 +5,8 @@ import Box from './Box'
 import { ItemTypes } from './ItemTypes'
 import update from 'immutability-helper'
 
+import drop from '../../../audio/dropp.mp3';
+
 import completedPuzzle from '../../../img/completedPuzzle1.png'
 
 
@@ -57,6 +59,7 @@ export const Container = () => {
           },
         }),
       );
+      new Audio(drop).play();
       count = count + 1;
     },
     [droppedBoxNames, dustbins],

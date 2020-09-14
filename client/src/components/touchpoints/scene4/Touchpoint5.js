@@ -8,6 +8,7 @@ import { Html } from 'drei';
 import switchButtonON from '../../../img/telephone.png'
 import switchButtonOFF from '../../../img/key.png'
 
+import switchfx from '../../../audio/switch.mp3'
 
 function TouchPoint5({ position, color, onClick }) {
     const [hovered, set] = useState(false)
@@ -40,7 +41,7 @@ function TouchPoint5({ position, color, onClick }) {
             var scene4 = new Date().getTime();
             localStorage.setItem('scene4', scene4);
             window.location.href = '/scene6';
-        }, 2000);            
+        }, 3000);            
       };
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
@@ -75,7 +76,7 @@ function TouchPoint5({ position, color, onClick }) {
                                         Did you know that noise is also a type of pollution?
                                     </p>
                                     <div>
-                                        <img src={switchState? switchButtonON : switchButtonOFF} onClick={() => setSwitchState(true)} alt='switch' width='100%' height='100%' />
+                                        <img src={switchState? switchButtonON : switchButtonOFF} onClick={() => {setSwitchState(true); new Audio(switchfx).play()}} alt='switch' width='100%' height='100%' />
                                     </div>
                                     {/* <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                     onMouseEnter={event => onMouseOver(event)}
