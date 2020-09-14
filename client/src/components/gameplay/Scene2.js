@@ -572,7 +572,7 @@ const Dome = () => {
   function Box7(props) {
     const mesh = useRef()
     const [showMessage, setShowMessage] = useState(false);
-    const [collectedMessage, setCollectedMessage] = useState(true)
+    const [collectedMessage, setCollectedMessage] = useState(false)
 
     setInterval(() => {
       if(ccom===6){
