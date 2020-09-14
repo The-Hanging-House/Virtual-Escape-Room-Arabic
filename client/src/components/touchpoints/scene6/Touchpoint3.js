@@ -46,7 +46,7 @@ function TouchPoint3({ position, color, onClick }) {
           }, 3000);
         }
         console.log(wrongAlert);
-     }, 1000);
+     }, 3000);
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
@@ -94,7 +94,7 @@ function TouchPoint3({ position, color, onClick }) {
                                     >
                                     Leave the lights on so that we can see nearby wildlife.
                                 </h3> 
-                                {/* <h3 onClick={() => setWrongAlert(false)} style={{ fontSize: '1rem', display: wrongAlert? 'block' : 'none'}}
+                                <h3 onClick={() => setWrongAlert(false)} style={{ fontSize: '1rem', display: wrongAlert? 'block' : 'none'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
                                     Reduce the brightness as you will try to enter the conservation centre.
