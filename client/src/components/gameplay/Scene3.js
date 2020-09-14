@@ -171,7 +171,7 @@ function Box1(props) {
                       dismissible
                       onClose={() => setShowMessage(false)}
                       >
-                      <div className="alert-inside" style={{visibility: collectedMessage? 'hidden':'visible', top: "0", width: '366px', height: "208px" }}>
+                      <div className="alert-inside" style={{visibility: collectedMessage? 'hidden':'visible', top: "0", width: '300px', height: "208px" }}>
                             <Alert.Heading>
                             <p>
                               Great! You found your keys.
