@@ -59,11 +59,11 @@ function TouchPoint2({ position, color, onClick }) {
                             <App />
                             <img src={Lock} alt='pinlock'/>
                                 
-                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', textAlign: 'center', cursor: 'pointer'}}
+                            {/* <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', textAlign: 'center', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 CLOSE
-                            </h3>    
+                            </h3>     */}
                             </Alert.Heading>
                                 
                             
