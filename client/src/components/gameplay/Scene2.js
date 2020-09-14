@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React, { Suspense, useRef, useState} from 'react'
+import React, { Suspense, useRef, useState, useEffect} from 'react'
 import { Canvas, extend, useFrame, useThree, useLoader } from 'react-three-fiber'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
@@ -12,6 +12,8 @@ import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
 import Map from '../../img/map.svg'
+
+import note from './../../img/key.png'
 
 
 import TouchPoint1 from '../touchpoints/scene2/Touchpoint1'
@@ -564,6 +566,86 @@ const Dome = () => {
     )
   }
 
+  
+  function Box7(props) {
+    const mesh = useRef()
+    const [showMessage, setShowMessage] = useState(false);
+    const [collectedMessage, setCollectedMessage] = useState(false)
+    if(collectedMessage){
+      counter();
+       
+    }
+    const texture = useLoader(THREE.TextureLoader, note)
+
+    const onMouseOver = event => {
+      const el = event.target;
+      let colorhex = "#F8A61F"
+      el.style.background = colorhex;
+    };
+
+    const onMouseOut = event => {
+      const el = event.target;
+      let black = "transparent";
+      el.style.background = black;
+    };
+  
+    // useFrame(({ camera, mouse }) => {
+    //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+    // })
+  
+    return (
+      <mesh
+        {...props}
+        ref={mesh}
+        rotation={[2, 2, 2]}
+        scale={collectedMessage ? [0, 0, 0] : [2, 2, 2, 2]}
+        onClick={() => setShowMessage(true)}>
+        <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
+        <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
+        <Html center>
+                <Container>
+                    <CSSTransition
+                        in={showMessage}
+                        timeout={300}
+                        classNames="alert4"
+                        unmountOnExit
+                    >
+                        <Alert
+                        className="alert4" 
+                        variant="primary"
+                        dismissible
+                        onClose={() => setShowMessage(false)}
+                        >
+                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
+                            <Alert.Heading>
+                            <p>
+                            Which of the following actions would you like to take?
+                                </p>
+                                <div>
+                                  <img src={egg} alt='egg' />
+                                </div>
+                            </Alert.Heading>
+                                <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
+                                    onMouseOut={event => onMouseOut(event)}
+                                    onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
+                                    Collect the piece of the migration map.
+
+                                </h3>
+                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
+                                onMouseEnter={event => onMouseOver(event)}
+                                onMouseOut={event => onMouseOut(event)}>
+                                Look for other clues.
+
+                            </h3>
+                        </div>
+                        </Alert>
+                    </CSSTransition>
+                </Container>
+            </Html>
+      </mesh>
+    )
+  }
+
 
 function TouchPoint5({ position, color, onClick }) {
   const [showMessage, setShowMessage] = useState(false);
@@ -820,11 +902,12 @@ function Scene2() {
                       <Dome />  
                       <pointLight position={[-10, 10, 10]} />
                       <Box1 position={[-12, -6, 10]} />
-                      <Box2 position={[10, -10, -13]}/>
-                      <Box3 position={[10, -4, 12]} />
-                      <Box4 position={[-8, -1, -13]} />
-                      <Box5 position={[10, 10, 2]} />
-                      <Box6 position={[-5, 3, 10]} />
+                      <Box2 position={[-14, 5.3, -13]}/>
+                      <Box3 position={[10, -4.8, 12]} />
+                      <Box4 position={[-12, 0.7, 2]} />
+                      <Box5 position={[-20, -8, 10]} />
+                      {/* <Box6 position={[-5, 3, 10]} /> */}
+                      {/* <Box7 position={[-20, -10, 4]} /> */}
                       <TouchPoint1 position={[-17, 1, -10]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint2 position={[-18, -7.5, -4.5]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint3 position={[1, -1, 2]} args={[3, 2, 1]} color='#F8A61F' />
