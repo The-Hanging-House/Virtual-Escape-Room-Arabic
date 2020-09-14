@@ -78,18 +78,18 @@ function TouchPoint3({ position, color, onClick }) {
                         <button className="close" onClick={() => setShowMessage(false)}>×</button>
 
                             <Alert.Heading>
-                                <p>
+                                <p style={{ fontSize: '1.2rem' }}>
                                     Which of the following actions would you like to take?
                                 </p>
                                 {/* <div>
                                     <img src={switchState? switchButtonON : switchButtonOFF} onClick={() => setSwitchState(true)} alt='switch' width='100%' height='100%' />
                                 </div> */}
-                                <h3 onClick={() => setSwitchState(true)} style={{ fontSize: '1rem', display: wrongAlert? 'block' : 'none'}}
+                                <h3 onClick={() => setSwitchState(true)} style={{ fontSize: '1.2rem', display: wrongAlert? 'block' : 'none', fontWeight: 'lighter'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
                                     Turn off the lights as you do not need them.
                                 </h3>
-                                <h3 onMouseEnter={event => onMouseOver(event)} style={{ fontSize: '1rem', display: wrongAlert? 'block' : 'none'}}
+                                <h3 onMouseEnter={event => onMouseOver(event)} style={{ fontSize: '1.2rem', display: wrongAlert? 'block' : 'none', fontWeight: 'lighter'}}
                                     onMouseOut={event => onMouseOut(event)}  onClick={() => setWrongAlert(false)}
                                     >
                                     Leave the lights on so that we can see nearby wildlife.
@@ -99,7 +99,7 @@ function TouchPoint3({ position, color, onClick }) {
                                     onMouseOut={event => onMouseOut(event)}>
                                     Reduce the brightness as you will try to enter the conservation centre.
                                 </h3> */}
-                                <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', display: wrongAlert? 'block' : 'none'}}
+                                <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1.2rem', display: wrongAlert? 'block' : 'none', fontWeight: 'lighter'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
                                     Ignore and explore other items in the trunk.

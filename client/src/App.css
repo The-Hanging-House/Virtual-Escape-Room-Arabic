@@ -761,6 +761,7 @@ h1 span {
 .alert6 button {
   top: 6%;
   right: 6%;
+  height: 20px;
 }
 .alert-inside2 {
   /* background-color: rgba(230, 206, 166, 0.9); */
@@ -903,7 +904,7 @@ h1 span {
   padding: 2rem;
   /*width: 30vw;
   height: 35vh;*/
-  width: 570px;
+  width: 590px;
   height: 442px;
   position: absolute;
   top: -10vh;
@@ -925,7 +926,7 @@ h1 span {
 .alert-inside h3 {
   font-family: "Dubai W23", sans-serif;
   margin-bottom: 0.5rem;
-  line-height: 1.1rem;
+  line-height: 1.3rem;
   cursor: pointer;
   font-size: 1rem;
   /* padding-left: 1rem; */

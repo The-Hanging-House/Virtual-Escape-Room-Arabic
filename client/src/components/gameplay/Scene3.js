@@ -45,7 +45,7 @@ setInterval(function(){
   }
   if(localStorage.getItem('myDataKey') === "1598355449119"){
     localStorage.setItem('myDataKey', "0");
-    // window.location.href = "/timesup";
+    window.location.href = "/timesup";
   }
 }, 500);
 
@@ -92,7 +92,7 @@ function obama(){
   
     if (counter === 0){
       console.log("Fail");
-      // window.location.href = "/timesup"
+      window.location.href = "/timesup"
     }
   
     return (
@@ -296,18 +296,18 @@ function TouchPoint3({ position, color, onClick }) {
                               {innerText}
                               </p>
                               {/* <a href="scene4"> */}
-                              <h3 style={{ display: wrongAlert? 'block' : 'none', cursor: 'pointer', fontSize: '1rem' }} onClick={() => setShowMessage(false)}
+                              <h3 style={{ display: wrongAlert? 'block' : 'none', cursor: 'pointer', fontSize: '1.2rem', fontWeight: 'lighter' }} onClick={() => setShowMessage(false)}
                                       onMouseEnter={event => onMouseOver(event)}
                                       onMouseOut={event => onMouseOut(event)}
                                       onClick={() => setWrongAlert(false)}>
                                       {show? 'Break the trunk door open in order to search for more clues.' : ""}
                                   </h3>
-                                  <h3 style={{ display: wrongAlert? 'block' : 'none', cursor: 'pointer', fontSize: '1rem' }} onMouseEnter={event => onMouseOver(event)}
+                                  <h3 style={{ display: wrongAlert? 'block' : 'none', cursor: 'pointer', fontSize: '1.2rem', fontWeight: 'lighter' }} onMouseEnter={event => onMouseOver(event)}
                                           onMouseOut={event => onMouseOut(event)} onClick={() => setCON(true)}
                                           >
                                       {show? 'Open the trunk with your keys to reach the radio.' : ""}
                                   </h3>
-                                  <h3 style={{ display: wrongAlert? 'block' : 'none', cursor: 'pointer', fontSize: '1rem' }} onClick={() => setShowMessage(false)}
+                                  <h3 style={{ display: wrongAlert? 'block' : 'none', cursor: 'pointer', fontSize: '1.2rem', fontWeight: 'lighter' }} onClick={() => setShowMessage(false)}
                                       onMouseEnter={event => onMouseOver(event)}
                                       onMouseOut={event => onMouseOut(event)}>
                                       {show? 'Put the keys in your pocket and continue exploring your surroundings for more clues.' : ""}

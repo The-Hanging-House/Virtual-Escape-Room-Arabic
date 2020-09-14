@@ -68,7 +68,7 @@ function Timer() {
 
   if (counter === 0){
     
-    // window.location.href = "/timesup"
+    window.location.href = "/timesup"
   }
 
   return (
