@@ -572,7 +572,7 @@ const Dome = () => {
   function Box7(props) {
     const mesh = useRef()
     const [showMessage, setShowMessage] = useState(false);
-    const [collectedMessage, setCollectedMessage] = useState(false)
+    const [collectedMessage, setCollectedMessage] = useState(true)
 
     setInterval(() => {
       if(ccom===6){
@@ -621,7 +621,7 @@ const Dome = () => {
                         dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
+                        <div className="alert-inside3" style={{ left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
                             <Alert.Heading>
                                 <div>
                                   <img src={solved} alt='completedPuzzle' style={{ width: '200%' }} />

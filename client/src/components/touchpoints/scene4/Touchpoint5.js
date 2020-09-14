@@ -5,8 +5,8 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import switchButtonON from '../../../img/telephone.png'
-import switchButtonOFF from '../../../img/key.png'
+import switchButtonON from '../../../img/radioON.png'
+import switchButtonOFF from '../../../img/radioON.png'
 
 import switchfx from '../../../audio/switch.mp3'
 
@@ -59,25 +59,27 @@ function TouchPoint5({ position, color, onClick }) {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert1"
+                        classNames="alert"
                         unmountOnExit
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
                         <Alert
-                        className="alert1"
+                        className="alert"
                         variant="primary"
-                        dismissible
+                        // style={{ top: '82px', right: '37px'}}
+                        // dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside">
+                        <div className="alert-inside2" stley={{}}>
                             <Alert.Heading>
-                                    <p>
-                                        Did you know that noise is also a type of pollution?
-                                    </p>
                                     <div>
-                                        <img src={switchState? switchButtonON : switchButtonOFF} onClick={() => {setSwitchState(true); new Audio(switchfx).play()}} alt='switch' width='100%' height='100%' />
+                                        <img src={switchState? switchButtonON : switchButtonOFF} onClick={() => {setSwitchState(true); new Audio(switchfx).play()}} alt='switch' width='100%' height='100%'/>
+                                        
                                     </div>
+                                    {/* <p style={{textAlign: 'center', color: 'black', letterSpacing: '2px', fontWeight: 'bold', fontFamily: 'Dubai W23, sans-serif'}}>
+                                        Did you know that noise is also a type of pollution?
+                                    </p> */}
                                     {/* <h3 style={{ cursor: 'pointer' }} onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
@@ -90,9 +92,12 @@ function TouchPoint5({ position, color, onClick }) {
                                         </h3> */}
                             </Alert.Heading>
                                 
-                            {/* <Button onClick={() => setShowMessage(false)}>
+                            <button onClick={() => setShowMessage(false)} style={{ top: '23%', right: '6%', position: 'absolute', opacity: '0', cursor: 'pointer'}}>
                                 Close
-                            </Button> */}
+                            </button>
+                            <button onClick={() => setSwitchState(true)} style={{ top: '60%', right: '28%', position: 'absolute', opacity: '0', cursor: 'pointer'}}>
+                                ON
+                            </button>
                         </div>
                         </Alert>
                     </CSSTransition>

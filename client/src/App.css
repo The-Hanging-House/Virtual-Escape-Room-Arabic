@@ -300,7 +300,7 @@
   padding: 0;
 }
 body {
-  font-family: "Dubai W23", sanns-serif;
+  font-family: "Dubai W23", sans-serif;
   font-size: 0.8rem;
   line-height: 1.6;
   background-color:  #1e1e1f;
@@ -805,8 +805,10 @@ h1 span {
   position: relative;
   /*width: 80%;
   left: 11vh;*/
-  width: 555px;
-  left: 45px;
+  /* width: 555px;
+  left: 45px; */
+  width: 754px;
+  left: -28px;
 }
 .garbage {
   position: relative;
