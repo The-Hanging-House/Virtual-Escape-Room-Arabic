@@ -209,7 +209,7 @@ function TouchPoint3({ position, color, onClick }) {
       setTimeout(function(){
         // console.log("false");
         setWrongAlert(true);
-      }, 2000);
+      }, 1000);
     }
   }, 1000);
 
