@@ -20,8 +20,7 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
     // console.log(user && user._id)
     return loading && profile === null ? <Spinner /> : 
     <Fragment>
-        {logout}
-        <div className="bg-image"></div>
+        <div className="bg-image"><div className="lock-up"></div></div>
         <div className="dashblock">
             <div className="bg-text1"></div>
             <img className="bg-text1" src={bg} width='100%' height='auto' alt="Dashboard"  />
