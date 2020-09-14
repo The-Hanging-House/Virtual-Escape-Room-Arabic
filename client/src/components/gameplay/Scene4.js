@@ -148,9 +148,9 @@ function Scene4() {
                     }>
                         <Dome />
                         <TouchPoint2 position={[-15, -2.9, -1.5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint3 position={[-20, -60, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint3 position={[5, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint3 position={[1, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint3 position={[2, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint3 position={[6.5, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint3 position={[-1, -3.2, 0.4]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint4 position={[-2, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint4 position={[11, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[5, -8, -15]} args={[3, 2, 1]} color='#F8A61F' />
