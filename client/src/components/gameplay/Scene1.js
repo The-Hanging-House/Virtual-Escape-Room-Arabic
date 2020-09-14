@@ -143,14 +143,14 @@ function Scene1() {
                         {/* <TouchPoint4 position={[-8, -25, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         {/* <TouchPoint5 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         {/* v Mid plant touchpoint v */}
-                        <TouchPoint5 position={[4, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[3.2, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         {/* v Far left plant touchpoint v */}
-                        {/* <TouchPoint5 position={[11, -7, 4.5]} args={[3, 2, 1]} color='#F8A61F' /> */}
-                        {/* <TouchPoint5 position={[0, -2, ]  } args={[3, 2, 1]} color='#F8A61F' /> */}
-                        <TouchPoint6 position={[7, -9, 4]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint7 position={[0, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[9.2, -7.1, 4.5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[-8, -30, 4 ]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint6 position={[6, -8, 4]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint7 position={[-1, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         {/* v far right touchpoint v */}
-                        {/* <TouchPoint8 position={[-35, -18, -15]} args={[3, 2, 1]} color='#F8A61F' />  */}
+                        <TouchPoint8 position={[-32, -23, -15]} args={[3, 2, 1]} color='#F8A61F' /> 
                         
                     </Suspense>
             </Canvas> 
