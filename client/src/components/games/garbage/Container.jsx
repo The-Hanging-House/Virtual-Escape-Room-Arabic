@@ -90,7 +90,6 @@ export const Container = () => {
 
     <div>
       <div style={{ dispaly: 'none'}}>
-        <div style={{ textAlign: 'center', fontSize: '1rem', display: garbageDone? 'none' : 'block' }}>{showHint}</div>
         <div style={{ overflow: "hidden", clear: "both", display: garbageDone? 'none' : 'flex', justifyContent: 'center'}}>
           {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
             <Dustbin
@@ -112,12 +111,13 @@ export const Container = () => {
               key={index}
               bgImageName={bgImageName}
             />
-          ))}
+            ))}
         </div>
       </div>
+            <div style={{ textAlign: 'center', fontSize: '1rem', color: 'black', letterSpacing: '2px', fontWeight: 'bold', fontFamily: 'Dubai W23, sans-serif', display: garbageDone? 'none' : 'block' }}>{showHint}</div>
       <div style={{display: garbageDone? 'block' : 'none'}}>
         <div>
-          <h2 style={{textAlign: 'center', fontFamily: 'Dubai W23, sans-serif', fontWeight: 'lighter'}}>Good job not leaving any trash behind! Have you found your keys?</h2>
+          <h2 style={{textAlign: 'center', color: 'black', letterSpacing: '2px', fontWeight: 'bold', fontFamily: 'Dubai W23, sans-serif'}}>Good job not leaving any trash behind! Have you found your keys?</h2>
           <br/>
         </div>
         {/* <div style={{  clear: "both", display: 'flex', justifyContent: 'center' }}>
