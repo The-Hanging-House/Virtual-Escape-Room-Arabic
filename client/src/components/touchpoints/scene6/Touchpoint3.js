@@ -75,7 +75,7 @@ function TouchPoint3({ position, color, onClick }) {
                         // dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside">
+                        <div className="alert-inside"  style={{ top: '-170px' }}>
                         <button className="close" onClick={() => setShowMessage(false)}>×</button>
 
                             <Alert.Heading>

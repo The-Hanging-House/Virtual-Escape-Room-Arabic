@@ -6,6 +6,7 @@ import React from 'react';
 // import H from '../../img/h.png'
 
 
+var winMessage = '';
 
 var data = localStorage.getItem('myDataKey');
 var now = localStorage.getItem('scene2');
@@ -30,6 +31,13 @@ setInterval(function(){
     now = localStorage.getItem('scene6');
     if(now!=='NaN'){
         End();
+    }
+    if(mins > 8){
+        winMessage = 'WOW! THAT WAS REALLY FAST. HAVE YOU DONE THIS BEFORE?'
+    }else if (mins > 3 && mins < 8){
+        winMessage = 'THAT WAS GOOD! YOU MUST\'VE REALLY CONNECTED WITH THE NATURE'
+    }else if (mins < 2){
+        winMessage = 'YOU MADE IT OUT JUST IN TIME.'
     }
 }, 500);
 
@@ -74,6 +82,9 @@ function End() {
                                         HOME
                             </h3>
                         </a>
+                        <h3>
+                            {winMessage}
+                        </h3>
                     </div>
                 </div>
               {/* <div className="icons">
