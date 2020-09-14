@@ -94,11 +94,11 @@ function TouchPoint3({ position, color, onClick }) {
                                     >
                                     Leave the lights on so that we can see nearby wildlife.
                                 </h3> 
-                                <h3 onClick={() => setWrongAlert(false)} style={{ fontSize: '1rem', display: wrongAlert? 'block' : 'none'}}
+                                <h3 onClick={() => setWrongAlert(false)} style={{ fontSize: '1.2rem', display: wrongAlert? 'block' : 'none', fontWeight: 'lighter'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
                                     Reduce the brightness as you will try to enter the conservation centre.
-                                </h3> */}
+                                </h3>
                                 <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1.2rem', display: wrongAlert? 'block' : 'none', fontWeight: 'lighter'}}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>

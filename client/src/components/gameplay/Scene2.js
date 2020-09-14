@@ -33,6 +33,7 @@ import Music2 from '../../audio/Music2'
 
 import Puzzle from '../games/puzzle/index'
 
+import solved from '../../img/completedPuzzle1.png'
 
 import egg from '../../img/pp1.png'
 import img from './../../img/pp1.png'
@@ -618,23 +619,14 @@ const Dome = () => {
                         >
                         <div className="alert-inside3" style={{visibility: collectedMessage? 'hidden':'visible', left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
                             <Alert.Heading>
-                            <p>
-                            Which of the following actions would you like to take?
-                                </p>
                                 <div>
-                                  <img src={egg} alt='egg' />
+                                  <img src={solved} alt='completedPuzzle' style={{ width: '200%' }} />
                                 </div>
                             </Alert.Heading>
-                                <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
-                                    onMouseOut={event => onMouseOut(event)}
-                                    onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
-                                    Collect the piece of the migration map.
-
-                                </h3>
                             <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
-                                Look for other clues.
+                                Call the phone.
 
                             </h3>
                         </div>
@@ -911,7 +903,7 @@ function Scene2() {
                       <TouchPoint1 position={[-17, 1, -10]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint2 position={[-18, -7.5, -4.5]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint3 position={[1, -1, 2]} args={[3, 2, 1]} color='#F8A61F' />
-                      <TouchPoint4 position={[-5, -2, 0]} args={[3, 2, 1]} color='#F8A61F' />
+                      <TouchPoint4 position={[-4.8, -2.2, 0]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint5 position={[-25, -10, 10]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint6 position={[-25, -15, -6]} args={[3, 2, 1]} color='#F8A61F' />
                       {/* <Portal position={[-10, -12, -20]} args={[3, 2, 1]} color='#fff' /> */}
