@@ -13,7 +13,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import Map from '../../img/map.svg'
 
-import note from './../../img/note.svg'
+import note from './../../img/note.png'
 import xclose from './../../img/x.svg'
 
 
@@ -629,7 +629,7 @@ const Dome = () => {
                         onClose={() => setShowMessage(false)}
                         >
                           <button style={{ position: 'absolute', top: '70px', right: '153px', cursor: 'pointer', opacity: '0' }} onClick={() => setShowMessage(false)}>XX</button>
-                          <img src={xclose} alt='stickyNote' style={{ width: '100%' }} />
+                          {/* <img src={xclose} alt='stickyNote' style={{ width: '100%' }} /> */}
                         <div className="alert-inside3" style={{ left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '100%'}}>
                             <Alert.Heading>
                                 <div>
@@ -666,6 +666,7 @@ function TouchPoint5({ position, color, onClick }) {
       setCollectedMessage(true);
     }if(coll){
       ccom=6;
+      x = 0;
       setCollectedMessage(false);
     } 
     if(puzzlePro === '1'){
@@ -779,7 +780,9 @@ function TouchPoint6({ position, color, onClick }) {
                       // dismissible
                       onClose={() => setShowMessage(false)}
                       >
-                      <button className="close" onClick={() => setShowMessage(false)}>×</button>
+                      {/* <button className="close" onClick={() => setShowMessage(false)}> */}
+                         <img onClick={() => setShowMessage(false)} style={{position: 'absolute', top: '-194px', right: '-141px', transform: 'scale(0.5)', cursor: 'pointer'}} src={xclose} /> 
+                         {/* </button> */}
                       <Telephone />
                       
                       </Alert>

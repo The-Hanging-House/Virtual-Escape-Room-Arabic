@@ -2,8 +2,9 @@ import React from 'react';
 // import Bgend from '../../img/bgend.png';
 // import { url } from 'gravatar';
 
-// import CWN from '../../img/cwn.svg'
-// import H from '../../img/h.png'
+import CWN from '../../img/cwn.svg'
+import H from '../../img/h.png'
+import Bgend from '../../img/bg.png';
 
 
 var winMessage = '';
@@ -87,14 +88,14 @@ function End() {
                         </h3>
                     </div>
                 </div>
-              {/* <div className="icons">
+              <div className="icons">
                   <a target="_blank" href="https://connectwithnature.ae/">
                       <img className="cwn" src={CWN} alt="CWN Logo" />
                   </a>
                   <a target="_blank" href="https://houbarafund.gov.ae/en/home">
                       <img className="h" src={H} alt="Houbara Fund" />
                   </a>
-              </div>       */}
+              </div>      
             </div>
         </>
         

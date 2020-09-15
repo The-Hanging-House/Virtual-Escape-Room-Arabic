@@ -6,6 +6,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 import Telephone from '../../gameplay/Telephone';
+import xc from '../../../img/x.svg'
 
 function TouchPoint6({ position, color, onClick }) {
     const [hovered, set] = useState(false)
@@ -42,6 +43,7 @@ function TouchPoint6({ position, color, onClick }) {
                         style={{width: '2px', position: 'absolute'}}
 
                         > */}
+                        {/* <button  onClick={setShowMessage(false)}> <img src={xc} />  X</button> */}
                         <Telephone />
                         {/* </Alert> */}
                     </CSSTransition>
