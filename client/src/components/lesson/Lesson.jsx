@@ -16,7 +16,12 @@ const Lesson = () => {
             setWatchComplete(true)
         }
         // console.log(played)
-
+    }
+    function ctset(){
+        var someData = new Date().getTime();
+        localStorage.setItem('myDataKey', someData);
+        console.log("CTSET: ", someData)
+        window.location.href = '/scene1';
     }
     
     return (
@@ -27,9 +32,12 @@ const Lesson = () => {
                         onProgress={handleWatchComplete} />
                         <div className={watchComplete ? "marker marker--is-complete" : "marker marker--not-complete"}>
                             <div className="buttons4" style={{ paddingLeft: '2px' }}>
-                                <Link to="scene1" className="btn btn-primary">
+                                {/* <Link to="scene1" className="btn btn-primary">
                                    CONTINUE
-                                </Link>
+                                </Link> */}
+                                <button onClick={() => ctset()} className="btn btn-primary">
+                                   CONTINUE
+                                </button>
                                 
                             </div>
                         </div>

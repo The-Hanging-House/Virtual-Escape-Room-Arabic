@@ -35,9 +35,10 @@ const TouchPoint1 = ({ position, color, onClick }) => {
                         <Alert
                         className="alert"
                         variant="primary"
-                        dismissible
+                        // dismissible
                         onClose={() => setShowMessage(false)}
                         >
+                        <button onClick={() => setShowMessage(false)} style={{ cursor: 'pointer', position: 'absolute', top: '12px', right: '-257', opacity: '0'}}>XXX</button>
                         <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
                         <button className="close" onClick={() => setShowMessage(false)}>×</button>
 

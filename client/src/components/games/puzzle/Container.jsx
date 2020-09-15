@@ -8,6 +8,7 @@ import update from 'immutability-helper'
 import drop from '../../../audio/dropp.mp3';
 
 import completedPuzzle from '../../../img/completedPuzzle1.png'
+import emptyBoard from '../../../img/completedPuzzle.png'
 
 
 var count = 0
@@ -75,19 +76,20 @@ export const Container = () => {
     }
     setInterval(function(){
       if(localStorage.getItem('forCheck')==="1"){
-        setCheckAfter(true);
-        console.log("KK");
+        // setCheckAfter(true);
+        // console.log("KK");
       }
     }, 500);
   }
   return (
     <>
-    <div style={{ display: checkAfter? 'block' : 'none'}}>
-      <img src={completedPuzzle} style={{height: "60vh", width: "50vw", position: 'relative'}} />
-    </div>
+    {/* <div style={{ display: checkAfter? 'block' : 'none'}}>
+      <img src={completedPuzzle} style={{height: "493px", position: 'absolute', left: '-290px', top: '-28px'}} />
+    </div> */}
     <div style={{ display: checkAfter? 'none' : 'block'}}>
     <div className="puzzle" >
       <div>
+        <img src={emptyBoard} style={{  display: boxDisplay? 'none' : 'block', position: 'absolute', height: '493px', left: '-290px', top: '-28px'}} className='puzzleBoard' />
           <div className="solvedboard" style={{ display: boxDisplay? 'none' : 'block', transform: 'scale(1.5)'}}>
             {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
               <Dustbin
@@ -99,14 +101,14 @@ export const Container = () => {
               />
             ))}
           </div>
-          <div style={{ display: boxDisplay? 'block' : 'none'}}>
-            <img src={completedPuzzle} style={{height: "60vh", width: "50vw", position: 'relative', left: '-10%'}} />
+          <div className='puzzleBoard' style={{ display: boxDisplay? 'block' : 'none'}}>
+            <img src={completedPuzzle} style={{height: "493px", position: 'absolute', left: '-290px', top: '-28px'}} />
           </div>
 
       </div>
     </div>
       
-      <div className="pieces" style={{ overflow: 'hidden', clear: 'both', top: '100%', display: boxDisplay? 'none' : 'block', position: 'absolute', width: '426px', left:'628px', top:'84px',transform: 'scale(1.4)'}}>
+      <div className="pieces" style={{ overflow: 'hidden', clear: 'both', top: '100%', display: boxDisplay? 'none' : 'block', position: 'absolute', width: '426px', left:'532px', top:'84px',transform: 'scale(0.7)'}}>
             {boxes.map(({ name, type, bgImageName }, index) => (
               <Box
                 // style={{ position:'absolute', width:'100%', left:'423px', top:'-17px' }}
