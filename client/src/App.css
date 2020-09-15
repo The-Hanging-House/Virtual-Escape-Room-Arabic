@@ -1335,11 +1335,8 @@ h3 {
   }
 
   .dashblock {
-    position: absolute;
     bottom: 105px;
     left: 19%;
-    width: 70vw;
-    height: 90%;
   }
   /* .alert-inside5 {
     right: 700px;
@@ -1350,7 +1347,7 @@ h3 {
 
 @media(max-width: 1599px) {
   .dashblock {
-    left: 1%;
+    left: 12%;
     bottom: 9%;
   }
   .bg-text1

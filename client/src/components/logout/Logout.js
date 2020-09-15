@@ -53,10 +53,10 @@ const Logout = ({ auth: { isAuthenticated, loading }, logout }) => {
               ARE YOU SURE YOU WANT TO LOGOUT?
               </p>
             </Alert.Heading>
-            <Button onClick={() => setShowMessage(false)}>
+            <Button onClick={() => setShowMessage(false)} style={{width:'40%'}}>
               Close
             </Button>
-            <Button onClick={logout}>
+            <Button onClick={logout} style={{width:'40%'}}>
               Logout
             </Button>
             </div>
