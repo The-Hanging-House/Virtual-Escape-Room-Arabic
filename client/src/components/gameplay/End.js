@@ -74,7 +74,7 @@ function End() {
                         </h3>
                     </div> */}
                 </div>
-                <div className="option1">
+                <div className="dashboard2">
                         <a href="briefing">
                             {/* <h3 className="home" style={{ color: 'black', fontSize: '2rem', float: 'left', position: 'absolute', left: '-4%', bottom: '14%', color: 'white' }}
                                     >
@@ -84,7 +84,7 @@ function End() {
                                    HOME
                             </button>
                         </a>
-                        <a href="dashboard2">
+                        <a href="briefing">
                             {/* <h3 className="play" style={{ color: 'black', fontSize: '2rem', float: 'left', position: 'absolute', right: '-4%', bottom: '14%', color: 'white' }}     
                                     >
                                         PLAY AGAIN
