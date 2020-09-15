@@ -654,7 +654,7 @@ const Dome = () => {
 
 function TouchPoint5({ position, color, onClick }) {
   const [showMessage, setShowMessage] = useState(false);
-  const [collectedMessage, setCollectedMessage] = useState(false);
+  const [collectedMessage, setCollectedMessage] = useState(true);
   const [coll, setColl] = useState(false);
   const [showProceed, setShowProceed] = useState('hidden');
   var puzzlePro;
@@ -703,7 +703,10 @@ function TouchPoint5({ position, color, onClick }) {
                           <Alert.Heading>
                             <Puzzle />
                              <div>
-                                  <button onClick={() => {setShowMessage(false); setColl(true)}} style={{visibility: showProceed, position: 'absolute', left: '520px', top: '120px', opacity: '0'}} className="btn btn-primary3">
+                                  <button onClick={() => {setShowMessage(false); setColl(true)}} style={{visibility: showProceed, position: 'absolute', left: '566px', top: '94px', opacity: '0'}} className="btn btn-primary3">
+                                      x
+                                  </button>
+                                  <button onClick={() => {setShowMessage(false)}} style={{visibility: showMessage? 'visible' : 'hidden', position: 'absolute', left: '526px', top: '116px', opacity: '0'}} className="btn btn-primary3">
                                       x
                                   </button>
                             </div>
