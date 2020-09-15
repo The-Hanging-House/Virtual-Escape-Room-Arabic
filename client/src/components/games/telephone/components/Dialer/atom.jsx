@@ -3,14 +3,14 @@ import styled, { css } from "styled-components";
 export const Box = styled.div
 `
   position: fixed;
-  bottom: 70px;
-  right: 15px;
-  width: 100vh;
-  max-width: 220px;
+  bottom: 32px;
+  right: -122px;
+  width: 288vh;
+  height: 439px;
+  max-width: 359px;
   padding: 15px;
-  // background: #263238;
-  background-image: url("./telephone.png");
-  background-size: 100%;
+  background-image: url(./telephone.png);
+  background-size: 350px;
   background-repeat: no-repeat;
   border-radius: 22.5px;
   visibility: hidden;
@@ -49,7 +49,7 @@ export const Input = styled.input`
 
 export const ButtonsContainer = styled.div`
   font-size: 0;
-  width: 70%;
+  width: 214px;
   // float: right;
 `;
 
@@ -58,9 +58,9 @@ export const Button = styled.button`
   display: inline-block;
   width: calc(33.33% - 10px);
   font-size: 18px;
-  background: transparent;
+  background: white;
   border: none;
-  color:  transparent;
+  color:  white;
   top: -50px;
   padding: 9px 0;
   text-align: center;

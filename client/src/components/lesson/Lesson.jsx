@@ -27,15 +27,11 @@ const Lesson = () => {
                         url={briefing}
                         onProgress={handleWatchComplete} />
                         <div className={watchComplete ? "marker marker--is-complete" : "marker marker--not-complete"}>
-                            <div className="buttons2">
-                                <Link to="dashboard2" className="btn btn-primary1">
-                                    <img src={RejectLogo} className="reject" alt="reject logo" /><br />
-                                    NO, LEAVE ME HERE
+                            <div className="buttons4">
+                                <Link to="scene1" className="btn btn-primary">
+                                   CONTINUE
                                 </Link>
-                                <Link to="briefing2" className="btn btn-light1">
-                                    <img src={AnswerLogo} className="accept" alt="answer logo" /><br />
-                                    CALL NOW
-                                </Link>
+                                
                             </div>
                         </div>
             </div>

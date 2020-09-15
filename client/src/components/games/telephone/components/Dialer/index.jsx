@@ -1,9 +1,9 @@
 import React from "react";
 import { useStore } from "../../store";
 import { Box, Button, Button1, Input, ButtonsContainer, CallButton } from "./atom";
-import phoneCall from '../../../../../audio/phoneCall.mp3'
+import phoneCall from '../../../../../audio/phoneCall.aac'
 import dialpad from '../../../../../audio/dialpad.mp3'
-import wrong from '../../../../../audio/wrong.mp3'
+import wrong from '../../../../../audio/wrongCall.aac'
 import Backgrounds from '../../../../../img/delete.png'
 
 var flag = 0;

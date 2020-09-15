@@ -23,6 +23,7 @@ import TouchPoint4 from '../touchpoints/scene3/Touchpoint4'
 import TouchPoint5 from '../touchpoints/scene3/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene3/Touchpoint6'
 import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
+import TouchPoint8 from '../touchpoints/scene1/Touchpoint8'
 import TouchPoint9 from '../touchpoints/scene1/Touchpoint9'
 
 // import Portal from '../touchpoints/scene3/Portal'
@@ -142,7 +143,7 @@ function Box1(props) {
   if(showMessage){
     setTimeout(function(){
       setCollectedMessage(true);
-    }, 5000);
+    }, 3000);
   }
 
   useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
@@ -171,9 +172,9 @@ function Box1(props) {
                       dismissible
                       onClose={() => setShowMessage(false)}
                       >
-                      <div className="alert-inside" style={{visibility: collectedMessage? 'hidden':'visible', top: "0", width: '300px', height: "208px" }}>
+                      <div className="alert-inside" style={{visibility: collectedMessage? 'hidden':'visible', top: "2px", width: '350px', height: "208px" }}>
                             <Alert.Heading>
-                            <p>
+                            <p style={{ transform: 'translate(10px, 10px)' }}>
                               Great! You found your keys.
                             </p>
                             </Alert.Heading>
@@ -355,12 +356,14 @@ function Scene3() {
                         <TouchPoint4 position={[-11, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint9 position={[11, -16, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         {/* <TouchPoint4 position={[1, -18, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
-                        <TouchPoint5 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint5 position={[3, -5.5, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint5 position={[9.5, -7, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        {/* <TouchPoint5 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
+                        <TouchPoint5 position={[2.9, -5.7, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[10.7, -8, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[-1.6, -4.6, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[-1, -3.2, 0.4]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint6 position={[6, -9, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint7 position={[0, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint6 position={[6.4, -9, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint7 position={[-.7, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint8 position={[-32, -23, -15]} args={[3, 2, 1]} color='#F8A61F' /> 
                         {/* <Portal position={[-6, -5, 1]} args={[3, 2, 1]} color='#fff' /> */}
                         
                     </Suspense>

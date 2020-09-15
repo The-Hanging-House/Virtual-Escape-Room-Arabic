@@ -8,8 +8,8 @@ const ResponsivePlayer = ({ url, onProgress }) => {
           <ReactPlayer
             className='react-player'
             url={url}
-            width='100%'
-            height='100%'
+            width='90%'
+            height='90%'
             controls={false}
             playing={true}
             onProgress={onProgress}
