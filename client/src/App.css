@@ -868,6 +868,10 @@ h1 span {
   left: -15px;
   width: 15px; */
 /* } */
+
+.alert8{
+  width: 0px;
+}
 .alert-inside6 {
   background-color: rgba(230, 206, 166, 0.9);
   border-radius: 20px;
