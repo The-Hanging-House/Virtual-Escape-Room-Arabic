@@ -4,7 +4,7 @@ import Music1 from '../../audio/Music3'
 
 function Briefing() {
     return (
-        <section className="landing">
+        <section className="video-player">
             <Lesson />
             <Music1 />
         </section>

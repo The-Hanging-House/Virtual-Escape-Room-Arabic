@@ -28,7 +28,7 @@ function TouchPoint6({ position, color, onClick }) {
                     <CSSTransition
                         in={showMessage}
                         timeout={300}
-                        classNames="alert4"
+                        classNames="alert"
                         unmountOnExit
                         // style={{backgroud: 'white'}}
                         // onEnter={() => setShowButton(false)}

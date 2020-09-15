@@ -3,7 +3,7 @@ import Lesson2 from '../lesson/Lesson2'
 
 function Instruction() {
     return (
-        <section className="landing">
+        <section className="video-player2">
             <Lesson2 />
         </section>
     )
