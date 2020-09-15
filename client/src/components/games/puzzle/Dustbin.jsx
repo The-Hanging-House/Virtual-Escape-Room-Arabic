@@ -3,11 +3,11 @@ import { DropTarget } from 'react-dnd'
 
 var backgroundsList = {
   bin1:
-    '/bg1.png',
+    '/bg4.png',
   bin2:
-    '/bg2.png',
+    '/bg5.png',
   bin3:
-    '/bg3.png',
+    '/bg6.png',
   bin4:
     '/bg4.png',
   bin5:
