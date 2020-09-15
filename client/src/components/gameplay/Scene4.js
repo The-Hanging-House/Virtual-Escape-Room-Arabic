@@ -154,8 +154,9 @@ function Scene4() {
                         <TouchPoint4 position={[-2, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint4 position={[11, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[5, -8, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint3 position={[-3, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint6 position={[4, -7, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint7 position={[-2, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint7 position={[-2.2, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         
                     </Suspense>
             </Canvas>,

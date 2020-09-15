@@ -6,6 +6,7 @@ import { CSSTransition } from 'react-transition-group';
 import { Html } from 'drei';
 
 import board from '../../../img/watercooler.png'
+import X from '../../../img/x.svg'
 
 const TouchPoint3 = ({ position, color, onClick }) => {
     const [hovered, set] = useState(false)
@@ -39,7 +40,8 @@ const TouchPoint3 = ({ position, color, onClick }) => {
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
-                            <div>
+                                                    <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='300%' height='300%'></img></button>
+<div>
                                 <img src={board} alt='board' />
                             </div>
                         </div>

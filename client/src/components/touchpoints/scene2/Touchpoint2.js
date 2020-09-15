@@ -4,9 +4,10 @@ import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
+import board from '../../../img/tools.png'
+// import tools from '../../../img/trap.png'
 
-import tools from '../../../img/tools.png'
-
+import X from '../../../img/x.svg'
 
 const TouchPoint2 = ({ position, color, onClick }) => {
     const [hovered, set] = useState(false)
@@ -40,8 +41,9 @@ const TouchPoint2 = ({ position, color, onClick }) => {
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
-                            <div>
-                                <img src={tools}/>
+                                                    <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='300%' height='300%'></img></button>
+<div>
+                                <img src={board} alt='board' />
                             </div>
                         </div>
                         </Alert>

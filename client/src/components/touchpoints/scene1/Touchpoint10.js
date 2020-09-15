@@ -7,7 +7,7 @@ import { Html } from 'drei';
 
 import plant from '../../../img/plant.png'
 
-function TouchPoint5({ position, color, onClick }) {
+function TouchPoint10({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     // const [showButton, setShowButton] = useState(true);
     const [showMessage, setShowMessage] = useState(false);
@@ -27,7 +27,7 @@ function TouchPoint5({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={[0.5, 0.5, 0.5, 0.5]}
+            scale={[3, 3, 3, 3]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
@@ -63,4 +63,4 @@ function TouchPoint5({ position, color, onClick }) {
     )
 }
 
-export default TouchPoint5;
+export default TouchPoint10;

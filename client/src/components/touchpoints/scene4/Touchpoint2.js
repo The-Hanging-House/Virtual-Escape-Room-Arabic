@@ -9,6 +9,8 @@ import Lock from '../../../img/lock.png'
 
 import App from '../../games/lock/App'
 
+import X from '../../../img/x.svg'
+
 function TouchPoint2({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     // const [showButton, setShowButton] = useState(true);
@@ -53,7 +55,7 @@ function TouchPoint2({ position, color, onClick }) {
                         onClose={() => setShowMessage(false)}
                         >
                          <div className="alert-inside6">
-                         <button className="close" onClick={() => setShowMessage(false)}>×</button>
+                         <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='300%' height='300%'></img></button>
 
                             <Alert.Heading>
                             <App />

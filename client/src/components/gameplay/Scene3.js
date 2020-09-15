@@ -15,6 +15,7 @@ import Loader from '../../img/loader.gif'
 import img from './../../img/key.png'
 
 import Logout from '../logout/Logout'
+import X from './../../img/x.svg'
 
 import Task1 from '../popup/Task1';
 import TouchPoint2 from '../touchpoints/scene3/Touchpoint2'
@@ -25,6 +26,7 @@ import TouchPoint6 from '../touchpoints/scene3/Touchpoint6'
 import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
 import TouchPoint8 from '../touchpoints/scene1/Touchpoint8'
 import TouchPoint9 from '../touchpoints/scene1/Touchpoint9'
+import TouchPoint10 from '../touchpoints/scene1/Touchpoint10'
 
 // import Portal from '../touchpoints/scene3/Portal'
 // import Timer from '../timer/Timer'
@@ -264,7 +266,7 @@ function TouchPoint3({ position, color, onClick }) {
                       onClose={() => setShowMessage(false)}
                       >
                       <div className={ show? "alert-inside" : "alert-inside4" }>
-                      <button className="close" onClick={() => setShowMessage(false)}>×</button>
+                      <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='300%' height='300%'></img></button>
                           <Alert.Heading>
                           <p style={{ fontSize: '1.2rem', fontFamily: 'Dubai W23, sans-serif', color: 'black', letterSpacing: '2px' }}>
                               {/* The car door is not locked, what should I do? */}
@@ -363,7 +365,7 @@ function Scene3() {
                         <TouchPoint5 position={[-1, -3.2, 0.4]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint6 position={[6.4, -9, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint7 position={[-.7, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint8 position={[-32, -23, -15]} args={[3, 2, 1]} color='#F8A61F' /> 
+                        <TouchPoint10 position={[-32, -23, -15]} args={[3, 2, 1]} color='#F8A61F' /> 
                         {/* <Portal position={[-6, -5, 1]} args={[3, 2, 1]} color='#fff' /> */}
                         
                     </Suspense>

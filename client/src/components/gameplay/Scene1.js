@@ -13,11 +13,12 @@ import TouchPoint1 from '../touchpoints/scene1/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene1/Touchpoint2'
 import TouchPoint3 from '../touchpoints/scene1/Touchpoint3'
 import TouchPoint4 from '../touchpoints/scene1/Touchpoint4'
-import TouchPoint5 from '../touchpoints/scene5/Touchpoint5'
+import TouchPoint5 from '../touchpoints/scene1/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene1/Touchpoint6'
 import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
 import TouchPoint8 from '../touchpoints/scene1/Touchpoint8'
 import TouchPoint9 from '../touchpoints/scene1/Touchpoint9'
+import TouchPoint10 from '../touchpoints/scene1/Touchpoint10'
 // import Timer from '../timer/Timer'
 import './style.css'
 
@@ -138,15 +139,15 @@ function Scene1() {
                         <TouchPoint9 position={[11, -16.7, -15]} args={[3, 2, 1]} color='#F8A61F' />
                        
                         {/* v Mid plant touchpoint v */}
-                        <TouchPoint5 position={[3.2, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint8 position={[3.2, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         {/* v Far left plant touchpoint v */}
-                        <TouchPoint5 position={[10, -7.5, 4.5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint5 position={[-1.7, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint5 position={[-1, -3.2, 0.4]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint8 position={[10, -7.5, 4.5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint8 position={[-1.7, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[-1, -3.5, 0.4]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint6 position={[5.5, -8, 4]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint7 position={[-.73, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         {/* v far right touchpoint v */}
-                        <TouchPoint8 position={[-32, -23, -15]} args={[3, 2, 1]} color='#F8A61F' /> 
+                        <TouchPoint10 position={[-32, -23, -15]} args={[3, 2, 1]} color='#F8A61F' /> 
                         
                     </Suspense>
             </Canvas> 

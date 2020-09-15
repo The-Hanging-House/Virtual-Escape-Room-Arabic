@@ -34,17 +34,17 @@ function Timesup() {
                     
                     <div className="option">
                         <a href="briefing">
-                            <h3 style={{ color: 'black', fontSize: '2rem' }}
-                                    onMouseEnter={event => onMouseOver(event)}
-                                    onMouseOut={event => onMouseOut(event)}>
-                                        PLAY AGAIN?
-                            </h3>
-                        </a>
-                        <a href="dashboard2">
-                            <h3 style={{ color: 'black', fontSize: '2rem' }}     
+                            <h3 style={{ color: 'black', fontSize: '2rem', float: 'left', position: 'absolute', left: '-4%', bottom: '14%' }}
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
                                         HOME
+                            </h3>
+                        </a>
+                        <a href="dashboard2">
+                            <h3 style={{ color: 'black', fontSize: '2rem', float: 'left', position: 'absolute', right: '-4%', bottom: '14%' }}     
+                                    onMouseEnter={event => onMouseOver(event)}
+                                    onMouseOut={event => onMouseOut(event)}>
+                                        PLAY AGAIN
                             </h3>
                         </a>
                     </div>

@@ -8,6 +8,7 @@ import { Html } from 'drei';
 import Lock from '../../../img/lock.png'
 
 import App from '../../games/lock/App'
+import X from '../../../img/x.svg'
 
 function TouchPoint2({ position, color, onClick }) {
     const [hovered, set] = useState(false)
@@ -53,8 +54,7 @@ function TouchPoint2({ position, color, onClick }) {
                         onClose={() => setShowMessage(false)}
                         >
                          <div className="alert-inside6">
-                         <button className="close" onClick={() => setShowMessage(false)}>×</button>
-
+                         <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='300%' height='300%'></img></button>
                             <Alert.Heading>
                             <App />
                             <img src={Lock} alt='pinlock' style={{ left: '-48px', transform: 'scale(0.9)',  top: '-33px' }}/>

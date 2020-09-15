@@ -162,6 +162,7 @@ function Scene5() {
                         <Task />
                         <TouchPoint5 position={[-10, -10, 0]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[-10, -8, 7]} args={[3, 2, 1]} color='#F8A61F' />
+                        {/* <TouchPoint5 position={[2, -4.6, 5]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         <TouchPoint5 position={[0, -3, -1]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint2 position={[0.85, -0.4, -2]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint4 position={[20, -27, -2]} args={[3, 2, 1]} color='#F8A61F' />

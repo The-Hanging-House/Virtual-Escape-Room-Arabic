@@ -864,7 +864,7 @@ h1 span {
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  user-drag: none; 
+  -user-drag: none; 
 }
 /* .alert8 .close { */
   /* top: -36px;
@@ -1099,8 +1099,7 @@ h3 {
   height: 51%;
 }
 .option {
-  position: relative;
-  top: 70vh;
+  width: 100%;
 }
 .option1 {
   position: relative;
