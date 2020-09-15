@@ -741,6 +741,7 @@ h1 span {
 }
 .alert1 .close {
   display: none;
+  cursor: pointer;
 }
 .alert2 {
   /* background-image: url(../src/img/popup1.svg); */
@@ -1059,6 +1060,7 @@ h1 span {
   right: -5vh;
   top: -5vh;
   background-color: transparent;
+  cursor: pointer;
 }
 span {
   font-size: 1rem;
@@ -1132,7 +1134,7 @@ h3 {
   background-color: white;
   /*right: 37vh;
   top: 29vh;*/
-  right: 238px;
+  right: 231px;
   top: 158px;
   z-index: 1;
   transform: scale(0.6);
