@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
-
+import X from '../../../img/x.svg'
 
 import { Html } from 'drei';
 // import App1 from '../../games/game/App1';
@@ -54,9 +54,9 @@ function TouchPoint3({ position, color, onClick }) {
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-inside4">
-                        <button className="close" onClick={() => setShowMessage(false)}>×</button>
+                        <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='250%' height='250%'></img></button>
                             <Alert.Heading>
-                                <p style={{ fontSize: '1.1rem' }}>
+                                <p style={{ fontSize: '1.1rem', color: 'black' }}>
                                     The trunk is locked, but you left the lights and music on. Have you got your keys?
                                 </p>
                             </Alert.Heading>
