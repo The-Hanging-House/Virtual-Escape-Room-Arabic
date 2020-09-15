@@ -629,7 +629,7 @@ const Dome = () => {
                         onClose={() => setShowMessage(false)}
                         >
                           <button style={{ position: 'absolute', top: '70px', right: '153px', cursor: 'pointer', opacity: '0' }} onClick={() => setShowMessage(false)}>XX</button>
-                          {/* <img src={xclose} alt='stickyNote' style={{ width: '100%' }} /> */}
+                          <img src={xclose} alt='stickyNote' style={{ width: '100%' }} />
                         <div className="alert-inside3" style={{ left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '100%'}}>
                             <Alert.Heading>
                                 <div>

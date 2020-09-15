@@ -353,7 +353,7 @@ body {
   -webkit-filter: blur(8px); */
   /* Full height */
   width: auto;
-  height: 1000px; 
+  height: 100%;
   z-index: -9999;
   
   /* Center and scale the image nicely */
@@ -1109,17 +1109,33 @@ h3 {
 }
 .gametime {
   position: absolute;
-  transform: translate(180%, 50%);
+  transform: translate(180%, -6%);
   width: 21.06%;
   height: 51%;
 }
 .option {
   width: 100%;
 }
+
 .option1 {
   position: relative;
-  top: 50vh;
-  line-height: 5vh;
+  width: 50%;
+  top: 660px;
+  left: 842px;
+}
+.home {
+  position: absolute;
+  font-size: 2rem;
+  float: left;
+  left: -4%;
+  bottom: 14%;
+}
+.play {
+  position: absolute;
+  font-size: 2rem;
+  float: right;
+  left: -4%;
+  bottom: 14%;
 }
 .bg-end1 {
   font-family: "Dubai W23", sans-serif;
@@ -1170,14 +1186,19 @@ h3 {
   z-index: 2;
 }
 .icons {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
+  position: absolute;
+  bottom: -4%;
+  left: 3%;
 }
 .icons img {
   position: absolute;
   bottom: -50px;                  /* center link horizontally */
-  transform: translateX(-50%);
+  transform: translate(437px, 48px);
+}
+.icons1 {
+  position: absolute;
+  top: 285%;
+  left: 50%;
 }
 .dashblock {
   position: absolute;
@@ -1289,6 +1310,27 @@ h3 {
     position: absolute;
     right: 45%;
     top: 30%;
+  }
+  .bg-end {
+    font-family: "Dubai W23", sans-serif;
+    position: absolute;
+    /* top: 5%; */
+    /* left: 37%; */
+    transform: translate(1%, -297%);
+    z-index: 2;
+    width: 100%;
+    height: 320px;
+    padding: 20px;
+    text-align: center;
+  }
+  .gametime {
+    transform: translate(175%, 196%);
+    width: 21.06%;
+    height: 51%;
+  }
+  .option1 {
+    top: 274%;
+    left: 307px;
   }
 }
 
@@ -1413,6 +1455,33 @@ h3 {
     top: 370px;
     width: 399px;
   } */
+  .bg-end {
+    font-family: "Dubai W23", sans-serif;
+    position: absolute;
+    /* top: 5%; */
+    /* left: 37%; */
+    transform: translate(1%, -297%);
+    z-index: 2;
+    width: 100%;
+    height: 320px;
+    padding: 20px;
+    text-align: center;
+  }
+  .gametime {
+    transform: translate(178%, 109%);
+    width: 21.06%;
+    height: 51%;
+  }
+  .option1 {
+    bottom: 10%;
+    left: 34%;
+  }
+  .icons1 {
+    top: 295%;
+  }
+  .icons1 img {
+    width: 120px;
+  }
 }
 
 @media(max-width: 1599px) {
@@ -1461,6 +1530,34 @@ h3 {
     height: 5vh;
     padding: 20px;
   }
+  .bg-end {
+    font-family: "Dubai W23", sans-serif;
+    position: absolute;
+    /* top: 5%; */
+    /* left: 37%; */
+    transform: translate(1%, -297%);
+    z-index: 2;
+    width: 100%;
+    height: 320px;
+    padding: 20px;
+    text-align: center;
+  }
+  .gametime {
+    transform: translate(178%, 199%);
+    width: 21.06%;
+    height: 51%;
+  }
+  .option1 {
+    bottom: 10%;
+    left: 34%;
+  }
+  .icons1 {
+    top: 295%;
+  }
+  .icons1 img {
+    width: 120px;
+  }
+  
 }
 @media(max-width: 1199px) {
   .bg-text {
@@ -1478,6 +1575,27 @@ h3 {
   .dashblock {
     left: -5%;
     bottom: 5%;
+  }
+  .bg-end {
+    font-family: "Dubai W23", sans-serif;
+    position: absolute;
+    /* top: 5%; */
+    /* left: 37%; */
+    transform: translate(1%, -297%);
+    z-index: 2;
+    width: 100%;
+    height: 320px;
+    padding: 20px;
+    text-align: center;
+  }
+  .gametime {
+    transform: translate(175%, 196%);
+    width: 21.06%;
+    height: 51%;
+  }
+  .option1 {
+    bottom: 10%;
+    left: 33%;
   }
 }
 
@@ -1575,4 +1693,25 @@ h3 {
     top: 370px;
     width: 399px;
   } */
+  .bg-end {
+    font-family: "Dubai W23", sans-serif;
+    position: absolute;
+    /* top: 5%; */
+    /* left: 37%; */
+    transform: translate(1%, -297%);
+    z-index: 2;
+    width: 100%;
+    height: 320px;
+    padding: 20px;
+    text-align: center;
+  }
+  .gametime {
+    transform: translate(175%, 196%);
+    width: 21.06%;
+    height: 51%;
+  }
+  .option1 {
+    top: 274%;;
+    left: 29%;
+  }
 }

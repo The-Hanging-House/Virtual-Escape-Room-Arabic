@@ -28,19 +28,19 @@ if (secs < 10){
   }
 var pacman = mins + ":" + secs;
 
-setInterval(function(){
-    now = localStorage.getItem('scene6');
-    if(now!=='NaN'){
-        End();
-    }
-    if(mins > 8){
-        winMessage = 'WOW! THAT WAS REALLY FAST. HAVE YOU DONE THIS BEFORE?'
-    }else if (mins > 3 && mins < 8){
-        winMessage = 'THAT WAS GOOD! YOU MUST\'VE REALLY CONNECTED WITH THE NATURE'
-    }else if (mins < 2){
-        winMessage = 'YOU MADE IT OUT JUST IN TIME.'
-    }
-}, 500);
+// setInterval(function(){
+//     now = localStorage.getItem('scene6');
+//     if(now!=='NaN'){
+//         End();
+//     }
+//     if(mins > 8){
+//         winMessage = 'WOW! THAT WAS REALLY FAST. HAVE YOU DONE THIS BEFORE?'
+//     }else if (mins > 3 && mins < 8){
+//         winMessage = 'THAT WAS GOOD! YOU MUST\'VE REALLY CONNECTED WITH THE NATURE'
+//     }else if (mins < 2){
+//         winMessage = 'YOU MADE IT OUT JUST IN TIME.'
+//     }
+// }, 500);
 
 function End() {
     
@@ -51,53 +51,61 @@ function End() {
         <>
         <div className="bg-image1"></div>
             <div className="bg-end">
-                <div className="congrats">
+                {/* <div className="congrats">
                     <h1>CONGRATULATIONS</h1>
-                </div>
-                <div style={{ fontSize: '1.7rem', fontWeight: 'bolder', letterSpacing: '2px' }}>
+                </div> */}
+                {/* <div style={{ fontSize: '1.7rem', fontWeight: 'bolder', letterSpacing: '2px' }}>
                 <h3>
                             {winMessage}
                         </h3>
-                </div>
+                </div> */}
                 <div className="game-timer">
                     <div className="gametime">
-                        <h1 style={{ fontSize: '2rem', letterSpacing: '4px' }}>
-                            YOU SURVIVED WITH
-                        </h1>
+                        
                         <h1 style={{ fontSize: '5rem', color: 'white', fontWeight: 'bolder' }}>
                             {pacman}
                             
                         </h1>
-                        <h1 style={{ fontSize: '2rem', letterSpacing: '4px' }}>
-                            TO SPARE
-                        </h1>
+                        
                     </div>
-                    <div className="option1">
-                        <a href="briefing">
-                            <h3 style={{ color: 'black', fontSize: '2rem' }}>
-                                        PLAY AGAIN?
-                            </h3>
-                        </a>
-                        <a href="dashboard2">
-                            <h3 style={{ color: 'black', fontSize: '2rem' }}>
-                                        HOME
-                            </h3>
-                        </a>
+                    {/* <div className="option1">
                         <h3>
                             {winMessage}
                         </h3>
-                    </div>
+                    </div> */}
                 </div>
-              <div className="icons">
+                <div className="option1">
+                        <a href="briefing">
+                            {/* <h3 className="home" style={{ color: 'black', fontSize: '2rem', float: 'left', position: 'absolute', left: '-4%', bottom: '14%', color: 'white' }}
+                                    >
+                                        HOME
+                            </h3> */}
+                            <button style={{float: 'left', position: 'absolute', left: '-4%', bottom: '14%', color: 'white'}} className="btn btn-primary">
+                                   HOME
+                            </button>
+                        </a>
+                        <a href="dashboard2">
+                            {/* <h3 className="play" style={{ color: 'black', fontSize: '2rem', float: 'left', position: 'absolute', right: '-4%', bottom: '14%', color: 'white' }}     
+                                    >
+                                        PLAY AGAIN
+                            </h3> */}
+                            <button style={{float: 'right', position: 'absolute', left: '40%', bottom: '14%', color: 'white'}} className="btn btn-primary">
+                                   PLAY AGAIN
+                            </button>
+                        </a>
+                    </div>
+              <div className="icons1">
                   <a target="_blank" href="https://connectwithnature.ae/">
-                      <img className="cwn" src={CWN} alt="CWN Logo" />
+                  <img style={{ float: 'left', position: 'absolute', left: '-4%', bottom: '14%' }} src={H}></img>
                   </a>
                   <a target="_blank" href="https://houbarafund.gov.ae/en/home">
-                      <img className="h" src={H} alt="Houbara Fund" />
+                  <img style={{ float: 'right', position: 'absolute', right: '-4%', bottom: '10%' }} src={CWN}></img>
                   </a>
               </div>      
             </div>
         </>
+
+
         
     )
 }

@@ -268,7 +268,7 @@ function TouchPoint3({ position, color, onClick }) {
                       <div className={ show? "alert-inside" : "alert-inside4" }>
                       <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='300%' height='300%'></img></button>
                           <Alert.Heading>
-                          <p>
+                          <p style={{ color: 'black' }}>
                               {/* The car door is not locked, what should I do? */}
                               {innerText}
                               </p>
