@@ -15,6 +15,7 @@ import Map from '../../img/map.svg'
 
 import note from './../../img/note.png'
 import xclose from './../../img/x.svg'
+import teleNo from './../../img/teleNo.png'
 
 
 import TouchPoint1 from '../touchpoints/scene2/Touchpoint1'
@@ -29,7 +30,7 @@ import paper from '../../audio/paper.mp3'
 import door from '../../audio/door.mp3'
 import correct from '../../audio/correct.mp3'
 
-import hint from '../../img/welcome.svg'
+import hint from '../../img/welcome.png'
 
 import Music2 from '../../audio/Music2'
 
@@ -745,7 +746,7 @@ function TouchPoint6({ position, color, onClick }) {
   const [hovered, set] = useState(false)
   const [showMessage, setShowMessage] = useState(false);
 
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   
   // function that checks the number of boxes collected
   setInterval(function(){
@@ -757,6 +758,7 @@ function TouchPoint6({ position, color, onClick }) {
   }, 1000);
   
   // useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
+ 
   return (
       <mesh 
           scale={[1, 2, 1, 1]}
@@ -783,11 +785,17 @@ function TouchPoint6({ position, color, onClick }) {
                       // dismissible
                       onClose={() => setShowMessage(false)}
                       >
+                        <div style={{ display: show? 'block' : 'none' }} >
                       {/* <button className="close" onClick={() => setShowMessage(false)}> */}
                          <img onClick={() => setShowMessage(false)} style={{position: 'absolute', top: '-194px', right: '-141px', transform: 'scale(0.5)', cursor: 'pointer'}} src={xclose} /> 
                          {/* </button> */}
                       <Telephone />
-                      
+                      {/* {tele} */}
+                      </div>
+                      <div style={{ display: show? 'none' : 'block', transform: 'scale(0.6)', position: 'absolute', top: '-145px', left: '-513px' }} >
+                        <img src={teleNo} />
+                        <button onClick={() => setShowMessage(false)} style={{ position: 'absolute', right: '39px', top: '36px', opacity: '0', cursor: 'pointer' }}> XX</button>
+                      </div>
                       </Alert>
                   </CSSTransition>
               </Container>
