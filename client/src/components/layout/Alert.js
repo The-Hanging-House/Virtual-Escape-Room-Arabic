@@ -7,7 +7,7 @@ const Alert = ({ alerts }) =>
   alerts.length > 0 &&
   alerts.map((alert) => (
     <div className="alert-danger">
-      <h3>Invalid Input</h3>
+      <p>Please check again your input.</p>
     </div>
   ));
 
