@@ -30,17 +30,20 @@ function TouchPoint6({ position, color, onClick }) {
                         timeout={300}
                         classNames="alert4"
                         unmountOnExit
+                        // style={{backgroud: 'white'}}
                         // onEnter={() => setShowButton(false)}
                         // onExited={() => setShowButton(true)}
                     >
-                        <Alert
+                        {/* <Alert
                         className="alert4"
                         variant="primary"
                         dismissible
                         onClose={() => setShowMessage(false)}
-                        >
+                        style={{width: '2px', position: 'absolute'}}
+
+                        > */}
                         <Telephone />
-                        </Alert>
+                        {/* </Alert> */}
                     </CSSTransition>
                 </Container>
             </Html>

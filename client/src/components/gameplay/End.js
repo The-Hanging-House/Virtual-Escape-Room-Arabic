@@ -53,10 +53,10 @@ function End() {
                 <div className="congrats">
                     <h1>CONGRATULATIONS</h1>
                 </div>
-                <div style={{ fontSize: '1.7rem', fontWeight: 'bolder', lineHeight: '5vh', letterSpacing: '2px' }}>
-                    <p>THAT WAS GOOD!</p>
-                    <p>YOU MUST'VE REALLY</p>
-                    <p>CONNECTED WITH NATURE.</p>
+                <div style={{ fontSize: '1.7rem', fontWeight: 'bolder', letterSpacing: '2px' }}>
+                <h3>
+                            {winMessage}
+                        </h3>
                 </div>
                 <div className="game-timer">
                     <div className="gametime">

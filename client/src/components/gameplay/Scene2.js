@@ -122,7 +122,7 @@ const Dome = () => {
       <mesh
         {...props}
         ref={mesh}
-        rotation={[2, 2.6, 1]}
+        rotation={[2, 2.2, 6.6]}
         scale={collectedMessage ? [0, 0, 0] : [1, 1, 1]}
         onClick={() => setShowMessage(true)}>
         <planeBufferGeometry attach="geometry" args={[1, 1, 1]} style={{visibility: collectedMessage? 'hidden':'visible', }}/>
@@ -628,7 +628,7 @@ const Dome = () => {
                         // dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                          <button style={{ position: 'absolute', top: '43px', right: '136px', cursor: 'pointer', background: 'url(xclose)' }} onClick={() => setShowMessage(false)}>X</button>
+                          <button style={{ position: 'absolute', top: '70px', right: '153px', cursor: 'pointer', opacity: '0' }} onClick={() => setShowMessage(false)}>XX</button>
                           <img src={xclose} alt='stickyNote' style={{ width: '100%' }} />
                         <div className="alert-inside3" style={{ left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '100%'}}>
                             <Alert.Heading>
@@ -654,7 +654,7 @@ const Dome = () => {
 
 function TouchPoint5({ position, color, onClick }) {
   const [showMessage, setShowMessage] = useState(false);
-  const [collectedMessage, setCollectedMessage] = useState(true);
+  const [collectedMessage, setCollectedMessage] = useState(false);
   const [coll, setColl] = useState(false);
   const [showProceed, setShowProceed] = useState('hidden');
   var puzzlePro;
@@ -666,6 +666,7 @@ function TouchPoint5({ position, color, onClick }) {
       setCollectedMessage(true);
     }if(coll){
       ccom=6;
+      setCollectedMessage(false);
     } 
     if(puzzlePro === '1'){
         setShowProceed('visible');
@@ -701,8 +702,8 @@ function TouchPoint5({ position, color, onClick }) {
                           <Alert.Heading>
                             <Puzzle />
                              <div>
-                                  <button onClick={() => {setShowMessage(false); setColl(true)}} style={{visibility: showProceed, position: 'relative', left: '40%'}} className="btn btn-primary3">
-                                      CALL NOW
+                                  <button onClick={() => {setShowMessage(false); setColl(true)}} style={{visibility: showProceed, position: 'absolute', left: '520px', top: '120px', opacity: '0'}} className="btn btn-primary3">
+                                      x
                                   </button>
                             </div>
                           </Alert.Heading>                       
@@ -754,13 +755,14 @@ function TouchPoint6({ position, color, onClick }) {
   // useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
   return (
       <mesh 
-          scale={show ? [0.5, 0.5, 0.5] : [0, 0, 0]}
+          scale={[1, 2, 1, 1]}
           position={position}
+          rotation={[-0.22, 0.22, 0.22]}
           onPointerOver={() => set(true)}
           onPointerOut={() => set(false)}
           onClick={() => setShowMessage(true)}>
-          <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-          <meshBasicMaterial attach="material" color={hovered ? 'hotpink' : 'orange'} /> 
+          <planeGeometry attach="geometry" args={[6, 1, 6]} />
+          <meshBasicMaterial attach="material" transparent opacity={hovered? 0.2 : 0} /> 
           <Html center>
               <Container>
                   <CSSTransition
@@ -911,7 +913,7 @@ function Scene2() {
                       <Box2 position={[-14, 5.3, -13]}/>
                       <Box3 position={[10, -4.8, 12]} />
                       <Box4 position={[-12, 0.7, 2]} />
-                      <Box5 position={[-12, -13, 5.5]} />
+                      <Box5 position={[-12, -13, 3.5]} />
                       <Box6 position={[-5, -1.6, 15]} />
                       <ambientLight intensity={0.7}/>
                       <Box7 position={[-20, -10, 4]}/>
@@ -920,7 +922,7 @@ function Scene2() {
                       <TouchPoint3 position={[1, -1, 2]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint4 position={[-4.8, -2.2, 0]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint5 position={[-25, -10, 10]} args={[3, 2, 1]} color='#F8A61F' />
-                      <TouchPoint6 position={[-25, -15, -6]} args={[3, 2, 1]} color='#F8A61F' />
+                      <TouchPoint6 position={[-25, -13.5, -6]} args={[3, 2, 1]} color='#F8A61F' />
                       {/* <Portal position={[-10, -12, -20]} args={[3, 2, 1]} color='#fff' /> */}
                   </Suspense>
           </Canvas>

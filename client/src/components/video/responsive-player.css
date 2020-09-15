@@ -1,5 +1,5 @@
 .player-wrapper {
-    position: relative;
+    position: absolute;
     padding-top: 56.25%;
     max-width: 100%;
   }

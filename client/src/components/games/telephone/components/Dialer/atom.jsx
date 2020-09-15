@@ -3,14 +3,14 @@ import styled, { css } from "styled-components";
 export const Box = styled.div
 `
   position: fixed;
-  bottom: 70px;
-  right: 15px;
-  width: 100vh;
-  max-width: 220px;
+  bottom: 32px;
+  right: -122px;
+  width: 288vh;
+  height: 439px;
+  max-width: 359px;
   padding: 15px;
-  // background: #263238;
-  background-image: url("./telephone.png");
-  background-size: 100%;
+  background-image: url(./telephone.png);
+  background-size: 350px;
   background-repeat: no-repeat;
   border-radius: 22.5px;
   visibility: hidden;
@@ -34,37 +34,44 @@ export const Box = styled.div
 `;
 
 export const Input = styled.input`
-  width: 70%;
+  width: 69%;
   // margin-bottom: 15px;
   margin-top: 15px;
   border: none;
   background: transparent;
-  height: 57px;
-  font-size: 1rem;
-  top: 50px;
+  height: 135px;
+  font-size: 2rem;
+  top: 53px;
   padding: 0 15px;
   border-radius: 4px;
   color: white; 
+  margin-left: 16px;
 `;
 
 export const ButtonsContainer = styled.div`
   font-size: 0;
-  width: 70%;
+  width: 214px;
   // float: right;
+  width: 214px;
+  position: absolute;
+  left: 24px;
+  top: 145px;
+
 `;
 
 export const Button = styled.button`
   // visibility: hidden;
   display: inline-block;
-  width: calc(33.33% - 10px);
+  width: calc(33.33% - 8px);
   font-size: 18px;
   background: transparent;
   border: none;
-  color:  transparent;
+  // color:  white;
   top: -50px;
-  padding: 9px 0;
+  padding: 18px 0;
   text-align: center;
   cursor: pointer;
+  opacity: 0;
 
   // &:hover {
   //   color: #fff;
