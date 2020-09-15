@@ -35,12 +35,12 @@ const style = {
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   height: '100px',
-  marginRight: '1px',
+  marginRight: '2px',
   color: 'white',
   textAlign: 'center',
   float: 'left',
   flexWrap: 'wrap',
-  width: "calc(100% * (1/3) - 10px - 1px)",
+  width: "calc(100% * (1/3) - 2px - 1px)",
 }
 
 export const Dustbin = ({

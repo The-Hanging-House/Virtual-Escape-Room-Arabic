@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { DragSource } from 'react-dnd'
 
 
@@ -29,7 +29,7 @@ const style = {
   marginLeft: '1rem',
   marginTop: '1rem',
   marginBottom: '1px',
-  cursor: 'move',
+  cursor: 'grab',
   float: 'left',
   // width: "calc((28% - 60px) - 1px)" ,
   width: "120px" ,

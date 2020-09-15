@@ -13,7 +13,8 @@ import { CSSTransition } from 'react-transition-group';
 
 import Map from '../../img/map.svg'
 
-import note from './../../img/key.png'
+import note from './../../img/note.svg'
+import xclose from './../../img/x.svg'
 
 
 import TouchPoint1 from '../touchpoints/scene2/Touchpoint1'
@@ -37,19 +38,19 @@ import Puzzle from '../games/puzzle/index'
 import solved from '../../img/completedPuzzle1.png'
 
 import egg from '../../img/pp1.png'
-import img from './../../img/pp1.png'
+import img from './../../img/p1.png'
 
 import egg3 from '../../img/pp3.png'
-import img3 from './../../img/pp3.png'
+import img3 from './../../img/p3.png'
 
 import egg4 from '../../img/pp4.png'
-import img4 from './../../img/pp4.png'
+import img4 from './../../img/p4.png'
 
 import egg5 from '../../img/pp5.png'
-import img5 from './../../img/pp5.png'
+import img5 from './../../img/p5.png'
 
 import egg6 from '../../img/pp6.png'
-import img6 from './../../img/pp6.png'
+import img6 from './../../img/p6.png'
 
 import './style.css'
 extend({ OrbitControls })
@@ -112,19 +113,20 @@ const Dome = () => {
       el.style.background = black;
     };
   
-    useFrame(({ camera, mouse }) => {
-      mesh.current.rotation.x = mesh.current.rotation.y += 0.01
-    })
+    // useFrame(({ camera, mouse }) => {
+    //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+    // })
   
     return (
     
       <mesh
         {...props}
         ref={mesh}
-        scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
+        rotation={[2, 2.6, 1]}
+        scale={collectedMessage ? [0, 0, 0] : [1, 1, 1]}
         onClick={() => setShowMessage(true)}>
-        <boxBufferGeometry attach="geometry" args={[1, 1, 1]} style={{visibility: collectedMessage? 'hidden':'visible', }}/>
-        <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
+        <planeBufferGeometry attach="geometry" args={[1, 1, 1]} style={{visibility: collectedMessage? 'hidden':'visible', }}/>
+        <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
         <Html center>
                 <Container>
                     <CSSTransition
@@ -192,9 +194,9 @@ const Dome = () => {
       el.style.background = black;
     };
   
-    useFrame(({ camera, mouse }) => {
-      mesh.current.rotation.x = mesh.current.rotation.y += 0.01
-    })
+    // useFrame(({ camera, mouse }) => {
+    //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+    // })
   
     // if(collectedMessage){
     //     Scene2(1)
@@ -207,10 +209,10 @@ const Dome = () => {
         <mesh
         {...props}
         ref={mesh}
-        scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
+        scale={collectedMessage ? [0, 0, 0] : [1, 1, 1]}
         onClick={() => setShowMessage(true)}>
-        <boxBufferGeometry attach="geometry" args={[1, 1, 1]} style={{visibility: collectedMessage? 'hidden':'visible', }}/>
-        <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
+        <planeBufferGeometry attach="geometry" args={[1, 1, 1]} style={{visibility: collectedMessage? 'hidden':'visible', }}/>
+        <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
         <Html center>
                 <Container>
                     <CSSTransition
@@ -278,18 +280,19 @@ const Dome = () => {
       el.style.background = black;
     };
   
-    useFrame(({ camera, mouse }) => {
-      mesh.current.rotation.x = mesh.current.rotation.y += 0.01
-    })
+    // useFrame(({ camera, mouse }) => {
+    //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+    // })
   
     return (
       <mesh
         {...props}
         ref={mesh}
-        scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
+        rotation={[3, 5, 1.5]}
+        scale={collectedMessage ? [0, 0, 0] : [1, 1, 1]}
         onClick={() => setShowMessage(true)}>
-        <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
-        <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
+        <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
+        <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
         <Html center>
                 <Container>
                     <CSSTransition
@@ -356,18 +359,19 @@ const Dome = () => {
       el.style.background = black;
     };
   
-    useFrame(({ camera, mouse }) => {
-      mesh.current.rotation.x = mesh.current.rotation.y += 0.01
-    })
+    // useFrame(({ camera, mouse }) => {
+    //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+    // })
   
     return (
       <mesh
         {...props}
         ref={mesh}
-        scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
+        rotation={[1, 2, 1.5]}
+        scale={collectedMessage ? [0, 0, 0] : [1, 1, 1]}
         onClick={() => setShowMessage(true)}>
-        <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
-        <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
+        <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
+        <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
         <Html center>
                 <Container>
                     <CSSTransition
@@ -434,18 +438,19 @@ const Dome = () => {
       el.style.background = black;
     };
   
-    useFrame(({ camera, mouse }) => {
-      mesh.current.rotation.x = mesh.current.rotation.y += 0.01
-    })
+    // useFrame(({ camera, mouse }) => {
+    //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+    // })
   
     return (
       <mesh
         {...props}
         ref={mesh}
-        scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
+        rotation={[1, 2, 1]}
+        scale={collectedMessage ? [0, 0, 0] : [1, 1, 1]}
         onClick={() => setShowMessage(true)}>
-        <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
-        <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
+        <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
+        <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
         <Html center>
                 <Container>
                     <CSSTransition
@@ -512,18 +517,19 @@ const Dome = () => {
       el.style.background = black;
     };
   
-    useFrame(({ camera, mouse }) => {
-      mesh.current.rotation.x = mesh.current.rotation.y += 0.01
-    })
+    // useFrame(({ camera, mouse }) => {
+    //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+    // })
   
     return (
       <mesh
         {...props}
         ref={mesh}
-        scale={collectedMessage ? [0, 0, 0] : [0.4, 0.4, 0.4]}
+        rotation={[1.2, 2.5, 3]}
+        scale={collectedMessage ? [0, 0, 0] : [1, 1, 1]}
         onClick={() => setShowMessage(true)}>
-        <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
-        <meshStandardMaterial attach="material" map={texture} toneMapped={false} />
+        <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
+        <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
         <Html center>
                 <Container>
                     <CSSTransition
@@ -601,7 +607,7 @@ const Dome = () => {
       <mesh
         {...props}
         ref={mesh}
-        rotation={[2, 2, 2]}
+        rotation={[4.5, 2, 2.5]}
         scale={collectedMessage ? [2, 2, 2, 2] : [0, 0, 0]}
         // scale={[0, 0, 0]}
         onClick={() => setShowMessage(true)}>
@@ -616,23 +622,26 @@ const Dome = () => {
                         unmountOnExit
                     >
                         <Alert
-                        className="alert4" 
+                        className="alert-note" 
+                        // style={{ top: '46px', right: '80px' }}
                         variant="primary"
-                        dismissible
+                        // dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside3" style={{ left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%'}}>
+                          <button style={{ position: 'absolute', top: '43px', right: '136px', cursor: 'pointer', background: 'url(xclose)' }} onClick={() => setShowMessage(false)}>X</button>
+                          <img src={xclose} alt='stickyNote' style={{ width: '100%' }} />
+                        <div className="alert-inside3" style={{ left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '100%'}}>
                             <Alert.Heading>
                                 <div>
-                                  <img src={solved} alt='completedPuzzle' style={{ width: '200%' }} />
+                                  <img src={note} alt='stickyNote' style={{ width: '100%' }} />
                                 </div>
                             </Alert.Heading>
-                            <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
+                            {/* <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
                                 onMouseEnter={event => onMouseOver(event)}
                                 onMouseOut={event => onMouseOut(event)}>
                                 Call the phone.
 
-                            </h3>
+                            </h3> */}
                         </div>
                         </Alert>
                     </CSSTransition>
@@ -645,7 +654,7 @@ const Dome = () => {
 
 function TouchPoint5({ position, color, onClick }) {
   const [showMessage, setShowMessage] = useState(false);
-  const [collectedMessage, setCollectedMessage] = useState(false);
+  const [collectedMessage, setCollectedMessage] = useState(true);
   const [coll, setColl] = useState(false);
   const [showProceed, setShowProceed] = useState('hidden');
   var puzzlePro;
@@ -904,7 +913,8 @@ function Scene2() {
                       <Box4 position={[-12, 0.7, 2]} />
                       <Box5 position={[-12, -13, 5.5]} />
                       <Box6 position={[-5, -1.6, 15]} />
-                      <Box7 position={[-20, -10, 4]} />
+                      <ambientLight intensity={0.7}/>
+                      <Box7 position={[-20, -10, 4]}/>
                       <TouchPoint1 position={[-17, 1, -10]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint2 position={[-18, -7.5, -4.5]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint3 position={[1, -1, 2]} args={[3, 2, 1]} color='#F8A61F' />

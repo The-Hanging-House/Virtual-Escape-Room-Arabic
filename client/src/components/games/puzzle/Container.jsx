@@ -88,42 +88,38 @@ export const Container = () => {
     <div style={{ display: checkAfter? 'none' : 'block'}}>
     <div className="puzzle" >
       <div>
-        <div className="solvedboard" style={{ display: boxDisplay? 'none' : 'block'}}>
-        {/* <div className="solvedboard" > */}
-          {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
-            <Dustbin
-              accepts={accepts}
-              lastDroppedItem={lastDroppedItem}
-              onDrop={(item) => handleDrop(index, item)}
-              key={index}
-              bgImageName={bgImageName}
-            />
-          ))}
-        </div>
-        <div style={{ display: boxDisplay? 'block' : 'none'}}>
-          <img src={completedPuzzle} style={{height: "60vh", width: "50vw", position: 'relative', left: '-10%'}} />
-        </div>
+          <div className="solvedboard" style={{ display: boxDisplay? 'none' : 'block', transform: 'scale(1.5)'}}>
+            {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
+              <Dustbin
+                accepts={accepts}
+                lastDroppedItem={lastDroppedItem}
+                onDrop={(item) => handleDrop(index, item)}
+                key={index}
+                bgImageName={bgImageName}
+              />
+            ))}
+          </div>
+          <div style={{ display: boxDisplay? 'block' : 'none'}}>
+            <img src={completedPuzzle} style={{height: "60vh", width: "50vw", position: 'relative', left: '-10%'}} />
+          </div>
 
-        </div>
       </div>
-      {/* <div style={{ fontSize: '1rem', marginTop: '10px' }}>
-        <p style={{ justifyContent: 'center' }}>
-          {text}
-        </p>
-      </div> */}
-      <div style={{ overflow: 'hidden', clear: 'both', top: '100%', display: boxDisplay? 'none' : 'block', position: 'relative'}}>
-        {boxes.map(({ name, type, bgImageName }, index) => (
-          <Box
-            name={name}
-            type={type}
-            isDropped={isDropped(name)}
-            key={index}
-            bgImageName={bgImageName}
-          />
-        ))}
+    </div>
+      
+      <div className="pieces" style={{ overflow: 'hidden', clear: 'both', top: '100%', display: boxDisplay? 'none' : 'block', position: 'absolute', width: '426px', left:'628px', top:'84px',transform: 'scale(1.4)'}}>
+            {boxes.map(({ name, type, bgImageName }, index) => (
+              <Box
+                // style={{ position:'absolute', width:'100%', left:'423px', top:'-17px' }}
+                name={name}
+                type={type}
+                isDropped={isDropped(name)}
+                key={index}
+                bgImageName={bgImageName}
+              />
+            ))}
       </div>
-      </div>
-    {/* </div> */}
+    </div>
+
     </>
   )
 }

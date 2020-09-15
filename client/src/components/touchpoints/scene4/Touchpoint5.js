@@ -6,7 +6,7 @@ import { CSSTransition } from 'react-transition-group';
 import { Html } from 'drei';
 
 import switchButtonON from '../../../img/radioON.png'
-import switchButtonOFF from '../../../img/radioON.png'
+import switchButtonOFF from '../../../img/radioOFF.png'
 
 import switchfx from '../../../audio/switch.mp3'
 

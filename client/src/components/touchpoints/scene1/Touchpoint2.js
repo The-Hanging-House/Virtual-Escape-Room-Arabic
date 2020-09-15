@@ -51,11 +51,11 @@ function TouchPoint2({ position, color, onClick }) {
                         variant="primary"
                         onClose={() => setShowMessage(false)}
                         >
-                         <div className="alert-inside6">
+                         <div className="alert-inside6" >
                          <button className="close" onClick={() => setShowMessage(false)}>×</button>
                             <Alert.Heading>
                             <App />
-                            <img src={Lock} alt='pinlock'/>
+                            <img src={Lock} alt='pinlock' style={{ left: '-48px', transform: 'scale(0.9)', top: '-33px' }}/>
                             </Alert.Heading>
                                 
                             
