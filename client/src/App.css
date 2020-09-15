@@ -190,14 +190,16 @@
 .buttons1 {
   text-align: center;
   position: absolute;
-  bottom: 5%;
-  left: 46%;
-  right: 46%;
+  bottom: 9%;
+  right: 0%;
+  width: 100%;
 }
 .buttons4 {
+  text-align: center;
   position: absolute;
-  bottom: 5%;
-  left: 44.5%;
+  bottom: 12%;
+  right: 0%;
+  width: 100%;
 }
 .button-1 {
   background-color: transparent;
@@ -218,7 +220,7 @@
   position: absolute;
   top: 57%;
   left: 46%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   z-index: 2;
   width: 18%;
   padding: 20px;
@@ -617,18 +619,40 @@ h1 span {
   position: absolute;
   padding-top: 56.25%;
   max-width: 100%;
+  
 }
-
+.video-player{
+  position: relative;
+  background: url("./img/image3.jpg") no-repeat center/cover;
+  height: 100vh;
+}
+.video-player img {
+  position: absolute;
+  height: auto;
+  z-index: 2;
+  left: 10%;
+  bottom: 2%;
+    max-width: 100%;
+}
+.video-player2{
+  position: relative;
+  background: url("./img/image2.jpg") no-repeat center/cover;
+  height: 100vh;
+}
 .react-player {
   position: fixed;
-  top: 0;
-  left: 100;
+  top: 7%;
+  left: 11%;
+  /* border: 11px solid #c9c9c9;
+  border-radius: 20px;
+  background-color: #eeeeee; */
 }
 .react-player video {
-  width: 112%;
-  height: 88%;
-  margin-top: 101px;
-  border-radius: 2px;
+  width: 78% !important;
+  height: 87% !important;
+  /* margin-top: 68px;
+  margin-left: 219px; */
+  
 }
 .checkbox {
   color: #161616;
@@ -719,6 +743,7 @@ h1 span {
   /* top: -270px;
   left: -20px; */
 }
+
 .alert4 {
     /* background-image: url(../src/img/popup.svg); */
     display: inline-block;
@@ -860,8 +885,8 @@ h1 span {
   top: 10vh;
 }
 .alert3 button {
-  top: 3px;
-  right: 1px;
+  top: -5px;
+  right: 350px;
   width: 20px;
   height: 20px;
 }
@@ -1091,6 +1116,8 @@ h3 {
 
 
 
+
+
 @media(min-width: 992px){
   .bg-text {
     position: absolute;
@@ -1138,14 +1165,14 @@ h3 {
 }
   .bg-text1
   {
-    /*transform: translate(53%, -78%) !important;*/
+    /* transform: translate(53%, -78%) !important; */
     transform: none;
     height: auto;
-    /*margin-top: -100px;*/
+    /* margin-top: -100px; */
     margin-top: 0;
     width: 880px;
-    left: 0;
-    top: 0;
+    left: 17px;
+    top: 169px;
     position: absolute;
   }
   .lead1
@@ -1153,28 +1180,28 @@ h3 {
     /*left: 15.2vw;*/
     /*top: 14vh;*/
     font-size: 2rem;
-    left: 42px;
-    top: 105px;
+    left: 76px;
+    top: 137px;
   }
   .button-1 {
     position: absolute;
-    top: 445px;
-    left: 190px;
-    /*transform: translate(-50%, -50%);*/
+    top: 478px;
+    left: 352px;
+    /* transform: translate(-50%, -50%); */
     transform: none;
     z-index: 2;
-    width: 350px;
+    width: 185px;
     height: 5vh;
     padding: 20px;
   }
   .button-2 {
     position: absolute;
-    top: 507px;
-    left: 360px;
-    /*transform: translate(-50%, -50%);*/
+    top: 547px;
+    left: 470px;
+    /* transform: translate(-50%, -50%); */
     transform: none;
     z-index: 2;
-    width: 260px;
+    width: 184px;
     height: 5vh;
     padding: 20px;
   }
@@ -1189,12 +1216,7 @@ h3 {
     position: absolute;
     right: 45%;
     top: 30%;
-}
-  /* .alert-inside5 {
-    right: 700px;
-    top: 370px;
-    width: 59px;
-  } */
+  }
 }
 
 @media(min-width: 1200px)
@@ -1269,50 +1291,44 @@ h3 {
   }
   .bg-text1
   {
-    /*transform: translate(53%, -78%) !important;*/
     transform: none;
     height: auto;
-    /*margin-top: -100px;*/
+    margin-top: -100px;
     margin-top: 0;
-    width: 1000px;
-    left: 0;
-    top: 0;
+    width: 84%;
+    left: 63px;
+    top: 259px;
     position: absolute;
   }
   .lead1
   {
-    /*left: 15.2vw;*/
-    /*top: 14vh;*/
+    left: 15.2vw;
+    top: 14vh;
     font-size: 2rem;
-    left: 50px;
-    top: 125px;
+    left: 123px;
+    top: 204px;
   }
   .button-1 {
     position: absolute;
-    top: 510px;
-    left: 250px;
-    /*transform: translate(-50%, -50%);*/
+    top: 650px;
+    left: 499px;
+    transform: translate(-50%, -50%);
     transform: none;
     z-index: 2;
-    width: 350px;
+    width: 231px;
     height: 5vh;
     padding: 20px;
   }
   .button-2 {
     position: absolute;
-    top: 580px;
-    left: 410px;
+    top: 720px;
+    left: 510px;
     /*transform: translate(-50%, -50%);*/
     transform: none;
     z-index: 2;
-    width: 290px;
+    width: 220px;
     height: 5vh;
     padding: 20px;
-  }
-  .buttons1 {
-    bottom: 12%;
-    left: 2%;
-    width: 100%;
   }
 
   .dashblock {
@@ -1331,8 +1347,49 @@ h3 {
 
 @media(max-width: 1599px) {
   .dashblock {
-    left: 14%;
+    left: 1%;
     bottom: 9%;
+  }
+  .bg-text1
+  {
+    transform: none;
+    height: auto;
+    margin-top: -100px;
+    margin-top: 0;
+    width: 949px;
+    left: 92px;
+    top: 160px;
+    position: absolute;
+  }
+  .lead1
+  {
+    /*left: 15.2vw;*/
+    /*top: 14vh;*/
+    font-size: 2rem;
+    left: 120px;
+    top: 139px;
+  }
+  .button-1 {
+    position: absolute;
+    top: 489px;
+    left: 460px;  
+    transform: translate(-50%, -50%);
+    transform: none;
+    z-index: 2;
+    width: 185px;
+    height: 5vh;
+    padding: 20px;
+  }
+  .button-2 {
+    position: absolute;
+    top: 547px;
+    left: 470px;
+    /* transform: translate(-50%, -50%); */
+    transform: none;
+    z-index: 2;
+    width: 184px;
+    height: 5vh;
+    padding: 20px;
   }
 }
 @media(max-width: 1199px) {
@@ -1348,15 +1405,9 @@ h3 {
 .bg-text .form {
     height: 50%;
   }
-  .buttons1 {
-    bottom: 10%;
-    left: 39%;
-    width: 25%;
-  }
   .dashblock {
-    left: 5%;
+    left: -5%;
     bottom: 5%;
-
   }
 }
 
@@ -1410,14 +1461,13 @@ h3 {
   }
   .bg-text1
   {
-    /*transform: translate(53%, -78%) !important;*/
     transform: none;
     height: auto;
-    /*margin-top: -100px;*/
+    margin-top: -100px;
     margin-top: 0;
-    width: 750px;
-    left: 0;
-    top: 0;
+    width: 895px;
+    left: -52px;
+    top: 92px;
     position: absolute;
   }
   .lead1
@@ -1425,28 +1475,28 @@ h3 {
     /*left: 15.2vw;*/
     /*top: 14vh;*/
     font-size: 2rem;
-    left: 34px;
-    top: 85px;
+    left: 46px;
+    top: 97px;
   }
   .button-1 {
     position: absolute;
-    top: 370px;
-    left: 180px;
-    /*transform: translate(-50%, -50%);*/
+    top: 399px;
+    left: 287px;
+    transform: translate(-50%, -50%);
     transform: none;
     z-index: 2;
-    width: 300px;
+    width: 185px;
     height: 5vh;
     padding: 20px;
   }
   .button-2 {
     position: absolute;
-    top: 430px;
-    left: 310px;
+    top: 455px;
+    left: 300px;
     /*transform: translate(-50%, -50%);*/
     transform: none;
     z-index: 2;
-    width: 220px;
+    width: 185px;
     height: 5vh;
     padding: 20px;
   }

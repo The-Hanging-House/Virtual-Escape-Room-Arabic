@@ -21,21 +21,20 @@ const Lesson2 = () => {
     
 
     return (
-        <section className="landing2">
-            <div className="orange-overlay">
+            <div className="video-player2">
                     <ResponsivePlayer
                         url={briefing2}
                         onProgress={handleWatchComplete} />
                         <div className={watchComplete ? "marker marker--is-complete" : "marker marker--not-complete"}>
                             <div className="buttons1">
-                                <Link to="dashboard2" className="btn btn-primary" style={{ fontSize:  '0.9rem', padding: '0.3rem 2rem', fontWeight: 'bold' }}>
+                                <Link to="dashboard2" className="btn btn-primary" >
                                     LET'S PLAY!
                                 </Link>
                                 
                             </div>
                         </div>
                 </div>
-        </section>
+   
     )
 }
 

@@ -8,6 +8,8 @@ import Index from '../../games/garbage/index'
 import { Html } from 'drei';
 // import Tp from '../../img/tp.svg'
 
+import X from '../../../img/x.svg'
+
 function TouchPoint1({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
@@ -38,7 +40,7 @@ function TouchPoint1({ position, color, onClick }) {
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-inside6">
-                        <button className="close" onClick={() => setShowMessage(false)}>×</button>
+                        <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='300%' height='300%'></img></button>
                             <Alert.Heading>
                                 <Index />
                                 {/* <p>
