@@ -35,13 +35,13 @@ function Timesup() {
                 <div style={{ fontSize: '1.7rem', fontWeight: 'bolder', lineHeight: '5vh', letterSpacing: '2px', margin: '1rem' }}>
                     
                     <div className="option">
-                        <a href="dashboard2">
+                        <a href="briefing">
                             <h3 style={{ color: 'black', fontSize: '2rem', float: 'left', position: 'absolute', left: '-4%', bottom: '14%', color: 'white' }}
                                     >
                                         HOME
                             </h3>
                         </a>
-                        <a href="briefing">
+                        <a href="dashboard2">
                             <h3 style={{ color: 'black', fontSize: '2rem', float: 'left', position: 'absolute', right: '-4%', bottom: '14%', color: 'white' }}     
                                     >
                                         PLAY AGAIN
