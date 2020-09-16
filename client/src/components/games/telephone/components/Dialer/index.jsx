@@ -1,9 +1,9 @@
 import React from "react";
 import { useStore } from "../../store";
 import { Box, Button, Button1, Input, ButtonsContainer, CallButton } from "./atom";
-import phoneCall from '../../../../../audio/phoneCall.aac'
+import phoneCall from '../../../../../audio/phoneCall.mp3'
 import dialpad from '../../../../../audio/dialpad.mp3'
-import wrong from '../../../../../audio/wrongCall.aac'
+import wrong from '../../../../../audio/wrongCall.mp3'
 import Backgrounds from '../../../../../img/delete.png'
 
 var flag = 0;
@@ -61,7 +61,7 @@ export default () => {
         flag = 0;
         setNumber("");
         setCallValues(number);
-      }, 1000);
+      }, 5000);
  
       setCallButton(false);
     }

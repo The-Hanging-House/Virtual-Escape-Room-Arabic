@@ -609,7 +609,8 @@ const Dome = () => {
 
     setInterval(() => {
       if(ccom===6){
-        setCollectedMessage(true);       
+        setCollectedMessage(true);      
+        // new Audio(noteSound).play();
       }
     }, 2000);
     const texture = useLoader(THREE.TextureLoader, note)
@@ -686,7 +687,7 @@ const Dome = () => {
 function TouchPoint5({ position, color, onClick }) {
   const [showMessage, setShowMessage] = useState(false);
   const [collectedMessage, setCollectedMessage] = useState(false);
-  const [hovered, set] = useState(false)
+  const [hovered, set] = useState(false);
   const [coll, setColl] = useState(false);
   const [showProceed, setShowProceed] = useState('hidden');
   var puzzlePro;
@@ -968,7 +969,7 @@ function Scene2() {
                       <TouchPoint1 position={[-17, 1, -10]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint2 position={[-18, -7.5, -4.5]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint3 position={[1, -1, 2]} args={[3, 2, 1]} color='#F8A61F' />
-                      <TouchPoint4 position={[-4.8, -2.2, 0]} args={[3, 2, 1]} color='#F8A61F' />
+                      <TouchPoint4 position={[-4.5, -2, 0.2]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint5 position={[-25, -10, 10]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint6 position={[-25, -13.5, -6]} args={[3, 2, 1]} color='#F8A61F' />
                       {/* <Portal position={[-10, -12, -20]} args={[3, 2, 1]} color='#fff' /> */}
