@@ -6,7 +6,7 @@ import Spinner from '../layout/Spinner'
 import { getCurrentProfile } from '../../actions/profile'
 import bg from '../../img/component1.png'
 
-import Logout from './../logout/Logout'
+import Logout from './../logout/Logout1'
 
 import Music4 from '../../audio/Music4'
 
@@ -19,7 +19,9 @@ const Dashboard2 = ({ getCurrentProfile, auth: { user }, profile: { profile, loa
 
     return loading && profile === null ? <Spinner /> : 
     <Fragment>
-        <div className="bg-image"><div className="lock-up"></div></div>
+        <div className="bg-image"><div className="lock-up"></div>
+            <div className="logout" style={{ position: 'sticky', left: '55%', bottom: '19%', zIndex: '50' }}>{logout}</div>
+        </div>
         <div className="dashblock">
             <div className="bg-text1"></div>
             <img className="bg-text1" src={bg} alt="Dashboard" useMap="#workmap" width="600" height="420" />

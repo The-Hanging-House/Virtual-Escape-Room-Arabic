@@ -101,7 +101,7 @@ function Initimg(){
     return (
     <>
     <div style={{display: displayProp? 'none' : 'block', position: "absolute", zIndex: "200", left: "50%", top: "50%", transform: "translate(-50%, -50%)"}}>
-        <img src = {hint} style={{width: "150%", height: "150%"}}/>
+        <img src = {hint} style={{width: "80%", height: "80%"}}/>
     </div>
     </>
     )
