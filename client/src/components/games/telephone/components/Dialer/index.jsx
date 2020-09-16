@@ -23,6 +23,7 @@ export default () => {
     new Audio(dialpad).play();
   };
  
+  var flag = 0;
  
   const callNumber = "800296";
   const callNumber2 = "8004432";
@@ -31,7 +32,11 @@ export default () => {
     if (strNumber.length === callNumber.length && strNumber.localeCompare(callNumber)===0){
       var scene2 = new Date().getTime();
       localStorage.setItem('scene2', scene2);
-      new Audio(phoneCall).play();
+
+      if (flag === 0){
+        new Audio(phoneCall).play();
+        flag = 1;
+      }
       setTimeout(function(){
         window.location.href = '/end';
       }, 15000);

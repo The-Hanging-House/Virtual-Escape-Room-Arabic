@@ -58,6 +58,7 @@ extend({ OrbitControls })
 
 // Counts the number of boxes
 var x = 0;
+var y = 0;
 var ccom = 4;
 
 // value of X increments each time a box is collected
@@ -634,7 +635,7 @@ const Dome = () => {
                         <div className="alert-inside3" style={{ left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '100%'}}>
                             <Alert.Heading>
                                 <div>
-                                  <img src={note} alt='stickyNote' style={{ width: '100%' }} />
+                                  <img style={{ cursor: 'pointer' }} src={note} alt='stickyNote' style={{ width: '100%' }} />
                                 </div>
                             </Alert.Heading>
                             {/* <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
@@ -663,11 +664,11 @@ function TouchPoint5({ position, color, onClick }) {
   // function that checks the number of boxes collected
   setInterval(function(){
     puzzlePro = localStorage.getItem("puzzleComplete");
-    if(x === 13){
+    if(x === 13 && y === 0){
       setCollectedMessage(true);
     }if(coll){
       ccom=6;
-      x = 0;
+      y = 1;
       setCollectedMessage(false);
     } 
     if(puzzlePro === '1'){
