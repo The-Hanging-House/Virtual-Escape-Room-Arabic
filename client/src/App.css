@@ -1,8 +1,10 @@
 
 @font-face {
   font-family: 'Dubai W23', ;
-  src: url('./fonts/DubaiW23-Regular.woff') format('woff2'),
+  src: url('./fonts/DubaiW23-Regular.woff2') format('woff2'),
        url('./fonts/DubaiW23-Regular.woff') format('woff'),
+       url('./fonts/DubaiW23-Bold.woff2') format('woff2'),
+       url('./fonts/DubaiW23-Bold.woff') format('woff'),
        url('./fonts/PermanentMarker-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -415,6 +417,9 @@ body {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+.parent-bg-text {
+  width: 100vh;
+}
 .bg-text {
   background-color: white;
   color: black;
@@ -422,13 +427,13 @@ body {
   font-weight: bold;
   border: 3px solid #f1f1f1;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -43%);
+  top: 177px;
+  left: 37%;
+  width: 500px;
   z-index: 2;
-  width: 30%;
   padding: 20px;
   text-align: center;
+  height: 520px;
 }
 .bg-text-login {
   background-color: white;
@@ -437,13 +442,13 @@ body {
   font-weight: bold;
   border: 3px solid #f1f1f1;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -43%);
+  top: 177px;
   z-index: 2;
-  width: 30%;
+  left: 37%;
   padding: 20px;
   text-align: center;
+  height: 374px;
+  width: 450px;
 }
 .bg-text1 {
   /* background: url("./../src//img/01.png") no-repeat center/cover; */
@@ -714,13 +719,11 @@ h1 span {
 .alert-danger {
   font-family: "Dubai W23", sans-serif;
   color: red;
-  /* background-color: white; */
+  background: var(--danger-color);
   font-size: 1.1rem;
   position: absolute;
-  top: 670px;
-  left: 2px;
-  /* width: 50%; */
-  height: 38px;
+  top: 174px;
+  left: 36.5%;
   text-align: center;
   z-index: 10;
 }
@@ -1002,14 +1005,18 @@ h1 span {
   color: #707070;
   position: absolute;
   font-size: 1rem;
-  right: 161%;
-  top: -231px;
-  width: 100%;
+  right: 150%;
+  bottom: 50px;
+  width: 400px;
   z-index: 100;
   border-radius: 20px;
   border-style: solid;
   border-width: thin;
   border-color: #F8A61F;
+}
+.alert-inside22 button {
+  margin: 1rem;
+  margin-top: 10rem;
 }
 .alert-inside5 button {
   margin: 1rem;
@@ -1249,15 +1256,15 @@ h3 {
 
 
 @media(min-width: 992px){
-  .bg-text {
+  /* .bg-text {
     position: absolute;
-    /* transform: translate(-50%, -43%); */
+    
     z-index: 2;
     width: 400px;
     height: 425px;
     padding: 20px;
     text-align: center;
-  }
+  } */
   .bg-text .btn {
     font-weight: 600;
     letter-spacing: 3px;
@@ -1268,13 +1275,12 @@ h3 {
     font-size: 1.1rem;
   }
   .bg-text-login {
-    position: absolute;
-    transform: translate(-50%, -54%);
     z-index: 2;
     width: 400px;
     height: 395px;
-    padding: 20px;
     text-align: center;
+    left: 30%;
+    width: 450px;
   }
   .bg-text-login .btn {
     font-weight: 600;
@@ -1368,17 +1374,14 @@ h3 {
     top: 274%;
     left: 307px;
   }
-  .alert-inside22 {
+  /* .alert-inside22 {
     right: 124%;
     top: -231px;
-    width: 400px;
-  }
-  .alert-danger {
-    position: absolute;
-    top: 24%;
-    left: 0%;
-    width: 100%;
-  }
+    width: 129%;
+  } */
+  /* .alert-danger {
+    left: 2%;
+  } */
   .bg-text6 img {
     position: absolute;
     width: 175px;
@@ -1390,7 +1393,7 @@ h3 {
 
 @media(min-width: 1200px)
 {
-  .bg-text {
+  /* .bg-text {
     position: absolute;
     transform: translate(-50%, -43%);
     z-index: 2;
@@ -1398,7 +1401,7 @@ h3 {
     height: 507px;
     padding: 20px;
     text-align: center;
-  }
+  } */
   .bg-text .text-primary {
     position: absolute;
     transform: translate(-50%, 30%);
@@ -1437,13 +1440,12 @@ h3 {
     top: 25%;
   }
   .bg-text-login {
-    position: absolute;
-    transform: translate(-50%, -54%);
     z-index: 2;
     width: 400px;
     height: 395px;
-    padding: 20px;
     text-align: center;
+    left: 37%;
+    width: 450px;
   }
   .bg-text-login .btn {
     font-weight: 600;
@@ -1536,16 +1538,13 @@ h3 {
   .icons1 img {
     width: 120px;
   }
-  .alert-inside22 {
+  /* .alert-inside22 {
     right: 110%;
     top: -231px;
-  }
-  .alert-danger {
-    position: absolute;
-    top: 24%;
+  } */
+  /* .alert-danger {
     left: 0%;
-    width: 100%;
-  }
+  } */
   .bg-text6 img {
     position: absolute;
     width: 175px;
@@ -1628,16 +1627,13 @@ h3 {
   .icons1 img {
     width: 120px;
   }
-  .alert-inside22 {
-    right: 130%;
-    top: -231px;
-  }
-  .alert-danger {
-    position: absolute;
-    top: 24%;
+  /* .alert-inside22 {
+    right: 111%;
+    top: -162px;
+  } */
+  /* .alert-danger {
     left: 0%;
-    width: 100%;
-  }
+  } */
   .bg-text6 img {
     position: absolute;
     width: 175px;
@@ -1648,7 +1644,7 @@ h3 {
   
 }
 @media(max-width: 1199px) {
-  .bg-text {
+  /* .bg-text {
     position: absolute;
     transform: translate(-50%, -43%);
     z-index: 2;
@@ -1656,7 +1652,7 @@ h3 {
     height: 492px;
     padding: 20px;
     text-align: center;
-  }
+  } */
 .bg-text .form {
     height: 50%;
   }
@@ -1685,12 +1681,9 @@ h3 {
     bottom: 10%;
     left: 33%;
   }
-  .alert-danger {
-    position: absolute;
-    top: 24%;
+  /* .alert-danger {
     left: 0%;
-    width: 100%;
-  }
+  } */
     .bg-text6 img {
     position: absolute;
     width: 175px;
@@ -1701,7 +1694,7 @@ h3 {
 }
 
 @media(max-width: 991px){
-  .bg-text {
+  /* .bg-text {
     position: absolute;
     transform: translate(-50%, -46%);
     z-index: 2;
@@ -1709,13 +1702,10 @@ h3 {
     height: 470px;
     padding: 20px;
     text-align: center;
-  }
-  .alert-danger {
-    position: absolute;
-    top: 24%;
-    left: 0%;
-    width: 100%;
-  }
+  } */
+  /* .alert-danger {
+    left: 15%;
+  } */
   .bg-text .btn {
     font-weight: 600;
     letter-spacing: 3px;
@@ -1727,13 +1717,12 @@ h3 {
     font-size: 1.1rem;
   }
   .bg-text-login {
-    position: absolute;
-    transform: translate(-50%, -55%);
     z-index: 2;
     width: 400px;
     height: 395px;
-    padding: 20px;
     text-align: center;
+    left: 29%;
+    width: 450px;
   }
   .bg-text-login .btn {
     font-weight: 600;
@@ -1820,11 +1809,11 @@ h3 {
     top: 274%;;
     left: 29%;
   }
-  .alert-inside22 {
+  /* .alert-inside22 {
     right: 126%;
     top: -231px;
     width: 379px;
-  }
+  } */
   .bg-text6 img {
     position: absolute;
     width: 175px;
@@ -1832,5 +1821,10 @@ h3 {
     top: 87%;
     right: 15%;
   }
-
+  /* .alert-inside22 {
+    right: 124%;
+    top: -231px;
+    width: 100%;
+  
+  } */
 }
