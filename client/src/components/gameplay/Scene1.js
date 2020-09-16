@@ -25,6 +25,7 @@ import './style.css'
 
 import Music1 from '../../audio/Music1'
 import hint from '../../img/click.png'
+import A from '../../img/a.png'
 
 // import Tp from '../../img/tp.svg'
 
@@ -85,8 +86,7 @@ function Timer() {
 function Counter(){
     return (
         <div className="bg-text6">
-            <h1>0<span>/7</span></h1>
-            <h3>CHALLENGES</h3>
+            <img src={A} />
         </div>
     )
 }

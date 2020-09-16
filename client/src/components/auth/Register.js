@@ -185,7 +185,6 @@ if (number !== "" && number <= 14 ){
             name="school"
             value={school}
             onChange={(e) => onChange(e)}
-            style={{ WebkitUserSelect: 'text' }}
           />
         </div>
         <div style={{ marginTop: '1rem' }}>

@@ -33,8 +33,8 @@ const Login = ({ login, isAuthenticated }) => {
   return (
     <Fragment>
     <div className="bg-image"><div className="lock-up"></div></div>
-    
-    <div className="bg-text-login">
+      <div>
+      <div className="bg-text-login">
     <h1 className="large text-primary" style={{ fontSize: '1.4rem', top: '259px' }}>LOG IN</h1>
 <<<<<<< HEAD
       <form className="form" onSubmit={(e) => onSubmit(e)} >
@@ -74,6 +74,8 @@ const Login = ({ login, isAuthenticated }) => {
 
       
     </div>  
+      </div>
+
     </Fragment>
   );
 };

@@ -49,10 +49,10 @@ function Timesup() {
                         </a>
                     </div>
                     <div className="icons">
-                    <a target="_blank" href="https://connectwithnature.ae/">
+                    <a target="_blank" href="https://houbarafund.gov.ae/en/home">
                             <img style={{ float: 'left', position: 'absolute', left: '-4%', bottom: '14%' }} src={H}></img>
                         </a>
-                        <a target="_blank" href="https://houbarafund.gov.ae/en/home">
+                        <a target="_blank" href="https://connectwithnature.ae/">
                             <img style={{ float: 'right', position: 'absolute', right: '-4%', bottom: '14%' }} src={CWN}></img>
                         </a>
                     </div>
@@ -64,6 +64,7 @@ function Timesup() {
         
     )
 }
+
 
 
 export default Timesup;
