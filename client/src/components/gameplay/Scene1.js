@@ -154,8 +154,8 @@ function Scene1() {
             <Music1 />
             {intiImage} 
             {elementorso}
-            {counter}
-            {logout},
+            {logout}
+            {counter},
         </>
     );
 }
