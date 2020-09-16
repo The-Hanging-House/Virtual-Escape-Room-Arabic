@@ -61,7 +61,7 @@ export default () => {
         flag = 0;
         setNumber("");
         setCallValues(number);
-      }, 5000);
+      }, 1000);
  
       setCallButton(false);
     }
