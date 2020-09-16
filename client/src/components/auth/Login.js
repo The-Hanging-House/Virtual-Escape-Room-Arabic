@@ -39,7 +39,7 @@ const Login = ({ login, isAuthenticated }) => {
       <form className="form" onSubmit={(e) => onSubmit(e)} style={{ WebkitUserSelect: 'text' }} >
         <div className="form-group">
           <input
-            style={{top: '5px'}}
+            style={{top: '5px', WebkitUserSelect: 'text'}}
             type="text"
             placeholder="Username"
             name="username"
