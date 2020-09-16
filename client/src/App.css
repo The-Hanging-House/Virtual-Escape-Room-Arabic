@@ -578,6 +578,44 @@ h1 span {
   letter-spacing: 3px;
   font-weight: 600;
 }
+.mcq-text{
+  letter-spacing: 1px;
+  background: #FFE7B0;
+  padding-left: 19px;
+}
+.mcq-bounding-text{
+  position: absolute;
+  width: 531px;
+  top: 76px;
+  left: -5px;
+  padding-left: 36px;
+  /* text-align: center; */
+}
+.mcq-bound-total{
+  border-radius: 34px;
+  margin-top: 10px;
+  padding-left: 23px;
+  /* width: 566px; */
+}
+.mcq-text2{
+  letter-spacing: 1px;
+  background: #FFE7B0;
+  padding-left: 19px;
+}
+.mcq-bounding-text2{
+  position: absolute;
+  width: 531px;
+  top: 93px;
+  left: -5px;
+  padding-left: 36px;
+  /* text-align: center; */
+}
+.mcq-bound-total2{
+  border-radius: 34px;
+  margin-top: 10px;
+  padding-left: 23px;
+  /* width: 566px; */
+}
 .bg-text7 h1 {
   font-size: 2rem;
 }
@@ -1018,11 +1056,18 @@ h1 span {
   line-height: 2rem;
   padding-left: 2rem;
 }
+
+.alert-inside3 {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
 .alert-inside {
-  background-image: url(../src/img/popup.svg);
+  background-image: url(../src/img/popup3.svg);
   display: inline-block;
   background-repeat: no-repeat;
-  background-size: 100%;
+  /* background-size: 100%; */
   border-radius: 30px;
   color: white;
   padding: 2rem;
@@ -1034,13 +1079,6 @@ h1 span {
   top: -10vh;
   left: -32px
 }
-
-.alert-inside3 {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-}
-
 .alert-inside p {
   font-family: "Dubai W23", sans-serif;;
   color: black;
@@ -1060,13 +1098,91 @@ h1 span {
   cursor: pointer;
   font-weight: 600;
   font-size: 1.1rem;
+  transform: translate(8px, 8px);
+  letter-spacing: 2px;
+}
+
+.alert-insides {
+  background-image: url(../src/img/popup3.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  /* background-size: 100%; */
+  border-radius: 30px;
+  color: white;
+  padding: 2rem;
+  /*width: 30vw;
+  height: 35vh;*/
+  width: 572px;
+  height: 442px;
+  position: absolute;
+  /* top: -10vh; */
+  left: 16px
+}
+.alert-insides p {
+  font-family: "Dubai W23", sans-serif;;
+  color: black;
+  font-size: 1.2rem;
+  margin: 1rem 0rem;
+  font-weight: 900;
+  letter-spacing: 0px;
+}
+.alert-insides h3 {
+  font-family: "Dubai W23", sans-serif;
+  margin-bottom: 0.5rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transform: translate(8px, 8px);
+  letter-spacing: 2px;
+}
+
+
+.alert-insider {
+  background-image: url(../src/img/popup2.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 30px;
+  color: white;
+  padding: 2rem;
+  /*width: 30vw;
+  height: 35vh;*/
+  width: 607px;
+  height: 442px;
+  position: absolute;
+  top: -10vh;
+  left: -32px
+}
+.alert-insider p {
+  font-family: "Dubai W23", sans-serif;;
+  color: black;
+  font-size: 1.2rem;
+  margin: 1rem 0rem;
+  font-weight: 900;
+  letter-spacing: 0px;
+}
+.alert-insider h3 {
+  font-family: "Dubai W23", sans-serif;
+  margin-bottom: 0.5rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
   /* font-size: 1.2rem; */
   transform: translate(8px, 8px);
   /* font-weight: bold; */
   letter-spacing: 2px;
   /* padding-left: 1rem; */
   /* padding-left: 1rem; */
-
 }
 .alert-inside2 p {
   color: #FFFFFFC7;
