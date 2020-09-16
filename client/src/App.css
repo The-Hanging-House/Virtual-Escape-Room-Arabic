@@ -542,7 +542,7 @@ h1 span {
   color: white;
   position: absolute;
   top: 10%;
-  left: 17.5vh;
+  left: 10%;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 30%;
