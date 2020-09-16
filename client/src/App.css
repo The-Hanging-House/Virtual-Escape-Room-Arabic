@@ -276,7 +276,7 @@
   display: flex;
   flex-direction: column;
   margin: 2.5rem;
-  -webkit-user-select: text; 
+  /* -webkit-user-select: text;  */
 }
 .form-group {
   margin: 0.3rem 0;
@@ -306,7 +306,7 @@
   margin: 0;
   padding: 0;
   user-select: none; /* supported by Chrome and Opera */
-  -webkit-user-select: none;  
+  /* -webkit-user-select: none;   */
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
