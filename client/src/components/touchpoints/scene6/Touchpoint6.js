@@ -40,7 +40,7 @@ function TouchPoint6({ position, color, onClick }) {
                         >
                         <div className="alert-inside">
                             <div>
-                                <img src={egg} alt='Trunk2' width='100%' height='100%' />
+                                <img src={egg} width='100%' height='100%' />
                             </div>
                             {/* <Button onClick={() => setShowMessage(false)}>
                                 Close

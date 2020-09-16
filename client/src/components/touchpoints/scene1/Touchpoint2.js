@@ -57,7 +57,7 @@ function TouchPoint2({ position, color, onClick }) {
                          <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='300%' height='300%'></img></button>
                             <Alert.Heading>
                             <App />
-                            <img src={Lock} alt='pinlock' style={{ left: '-48px', transform: 'scale(0.9)', top: '-33px' }}/>
+                            <img src={Lock} style={{ left: '-48px', transform: 'scale(0.9)', top: '-33px' }}/>
                             </Alert.Heading>
                                 
                             

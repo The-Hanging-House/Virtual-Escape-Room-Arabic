@@ -18,6 +18,9 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
     }, [getCurrentProfile])
     // console.log(user && user.username)
     // console.log(user && user._id)
+
+    // const userName = user && user.username
+    
     return loading && profile === null ? <Spinner /> : 
     <Fragment>
         <div className="bg-image"><div className="lock-up"></div></div>

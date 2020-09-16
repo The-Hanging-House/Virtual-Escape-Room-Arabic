@@ -40,7 +40,7 @@ function TouchPoint4({ position, color, onClick }) {
                         >
                         <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
                             <div>
-                                <img src={egg} alt='Trunk2' width='100%' height='100%' />
+                                <img src={egg} width='100%' height='100%' />
                             </div>
                         </div>
                         </Alert>
