@@ -741,9 +741,9 @@ function TouchPoint5({ position, color, onClick }) {
                                   <button onClick={() => {setShowMessage(false); setColl(true)}} style={{visibility: showProceed, position: 'absolute', left: '746px', top: '94px', opacity: '0'}} className="btn btn-primary3">
                                       x
                                   </button>
-                                  <button onClick={() => {setShowMessage(false)}} style={{visibility: showMessage? 'visible' : 'hidden', position: 'absolute', left: '526px', top: '116px', opacity: '0'}} className="btn btn-primary3">
+                                  {/* <button onClick={() => {setShowMessage(false)}} style={{visibility: showMessage? 'visible' : 'hidden', position: 'absolute', left: '526px', top: '116px', opacity: '0'}} className="btn btn-primary3">
                                       x
-                                  </button>
+                                  </button> */}
                             </div>
                           </Alert.Heading>                       
                       </div>
