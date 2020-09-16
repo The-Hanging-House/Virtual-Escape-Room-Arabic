@@ -84,8 +84,7 @@ function Timer() {
 function Counter(){
     return (
         <div className="bg-text6">
-            <h1>0<span>/7</span></h1>
-            <h3>CHALLENGES</h3>
+            <img src={hint} />
         </div>
     )
 }
