@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.c046fee4.chunk.css",
-    "main.js": "/static/js/main.8033d495.chunk.js",
-    "main.js.map": "/static/js/main.8033d495.chunk.js.map",
+    "main.css": "/static/css/main.2e98663d.chunk.css",
+    "main.js": "/static/js/main.c6acd8c2.chunk.js",
+    "main.js.map": "/static/js/main.c6acd8c2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
     "static/css/2.1f156bdb.chunk.css": "/static/css/2.1f156bdb.chunk.css",
-    "static/js/2.0517870a.chunk.js": "/static/js/2.0517870a.chunk.js",
-    "static/js/2.0517870a.chunk.js.map": "/static/js/2.0517870a.chunk.js.map",
+    "static/js/2.369b79c4.chunk.js": "/static/js/2.369b79c4.chunk.js",
+    "static/js/2.369b79c4.chunk.js.map": "/static/js/2.369b79c4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.97d61621f4385ac0dbb01235b63a55ab.js": "/precache-manifest.97d61621f4385ac0dbb01235b63a55ab.js",
+    "precache-manifest.8c169fcf875866e35767b8891c8eda95.js": "/precache-manifest.8c169fcf875866e35767b8891c8eda95.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.1f156bdb.chunk.css.map": "/static/css/2.1f156bdb.chunk.css.map",
-    "static/css/main.c046fee4.chunk.css.map": "/static/css/main.c046fee4.chunk.css.map",
-    "static/js/2.0517870a.chunk.js.LICENSE.txt": "/static/js/2.0517870a.chunk.js.LICENSE.txt",
+    "static/css/main.2e98663d.chunk.css.map": "/static/css/main.2e98663d.chunk.css.map",
+    "static/js/2.369b79c4.chunk.js.LICENSE.txt": "/static/js/2.369b79c4.chunk.js.LICENSE.txt",
     "static/media/01.png": "/static/media/01.9b8d6da3.png",
     "static/media/Birds.mp3": "/static/media/Birds.f60776c4.mp3",
     "static/media/App.css": "/static/media/popup.26e6edd7.svg",
     "static/media/Party.mpeg": "/static/media/Party.068aa897.mpeg",
     "static/media/bg.png": "/static/media/bg.bbc1d809.png",
     "static/media/bgend.png": "/static/media/bgend.5c49681b.png",
-    "static/media/board.png": "/static/media/board.910a709e.png",
+    "static/media/board.png": "/static/media/board.390523b2.png",
     "static/media/briefing1.mp4": "/static/media/briefing1.6e8efd8b.mp4",
     "static/media/briefing2.mp4": "/static/media/briefing2.9d531761.mp4",
     "static/media/carDoor.mp3": "/static/media/carDoor.68ef1c02.mp3",
@@ -79,8 +79,8 @@
   "entrypoints": [
     "static/js/runtime-main.09b85ec0.js",
     "static/css/2.1f156bdb.chunk.css",
-    "static/js/2.0517870a.chunk.js",
-    "static/css/main.c046fee4.chunk.css",
-    "static/js/main.8033d495.chunk.js"
+    "static/js/2.369b79c4.chunk.js",
+    "static/css/main.2e98663d.chunk.css",
+    "static/js/main.c6acd8c2.chunk.js"
   ]
 }
