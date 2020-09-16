@@ -110,7 +110,7 @@ if (number !== "" && number <= 14 ){
       <div className="bg-image"><div className="lock-up"></div></div>
       <div className="bg-text">
       <h1 className="large text-primary">REGISTER</h1>
-      <form className="form" onSubmit={(e) => onSubmit(e)} style={{ WebkitUserSelect: 'none' }}>
+      <form className="form" onSubmit={(e) => onSubmit(e)} style={{ WebkitUserSelect: 'text' }}>
 
         <div className="form-group">
           <input
@@ -119,6 +119,7 @@ if (number !== "" && number <= 14 ){
             name="username"
             value={username}
             onChange={(e) => onChange(e)}
+            style={{ WebkitUserSelect: 'text' }}
           />
         </div>
         <div className="form-group" style={{display:'none' }}>
@@ -128,6 +129,7 @@ if (number !== "" && number <= 14 ){
             name="password"
             value={password}
             onChange={(e) => onChange(e)}
+            style={{ WebkitUserSelect: 'text' }}
           />
         </div>
         <div className="form-group" style={{display: 'none' }}>
@@ -137,6 +139,7 @@ if (number !== "" && number <= 14 ){
             name="password2"
             value={password2}
             onChange={(e) => onChange(e)}
+            style={{ WebkitUserSelect: 'text' }}
           />
         </div>
 
@@ -160,6 +163,7 @@ if (number !== "" && number <= 14 ){
               name="age"
               value={number}
               onChange={e => {setNumber(e.target.value); checkers()}}
+              style={{ WebkitUserSelect: 'text' }}
             />
         </div>
         <div className="form-group" style={{display: isVisible? 'none' : 'inline'}}>
@@ -170,6 +174,7 @@ if (number !== "" && number <= 14 ){
             name="email"
             value={textIs? textInput : username + "@e.com"}
             onChange={(e) => {setTextInput(e.target.value); onChange(e) }}
+            style={{ WebkitUserSelect: 'text' }}
           />
         </div>
         <div className="form-group" style={{display: isVisible? 'none' : 'inline'}}>
@@ -180,6 +185,7 @@ if (number !== "" && number <= 14 ){
             name="school"
             value={school}
             onChange={(e) => onChange(e)}
+            style={{ WebkitUserSelect: 'text' }}
           />
         </div>
         <div style={{ marginTop: '1rem' }}>
