@@ -541,9 +541,9 @@ h1 span {
   background-color: transparent;
   color: white;
   position: absolute;
-  top: 10%;
-  left: 10%;
-  transform: translate(-50%, -50%);
+  top: -2%;
+  left: -6%;
+  /* transform: translate(-50%, -50%); */
   z-index: 2;
   width: 30%;
   padding: 20px;
