@@ -9,7 +9,7 @@ export const Box = styled.div
   height: 439px;
   max-width: 359px;
   padding: 15px;
-  background-image: url(./telephone.png);
+  background-image: url(./telephone1.png);
   background-size: 350px;
   background-repeat: no-repeat;
   border-radius: 22.5px;
