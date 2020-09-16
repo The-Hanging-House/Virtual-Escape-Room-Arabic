@@ -23,7 +23,7 @@ import TouchPoint10 from '../touchpoints/scene1/Touchpoint10'
 import './style.css'
 
 import Music1 from '../../audio/Music1'
-import hint from '../../img/click.svg'
+import hint from '../../img/click.png'
 
 // import Tp from '../../img/tp.svg'
 
@@ -100,8 +100,8 @@ function Initimg(){
 
     return (
     <>
-    <div style={{display: displayProp? 'none' : 'block', position: "absolute", zIndex: "200", left: "50%", top: "50%", transform: "translate(-50%, -50%)"}}>
-        <img src = {hint} style={{width: "80%", height: "80%"}}/>
+    <div style={{display: displayProp? 'none' : 'block', position: "absolute", zIndex: "200", left: "60%", top: "50%", transform: "translate(-50%, -50%)"}}>
+        <img src = {hint} style={{width: "50%", height: "50%"}}/>
     </div>
     </>
     )

@@ -705,11 +705,11 @@ h1 span {
   font-family: "Dubai W23", sans-serif;
   color: red;
   /* background-color: white; */
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   position: absolute;
   top: 670px;
   left: 2px;
-  width: 100%;
+  /* width: 50%; */
   height: 38px;
   text-align: center;
   z-index: 10;
@@ -994,7 +994,7 @@ h1 span {
   font-size: 1rem;
   right: 161%;
   top: -231px;
-  width: 400px;
+  width: 100%;
   z-index: 100;
   border-radius: 20px;
   border-style: solid;
@@ -1241,7 +1241,7 @@ h3 {
 @media(min-width: 992px){
   .bg-text {
     position: absolute;
-    transform: translate(-50%, -43%);
+    /* transform: translate(-50%, -43%); */
     z-index: 2;
     width: 400px;
     height: 425px;
@@ -1259,7 +1259,7 @@ h3 {
   }
   .bg-text-login {
     position: absolute;
-    transform: translate(-50%, -43%);
+    transform: translate(-50%, -54%);
     z-index: 2;
     width: 400px;
     height: 395px;
@@ -1359,8 +1359,15 @@ h3 {
     left: 307px;
   }
   .alert-inside22 {
-    right: 120%;
+    right: 124%;
     top: -231px;
+    width: 400px;
+  }
+  .alert-danger {
+    position: absolute;
+    top: 24%;
+    left: 0%;
+    width: 100%;
   }
 }
 
@@ -1414,7 +1421,7 @@ h3 {
   }
   .bg-text-login {
     position: absolute;
-    transform: translate(-50%, -43%);
+    transform: translate(-50%, -54%);
     z-index: 2;
     width: 400px;
     height: 395px;
@@ -1516,6 +1523,12 @@ h3 {
     right: 110%;
     top: -231px;
   }
+  .alert-danger {
+    position: absolute;
+    top: 24%;
+    left: 0%;
+    width: 100%;
+  }
 }
 
 @media(max-width: 1599px) {
@@ -1591,6 +1604,16 @@ h3 {
   .icons1 img {
     width: 120px;
   }
+  .alert-inside22 {
+    right: 130%;
+    top: -231px;
+  }
+  .alert-danger {
+    position: absolute;
+    top: 24%;
+    left: 0%;
+    width: 100%;
+  }
   
 }
 @media(max-width: 1199px) {
@@ -1631,17 +1654,28 @@ h3 {
     bottom: 10%;
     left: 33%;
   }
+  .alert-danger {
+    position: absolute;
+    top: 24%;
+    left: 0%;
+    width: 100%;
+  }
 }
 
 @media(max-width: 991px){
   .bg-text {
+    position: absolute;
+    transform: translate(-50%, -46%);
+    z-index: 2;
     width: 400px;
-    height: 468px;
+    height: 470px;
+    padding: 20px;
+    text-align: center;
   }
   .alert-danger {
     position: absolute;
-    top: 30%;
-    left: 45.5%;
+    top: 24%;
+    left: 0%;
     width: 100%;
   }
   .bg-text .btn {
@@ -1656,7 +1690,7 @@ h3 {
   }
   .bg-text-login {
     position: absolute;
-    transform: translate(-50%, -43%);
+    transform: translate(-50%, -55%);
     z-index: 2;
     width: 400px;
     height: 395px;
