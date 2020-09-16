@@ -40,7 +40,7 @@ function TouchPoint6({ position, color, onClick }) {
                         >
                         <div className="alert-inside2">
                             <div>
-                                <img src={egg} alt='Egg' width='100%' height='100%' />
+                                <img src={egg} width='100%' height='100%' />
                             </div>
                             <p onClick={() => setShowMessage(false)} style={{ fontSize: '2rem'}}>
                                 Ok.

@@ -4,6 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth";
 import PropTypes from "prop-types";
+import { set } from "mongoose";
 // import { register } from "../../actions/auth";
 
 var runOnce = 0;
@@ -54,13 +55,19 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
     e.preventDefault();
     if(selectValue === ""){
-      setAlert("Please input username", "danger");
+      setAlert("Please Select Emirate", "danger");
+    } else if (username.length === 0 ){
+      setAlert("Please input username", "danger")
     }
     else if (password !== password2) {
       setAlert("Passwords do not match!", "danger");
-    } else {
+    } else if (username.length >= 9){
+      setAlert("Username 8 characters max", "danger")
+    }
+     else {
       register({ username, email, password });
     }
+    console.log(username.length)
   };
 
   
@@ -108,7 +115,7 @@ if (number !== "" && number <= 14 ){
         <div className="form-group">
           <input
             type="text"
-            placeholder="Username"
+            placeholder="Username (max 8 characters)"
             name="username"
             value={username}
             onChange={(e) => onChange(e)}

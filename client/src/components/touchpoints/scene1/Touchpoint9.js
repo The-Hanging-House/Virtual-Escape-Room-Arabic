@@ -41,7 +41,7 @@ function TouchPoint9({ position, color, onClick }) {
                         >
                         <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
                             <div>
-                                <img src={trunk1} alt='Trunk1' width='100%' height='100%' />
+                                <img src={trunk1} width='100%' height='100%' />
                             </div>
                         </div>
                         </Alert>

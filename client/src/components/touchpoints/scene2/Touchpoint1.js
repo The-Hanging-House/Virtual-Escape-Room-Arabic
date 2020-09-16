@@ -43,7 +43,7 @@ const TouchPoint1 = ({ position, color, onClick }) => {
                         <button className="close" onClick={() => setShowMessage(false)}>×</button>
 
                             <div>
-                                <img src={board} alt='board'  />
+                                <img src={board}   />
                             </div>
                         </div>
                         </Alert>

@@ -12,6 +12,7 @@ import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
 import Map from '../../img/map.svg'
+// import X from '../../img/x.svg'
 
 import note from './../../img/note.png'
 import xclose from './../../img/x.svg'
@@ -153,7 +154,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg} alt='egg' />
+                                  <img src={egg}  />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -242,7 +243,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg} alt='egg' />
+                                  <img src={egg}  />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -326,7 +327,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg} alt='egg' />
+                                  <img src={egg}  />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -409,7 +410,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg} alt='egg' />
+                                  <img src={egg}  />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -492,7 +493,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg} alt='egg' />
+                                  <img src={egg}  />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -575,7 +576,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg} alt='egg' />
+                                  <img src={egg}  />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -660,6 +661,7 @@ const Dome = () => {
                           <button style={{ position: 'absolute', top: '70px', right: '153px', cursor: 'pointer', opacity: '0', width: '166px', height: '102px' }} onClick={() => setShowMessage(false)}>XX</button>
                           {/* <img src={xclose} alt='stickyNote' style={{ width: '100%' }} /> */}
                         <div className="alert-inside3" style={{ left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '100%'}}>
+                        {/* <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='100%' height='300%' style={{cursor: 'pointer'}} ></img></button> */}
                             <Alert.Heading>
                                 <div>
                                   <img style={{ cursor: 'pointer' }} src={note} alt='stickyNote' style={{ width: '100%' }} />
