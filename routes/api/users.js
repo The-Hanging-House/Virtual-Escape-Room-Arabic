@@ -19,8 +19,7 @@ router.post(
     check("username", "Username is required!").not().isEmpty(),
     check(
       "password",
-      "Please enter a password with 6 or more characters"
-    ).isLength({ min: 6 }),
+    ).isLength({ min: 4 }),
     check("email", "Please include a valid Email").isEmail(),
   ],
   async (req, res) => {
@@ -38,7 +37,7 @@ router.post(
       if (user) {
         return res
           .status(400)
-          .json({ errors: [{ msg: "User already exists" }] });
+          .json({ errors: [{ msg: "Email already exists" }] });
       }
 
       // Get users gravatar

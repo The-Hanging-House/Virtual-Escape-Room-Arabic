@@ -28,7 +28,7 @@ router.post(
   "/",
   [
     check("username", "Username is required!").not().isEmpty(),
-    check("password", "Password is required").exists(),
+    check("password", ).exists(),
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -45,7 +45,7 @@ router.post(
       if (!user) {
         return res
           .status(400)
-          .json({ errors: [{ msg: "Invalid Credentials" }] });
+          .json({ errors: [{ msg: "Invalid Username" }] });
       }
 
       // Check if the credentials matches

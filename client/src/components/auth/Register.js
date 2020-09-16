@@ -54,7 +54,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
     e.preventDefault();
     if(selectValue === ""){
-      setAlert("Select an Emirate", "danger");
+      setAlert("Please input username", "danger");
     }
     else if (password !== password2) {
       setAlert("Passwords do not match!", "danger");
