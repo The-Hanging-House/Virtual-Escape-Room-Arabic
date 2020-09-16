@@ -84,7 +84,7 @@ function Timer() {
 function Counter(){
     return (
         <div className="bg-text6">
-            <img src={hint} />
+            <img src={hint} style={{width: "30%", height: "30%"}} />
         </div>
     )
 }
