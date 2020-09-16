@@ -7,6 +7,7 @@ import { Html } from 'drei';
 
 import board from '../../../img/board.png'
 
+
 const TouchPoint1 = ({ position, color, onClick }) => {
     const [hovered, set] = useState(false)
     // const [showButton, setShowButton] = useState(true);

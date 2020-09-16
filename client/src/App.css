@@ -271,6 +271,7 @@
   left: 0;
 }
 .form {
+  position: relative;
   max-width: 100%;
   height: 100%;
   display: flex;
@@ -278,6 +279,7 @@
   margin: 2.5rem;
   /* -webkit-user-select: text;  */
 }
+
 .form-group {
   margin: 0.3rem 0;
 }
@@ -548,6 +550,13 @@ h1 span {
   width: 30%;
   padding: 20px;
   text-align: center;
+}
+.bg-text6 img {
+  position: absolute;
+  width: 175px;
+  height: 116px;
+  top: 87%;
+  right: 31%;
 }
 .bg-text7 {
   font-family: "Dubai W23", sans-serif;
@@ -1370,6 +1379,13 @@ h3 {
     left: 0%;
     width: 100%;
   }
+  .bg-text6 img {
+    position: absolute;
+    width: 175px;
+    height: 116px;
+    top: 87%;
+    right: 15%;
+}
 }
 
 @media(min-width: 1200px)
@@ -1530,6 +1546,13 @@ h3 {
     left: 0%;
     width: 100%;
   }
+  .bg-text6 img {
+    position: absolute;
+    width: 175px;
+    height: 116px;
+    top: 87%;
+    right: 23%;
+}
 }
 
 @media(max-width: 1599px) {
@@ -1615,6 +1638,13 @@ h3 {
     left: 0%;
     width: 100%;
   }
+  .bg-text6 img {
+    position: absolute;
+    width: 175px;
+    height: 116px;
+    top: 87%;
+    right: 36%;
+}
   
 }
 @media(max-width: 1199px) {
@@ -1661,6 +1691,13 @@ h3 {
     left: 0%;
     width: 100%;
   }
+    .bg-text6 img {
+    position: absolute;
+    width: 175px;
+    height: 116px;
+    top: 87%;
+    right: 23%;
+}
 }
 
 @media(max-width: 991px){
@@ -1784,7 +1821,16 @@ h3 {
     left: 29%;
   }
   .alert-inside22 {
-    right: 120%;
+    right: 126%;
     top: -231px;
+    width: 379px;
   }
+  .bg-text6 img {
+    position: absolute;
+    width: 175px;
+    height: 116px;
+    top: 87%;
+    right: 15%;
+  }
+
 }
