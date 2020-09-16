@@ -36,7 +36,7 @@ const Login = ({ login, isAuthenticated }) => {
     
     <div className="bg-text-login">
     <h1 className="large text-primary" style={{ fontSize: '1.4rem', top: '259px' }}>LOG IN</h1>
-      <form className="form" onSubmit={(e) => onSubmit(e)}>
+      <form className="form" onSubmit={(e) => onSubmit(e)} style={{ WebkitUserSelect: 'none' }} >
         <div className="form-group">
           <input
             style={{top: '5px'}}
