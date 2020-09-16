@@ -605,7 +605,7 @@ const Dome = () => {
     const mesh = useRef()
     const [showMessage, setShowMessage] = useState(false);
     const [hovered, set] = useState(false);
-    const [collectedMessage, setCollectedMessage] = useState(true);
+    const [collectedMessage, setCollectedMessage] = useState(false);
 
     setInterval(() => {
       if(ccom===6){
