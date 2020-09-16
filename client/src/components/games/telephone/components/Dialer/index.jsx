@@ -39,7 +39,7 @@ export default () => {
       }
       setTimeout(function(){
         window.location.href = '/end';
-      }, 15000);
+      }, 5000);
     }
     
  

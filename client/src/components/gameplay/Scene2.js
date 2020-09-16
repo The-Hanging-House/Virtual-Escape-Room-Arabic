@@ -97,6 +97,7 @@ const Dome = () => {
   function Box1(props) {
     const mesh = useRef()
     const [collectedMessage, setCollectedMessage] = useState(false)
+    const [hovered, set] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
     if(collectedMessage){
       counter();
@@ -119,7 +120,8 @@ const Dome = () => {
     // useFrame(({ camera, mouse }) => {
     //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
     // })
-  
+    useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
+
     return (
     
       <mesh
@@ -127,6 +129,8 @@ const Dome = () => {
         ref={mesh}
         rotation={[2, 2.2, 6.6]}
         scale={collectedMessage ? [0, 0, 0] : [1, 1, 1]}
+        onPointerOver={() => set(true)}
+          onPointerOut={() => set(false)}
         onClick={() => setShowMessage(true)}>
         <planeBufferGeometry attach="geometry" args={[1, 1, 1]} style={{visibility: collectedMessage? 'hidden':'visible', }}/>
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
@@ -177,7 +181,8 @@ const Dome = () => {
   
   function Box2(props) {
     const mesh = useRef()
-    const [collectedMessage, setCollectedMessage] = useState(false)
+    const [collectedMessage, setCollectedMessage] = useState(false);
+    const [hovered, set] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
     if(collectedMessage){
       counter();
@@ -204,7 +209,7 @@ const Dome = () => {
     // if(collectedMessage){
     //     Scene2(1)
     // }
-
+    useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
 
     return (        
             
@@ -213,6 +218,8 @@ const Dome = () => {
         {...props}
         ref={mesh}
         scale={collectedMessage ? [0, 0, 0] : [1, 1, 1]}
+        onPointerOver={() => set(true)}
+        onPointerOut={() => set(false)}
         onClick={() => setShowMessage(true)}>
         <planeBufferGeometry attach="geometry" args={[1, 1, 1]} style={{visibility: collectedMessage? 'hidden':'visible', }}/>
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
@@ -264,6 +271,7 @@ const Dome = () => {
   function Box3(props) {
     const mesh = useRef()
     const [showMessage, setShowMessage] = useState(false);
+    const [hovered, set] = useState(false)
     const [collectedMessage, setCollectedMessage] = useState(false)
     if(collectedMessage){
       counter();
@@ -286,6 +294,7 @@ const Dome = () => {
     // useFrame(({ camera, mouse }) => {
     //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
     // })
+    useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
   
     return (
       <mesh
@@ -293,6 +302,8 @@ const Dome = () => {
         ref={mesh}
         rotation={[3, 5, 1.5]}
         scale={collectedMessage ? [0, 0, 0] : [1, 1, 1]}
+        onPointerOver={() => set(true)}
+        onPointerOut={() => set(false)}
         onClick={() => setShowMessage(true)}>
         <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
@@ -343,6 +354,7 @@ const Dome = () => {
   function Box4(props) {
     const mesh = useRef()
     const [showMessage, setShowMessage] = useState(false);
+    const [hovered, set] = useState(false)
     const [collectedMessage, setCollectedMessage] = useState(false)
     if(collectedMessage){
       counter();
@@ -365,6 +377,7 @@ const Dome = () => {
     // useFrame(({ camera, mouse }) => {
     //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
     // })
+    useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
   
     return (
       <mesh
@@ -372,6 +385,8 @@ const Dome = () => {
         ref={mesh}
         rotation={[1, 2, 1.5]}
         scale={collectedMessage ? [0, 0, 0] : [1, 1, 1]}
+        onPointerOver={() => set(true)}
+        onPointerOut={() => set(false)}
         onClick={() => setShowMessage(true)}>
         <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
@@ -422,6 +437,7 @@ const Dome = () => {
   function Box5(props) {
     const mesh = useRef()
     const [showMessage, setShowMessage] = useState(false);
+    const [hovered, set] = useState(false)
     const [collectedMessage, setCollectedMessage] = useState(false)
     if(collectedMessage){
       counter();
@@ -444,6 +460,7 @@ const Dome = () => {
     // useFrame(({ camera, mouse }) => {
     //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
     // })
+    useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
   
     return (
       <mesh
@@ -451,6 +468,8 @@ const Dome = () => {
         ref={mesh}
         rotation={[1, 2, 1]}
         scale={collectedMessage ? [0, 0, 0] : [1, 1, 1]}
+        onPointerOver={() => set(true)}
+        onPointerOut={() => set(false)}
         onClick={() => setShowMessage(true)}>
         <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
@@ -501,6 +520,7 @@ const Dome = () => {
   function Box6(props) {
     const mesh = useRef()
     const [showMessage, setShowMessage] = useState(false);
+    const [hovered, set] = useState(false)
     const [collectedMessage, setCollectedMessage] = useState(false)
     if(collectedMessage){
       counter();
@@ -523,6 +543,7 @@ const Dome = () => {
     // useFrame(({ camera, mouse }) => {
     //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
     // })
+    useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
   
     return (
       <mesh
@@ -530,6 +551,8 @@ const Dome = () => {
         ref={mesh}
         rotation={[1.2, 2.5, 3]}
         scale={collectedMessage ? [0, 0, 0] : [1, 1, 1]}
+        onPointerOver={() => set(true)}
+        onPointerOut={() => set(false)}
         onClick={() => setShowMessage(true)}>
         <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
@@ -581,7 +604,8 @@ const Dome = () => {
   function Box7(props) {
     const mesh = useRef()
     const [showMessage, setShowMessage] = useState(false);
-    const [collectedMessage, setCollectedMessage] = useState(false)
+    const [hovered, set] = useState(false);
+    const [collectedMessage, setCollectedMessage] = useState(true);
 
     setInterval(() => {
       if(ccom===6){
@@ -605,6 +629,7 @@ const Dome = () => {
     // useFrame(({ camera, mouse }) => {
     //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
     // })
+    useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
   
     return (
       <mesh
@@ -613,6 +638,8 @@ const Dome = () => {
         rotation={[4.5, 2, 2.5]}
         scale={collectedMessage ? [2, 2, 2, 2] : [0, 0, 0]}
         // scale={[0, 0, 0]}
+        onPointerOver={() => set(true)}
+        onPointerOut={() => set(false)}
         onClick={() => setShowMessage(true)}>
         <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
         <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />
@@ -631,8 +658,8 @@ const Dome = () => {
                         // dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                         
-                          <img src={xclose} style={{ width: '100%' }} />
+                          <button style={{ position: 'absolute', top: '70px', right: '153px', cursor: 'pointer', opacity: '0', width: '166px', height: '102px' }} onClick={() => setShowMessage(false)}>XX</button>
+                          {/* <img src={xclose} alt='stickyNote' style={{ width: '100%' }} /> */}
                         <div className="alert-inside3" style={{ left: '-15%', display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '100%'}}>
                         {/* <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='100%' height='300%' style={{cursor: 'pointer'}} ></img></button> */}
                             <Alert.Heading>
@@ -760,7 +787,7 @@ function TouchPoint6({ position, color, onClick }) {
 
   }, 1000);
   
-  // useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
+  useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
  
   return (
       <mesh 
@@ -933,7 +960,7 @@ function Scene2() {
                       <Box5 position={[-12, -13, 3.5]} />
                       <Box6 position={[-5, -1.6, 15]} />
                       <ambientLight intensity={0.7}/>
-                      <Box7 position={[-20, -10, 4]}/>
+                      <Box7 position={[-20, -10, 9]}/>
                       <TouchPoint1 position={[-17, 1, -10]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint2 position={[-18, -7.5, -4.5]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint3 position={[1, -1, 2]} args={[3, 2, 1]} color='#F8A61F' />
