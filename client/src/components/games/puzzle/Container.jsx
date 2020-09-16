@@ -102,7 +102,7 @@ export const Container = () => {
             ))}
           </div>
           <div className='puzzleBoard' style={{ display: boxDisplay? 'block' : 'none'}}>
-            <img src={completedPuzzle} style={{height: "493px", position: 'absolute', left: '-284px', top: '-27px', transform: 'scale(1.1)'}} />
+            <img src={completedPuzzle} style={{height: "493px", position: 'absolute', left: '-105px', top: '-27px', transform: 'scale(1.1)'}} />
           </div>
 
       </div>

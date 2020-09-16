@@ -686,6 +686,7 @@ const Dome = () => {
 function TouchPoint5({ position, color, onClick }) {
   const [showMessage, setShowMessage] = useState(false);
   const [collectedMessage, setCollectedMessage] = useState(false);
+  const [hovered, set] = useState(false)
   const [coll, setColl] = useState(false);
   const [showProceed, setShowProceed] = useState('hidden');
   var puzzlePro;
@@ -708,11 +709,14 @@ function TouchPoint5({ position, color, onClick }) {
     // console.log(puzzlePro)
   }, 1000);
 
-  
+  useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
+
   return (
       <mesh 
           scale={collectedMessage ? [0.4, 0.4, 0.4] : [0, 0, 0]}
           position={position}
+          onPointerOver={() => set(true)}
+          onPointerOut={() => set(false)}
           onClick={() => {setShowMessage(true); new Audio(paper).play()}}>
           <sphereGeometry attach="geometry" args={[1, 32, 32]} />
           <meshBasicMaterial attach="material" color="orange" /> 
@@ -734,7 +738,7 @@ function TouchPoint5({ position, color, onClick }) {
                           <Alert.Heading>
                             <Puzzle />
                              <div>
-                                  <button onClick={() => {setShowMessage(false); setColl(true)}} style={{visibility: showProceed, position: 'absolute', left: '566px', top: '94px', opacity: '0'}} className="btn btn-primary3">
+                                  <button onClick={() => {setShowMessage(false); setColl(true)}} style={{visibility: showProceed, position: 'absolute', left: '746px', top: '94px', opacity: '0'}} className="btn btn-primary3">
                                       x
                                   </button>
                                   <button onClick={() => {setShowMessage(false)}} style={{visibility: showMessage? 'visible' : 'hidden', position: 'absolute', left: '526px', top: '116px', opacity: '0'}} className="btn btn-primary3">
