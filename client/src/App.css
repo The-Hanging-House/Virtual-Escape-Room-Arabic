@@ -715,6 +715,18 @@ h1 span {
   top: -270px;
   left: -20px;
 }
+.alerts {
+  /* background-image: url(../src/img/popup.svg); */
+  position: relative;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 30px;
+  color: white;
+  padding: 5px;
+  /* width: 100%; */
+  height: 35vh;
+}
 .alert-note {
   /* background-image: url(../src/img/popup.svg); */
   display: inline-block;
@@ -734,9 +746,10 @@ h1 span {
   color: red;
   background: var(--danger-color);
   font-size: 1.1rem;
-  position: absolute;
-  top: 174px;
-  left: 36.5%;
+  position: fixed;
+  top: 170px;
+  left: 0;
+  width: 100%;
   text-align: center;
   z-index: 10;
 }
