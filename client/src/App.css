@@ -450,6 +450,19 @@ body {
   height: 374px;
   width: 450px;
 }
+.bg-text-login .btn {
+  font-weight: 600;
+  letter-spacing: 3px;
+  border-radius: 30px;
+  position: relative;
+  top: 37px;
+  width: 60%;
+  font-size: 1.1rem;
+}
+.bg-text-login p {
+  position: relative;
+  top: 10%;
+}
 .bg-text1 {
   /* background: url("./../src//img/01.png") no-repeat center/cover; */
   transform: translate(55%, -100%);
@@ -747,6 +760,18 @@ h1 span {
   top: -270px;
   left: -20px;
 }
+.alerts {
+  /* background-image: url(../src/img/popup.svg); */
+  position: relative;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 30px;
+  color: white;
+  padding: 5px;
+  /* width: 100%; */
+  height: 35vh;
+}
 .alert-note {
   /* background-image: url(../src/img/popup.svg); */
   display: inline-block;
@@ -766,9 +791,10 @@ h1 span {
   color: red;
   background: var(--danger-color);
   font-size: 1.1rem;
-  position: absolute;
-  top: 174px;
-  left: 36.5%;
+  position: fixed;
+  top: 170px;
+  left: 0;
+  width: 100%;
   text-align: center;
   z-index: 10;
 }
@@ -1456,15 +1482,13 @@ h3 {
 
 
 @media(min-width: 992px){
-  /* .bg-text {
+  .bg-text {
     position: absolute;
-    
-    z-index: 2;
-    width: 400px;
-    height: 425px;
-    padding: 20px;
-    text-align: center;
-  } */
+    top: 177px;
+    left: 27%;
+    width: 500px;
+    height: 520px;
+  }
   .bg-text .btn {
     font-weight: 600;
     letter-spacing: 3px;
@@ -1479,7 +1503,7 @@ h3 {
     width: 400px;
     height: 395px;
     text-align: center;
-    left: 30%;
+    left: 28%;
     width: 450px;
   }
   .bg-text-login .btn {
@@ -1493,7 +1517,7 @@ h3 {
   }
   .bg-text-login p {
     position: relative;
-    top: 19%;
+    top: 10%;
   }
   .dashblock {
     left: 5%;
@@ -1580,7 +1604,7 @@ h3 {
     width: 129%;
   } */
   /* .alert-danger {
-    left: 2%;
+    left: 34%;
   } */
   .bg-text6 img {
     position: absolute;
@@ -1593,15 +1617,13 @@ h3 {
 
 @media(min-width: 1200px)
 {
-  /* .bg-text {
+  .bg-text {
     position: absolute;
-    transform: translate(-50%, -43%);
-    z-index: 2;
-    width: 473px;
-    height: 507px;
-    padding: 20px;
-    text-align: center;
-  } */
+    top: 177px;
+    left: 31%;
+    width: 500px;
+    height: 520px;
+  }
   .bg-text .text-primary {
     position: absolute;
     transform: translate(-50%, 30%);
@@ -1644,7 +1666,7 @@ h3 {
     width: 400px;
     height: 395px;
     text-align: center;
-    left: 37%;
+    left: 35%;
     width: 450px;
   }
   .bg-text-login .btn {
@@ -1658,7 +1680,7 @@ h3 {
   }
   .bg-text-login p {
     position: relative;
-    top: 19%;
+    top: 12%;
   }
   .bg-text1
   {
@@ -1743,7 +1765,7 @@ h3 {
     top: -231px;
   } */
   /* .alert-danger {
-    left: 0%;
+    left: 20%;
   } */
   .bg-text6 img {
     position: absolute;
@@ -1754,7 +1776,15 @@ h3 {
 }
 }
 
-@media(max-width: 1599px) {
+@media(max-width: 1599px) 
+{
+  .bg-text {
+    position: absolute;
+    top: 177px;
+    left: 31%;
+    width: 500px;
+    height: 520px;
+  }
   .dashblock {
     left: 12%;
     bottom: 9%;
@@ -1832,7 +1862,7 @@ h3 {
     top: -162px;
   } */
   /* .alert-danger {
-    left: 0%;
+    left: 20%;
   } */
   .bg-text6 img {
     position: absolute;
@@ -1841,18 +1871,24 @@ h3 {
     top: 87%;
     right: 36%;
 }
+.bg-text-login {
+  z-index: 2;
+  width: 400px;
+  height: 395px;
+  text-align: center;
+  left: 33%;
+  width: 450px;
+}
   
 }
 @media(max-width: 1199px) {
-  /* .bg-text {
+  .bg-text {
     position: absolute;
-    transform: translate(-50%, -43%);
-    z-index: 2;
-    width: 450px;
-    height: 492px;
-    padding: 20px;
-    text-align: center;
-  } */
+    top: 177px;
+    left: 26%;
+    width: 500px;
+    height: 520px;
+  }
 .bg-text .form {
     height: 50%;
   }
@@ -1891,21 +1927,24 @@ h3 {
     top: 87%;
     right: 23%;
 }
+.bg-text-login {
+  z-index: 2;
+  width: 400px;
+  height: 395px;
+  text-align: center;
+  left: 29.5%;
+  width: 450px;
+}
 }
 
 @media(max-width: 991px){
-  /* .bg-text {
+  .bg-text {
     position: absolute;
-    transform: translate(-50%, -46%);
-    z-index: 2;
-    width: 400px;
-    height: 470px;
-    padding: 20px;
-    text-align: center;
-  } */
-  /* .alert-danger {
-    left: 15%;
-  } */
+    top: 177px;
+    left: 27%;
+    width: 500px;
+    height: 520px;
+  }
   .bg-text .btn {
     font-weight: 600;
     letter-spacing: 3px;
