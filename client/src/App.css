@@ -450,6 +450,19 @@ body {
   height: 374px;
   width: 450px;
 }
+.bg-text-login .btn {
+  font-weight: 600;
+  letter-spacing: 3px;
+  border-radius: 30px;
+  position: relative;
+  top: 37px;
+  width: 60%;
+  font-size: 1.1rem;
+}
+.bg-text-login p {
+  position: relative;
+  top: 10%;
+}
 .bg-text1 {
   /* background: url("./../src//img/01.png") no-repeat center/cover; */
   transform: translate(55%, -100%);
@@ -1277,7 +1290,7 @@ h3 {
     width: 400px;
     height: 395px;
     text-align: center;
-    left: 29%;
+    left: 28%;
     width: 450px;
   }
   .bg-text-login .btn {
@@ -1291,7 +1304,7 @@ h3 {
   }
   .bg-text-login p {
     position: relative;
-    top: 19%;
+    top: 10%;
   }
   .dashblock {
     left: 5%;
@@ -1378,7 +1391,7 @@ h3 {
     width: 129%;
   } */
   /* .alert-danger {
-    left: 2%;
+    left: 34%;
   } */
   .bg-text6 img {
     position: absolute;
@@ -1440,7 +1453,7 @@ h3 {
     width: 400px;
     height: 395px;
     text-align: center;
-    left: 33%;
+    left: 35%;
     width: 450px;
   }
   .bg-text-login .btn {
@@ -1454,7 +1467,7 @@ h3 {
   }
   .bg-text-login p {
     position: relative;
-    top: 19%;
+    top: 12%;
   }
   .bg-text1
   {
@@ -1539,7 +1552,7 @@ h3 {
     top: -231px;
   } */
   /* .alert-danger {
-    left: 0%;
+    left: 20%;
   } */
   .bg-text6 img {
     position: absolute;
@@ -1555,7 +1568,7 @@ h3 {
   .bg-text {
     position: absolute;
     top: 177px;
-    left: 36%;
+    left: 31%;
     width: 500px;
     height: 520px;
   }
@@ -1636,7 +1649,7 @@ h3 {
     top: -162px;
   } */
   /* .alert-danger {
-    left: 0%;
+    left: 20%;
   } */
   .bg-text6 img {
     position: absolute;
@@ -1650,7 +1663,7 @@ h3 {
   width: 400px;
   height: 395px;
   text-align: center;
-  left: 37.5%;
+  left: 33%;
   width: 450px;
 }
   
@@ -1659,7 +1672,7 @@ h3 {
   .bg-text {
     position: absolute;
     top: 177px;
-    left: 30.5%;
+    left: 26%;
     width: 500px;
     height: 520px;
   }
@@ -1706,7 +1719,7 @@ h3 {
   width: 400px;
   height: 395px;
   text-align: center;
-  left: 33%;
+  left: 29.5%;
   width: 450px;
 }
 }
