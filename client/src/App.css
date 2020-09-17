@@ -426,10 +426,12 @@ body {
   border-radius: 50px;
   font-weight: bold;
   border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 177px;
-  left: 37%;
-  width: 500px;
+  position: fixed;
+  top: 279px;
+  width: 483px;
+  left: 51%;
+  margin-top: -100px;
+  margin-left: -250px;
   z-index: 2;
   padding: 20px;
   text-align: center;
@@ -441,14 +443,16 @@ body {
   border-radius: 50px;
   font-weight: bold;
   border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 177px;
   z-index: 2;
-  left: 37%;
+  position: fixed;
+  width: 483px;
+  top: 279px;
+  left: 51%;
+  margin-top: -100px;
+  margin-left: -250px;
   padding: 20px;
   text-align: center;
-  height: 374px;
-  width: 450px;
+  height: 373px;
 }
 .bg-text-login .btn {
   font-weight: 600;
@@ -793,7 +797,7 @@ h1 span {
   background: var(--danger-color);
   font-size: 1.1rem;
   position: fixed;
-  top: 170px;
+  top: 174px;
   left: 0;
   width: 100%;
   text-align: center;
@@ -1505,11 +1509,11 @@ h3 {
 }
 .dashblock {
   position: absolute;
-  bottom: 0;
-  left: 25%;
-  width: 70vw;
+  left: 15%;
+  width: 74vw;
   height: 90%;
   z-index: 0;
+  bottom: 15%;
 }
 
 
@@ -1517,13 +1521,13 @@ h3 {
 
 
 @media(min-width: 992px){
-  .bg-text {
+  /* .bg-text {
     position: absolute;
     top: 177px;
     left: 27%;
     width: 500px;
     height: 520px;
-  }
+  } */
   .bg-text .btn {
     font-weight: 600;
     letter-spacing: 3px;
@@ -1533,14 +1537,12 @@ h3 {
     width: 60%;
     font-size: 1.1rem;
   }
-  .bg-text-login {
+  /* .bg-text-login {
     z-index: 2;
     width: 400px;
     height: 395px;
     text-align: center;
-    left: 28%;
-    width: 450px;
-  }
+  } */
   .bg-text-login .btn {
     font-weight: 600;
     letter-spacing: 3px;
@@ -1555,8 +1557,8 @@ h3 {
     top: 10%;
   }
   .dashblock {
-    left: 5%;
-    bottom: 5%;
+    left: -5%;
+    bottom: 11%;
 }
   .bg-text1
   {
@@ -1582,7 +1584,6 @@ h3 {
     position: absolute;
     top: 478px;
     left: 352px;
-    /* transform: translate(-50%, -50%); */
     transform: none;
     z-index: 2;
     width: 185px;
@@ -1593,7 +1594,6 @@ h3 {
     position: absolute;
     top: 547px;
     left: 470px;
-    /* transform: translate(-50%, -50%); */
     transform: none;
     z-index: 2;
     width: 184px;
@@ -1652,13 +1652,13 @@ h3 {
 
 @media(min-width: 1200px)
 {
-  .bg-text {
+  /* .bg-text {
     position: absolute;
     top: 177px;
     left: 31%;
     width: 500px;
     height: 520px;
-  }
+  } */
   .bg-text .text-primary {
     position: absolute;
     transform: translate(-50%, 30%);
@@ -1696,14 +1696,12 @@ h3 {
     position: relative;
     top: 25%;
   }
-  .bg-text-login {
+  /* .bg-text-login {
     z-index: 2;
     width: 400px;
     height: 395px;
     text-align: center;
-    left: 35%;
-    width: 450px;
-  }
+  } */
   .bg-text-login .btn {
     font-weight: 600;
     letter-spacing: 3px;
@@ -1730,11 +1728,9 @@ h3 {
   }
   .lead1
   {
-    left: 15.2vw;
-    top: 14vh;
     font-size: 2rem;
-    left: 123px;
-    top: 204px;
+    left: 112px;
+    top: 176px;
   }
   .button-1 {
     position: absolute;
@@ -1751,7 +1747,6 @@ h3 {
     position: absolute;
     top: 720px;
     left: 510px;
-    /*transform: translate(-50%, -50%);*/
     transform: none;
     z-index: 2;
     width: 220px;
@@ -1760,8 +1755,8 @@ h3 {
   }
 
   .dashblock {
-    bottom: 105px;
-    left: 19%;
+    left: 17%;
+    bottom: 25%
   }
   /* .alert-inside5 {
     right: 700px;
@@ -1813,15 +1808,15 @@ h3 {
 
 @media(max-width: 1599px) 
 {
-  .bg-text {
+  /* .bg-text {
     position: absolute;
     top: 177px;
     left: 31%;
     width: 500px;
     height: 520px;
-  }
+  } */
   .dashblock {
-    left: 12%;
+    left: 7%;
     bottom: 9%;
   }
   .bg-text1
@@ -1840,14 +1835,14 @@ h3 {
     /*left: 15.2vw;*/
     /*top: 14vh;*/
     font-size: 24px;
-    left: 123px;
-    top: 146px;
+    left: 130px;
+    top: 130px;
   }
   .button-1 {
     position: absolute;
-    top: 489px;
-    left: 460px;  
-    transform: translate(-50%, -50%);
+    top: 461px;
+    left: 469px;  
+    /* transform: translate(-50%, -50%); */
     transform: none;
     z-index: 2;
     width: 185px;
@@ -1856,9 +1851,8 @@ h3 {
   }
   .button-2 {
     position: absolute;
-    top: 547px;
+    top: 519px;
     left: 470px;
-    /* transform: translate(-50%, -50%); */
     transform: none;
     z-index: 2;
     width: 184px;
@@ -1906,24 +1900,22 @@ h3 {
     top: 87%;
     right: 36%;
 }
-.bg-text-login {
+/* .bg-text-login {
   z-index: 2;
   width: 400px;
   height: 395px;
   text-align: center;
-  left: 33%;
-  width: 450px;
-}
+} */
   
 }
 @media(max-width: 1199px) {
-  .bg-text {
+  /* .bg-text {
     position: absolute;
     top: 177px;
     left: 26%;
     width: 500px;
     height: 520px;
-  }
+  } */
 .bg-text .form {
     height: 50%;
   }
@@ -1962,24 +1954,22 @@ h3 {
     top: 87%;
     right: 23%;
 }
-.bg-text-login {
+/* .bg-text-login {
   z-index: 2;
   width: 400px;
   height: 395px;
   text-align: center;
-  left: 29.5%;
-  width: 450px;
-}
+} */
 }
 
 @media(max-width: 991px){
-  .bg-text {
+  /* .bg-text {
     position: absolute;
     top: 177px;
     left: 27%;
     width: 500px;
     height: 520px;
-  }
+  } */
   .bg-text .btn {
     font-weight: 600;
     letter-spacing: 3px;
@@ -1990,14 +1980,12 @@ h3 {
     width: 60%;
     font-size: 1.1rem;
   }
-  .bg-text-login {
+  /* .bg-text-login {
     z-index: 2;
     width: 400px;
     height: 395px;
     text-align: center;
-    left: 29%;
-    width: 450px;
-  }
+  } */
   .bg-text-login .btn {
     font-weight: 600;
     letter-spacing: 3px;
@@ -2032,13 +2020,14 @@ h3 {
     /*left: 15.2vw;*/
     /*top: 14vh;*/
     font-size: 22px;
-    left: 50px;
-    top: 106px;
+    left: 55px;
+    top: 92px;
+
   }
   .button-1 {
     position: absolute;
-    top: 399px;
-    left: 287px;
+    top: 375px;
+    left: 295px;
     transform: translate(-50%, -50%);
     transform: none;
     z-index: 2;
@@ -2048,9 +2037,8 @@ h3 {
   }
   .button-2 {
     position: absolute;
-    top: 455px;
+    top: 430px;
     left: 300px;
-    /*transform: translate(-50%, -50%);*/
     transform: none;
     z-index: 2;
     width: 185px;
