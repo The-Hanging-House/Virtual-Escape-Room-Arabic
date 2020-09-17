@@ -53,7 +53,7 @@ function TouchPoint3({ position, color, onClick }) {
                         // dismissible
                         onClose={() => setShowMessage(false)}
                         >
-                        <div className="alert-inside4">
+                        <div className="alert-insides1">
                         <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='250%' height='250%'></img></button>
                             <Alert.Heading>
                                 <p style={{ fontSize: '1.1rem', color: 'black' }}>

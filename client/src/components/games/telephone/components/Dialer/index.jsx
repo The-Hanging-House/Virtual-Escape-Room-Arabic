@@ -20,7 +20,7 @@ export default () => {
   const onDialerClick = e => {
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
-    new Audio(dialpad).play();
+    // new Audio(dialpad).play();
   };
  
   var flag = 0;
@@ -39,7 +39,7 @@ export default () => {
       }
       setTimeout(function(){
         window.location.href = '/end';
-      }, 5000);
+      }, 11000);
     }
     
  
@@ -96,7 +96,7 @@ export default () => {
       <div className="Yeet" style={{float: "right"}}>
         <ButtonsContainer>
           {buttons.map(char => (
-            <Button key={char} onClick={() => setNumber(number + char)}>
+            <Button key={char} onClick={() => {setNumber(number + char); new Audio(dialpad).play()}}>
               {char}
             </Button>
           ))}
@@ -113,9 +113,9 @@ export default () => {
 
         {/* <button style={{position: 'absolute', backgroundColor: 'transparent', height: '20px' , twop: '70%', left: '75%', padding: '2px', color: 'white', border: 'green'}}  onClick={() => eraser()}>Del</button> */}
         {/* <a style={{background:`url(${Backgrounds})`}}  onClick={() => eraser()}></a> */}
-        <a><img src={Backgrounds} alt="my image" style={{ cursor: 'pointer', opacity: '0', position: 'absolute', backgroundColor: 'transparent', height: '30px' , top: '74%', left: '48%', padding: '2px', border: 'green'}} onClick={() => eraser()} /></a>
+        <a><img src={Backgrounds} alt="my image" style={{ cursor: 'pointer', opacity: '0', position: 'absolute', backgroundColor: 'transparent', height: '30px' , top: '74%', left: '48%', padding: '2px', border: 'green'}} onClick={() => {eraser(); new Audio(dialpad).play();}} /></a>
 
-        <a><img src={Backgrounds} onClick={() => setCallButton(true)} alt="my image" style={{ cursor: 'pointer', opacity: '0', position: 'absolute', backgroundColor: 'transparent', height: '30px' , top: '74%', left: '13%', padding: '2px', border: 'green'}} /></a>
+        <a><img src={Backgrounds} onClick={() => {setCallButton(true); new Audio(dialpad).play();}} alt="my image" style={{ cursor: 'pointer', opacity: '0', position: 'absolute', backgroundColor: 'transparent', height: '30px' , top: '74%', left: '13%', padding: '2px', border: 'green'}} /></a>
       </div>
       {/* <CallButton onClick={() => setCallButton(true)}>Call</CallButton> */}
     </Box>

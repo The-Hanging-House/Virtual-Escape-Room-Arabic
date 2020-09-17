@@ -7,6 +7,7 @@ import { Html } from 'drei';
 
 import switchButtonON from '../../../img/telephone.png'
 import switchButtonOFF from '../../../img/key.png'
+import X from '../../../img/x.svg'
 
 
 
@@ -76,10 +77,12 @@ function TouchPoint3({ position, color, onClick }) {
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-insides"  style={{ top: '-170px' }}>
-                        <button className="close" onClick={() => setShowMessage(false)}>×</button>
+                        <button className="close" onClick={() => setShowMessage(false)}>
+                            <img src={X} style={{ position: 'absolute', top: '-28px', left: '6px', width: '50px' }} />
+                        </button>
 
                             <Alert.Heading>
-                                <p style={{ fontSize: '1.2rem', position: 'absolute', top: '16px', width: '500px' }}>
+                                <p style={{ fontSize: '1.2rem', position: 'absolute', top: '33px', width: '500px', right: '17px' }}>
                                     Which of the following actions would you like to take?
                                 </p>
                                 {/* <div>
