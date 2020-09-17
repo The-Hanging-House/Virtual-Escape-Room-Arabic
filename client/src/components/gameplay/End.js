@@ -31,80 +31,75 @@ var pacman = mins + ":" + secs;
 
 function End() {
     
-    // setInterval(function(){
-        // now = localStorage.getItem('scene6');
-        // if(now!=='NaN'){
-        //     End();
-        // }
-        if(mins > 8){
-            winMessage = 'WOW! THAT WAS REALLY FAST. HAVE YOU DONE THIS BEFORE?'
-        }else if (mins > 3 && mins < 8){
-            winMessage = 'THAT WAS GOOD! YOU MUST\'VE REALLY CONNECTED WITH THE NATURE'
-        }else if (mins < 2){
-            winMessage = 'YOU MADE IT OUT JUST IN TIME.'
-        }
-    // }, 500);
-    
+    if(mins > 8){
+        winMessage = 'WOW! THAT WAS REALLY FAST. HAVE YOU DONE THIS BEFORE?'
+    }else if (mins > 3 && mins < 8){
+        winMessage = 'THAT WAS GOOD! YOU MUST\'VE REALLY CONNECTED WITH THE NATURE'
+    }else if (mins < 2){
+        winMessage = 'YOU MADE IT OUT JUST IN TIME.'
+    }
 
     return (
         <>
         <div className="bg-image1"></div>
             <div className="bg-end">
-                {/* <div className="congrats">
+                <div className="congrats">
                     <h1>CONGRATULATIONS</h1>
-                </div> */}
-                {/* <div style={{ fontSize: '1.7rem', fontWeight: 'bolder', letterSpacing: '2px' }}>
-                <h3>
-                     {winMessage}j
-                </h3>
-                </div> */}
-                <div className="game-timer">
+                </div>
+                <div className="yellow-block">
+                    <div className="first-h1">
+                        <h1>
+                            YOU ESCAPED DANGER WITH
+                        </h1>
+                    </div>
                     <div className="gametime">
-                        
-                        <h1 style={{ fontSize: '5rem', color: 'white', fontWeight: 'bolder' }}>
+                        <h1>
                             {pacman}
                             
                         </h1>
-                        <h1 style={{ color: 'white', fontWeight: 'bolder' }}>
-                            {winMessage}
-                            
-                        </h1>
-                        
                     </div>
-                    {/* <div className="option1">
-                        <h3>
-                            {winMessage}
-                        </h3>
-                    </div> */}
+                    <div className="second-h1">
+                        <h1>
+                            TO SPARE
+                        </h1>
+                    </div>
+                </div>
+                <div className="message-win">
+                    <h1>
+                        {winMessage}
+                    </h1>
+                </div>
+                <div className="some-text">
+                    <h2>
+                        Don't forget to take a screenshot to share<br /> with your friends!
+                    </h2>
                 </div>
                 <div className="option1">
-                        <a href="briefing">
-                            {/* <h3 className="home" style={{ color: 'black', fontSize: '2rem', float: 'left', position: 'absolute', left: '-4%', bottom: '14%', color: 'white' }}
-                                    >
-                                        HOME
-                            </h3> */}
-                            <button style={{float: 'left', position: 'absolute', left: '-4%', bottom: '14%', color: 'white'}} className="btn btn-primary">
-                                   HOME
-                            </button>
-                        </a>
-                        <a href="dashboard2">
-                            {/* <h3 className="play" style={{ color: 'black', fontSize: '2rem', float: 'left', position: 'absolute', right: '-4%', bottom: '14%', color: 'white' }}     
-                                    >
-                                        PLAY AGAIN
-                            </h3> */}
-                            <button style={{float: 'right', position: 'absolute', left: '40%', bottom: '14%', color: 'white'}} className="btn btn-primary">
-                                   PLAY AGAIN
-                            </button>
-                        </a>
-                    </div>
-              <div className="icons1">
-                  <a target="_blank" href="https://houbarafund.gov.ae/en/home">
-                  <img style={{ float: 'left', position: 'absolute', left: '-4%', bottom: '14%' }} src={H}></img>
-                  </a>
-                  <a target="_blank" href="https://connectwithnature.ae">
-                  <img style={{ float: 'right', position: 'absolute', right: '-4%', bottom: '10%' }} src={CWN}></img>
-                  </a>
-              </div>      
+                        <div className="home-button">
+                            <a href="dashboard2">
+                                <button className="btn btn-primary">
+                                    HOME
+                                </button>
+                            </a>
+                        </div>
+                        <div className="play-bottom">
+                            <a href="briefing">
+                                <button className="btn btn-primary">
+                                    PLAY AGAIN
+                                </button>
+                            </a>
+                        </div>
+                </div>
+                <div className="icons1">
+                    <p>For more adventures, visit the link below</p>
+                   
+                    <a target="_blank" href="https://connectwithnature.ae">
+                    <img className="cwnimg" src={CWN}></img>
+                    </a>
+                    <a target="_blank" href="https://houbarafund.gov.ae/en/home">
+                    <img className="houbara" src={H}></img>
+                    </a>
+                </div>      
             </div>
         </>
         

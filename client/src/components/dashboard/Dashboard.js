@@ -24,7 +24,7 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
     return loading && profile === null ? <Spinner /> : 
     <Fragment>
         <div className="bg-image"><div className="lock-up"></div>
-            <div className="logout" style={{ position: 'sticky', left: '55%', bottom: '19%', zIndex: '50' }}>{logout}</div>
+            <div className="logout" style={{ position: 'sticky', left: '55%', bottom: '21%', zIndex: '50' }}>{logout}</div>
         </div>
         <div className="dashblock">
             <div className="bg-text1"></div>
