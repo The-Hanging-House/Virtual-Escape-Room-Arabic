@@ -19,6 +19,7 @@ import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
 import TouchPoint8 from '../touchpoints/scene1/Touchpoint8'
 import TouchPoint9 from '../touchpoints/scene1/Touchpoint9'
 import TouchPoint10 from '../touchpoints/scene1/Touchpoint10'
+import TouchPoint11 from '../touchpoints/scene1/Touchpoint11'
 // import Timer from '../timer/Timer'
 import './style.css'
 
@@ -131,7 +132,9 @@ function Scene1() {
                     }>
                         <Dome />
                         
-                        <TouchPoint1 position={[-4, -7, 0]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint1 position={[-4, -5.6, 0]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint1 position={[8, -6.6, -3]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint11 position={[3.2, -15, 5]} args={[3, 2, 1]} color='#F8A61F' />
 
                         <TouchPoint2 position={[-10, -2, 1.5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-11, -10, -15]} args={[3, 2, 1]} color='#F8A61F' />

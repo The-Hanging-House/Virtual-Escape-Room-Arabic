@@ -718,7 +718,7 @@ function TouchPoint5({ position, color, onClick }) {
           position={position}
           onPointerOver={() => set(true)}
           onPointerOut={() => set(false)}
-          onClick={() => {setShowMessage(true); new Audio(paper).play()}}>
+          onClick={() => {setShowMessage(true); new Audio(paper).play(); localStorage.setItem('pState', "1");}}>
           <sphereGeometry attach="geometry" args={[1, 32, 32]} />
           <meshBasicMaterial attach="material" color="orange" /> 
           <Html center>
@@ -733,18 +733,18 @@ function TouchPoint5({ position, color, onClick }) {
                       className="alert1" 
                       variant="primary"
                       dismissible
-                      onClose={() => setShowMessage(false)}
+                      onClose={() => {setShowMessage(false); localStorage.setItem('pState', "0"); localStorage.setItem('skurva', "0");}}
                       >
                       <div className="alert-inside20">
                           <Alert.Heading>
                             <Puzzle />
                              <div>
-                                  <button onClick={() => {setShowMessage(false); setColl(true)}} style={{visibility: showProceed, position: 'absolute', left: '746px', top: '94px', opacity: '0'}} className="btn btn-primary3">
+                                  <button onClick={() => {setShowMessage(false); setColl(true); localStorage.setItem('pState', "0");}} style={{visibility: showProceed, position: 'absolute', left: '746px', top: '94px', opacity: '0'}} className="btn btn-primary3">
                                       x
                                   </button>
-                                  {/* <button onClick={() => {setShowMessage(false)}} style={{visibility: showMessage? 'visible' : 'hidden', position: 'absolute', left: '526px', top: '116px', opacity: '0'}} className="btn btn-primary3">
+                                  <button onClick={() => {setShowMessage(false); localStorage.setItem('pState', "0");}} style={{visibility: showMessage? 'visible' : 'hidden', position: 'absolute', left: '526px', top: '116px', opacity: '0'}} className="btn btn-primary3">
                                       x
-                                  </button> */}
+                                  </button>
                             </div>
                           </Alert.Heading>                       
                       </div>

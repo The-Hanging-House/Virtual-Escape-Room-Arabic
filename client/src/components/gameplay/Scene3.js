@@ -174,7 +174,7 @@ function Box1(props) {
                       dismissible
                       onClose={() => setShowMessage(false)}
                       >
-                      <div className="alert-inside" style={{visibility: collectedMessage? 'hidden':'visible', top: "2px", width: '350px', height: "208px" }}>
+                      <div className="alert-insides-keys" style={{visibility: collectedMessage? 'hidden' : 'visible', top: "111px", left: '6px', width: '350px', height: "208px" }}>
                             <Alert.Heading>
                             <p style={{ transform: 'translate(10px, 10px)', fontSize:'1rem' }}>
                               Great! You found your keys.
@@ -225,7 +225,7 @@ function TouchPoint3({ position, color, onClick }) {
 
     const onMouseOut = event => {
       const el = event.target;
-      let black = "transparent";
+      let black = "#FFE7B0";
       el.style.background = black;
     };
 
@@ -265,33 +265,48 @@ function TouchPoint3({ position, color, onClick }) {
                       // dismissible
                       onClose={() => setShowMessage(false)}
                       >
-                      <div className={ show? "alert-inside" : "alert-inside4" }>
-                      <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='300%' height='300%'></img></button>
+                      <div className={ show? "alert-inside" : "alert-inside-keys4" }>
+                      <button style={{ display: 'block' }} className="close" onClick={() => setShowMessage(false)}><img src={X} style={{ position: 'absolute', top: '-21px', right: '537px' }} ></img></button>
                           <Alert.Heading>
                           <p style={{ color: 'black' }}>
                               {/* The car door is not locked, what should I do? */}
-                              {innerText}
                               </p>
+                              <h3 className='mcq-bound-total' style={{ cursor: 'default'}} >
+                                {innerText}
+                              </h3>
                               {/* <a href="scene4"> */}
-                              <h3 style={{ display: wrongAlert? 'block' : 'none', letterSpacing: '1px' }} onClick={() => setShowMessage(false)}
+                                      {/* <h3 style={{fontWeight: '800', position: 'absolute', top: '-19px', left: '-33px'}} >
+                                      {show? 'A. ' : ""}
+                                      </h3>  */}
+                              <div className='mcq-bounding-text'>
+
+                                  <h3 className='mcq-text' style={{ display: wrongAlert? 'block' : 'none' }} 
+                                          onMouseEnter={event => onMouseOver(event)}
+                                          onMouseOut={event => onMouseOut(event)} 
+                                          onClick={() => setCON(true)}
+                                          >
+                                      {/* <h3 style={{fontWeight: '800', position: 'absolute', top: '-19px', left: '-33px'}} >
+                                      {show? 'B. ' : ""}
+                                      </h3>  */}
+                                      {show? 'Open the trunk with your keys to reach the radio.' : ""}
+                                  </h3>
+                              <h3 className='mcq-text' style={{ display: wrongAlert? 'block' : 'none' }} onClick={() => setShowMessage(false)}
                                       onMouseEnter={event => onMouseOver(event)}
                                       onMouseOut={event => onMouseOut(event)}
                                       onClick={() => setWrongAlert(false)}>
                                       {show? 'Break the trunk door open in order to search for more clues.' : ""}
                                   </h3>
-                                  <h3 style={{ display: wrongAlert? 'block' : 'none', letterSpacing: '1px' }} 
-                                          onMouseEnter={event => onMouseOver(event)}
-                                          onMouseOut={event => onMouseOut(event)} 
-                                          onClick={() => setCON(true)}
-                                          >
-                                      {show? 'Open the trunk with your keys to reach the radio.' : ""}
-                                  </h3>
-                                  <h3 style={{ display: wrongAlert? 'block' : 'none', letterSpacing: '1px' }} onClick={() => setShowMessage(false)}
+                                  <h3 className='mcq-text' style={{ display: wrongAlert? 'block' : 'none'}} onClick={() => setShowMessage(false)}
                                       onMouseEnter={event => onMouseOver(event)}
                                       onMouseOut={event => onMouseOut(event)}
                                       >
+                                        {/* <h3 style={{fontWeight: '800', position: 'absolute', top: '-19px', left: '-33px'}} >
+                                      {show? 'C. ' : ""}
+                                      </h3>  */}
                                       {show? 'Put the keys in your pocket and continue exploring your surroundings for more clues.' : ""}
                                   </h3>
+
+                                  </div>
                               {/* </a> */}
                               <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem'}}
                               // onMouseEnter={event => onMouseOver(event)}
@@ -299,7 +314,7 @@ function TouchPoint3({ position, color, onClick }) {
                               >
                                   {/* {show? 'CLOSE' : "IGNORE IT"} */}
                               </h3>
-                              <h3 style={{ display: wrongAlert? 'none' : 'block' }}>Try Again!</h3>
+                              <h3 style={{ display: wrongAlert? 'none' : 'block', position: 'absolute', top: '88px' }}>Try Again!</h3>
                           </Alert.Heading>
                       </div>
                       </Alert>

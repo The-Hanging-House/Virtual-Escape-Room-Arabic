@@ -8,7 +8,7 @@ import { Html } from 'drei';
 import Lock from '../../../img/lock.png'
 
 import App from '../../games/lock/App'
-import X from '../../../img/x.svg'
+import X from '../../../img/whiteX.svg'
 
 function TouchPoint2({ position, color, onClick }) {
     const [hovered, set] = useState(false)

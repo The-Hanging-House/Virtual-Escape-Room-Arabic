@@ -37,6 +37,7 @@ function TouchPoint5({ position, color, onClick }) {
     // };
 
     if(switchState){
+        new Audio(switchfx).play();
         setTimeout(function(){
             var scene4 = new Date().getTime();
             localStorage.setItem('scene4', scene4);
@@ -74,7 +75,7 @@ function TouchPoint5({ position, color, onClick }) {
                         <div className="alert-inside2" stley={{}}>
                             <Alert.Heading>
                                     <div>
-                                        <img src={switchState? switchButtonON : switchButtonOFF} onClick={() => {setSwitchState(true); new Audio(switchfx).play()}} width='100%' height='100%'/>
+                                        <img src={switchState? switchButtonON : switchButtonOFF} width='100%' height='100%'/>
                                         
                                     </div>
                                     {/* <p style={{textAlign: 'center', color: 'black', letterSpacing: '2px', fontWeight: 'bold', fontFamily: 'Dubai W23, sans-serif'}}>

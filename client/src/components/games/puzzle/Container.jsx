@@ -17,6 +17,7 @@ var ddd = 'hidden'
 var text = 'Conservationists are tracking Houbara #324 but the pieces of the map are missing.'
 var flag = 0;
 var flag2 = 0;
+var pState = 0;
 
 export const Container = () => {
   var canProceed = ['visible', 'hidden']
@@ -33,6 +34,9 @@ export const Container = () => {
     { accepts: [ItemTypes.PAPER], lastDroppedItem: null, bgImageName: "bin5" },
     { accepts: [ItemTypes.FOOD], lastDroppedItem: null, bgImageName: "bin6" },
   ])
+
+
+
   const [boxes] = useState([
     { name: 'Bottle', type: ItemTypes.GLASS, bgImageName: "p1" },
     { name: 'Banana', type: ItemTypes.FOOD, bgImageName: "p6" },
@@ -61,7 +65,20 @@ export const Container = () => {
         }),
       );
       new Audio(drop).play();
-      count = count + 1;
+      
+      setInterval(() => {
+        pState = localStorage.getItem('pState')
+        // console.log("pState: ", pState);
+        if(pState === '0'){
+          count = 0;
+        }
+      }, 1000);
+
+      if(pState === '1'){
+        count = count + 1;
+      }
+      // console.log('count: ', count);
+
     },
     [droppedBoxNames, dustbins],
   );
