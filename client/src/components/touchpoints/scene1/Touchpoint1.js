@@ -13,6 +13,9 @@ import X from '../../../img/x.svg'
 function TouchPoint1({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
+
+
+
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
@@ -21,7 +24,7 @@ function TouchPoint1({ position, color, onClick }) {
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
-            onClick={() => setShowMessage(true)}>
+            onClick={() => {setShowMessage(true); localStorage.setItem('gState', "1")}}>
             <sphereGeometry attach="geometry" args={[1, 32, 32]} />
             <meshBasicMaterial attach="material" transparent opacity={hovered? 0.2 : 0} /> 
             <Html center>
@@ -37,10 +40,10 @@ function TouchPoint1({ position, color, onClick }) {
                         <Alert
                         className="alert3" 
                         variant="primary"
-                        onClose={() => setShowMessage(false)}
+                        onClose={() => {setShowMessage(false); localStorage.setItem('gState', "0")}}
                         >
                         <div className="alert-inside6">
-                        <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='100%' height='300%' style={{cursor: 'pointer'}} ></img></button>
+                        <button className="close" onClick={() => {setShowMessage(false); localStorage.setItem('gState', "0");}}><img src={X} width='100%' height='300%' style={{cursor: 'pointer'}} ></img></button>
                             <Alert.Heading>
                                 <Index />
                                 {/* <p>

@@ -11,6 +11,7 @@ var showHint = "Leaving trash behind in nature pollutes the environment and is h
 var count = 0
 var ddd = 'hidden'
 var flag = 0;
+var gState = 0;
 
 export const Container = () => {
   const [garbageDone, setGarbageDone] = useState(false)
@@ -58,7 +59,19 @@ export const Container = () => {
         })
       );
       new Audio(drop).play();
-      count = count + 1;
+      
+
+      setInterval(() => {
+        gState = localStorage.getItem('gState')
+        console.log("gState: ", gState);
+        if(gState === '0'){
+          count = 0;
+        }
+      }, 1000);
+
+      if(gState === '1'){
+        count = count + 1;
+      }
 
     },
     [droppedBoxNames, dustbins]

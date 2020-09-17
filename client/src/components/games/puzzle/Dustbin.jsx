@@ -43,6 +43,7 @@ const style = {
   width: "calc(100% * (1/3) - 2px - 1px)",
 }
 
+
 export const Dustbin = ({
   accepts,
   isOver,
@@ -60,29 +61,25 @@ export const Dustbin = ({
   // }
   if (lastDroppedItem !== null){
     if (lastDroppedItem["name"] === 'Bottle'){
-      // console.log(lastDroppedItem["name"]);
       backgroundsList["bin1"] = '/p1.png';
     }
     if (lastDroppedItem["name"] === 'Bottle1'){
-      // console.log(lastDroppedItem["name"]);
       backgroundsList["bin2"] = '/p2.png';
     }
     if (lastDroppedItem["name"] === 'Magazine1'){
-      // console.log(lastDroppedItem["name"]);
       backgroundsList["bin3"] = '/p3.png';
     }
     if (lastDroppedItem["name"] === 'Banana1'){
-      // console.log(lastDroppedItem["name"]);
       backgroundsList["bin4"] = '/p4.png';
     }
     if (lastDroppedItem["name"] === 'Magazine'){
-      // console.log(lastDroppedItem["name"]);
       backgroundsList["bin5"] = '/p5.png';
     }
     if (lastDroppedItem["name"] === 'Banana'){
-      // console.log(lastDroppedItem["name"]);
       backgroundsList["bin6"] = '/p6.png';
     }
+
+    console.log("pState: ", localStorage.getItem('pState'));
   }
   // console.log("t", lastDroppedItem);
 
