@@ -686,7 +686,7 @@ const Dome = () => {
 
 function TouchPoint5({ position, color, onClick }) {
   const [showMessage, setShowMessage] = useState(false);
-  const [collectedMessage, setCollectedMessage] = useState(true);
+  const [collectedMessage, setCollectedMessage] = useState(false);
   const [hovered, set] = useState(false);
   const [coll, setColl] = useState(false);
   const [showProceed, setShowProceed] = useState('hidden');
@@ -733,7 +733,7 @@ function TouchPoint5({ position, color, onClick }) {
                       className="alert1" 
                       variant="primary"
                       dismissible
-                      onClose={() => {setShowMessage(false); localStorage.setItem('pState', "0");}}
+                      onClose={() => {setShowMessage(false); localStorage.setItem('pState', "0"); localStorage.setItem('skurva', "0");}}
                       >
                       <div className="alert-inside20">
                           <Alert.Heading>

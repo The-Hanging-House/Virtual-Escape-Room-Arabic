@@ -28,22 +28,25 @@ if (secs < 10){
   }
 var pacman = mins + ":" + secs;
 
-// setInterval(function(){
-//     now = localStorage.getItem('scene6');
-//     if(now!=='NaN'){
-//         End();
-//     }
-//     if(mins > 8){
-//         winMessage = 'WOW! THAT WAS REALLY FAST. HAVE YOU DONE THIS BEFORE?'
-//     }else if (mins > 3 && mins < 8){
-//         winMessage = 'THAT WAS GOOD! YOU MUST\'VE REALLY CONNECTED WITH THE NATURE'
-//     }else if (mins < 2){
-//         winMessage = 'YOU MADE IT OUT JUST IN TIME.'
-//     }
-// }, 500);
 
 function End() {
     
+    // setInterval(function(){
+        // now = localStorage.getItem('scene6');
+        // if(now!=='NaN'){
+        //     End();
+        // }
+        if(mins > 8){
+            winMessage = 'WOW! THAT WAS REALLY FAST. HAVE YOU DONE THIS BEFORE?'
+        }else if (mins > 3 && mins < 8){
+            winMessage = 'THAT WAS GOOD! YOU MUST\'VE REALLY CONNECTED WITH THE NATURE'
+        }else if (mins < 2){
+            winMessage = 'YOU MADE IT OUT JUST IN TIME.'
+        }
+    // }, 500);
+    
+    console.log('message: ', winMessage);
+    console.log('mins: ', mins);
 
 
 
@@ -56,14 +59,18 @@ function End() {
                 </div> */}
                 {/* <div style={{ fontSize: '1.7rem', fontWeight: 'bolder', letterSpacing: '2px' }}>
                 <h3>
-                            {winMessage}
-                        </h3>
+                     {winMessage}j
+                </h3>
                 </div> */}
                 <div className="game-timer">
                     <div className="gametime">
                         
                         <h1 style={{ fontSize: '5rem', color: 'white', fontWeight: 'bolder' }}>
                             {pacman}
+                            
+                        </h1>
+                        <h1 style={{ color: 'white', fontWeight: 'bolder' }}>
+                            {winMessage}
                             
                         </h1>
                         

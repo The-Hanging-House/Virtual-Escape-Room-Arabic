@@ -68,7 +68,7 @@ export const Container = () => {
       
       setInterval(() => {
         pState = localStorage.getItem('pState')
-        console.log("pState: ", pState);
+        // console.log("pState: ", pState);
         if(pState === '0'){
           count = 0;
         }
@@ -77,6 +77,7 @@ export const Container = () => {
       if(pState === '1'){
         count = count + 1;
       }
+      // console.log('count: ', count);
 
     },
     [droppedBoxNames, dustbins],
