@@ -45,10 +45,6 @@ function End() {
         }
     // }, 500);
     
-    console.log('message: ', winMessage);
-    console.log('mins: ', mins);
-
-
 
     return (
         <>
