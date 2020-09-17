@@ -174,7 +174,7 @@ function Box1(props) {
                       dismissible
                       onClose={() => setShowMessage(false)}
                       >
-                      <div className="alert-inside" style={{visibility: collectedMessage? 'hidden':'visible', top: "2px", width: '350px', height: "208px" }}>
+                      <div className="alert-insides-keys" style={{visibility: collectedMessage? 'hidden' : 'visible', top: "2px", width: '350px', height: "208px" }}>
                             <Alert.Heading>
                             <p style={{ transform: 'translate(10px, 10px)', fontSize:'1rem' }}>
                               Great! You found your keys.
@@ -265,13 +265,13 @@ function TouchPoint3({ position, color, onClick }) {
                       // dismissible
                       onClose={() => setShowMessage(false)}
                       >
-                      <div className={ show? "alert-inside" : "alert-inside4" }>
-                      <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='300%' height='300%'></img></button>
+                      <div className={ show? "alert-inside" : "alert-inside-keys4" }>
+                      <button className="close" onClick={() => setShowMessage(false)}><img src={X} ></img></button>
                           <Alert.Heading>
                           <p style={{ color: 'black' }}>
                               {/* The car door is not locked, what should I do? */}
                               </p>
-                              <h3 className='mcq-bound-total' style={{ color: 'black', letterSpacing: '1px', position: 'absolute', top: '35px', right: '166px'}}>
+                              <h3 className='mcq-bound-total'>
                                 {innerText}
                               </h3>
                               {/* <a href="scene4"> */}

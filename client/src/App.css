@@ -601,7 +601,8 @@ h1 span {
 .mcq-bounding-text{
   position: absolute;
   width: 531px;
-  top: 76px;
+  /* top: 76px; */
+  top: 88px;
   left: -5px;
   padding-left: 36px;
   /* text-align: center; */
@@ -609,7 +610,13 @@ h1 span {
 .mcq-bound-total{
   border-radius: 34px;
   margin-top: 10px;
-  padding-left: 23px;
+  padding-left: 29px;
+  color: black;
+  letter-spacing: 1px;
+  position: absolute;
+  /* top: 35px; */
+  top: 29px;
+  right: 166px;
   /* width: 566px; */
 }
 .mcq-text2{
@@ -1000,6 +1007,54 @@ h1 span {
   position: absolute;
   top: 10vh;
 }
+.alert-inside4 p {
+  color: #FFFFFFC7;
+  font-size: 1.2rem;
+  position: relative;
+  padding: 2rem;
+}
+.alert-inside4 h3 {
+  font-family: "Dubai W23", sans-serif;
+  position: relative;
+  top: -3vh;
+  line-height: 2rem;
+  padding-left: 2rem;
+}
+.alert-inside-keys4 {
+  background-image: url(../src/img/popupKey.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 30px;
+  color: white;
+  /*width: 32vw;
+  height: 35vh;*/
+  width: 464px;
+  height: 442px;
+  position: absolute;
+  top: 22px;
+}
+.alert-inside-keys4 p {
+  color: #FFFFFFC7;
+  font-size: 1.2rem;
+  position: relative;
+  padding: 2rem;
+}
+.alert-inside-keys4 h3 {
+  font-family: "Dubai W23", sans-serif;
+  position: absolute;
+  top: 28px;
+  width: 401px;
+  left: 14px;
+  /* line-height: 2rem; */
+  /* padding-left: 2rem; */
+}
+.alert-inside-keys4 img {
+  width: 45px;
+  position: absolute;
+  top: -18px;
+  left: 30px;
+}
 .alert3 button {
   top: -5px;
   right: 350px;
@@ -1060,19 +1115,7 @@ h1 span {
   margin: 1rem;
   margin-top: 10rem;
 }
-.alert-inside4 p {
-  color: #FFFFFFC7;
-  font-size: 1.2rem;
-  position: relative;
-  padding: 2rem;
-}
-.alert-inside4 h3 {
-  font-family: "Dubai W23", sans-serif;
-  position: relative;
-  top: -3vh;
-  line-height: 2rem;
-  padding-left: 2rem;
-}
+
 
 .alert-inside3 {
   position: absolute;
@@ -1085,7 +1128,7 @@ h1 span {
   display: inline-block;
   background-repeat: no-repeat;
   /* background-size: 100%; */
-  border-radius: 30px;
+  border-radius: 25px;
   color: white;
   padding: 2rem;
   /*width: 30vw;
@@ -1144,6 +1187,47 @@ h1 span {
   letter-spacing: 0px;
 }
 .alert-insides h3 {
+  font-family: "Dubai W23", sans-serif;
+  margin-bottom: 0.5rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transform: translate(8px, 8px);
+  letter-spacing: 2px;
+}
+.alert-insides-keys {
+  background-image: url(../src/img/popupKey.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  /* background-size: 100%; */
+  border-radius: 25px;
+  color: white;
+  padding: 2rem;
+  /*width: 30vw;
+  height: 35vh;*/
+  width: 572px;
+  height: 442px;
+  position: absolute;
+  /* top: -10vh; */
+  left: 16px
+}
+.alert-insides-keys p {
+  font-family: "Dubai W23", sans-serif;;
+  color: black;
+  font-size: 1.2rem;
+  margin: 1rem 0rem;
+  font-weight: 900;
+  letter-spacing: 0px;
+  position: absolute;
+  top: 7px;
+  left: 42px;
+}
+.alert-insides-keys h3 {
   font-family: "Dubai W23", sans-serif;
   margin-bottom: 0.5rem;
   line-height: 1.5rem;
