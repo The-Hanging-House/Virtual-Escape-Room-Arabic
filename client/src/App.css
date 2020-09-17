@@ -1256,15 +1256,13 @@ h3 {
 
 
 @media(min-width: 992px){
-  /* .bg-text {
+  .bg-text {
     position: absolute;
-    
-    z-index: 2;
-    width: 400px;
-    height: 425px;
-    padding: 20px;
-    text-align: center;
-  } */
+    top: 177px;
+    left: 27%;
+    width: 500px;
+    height: 520px;
+  }
   .bg-text .btn {
     font-weight: 600;
     letter-spacing: 3px;
@@ -1279,7 +1277,7 @@ h3 {
     width: 400px;
     height: 395px;
     text-align: center;
-    left: 30%;
+    left: 29%;
     width: 450px;
   }
   .bg-text-login .btn {
@@ -1393,15 +1391,13 @@ h3 {
 
 @media(min-width: 1200px)
 {
-  /* .bg-text {
+  .bg-text {
     position: absolute;
-    transform: translate(-50%, -43%);
-    z-index: 2;
-    width: 473px;
-    height: 507px;
-    padding: 20px;
-    text-align: center;
-  } */
+    top: 177px;
+    left: 31%;
+    width: 500px;
+    height: 520px;
+  }
   .bg-text .text-primary {
     position: absolute;
     transform: translate(-50%, 30%);
@@ -1444,7 +1440,7 @@ h3 {
     width: 400px;
     height: 395px;
     text-align: center;
-    left: 37%;
+    left: 33%;
     width: 450px;
   }
   .bg-text-login .btn {
@@ -1554,7 +1550,15 @@ h3 {
 }
 }
 
-@media(max-width: 1599px) {
+@media(max-width: 1599px) 
+{
+  .bg-text {
+    position: absolute;
+    top: 177px;
+    left: 36%;
+    width: 500px;
+    height: 520px;
+  }
   .dashblock {
     left: 12%;
     bottom: 9%;
@@ -1641,18 +1645,24 @@ h3 {
     top: 87%;
     right: 36%;
 }
+.bg-text-login {
+  z-index: 2;
+  width: 400px;
+  height: 395px;
+  text-align: center;
+  left: 37.5%;
+  width: 450px;
+}
   
 }
 @media(max-width: 1199px) {
-  /* .bg-text {
+  .bg-text {
     position: absolute;
-    transform: translate(-50%, -43%);
-    z-index: 2;
-    width: 450px;
-    height: 492px;
-    padding: 20px;
-    text-align: center;
-  } */
+    top: 177px;
+    left: 30.5%;
+    width: 500px;
+    height: 520px;
+  }
 .bg-text .form {
     height: 50%;
   }
@@ -1691,21 +1701,24 @@ h3 {
     top: 87%;
     right: 23%;
 }
+.bg-text-login {
+  z-index: 2;
+  width: 400px;
+  height: 395px;
+  text-align: center;
+  left: 33%;
+  width: 450px;
+}
 }
 
 @media(max-width: 991px){
-  /* .bg-text {
+  .bg-text {
     position: absolute;
-    transform: translate(-50%, -46%);
-    z-index: 2;
-    width: 400px;
-    height: 470px;
-    padding: 20px;
-    text-align: center;
-  } */
-  /* .alert-danger {
-    left: 15%;
-  } */
+    top: 177px;
+    left: 27%;
+    width: 500px;
+    height: 520px;
+  }
   .bg-text .btn {
     font-weight: 600;
     letter-spacing: 3px;
