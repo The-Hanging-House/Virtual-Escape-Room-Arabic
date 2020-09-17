@@ -733,7 +733,7 @@ function TouchPoint5({ position, color, onClick }) {
                       className="alert1" 
                       variant="primary"
                       dismissible
-                      onClose={() => {setShowMessage(false); localStorage.setItem('pState', "0"); localStorage.setItem('skurva', "0");}}
+                      onClose={() => {setShowMessage(false); localStorage.setItem('pState', "0");}}
                       >
                       <div className="alert-inside20">
                           <Alert.Heading>
@@ -781,7 +781,7 @@ function TouchPoint6({ position, color, onClick }) {
   const [hovered, set] = useState(false)
   const [showMessage, setShowMessage] = useState(false);
 
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   
   // function that checks the number of boxes collected
   setInterval(function(){
