@@ -1274,11 +1274,11 @@ h3 {
 }
 .dashblock {
   position: absolute;
-  bottom: 0;
-  left: 25%;
-  width: 70vw;
+  left: 15%;
+  width: 74vw;
   height: 90%;
   z-index: 0;
+  bottom: 15%;
 }
 
 
@@ -1322,8 +1322,8 @@ h3 {
     top: 10%;
   }
   .dashblock {
-    left: 5%;
-    bottom: 5%;
+    left: -5%;
+    bottom: 11%;
 }
   .bg-text1
   {
@@ -1349,7 +1349,6 @@ h3 {
     position: absolute;
     top: 478px;
     left: 352px;
-    /* transform: translate(-50%, -50%); */
     transform: none;
     z-index: 2;
     width: 185px;
@@ -1360,7 +1359,6 @@ h3 {
     position: absolute;
     top: 547px;
     left: 470px;
-    /* transform: translate(-50%, -50%); */
     transform: none;
     z-index: 2;
     width: 184px;
@@ -1495,11 +1493,9 @@ h3 {
   }
   .lead1
   {
-    left: 15.2vw;
-    top: 14vh;
     font-size: 2rem;
-    left: 123px;
-    top: 204px;
+    left: 112px;
+    top: 176px;
   }
   .button-1 {
     position: absolute;
@@ -1516,7 +1512,6 @@ h3 {
     position: absolute;
     top: 720px;
     left: 510px;
-    /*transform: translate(-50%, -50%);*/
     transform: none;
     z-index: 2;
     width: 220px;
@@ -1525,8 +1520,8 @@ h3 {
   }
 
   .dashblock {
-    bottom: 105px;
-    left: 19%;
+    left: 17%;
+    bottom: 25%
   }
   /* .alert-inside5 {
     right: 700px;
@@ -1586,7 +1581,7 @@ h3 {
     height: 520px;
   } */
   .dashblock {
-    left: 12%;
+    left: 7%;
     bottom: 9%;
   }
   .bg-text1
@@ -1605,14 +1600,14 @@ h3 {
     /*left: 15.2vw;*/
     /*top: 14vh;*/
     font-size: 24px;
-    left: 123px;
-    top: 146px;
+    left: 130px;
+    top: 130px;
   }
   .button-1 {
     position: absolute;
-    top: 489px;
-    left: 460px;  
-    transform: translate(-50%, -50%);
+    top: 461px;
+    left: 469px;  
+    /* transform: translate(-50%, -50%); */
     transform: none;
     z-index: 2;
     width: 185px;
@@ -1621,9 +1616,8 @@ h3 {
   }
   .button-2 {
     position: absolute;
-    top: 547px;
+    top: 519px;
     left: 470px;
-    /* transform: translate(-50%, -50%); */
     transform: none;
     z-index: 2;
     width: 184px;
@@ -1791,13 +1785,14 @@ h3 {
     /*left: 15.2vw;*/
     /*top: 14vh;*/
     font-size: 22px;
-    left: 50px;
-    top: 106px;
+    left: 55px;
+    top: 92px;
+
   }
   .button-1 {
     position: absolute;
-    top: 399px;
-    left: 287px;
+    top: 375px;
+    left: 295px;
     transform: translate(-50%, -50%);
     transform: none;
     z-index: 2;
@@ -1807,9 +1802,8 @@ h3 {
   }
   .button-2 {
     position: absolute;
-    top: 455px;
+    top: 430px;
     left: 300px;
-    /*transform: translate(-50%, -50%);*/
     transform: none;
     z-index: 2;
     width: 185px;
