@@ -35,7 +35,7 @@ function End() {
         winMessage = 'WOW! THAT WAS REALLY FAST. HAVE YOU DONE THIS BEFORE?'
     }else if (mins > 3 && mins < 8){
         winMessage = 'THAT WAS GOOD! YOU MUST\'VE REALLY CONNECTED WITH THE NATURE'
-    }else if (mins < 2){
+    }else if (mins < 3){
         winMessage = 'YOU MADE IT OUT JUST IN TIME.'
     }
 

@@ -48,14 +48,16 @@ function Timesup() {
                             </h3>
                         </a>
                     </div>
-                    <div className="icons">
+                    <div className="icons2">
+                    {/* <p>For more adventures, visit the link below</p> */}
+                   
+                    <a target="_blank" href="https://connectwithnature.ae">
+                    <img className="cwnimg1" src={CWN}></img>
+                    </a>
                     <a target="_blank" href="https://houbarafund.gov.ae/en/home">
-                            <img style={{ float: 'left', position: 'absolute', left: '-4%', bottom: '14%' }} src={H}></img>
-                        </a>
-                        <a target="_blank" href="https://connectwithnature.ae/">
-                            <img style={{ float: 'right', position: 'absolute', right: '-4%', bottom: '14%' }} src={CWN}></img>
-                        </a>
-                    </div>
+                    <img className="houbara1" src={H}></img>
+                    </a>
+                </div>    
                 </div>
                     
                     

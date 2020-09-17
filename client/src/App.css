@@ -472,6 +472,34 @@ body {
   width: 20%;
   height: 20%;
 }
+.icons2 {
+  text-align: center;
+  margin-top: 1rem;
+  position: fixed;
+  bottom: -45px;
+  left: 68px;
+}
+
+.icons2 img {
+  margin-top: 1rem;
+  height: 36px;
+}
+.icons2 .cwnimg1 {
+  position: relative;
+  top: 0px;
+  left: -71px;
+  height: 74px;
+}
+.icons2 .houbara1 {
+  position: relative;
+  top: 5px;
+  right: -59px;
+  height: 78px;
+}
+.icons2 img {
+  width: 20%;
+  height: 20%;
+}
 .bg-image2 {
   display: block;
   background-image: url("./img/bgend2.png");
