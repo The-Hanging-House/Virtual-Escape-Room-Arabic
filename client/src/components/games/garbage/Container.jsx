@@ -61,17 +61,17 @@ export const Container = () => {
       new Audio(drop).play();
       
 
-      setInterval(() => {
-        gState = localStorage.getItem('gState')
-        console.log("gState: ", gState);
-        if(gState === '0'){
-          count = 0;
-        }
-      }, 1000);
+      // setInterval(() => {
+      //   gState = localStorage.getItem('gState')
+      //   console.log("gState: ", gState);
+      //   if(gState === '0'){
+      //     count = 0;
+      //   }
+      // }, 1000);
 
-      if(gState === '1'){
+      // if(gState === '1'){
         count = count + 1;
-      }
+      // }
 
     },
     [droppedBoxNames, dustbins]
