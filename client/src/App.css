@@ -399,13 +399,14 @@ body {
   font-size: 17.5px;
   letter-spacing: 3px;
 }
+.yellow-block .gametime {
+  transform: none;
+  width: 100%;
+}
 .yellow-block .gametime h1 {
-  bottom: 236px;
-  position: relative;
-  left: 23px;
-  color: #FFF;
-  font-size: 7rem;
-  letter-spacing: 6px;
+  color: #fff;
+    font-size: 4rem;
+    letter-spacing: 6px;
 }
 .yellow-block .second-h1 h1 {
   font-size: 17.5px;
