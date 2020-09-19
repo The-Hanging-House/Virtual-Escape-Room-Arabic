@@ -32,31 +32,52 @@ function Timesup() {
         <>
         <div className="bg-image2"></div>
             <div className="bg-end1">
-                <div style={{ fontSize: '1.7rem', fontWeight: 'bolder', lineHeight: '5vh', letterSpacing: '2px', margin: '1rem' }}>
-                    
-                    <div className="option">
-                        <a href="briefing">
-                            <h3 style={{ color: 'black', fontSize: '2rem', float: 'left', position: 'absolute', left: '-4%', bottom: '14%', color: 'white' }}
-                                    >
-                                        HOME
-                            </h3>
-                        </a>
-                        <a href="dashboard2">
-                            <h3 style={{ color: 'black', fontSize: '2rem', float: 'left', position: 'absolute', right: '-4%', bottom: '14%', color: 'white' }}     
-                                    >
-                                        PLAY AGAIN
-                            </h3>
-                        </a>
-                    </div>
-                    <div className="icons">
-                    <a target="_blank" href="https://houbarafund.gov.ae/en/home">
-                            <img style={{ float: 'left', position: 'absolute', left: '-4%', bottom: '14%' }} src={H}></img>
-                        </a>
-                        <a target="_blank" href="https://connectwithnature.ae/">
-                            <img style={{ float: 'right', position: 'absolute', right: '-4%', bottom: '14%' }} src={CWN}></img>
-                        </a>
+                {/* <div className="congrats">
+                    <h1>CONGRATULATIONS</h1>
+                </div>   */}
+                <div className="yellow-block1">
+                    <div className="gametime1">
+                        <h1>
+                            TIMES UP
+                        </h1>
                     </div>
                 </div>
+                <div className="message-win1">
+                    <h1>
+                        DID YOU DO YOUR BEST?
+                    </h1>
+                </div> 
+                <div className="some-text1">
+                    <h2>
+                        TRY AGAIN AND HOPEFULLY YOU WILL <br />MAKE IT TO SAFETY NEXT TIME.
+                    </h2>
+                </div>              
+                <div className="option2">
+                        <div className="home-button1">
+                            <a href="dashboard2">
+                                <button className="btn btn-primary">
+                                    HOME
+                                </button>
+                            </a>
+                        </div>
+                        <div className="play-bottom1">
+                            <a href="briefing">
+                                <button className="btn btn-primary">
+                                    PLAY AGAIN
+                                </button>
+                            </a>
+                        </div>
+                </div>
+                    <div className="icons2">
+                    <p>For more adventures, visit the link below</p>
+                   
+                    <a target="_blank" href="https://connectwithnature.ae">
+                    <img className="cwnimg1" src={CWN}></img>
+                    </a>
+                    <a target="_blank" href="https://houbarafund.gov.ae/en/home">
+                    <img className="houbara1" src={H}></img>
+                    </a>
+                </div>   
                     
                     
             </div>
