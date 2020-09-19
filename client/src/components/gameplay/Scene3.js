@@ -174,7 +174,7 @@ function Box1(props) {
                       dismissible
                       onClose={() => setShowMessage(false)}
                       >
-                      <div className="alert-insides-keys" style={{visibility: collectedMessage? 'hidden' : 'visible', top: "111px", left: '6px', width: '350px', height: "208px" }}>
+                      <div className="alert-insides-keys" style={{visibility: collectedMessage? 'hidden' : 'visible', top: "111px", left: '6px', width: '350px', height: "208px", fontWfont: '400' }}>
                             <Alert.Heading>
                             <p style={{ transform: 'translate(10px, 10px)', fontSize:'1rem' }}>
                               Great! You found your keys.
@@ -271,7 +271,7 @@ function TouchPoint3({ position, color, onClick }) {
                           <p style={{ color: 'black' }}>
                               {/* The car door is not locked, what should I do? */}
                               </p>
-                              <h3 className='mcq-bound-total' style={{ cursor: 'default'}} >
+                              <h3 className='mcq-bound-total' style={{ cursor: 'default', fontSize: '1rem', color: 'black'}} >
                                 {innerText}
                               </h3>
                               {/* <a href="scene4"> */}
