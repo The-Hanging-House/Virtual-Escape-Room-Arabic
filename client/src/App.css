@@ -1373,7 +1373,7 @@ h1 span {
   background-image: url(../src/img/popup3.png);
   display: inline-block;
   background-repeat: no-repeat;
-  /* background-size: 100%; */
+  background-size: 82%;
   border-radius: 25px;
   color: white;
   padding: 2rem;
@@ -1412,7 +1412,7 @@ h1 span {
   background-image: url(../src/img/popup3.png);
   display: inline-block;
   background-repeat: no-repeat;
-  /* background-size: 100%; */
+  background-size: 100%;
   border-radius: 25px;
   color: white;
   padding: 2rem;
@@ -1450,7 +1450,7 @@ h1 span {
   background-image: url(../src/img/popupKey.png);
   display: inline-block;
   background-repeat: no-repeat;
-  /* background-size: 100%; */
+  background-size: 90%;
   border-radius: 25px;
   color: white;
   padding: 2rem;
