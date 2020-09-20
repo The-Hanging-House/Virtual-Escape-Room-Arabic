@@ -433,6 +433,7 @@ body {
   font-weight: 500;
 }
 .option1 {
+  font-family: "Dubai W23", sans-serif;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -515,6 +516,7 @@ body {
   font-weight: 500;
 }
 .option2 {
+  font-family: "Dubai W23", sans-serif;
   text-align: center;
   display: flex;
   flex-direction: row;
