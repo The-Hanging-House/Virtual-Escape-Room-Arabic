@@ -766,9 +766,9 @@ h1 span {
   background-color: transparent;
   color: white;
   position: absolute;
-  top: 25%;
-  left: 21vh;
-  transform: translate(-50%, -50%);
+  top: 80px;
+  left: -17px;
+  /* transform: translate(-50%, -50%); */
   z-index: 2;
   width: 30%;
   padding: 20px;
@@ -1656,7 +1656,7 @@ h3 {
   position: absolute;
   left: 15%;
   width: 74vw;
-  height: 90%;
+  height: 85%;
   z-index: 0;
   bottom: 15%;
 }
@@ -1745,7 +1745,7 @@ h3 {
     height: 5vh;
     padding: 20px;
   }
-  .bg-text7 {
+  /* .bg-text7 {
     top: 25%;
     left: 21vh;
     transform: translate(-50%, -50%);
@@ -1756,7 +1756,7 @@ h3 {
     position: absolute;
     right: 45%;
     top: 30%;
-  }
+  } */
   .gametime {
     transform: translate(175%, 196%);
     width: 21.06%;
@@ -1884,8 +1884,8 @@ h3 {
   }
 
   .dashblock {
-    left: 17%;
-    bottom: 25%
+    left: 3%;
+    bottom: 1%;
   }
   /* .alert-inside5 {
     right: 700px;
@@ -1925,8 +1925,8 @@ h3 {
     height: 520px;
   } */
   .dashblock {
-    left: 7%;
-    bottom: 9%;
+    left: 15%;
+    bottom: 5%;
   }
   .bg-text1
   {
@@ -2009,8 +2009,8 @@ h3 {
     height: 50%;
   }
   .dashblock {
-    left: -5%;
-    bottom: 5%;
+    left: 3%;
+    bottom: 2%;
   }
 
   .gametime {
@@ -2076,7 +2076,7 @@ h3 {
   
   .dashblock {
     left: 12%;
-    top: 14%;
+    top: 23%;
   }
   .bg-text1
   {
@@ -2143,4 +2143,50 @@ h3 {
     right: 15%;
   }
 
+}
+
+@media(min-width: 1600px){
+  .dashblock {
+    height: 71%;
+    left: 22%;
+    bottom: 11%;
+}
+  .bg-text1
+  {
+    /* transform: translate(53%, -78%) !important; */
+    transform: none;
+    height: auto;
+    /* margin-top: -100px; */
+    margin-top: 0;
+    width: 880px;
+    left: 17px;
+    top: 169px;
+    position: absolute;
+  }
+  .lead1
+  {
+    font-size: 31px;
+    left: 78px;
+    top: 122px;
+  }
+  .button-1 {
+    position: absolute;
+    top: 447px;
+    left: 359px;
+    transform: none;
+    z-index: 2;
+    width: 185px;
+    height: 3vh;
+    padding: 20px;
+  }
+  .button-2 {
+    position: absolute;
+    top: 500px;
+    left: 360px;
+    transform: none;
+    z-index: 2;
+    width: 184px;
+    height: 3vh;
+    padding: 20px;
+  }
 }

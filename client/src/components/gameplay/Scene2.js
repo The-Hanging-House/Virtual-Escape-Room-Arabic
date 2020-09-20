@@ -931,8 +931,8 @@ function Counter(){
       </div>
       <div className="bg-text7">
         <img src={Map} height="45%" width="45%" />
-        <h1>{pieceCollected}/<span>6</span></h1>
-        <h3>PIECES</h3> 
+        <h1 style={{paddingLeft: '50px'}}>{pieceCollected}/<span>6</span></h1>
+        <h3 style={{paddingLeft: '32px'}}>PIECES</h3> 
       </div>    
     </>
   )

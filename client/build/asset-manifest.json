@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.a2233922.chunk.css",
-    "main.js": "/static/js/main.a01290cc.chunk.js",
-    "main.js.map": "/static/js/main.a01290cc.chunk.js.map",
+    "main.css": "/static/css/main.5ad7e028.chunk.css",
+    "main.js": "/static/js/main.2e80a458.chunk.js",
+    "main.js.map": "/static/js/main.2e80a458.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
     "static/css/2.1f156bdb.chunk.css": "/static/css/2.1f156bdb.chunk.css",
     "static/js/2.dbf20af6.chunk.js": "/static/js/2.dbf20af6.chunk.js",
     "static/js/2.dbf20af6.chunk.js.map": "/static/js/2.dbf20af6.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.61c3a1627912e2a82824d2e9e62f2f42.js": "/precache-manifest.61c3a1627912e2a82824d2e9e62f2f42.js",
+    "precache-manifest.464c48c2a912dee9aac5d16619db2918.js": "/precache-manifest.464c48c2a912dee9aac5d16619db2918.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.1f156bdb.chunk.css.map": "/static/css/2.1f156bdb.chunk.css.map",
-    "static/css/main.a2233922.chunk.css.map": "/static/css/main.a2233922.chunk.css.map",
+    "static/css/main.5ad7e028.chunk.css.map": "/static/css/main.5ad7e028.chunk.css.map",
     "static/js/2.dbf20af6.chunk.js.LICENSE.txt": "/static/js/2.dbf20af6.chunk.js.LICENSE.txt",
     "static/media/01.png": "/static/media/01.9feaa871.png",
     "static/media/Birds.mp3": "/static/media/Birds.f60776c4.mp3",
-    "static/media/App.css": "/static/media/popupKey.a10125a6.svg",
+    "static/media/App.css": "/static/media/yellowblock1.e7d166a0.png",
     "static/media/Party.mpeg": "/static/media/Party.068aa897.mpeg",
     "static/media/bg.png": "/static/media/bg.bbc1d809.png",
     "static/media/bgend.png": "/static/media/bgend.5c49681b.png",
@@ -39,7 +39,7 @@
     "static/media/feather.png": "/static/media/feather.2dad6274.png",
     "static/media/h.png": "/static/media/h.26fa55f4.png",
     "static/media/hint.svg": "/static/media/hint.279ebe6f.svg",
-    "static/media/instruction.mp4": "/static/media/instruction.0659ef09.mp4",
+    "static/media/instruction.mp4": "/static/media/instruction.bf05f6ab.mp4",
     "static/media/key.png": "/static/media/key.4dcd128d.png",
     "static/media/keyPickup.mp3": "/static/media/keyPickup.b3905471.mp3",
     "static/media/loader.gif": "/static/media/loader.14a25c3a.gif",
@@ -81,7 +81,7 @@
     "static/js/runtime-main.09b85ec0.js",
     "static/css/2.1f156bdb.chunk.css",
     "static/js/2.dbf20af6.chunk.js",
-    "static/css/main.a2233922.chunk.css",
-    "static/js/main.a01290cc.chunk.js"
+    "static/css/main.5ad7e028.chunk.css",
+    "static/js/main.2e80a458.chunk.js"
   ]
 }

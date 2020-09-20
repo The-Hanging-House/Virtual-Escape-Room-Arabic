@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "963144b15619b04562a3bbd287bbc265",
+    "revision": "2e7bbea00517fe5163d01f470a5f742e",
     "url": "/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.1f156bdb.chunk.css"
   },
   {
-    "revision": "9faa71705d1729ad9954",
-    "url": "/static/css/main.a2233922.chunk.css"
+    "revision": "99ff434034a7a1ed9760",
+    "url": "/static/css/main.5ad7e028.chunk.css"
   },
   {
     "revision": "59e43d86dc6d8bd20570",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.dbf20af6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9faa71705d1729ad9954",
-    "url": "/static/js/main.a01290cc.chunk.js"
+    "revision": "99ff434034a7a1ed9760",
+    "url": "/static/js/main.2e80a458.chunk.js"
   },
   {
     "revision": "9b4e396c183e42c1fa5c",
@@ -172,8 +172,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/image4.5ea6ad38.jpg"
   },
   {
-    "revision": "0659ef09ea936bf5c262464e3f70128e",
-    "url": "/static/media/instruction.0659ef09.mp4"
+    "revision": "bf05f6abbabc4b5c844f55035ecdd1b9",
+    "url": "/static/media/instruction.bf05f6ab.mp4"
   },
   {
     "revision": "4dcd128d2d632ff695d4ffd2dc3c9c24",
@@ -250,10 +250,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a442327a5e9f544e36fc200532ba9cb5",
     "url": "/static/media/popup2.a442327a.svg"
-  },
-  {
-    "revision": "2e3d1a8e4f77137f01cce18a53bb06e9",
-    "url": "/static/media/popup3.2e3d1a8e.svg"
   },
   {
     "revision": "a10125a6487685ecbebf6ce17d26863f",
@@ -338,5 +334,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ef8dfb6a93c4510e6c9aec04d7b96659",
     "url": "/static/media/x.ef8dfb6a.svg"
+  },
+  {
+    "revision": "2ee50bf2708a9edfa53090e4e9cfa163",
+    "url": "/static/media/yellowblock.2ee50bf2.png"
+  },
+  {
+    "revision": "e7d166a0dc52ad3b0859a6203f17ca9b",
+    "url": "/static/media/yellowblock1.e7d166a0.png"
   }
 ]);
