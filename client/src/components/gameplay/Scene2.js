@@ -781,7 +781,7 @@ function TouchPoint6({ position, color, onClick }) {
   const [hovered, set] = useState(false)
   const [showMessage, setShowMessage] = useState(false);
 
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   
   // function that checks the number of boxes collected
   setInterval(function(){

@@ -646,7 +646,7 @@ body {
 }
 .bg-text-login p {
   position: relative;
-  top: 10%;
+  top: 20%;
 }
 .bg-text1 {
   /* background: url("./../src//img/01.png") no-repeat center/cover; */
@@ -1699,7 +1699,7 @@ h3 {
   }
   .bg-text-login p {
     position: relative;
-    top: 10%;
+    top: 18%;
   }
   .dashblock {
     left: -5%;
@@ -1842,7 +1842,7 @@ h3 {
   }
   .bg-text-login p {
     position: relative;
-    top: 12%;
+    top: 21%;
   }
   .bg-text1
   {
