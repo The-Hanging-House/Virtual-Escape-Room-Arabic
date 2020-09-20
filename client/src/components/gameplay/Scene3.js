@@ -271,7 +271,7 @@ function TouchPoint3({ position, color, onClick }) {
                           <p style={{ color: 'black' }}>
                               {/* The car door is not locked, what should I do? */}
                               </p>
-                              <h3 className='mcq-bound-total' style={{ cursor: 'default', fontSize: '1rem', color: 'black'}} >
+                              <h3 className='mcq-bound-total' style={{ cursor: 'default', fontSize: '1rem', color: 'black', paddingRight: '52px'}} >
                                 {innerText}
                               </h3>
                               {/* <a href="scene4"> */}

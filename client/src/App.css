@@ -383,7 +383,7 @@ body {
   text-shadow: 2px 2px 17px black;
 }
 .yellow-block {
-  background-image: url(/static/media/yellowblock.1e7e2f99.svg);
+  background-image: url("./img/yellowblock.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -474,7 +474,7 @@ body {
   height: 20%;
 }
 .yellow-block1 {
-  background-image: url(/static/media/yellowblock.1e7e2f99.svg);
+  background-image: url("./img/yellowblock1.png");
   background-repeat: no-repeat;
   background-size: 399px;
   background-position: center center;
@@ -747,7 +747,7 @@ h1 span {
   color: white;
   position: absolute;
   top: -2%;
-  left: -6%;
+  right: 73%;
   /* transform: translate(-50%, -50%); */
   z-index: 2;
   width: 30%;
@@ -848,6 +848,7 @@ h1 span {
   top: -10px;
   letter-spacing: 2px;
   font-weight: 600;
+  left: 5%;
 }
 .bg-text
 .login {
