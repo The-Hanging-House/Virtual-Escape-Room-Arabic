@@ -1207,7 +1207,7 @@ h1 span {
   width: 220%;
 }
 .alert-inside4 {
-  background-image: url(../src/img/popup.svg);
+  background-image: url(../src/img/popup.png);
   display: inline-block;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -1234,7 +1234,7 @@ h1 span {
   padding-left: 2rem;
 }
 .alert-insides1 {
-  background-image: url(../src/img/popupKey.svg);
+  background-image: url(../src/img/popupKey.png);
   display: inline-block;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -1267,7 +1267,7 @@ h1 span {
   right: -50px;
 }
 .alert-inside-keys4 {
-  background-image: url(../src/img/popupKey.svg);
+  background-image: url(../src/img/popupKey.png);
   display: inline-block;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -1371,7 +1371,7 @@ h1 span {
 }
 
 .alert-inside {
-  background-image: url(../src/img/popup3.svg);
+  background-image: url(../src/img/popup3.png);
   display: inline-block;
   background-repeat: no-repeat;
   /* background-size: 100%; */
@@ -1410,7 +1410,7 @@ h1 span {
 }
 
 .alert-insides {
-  background-image: url(../src/img/popup3.svg);
+  background-image: url(../src/img/popup3.png);
   display: inline-block;
   background-repeat: no-repeat;
   /* background-size: 100%; */
@@ -1448,7 +1448,7 @@ h1 span {
   /* letter-spacing: 2px; */
 }
 .alert-insides-keys {
-  background-image: url(../src/img/popupKey.svg);
+  background-image: url(../src/img/popupKey.png);
   display: inline-block;
   background-repeat: no-repeat;
   /* background-size: 100%; */
@@ -1491,7 +1491,7 @@ h1 span {
 
 
 .alert-insider {
-  background-image: url(../src/img/popup2.svg);
+  background-image: url(../src/img/popup2.png);
   display: inline-block;
   background-repeat: no-repeat;
   background-size: 100%;

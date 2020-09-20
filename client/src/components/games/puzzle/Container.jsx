@@ -82,7 +82,7 @@ export const Container = () => {
     },
     [droppedBoxNames, dustbins],
   );
-  if(count > 3){
+  if(count > 4){
     ddd = canProceed[0];
     text = stateText[1];
     localStorage.setItem('forCheck', "1");
