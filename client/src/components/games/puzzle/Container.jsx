@@ -66,18 +66,18 @@ export const Container = () => {
       );
       new Audio(drop).play();
       
-      setInterval(() => {
-        pState = localStorage.getItem('pState')
-        // console.log("pState: ", pState);
-        if(pState === '0'){
-          count = 0;
-        }
-      }, 1000);
+      // setInterval(() => {
+      //   pState = localStorage.getItem('pState')
+      //   // console.log("pState: ", pState);
+      //   if(pState === '0'){
+      //     count = 0;
+      //   }
+      // }, 1000);
 
-      if(pState === '1'){
+      // if(pState === '1'){
         count = count + 1;
-      }
-      console.log('count: ', count);
+      // }
+      // console.log('count: ', count);
 
     },
     [droppedBoxNames, dustbins],
