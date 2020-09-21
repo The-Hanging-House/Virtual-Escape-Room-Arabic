@@ -951,7 +951,7 @@ function Initimg(){
     return (
     <>
     <div className="welcomedcc" style={{display: displayProp? 'none' : 'block', position: "absolute", zIndex: "200", left: "50%", top: "50%", transform: "translate(-50%, -50%)"}}>
-        <img src = {hint} width='100%' height='100%' />
+        <img src = {hint} width='100%' height='100%' className="stopDrag" />
     </div>
     </>
     )
@@ -1117,7 +1117,7 @@ function Counter(){
         <h3>CHALLENGES</h3>
       </div>
       <div className="bg-text7" style={{visibility: pieceShow? 'visible' : 'hidden'}}>
-        <img src={Map} height="45%" width="45%" />
+        <img src={Map} height="45%" width="45%" className="stopDrag" />
         <h1 style={{paddingLeft: '50px'}}>{pieceCollected}/<span>6</span></h1>
         <h3 style={{paddingLeft: '32px'}}>PIECES</h3> 
       </div>    
