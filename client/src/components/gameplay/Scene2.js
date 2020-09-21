@@ -187,7 +187,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg}  />
+                                  <img src={egg} className="stopDrag" />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -295,7 +295,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg}  />
+                                  <img src={egg} className="stopDrag" />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -397,7 +397,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg}  />
+                                  <img src={egg} className="stopDrag" />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -498,7 +498,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg}  />
+                                  <img src={egg} className="stopDrag" />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -599,7 +599,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg}  />
+                                  <img src={egg} className="stopDrag" />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -700,7 +700,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg}  />
+                                  <img src={egg} className="stopDrag"  />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -789,7 +789,7 @@ const Dome = () => {
                         {/* <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='100%' height='300%' style={{cursor: 'pointer'}} ></img></button> */}
                             <Alert.Heading>
                                 <div>
-                                  <img style={{ cursor: 'pointer' }} src={note} alt='stickyNote' style={{ width: '100%' }} />
+                                  <img style={{ cursor: 'pointer' }} className="stopDrag" src={note} alt='stickyNote' style={{ width: '100%' }} />
                                 </div>
                             </Alert.Heading>
                             {/* <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
@@ -845,7 +845,7 @@ const Dome = () => {
                         <button className="close" onClick={() => setShowMessage(false)}>×</button>
 
                             <div>
-                                <img src={board}   />
+                                <img src={board} className="stopDrag"  />
                             </div>
                         </div>
                         </Alert>
@@ -926,8 +926,8 @@ function TouchPoint5({ position, color, onClick }) {
                               </div>
                             </div>
                             <div style={{ display: show? 'none' : 'block', transform: 'scale(0.6)', position: 'absolute', top: '0px', left: '0px' }} >
-                              <img src={PrePuz} style={{ position: 'absolute', transform: 'scale(0.5) translate(-65%, -45%)' }} />
-                              <img src={Xclose} onClick={() => {setShowMessage(false)}} style={{ position: 'absolute', left: '1251px', top: '80px' }} />
+                              <img src={PrePuz} className="stopDrag" style={{ position: 'absolute', transform: 'scale(0.5) translate(-65%, -45%)' }} />
+                              <img src={Xclose} className="stopDrag" onClick={() => {setShowMessage(false)}} style={{ position: 'absolute', left: '1251px', top: '80px' }} />
                             </div>
                           </Alert.Heading>                       
                       </div>
@@ -1005,14 +1005,14 @@ function TouchPoint6({ position, color, onClick }) {
                       >
                         <div style={{ display: show? 'block' : 'none' }} >
                       {/* <button className="close" onClick={() => setShowMessage(false)}> */}
-                         <img onClick={() => setShowMessage(false)} style={{position: 'absolute', top: '-194px', right: '-141px', transform: 'scale(0.5)', cursor: 'pointer'}} src={xclose} /> 
+                         <img onClick={() => setShowMessage(false)} className="stopDrag" style={{position: 'absolute', top: '-194px', right: '-141px', transform: 'scale(0.5)', cursor: 'pointer'}} src={xclose} /> 
                          {/* </button> */}
                       <Telephone />
                       {/* {tele} */}
                       </div>
                       <div style={{ display: show? 'none' : 'block', transform: 'scale(0.6)', position: 'absolute', top: '-145px', left: '-513px' }} >
-                        <img src={teleNo} />
-                        <button onClick={() => setShowMessage(false)} style={{ position: 'absolute', right: '39px', top: '36px', opacity: '0', cursor: 'pointer' }}> XX</button>
+                        <img src={teleNo} className="stopDrag" />
+                        <button onClick={() => setShowMessage(false)} className="stopDrag" style={{ position: 'absolute', right: '39px', top: '36px', opacity: '0', cursor: 'pointer' }}> XX</button>
                       </div>
                       </Alert>
                   </CSSTransition>

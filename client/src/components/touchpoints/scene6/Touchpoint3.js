@@ -78,7 +78,7 @@ function TouchPoint3({ position, color, onClick }) {
                         >
                         <div className="alert-insides"  style={{ top: '-170px' }}>
                         <button className="close" onClick={() => setShowMessage(false)}>
-                            <img src={X} style={{ position: 'absolute', top: '-28px', left: '6px', width: '50px' }} />
+                            <img src={X} className="stopDrag" style={{ position: 'absolute', top: '-28px', left: '6px', width: '50px' }} />
                         </button>
 
                             <Alert.Heading>

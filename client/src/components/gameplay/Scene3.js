@@ -266,7 +266,7 @@ function TouchPoint3({ position, color, onClick }) {
                       onClose={() => setShowMessage(false)}
                       >
                       <div className={ show? "alert-inside" : "alert-inside-keys4" }>
-                      <button style={{ display: 'block' }} className="close" onClick={() => setShowMessage(false)}><img className="stopDrag" src={X} style={{ position: 'absolute', top: '-21px', right: '537px' }} ></img></button>
+                      <button style={{ display: 'block' }} className="close" onClick={() => setShowMessage(false)}><img src={X} className="stopDrag" style={{ position: 'absolute', top: '-21px', right: '537px' }} ></img></button>
                           <Alert.Heading>
                           <p style={{ color: 'black' }}>
                               {/* The car door is not locked, what should I do? */}
