@@ -43,7 +43,7 @@ function TouchPoint1({ position, color, onClick }) {
                         onClose={() => {setShowMessage(false); localStorage.setItem('gState', "0")}}
                         >
                         <div className="alert-inside6">
-                        <button className="close" onClick={() => {setShowMessage(false); localStorage.setItem('gState', "0");}}><img src={X} width='100%' height='300%' style={{cursor: 'pointer'}} ></img></button>
+                        <button className="close" onClick={() => {setShowMessage(false); localStorage.setItem('gState', "0");}}><img className= "stopDrag" src={X} width='100%' height='300%' style={{cursor: 'pointer'}} ></img></button>
                             <Alert.Heading>
                                 <Index />
                                 {/* <p>
