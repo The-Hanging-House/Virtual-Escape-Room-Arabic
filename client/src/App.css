@@ -1326,6 +1326,14 @@ h1 span {
   width: 81%;
   font-size: 1rem;
 }
+.stopDrag {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
 .alert-inside5 {
   background-color: white;
   padding: 1rem;
