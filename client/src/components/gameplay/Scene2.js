@@ -19,7 +19,7 @@ import xclose from './../../img/x.svg'
 import teleNo from './../../img/teleNo.png'
 
 
-import TouchPoint1 from '../touchpoints/scene2/Touchpoint1'
+// import TouchPoint1 from '../touchpoints/scene2/Touchpoint1'
 import TouchPoint2 from '../touchpoints/scene2/Touchpoint2'
 import TouchPoint3 from '../touchpoints/scene2/Touchpoint3'
 import TouchPoint4 from '../touchpoints/scene2/Touchpoint4'
@@ -38,6 +38,8 @@ import Music2 from '../../audio/Music2'
 import Puzzle from '../games/puzzle/index'
 
 import solved from '../../img/completedPuzzle1.png'
+
+import board from '../../img/board.png'
 
 import egg from '../../img/pp1.png'
 import img from './../../img/p1.png'
@@ -61,13 +63,19 @@ extend({ OrbitControls })
 var x = 0;
 var y = 0;
 var ccom = 4;
+var cork = 0
+var flagB1 = 0;
+var flagB2 = 0;
+var flagB3 = 0;
+var flagB4 = 0;
+var flagB5 = 0;
+var flagB6 = 0;
+
 
 // value of X increments each time a box is collected
 function counter(){
   x = x + 1;
-  if (x%2 === 0){
-    new Audio(ding).play();
-  }
+  new Audio(ding).play();
 }
 
 function Door(){
@@ -96,13 +104,16 @@ const Dome = () => {
 
   function Box1(props) {
     const mesh = useRef()
-    const [collectedMessage, setCollectedMessage] = useState(false)
+    const [collectedMessage, setCollectedMessage] = useState(true)
+    const [corkSeen, setCorkSeen] = useState(false)
     const [hovered, set] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
-    if(collectedMessage){
-      counter();
-       
-    }
+
+    // if(corkSeen){
+    //   counter();
+
+    //   // setCollectedMessage(true);
+    // }
     const texture = useLoader(THREE.TextureLoader, img)
 
     const onMouseOver = event => {
@@ -116,6 +127,25 @@ const Dome = () => {
       let black = "transparent";
       el.style.background = black;
     };
+
+    
+
+    var checkBoard = setInterval(function(){
+      if (cork === 2 && flagB1 === 0){
+        setCollectedMessage(false)
+        console.log('flag = 2')
+        clearInterval(checkBoard);
+        flagB1 = 1;
+      }
+    }, 1000)
+
+    function afterClick() {
+      console.log("afterClick");
+      setCollectedMessage(true);
+      setShowMessage(false);
+      setCorkSeen(true)
+      counter();
+    }
   
     // useFrame(({ camera, mouse }) => {
     //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
@@ -159,7 +189,7 @@ const Dome = () => {
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
-                                    onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
+                                    onClick={() => afterClick()}>
                                     Collect the piece of the migration map.
 
                                 </h3>
@@ -181,13 +211,15 @@ const Dome = () => {
   
   function Box2(props) {
     const mesh = useRef()
-    const [collectedMessage, setCollectedMessage] = useState(false);
+    const [collectedMessage, setCollectedMessage] = useState(true);
+    const [corkSeen, setCorkSeen] = useState(false)
     const [hovered, set] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
-    if(collectedMessage){
-      counter();
+
+    // if(corkSeen){
+    //   counter();
        
-    }
+    // }
     const texture = useLoader(THREE.TextureLoader, img)
 
     const onMouseOver = event => {
@@ -201,6 +233,23 @@ const Dome = () => {
       let black = "transparent";
       el.style.background = black;
     };
+
+    var checkBoard = setInterval(function(){
+      if (cork === 2 && flagB2 === 0){
+        setCollectedMessage(false)
+        console.log('flag = 2')
+        clearInterval(checkBoard);
+        flagB2 = 1;
+      }
+    }, 1000)
+
+    function afterClick() {
+      console.log("afterClick");
+      setCollectedMessage(true);
+      setShowMessage(false);
+      setCorkSeen(true)
+      counter();
+    }
   
     // useFrame(({ camera, mouse }) => {
     //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
@@ -248,7 +297,7 @@ const Dome = () => {
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
-                                    onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
+                                    onClick={() => afterClick()}>
                                     Collect the piece of the migration map.
 
                                 </h3>
@@ -271,12 +320,13 @@ const Dome = () => {
   function Box3(props) {
     const mesh = useRef()
     const [showMessage, setShowMessage] = useState(false);
+    const [corkSeen, setCorkSeen] = useState(false)
     const [hovered, set] = useState(false)
-    const [collectedMessage, setCollectedMessage] = useState(false)
-    if(collectedMessage){
-      counter();
+    const [collectedMessage, setCollectedMessage] = useState(true)
+    // if(corkSeen){
+    //   counter();
        
-    }
+    // }
     const texture = useLoader(THREE.TextureLoader, img3)
 
     const onMouseOver = event => {
@@ -290,6 +340,23 @@ const Dome = () => {
       let black = "transparent";
       el.style.background = black;
     };
+
+    var checkBoard = setInterval(function(){
+      if (cork === 2 && flagB3 === 0){
+        setCollectedMessage(false)
+        console.log('flag = 2')
+        clearInterval(checkBoard);
+        flagB3 = 1;
+      }
+    }, 1000)
+
+    function afterClick() {
+      console.log("afterClick");
+      setCollectedMessage(true);
+      setShowMessage(false);
+      setCorkSeen(true)
+      counter();
+    }
   
     // useFrame(({ camera, mouse }) => {
     //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
@@ -332,7 +399,7 @@ const Dome = () => {
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
-                                    onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
+                                    onClick={() => afterClick()}>
                                     Collect the piece of the migration map.
 
                                 </h3>
@@ -354,12 +421,13 @@ const Dome = () => {
   function Box4(props) {
     const mesh = useRef()
     const [showMessage, setShowMessage] = useState(false);
+    const [corkSeen, setCorkSeen] = useState(false)
     const [hovered, set] = useState(false)
-    const [collectedMessage, setCollectedMessage] = useState(false)
-    if(collectedMessage){
-      counter();
+    const [collectedMessage, setCollectedMessage] = useState(true)
+    // if(corkSeen){
+    //   counter();
        
-    }
+    // }
     const texture = useLoader(THREE.TextureLoader, img4)
 
     const onMouseOver = event => {
@@ -373,6 +441,23 @@ const Dome = () => {
       let black = "transparent";
       el.style.background = black;
     };
+
+    var checkBoard = setInterval(function(){
+      if (cork === 2 && flagB4 === 0){
+        setCollectedMessage(false)
+        console.log('flag = 2')
+        clearInterval(checkBoard);
+        flagB4 = 1;
+      }
+    }, 1000)
+
+    function afterClick() {
+      console.log("afterClick");
+      setCollectedMessage(true);
+      setShowMessage(false);
+      setCorkSeen(true)
+      counter();
+    }
   
     // useFrame(({ camera, mouse }) => {
     //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
@@ -415,7 +500,7 @@ const Dome = () => {
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
-                                    onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
+                                    onClick={() => afterClick()}>
                                     Collect the piece of the migration map.
 
                                 </h3>
@@ -437,12 +522,13 @@ const Dome = () => {
   function Box5(props) {
     const mesh = useRef()
     const [showMessage, setShowMessage] = useState(false);
+    const [corkSeen, setCorkSeen] = useState(false)
     const [hovered, set] = useState(false)
-    const [collectedMessage, setCollectedMessage] = useState(false)
-    if(collectedMessage){
-      counter();
+    const [collectedMessage, setCollectedMessage] = useState(true)
+    // if(corkSeen){
+    //   counter();
        
-    }
+    // }
     const texture = useLoader(THREE.TextureLoader, img5)
 
     const onMouseOver = event => {
@@ -456,6 +542,23 @@ const Dome = () => {
       let black = "transparent";
       el.style.background = black;
     };
+
+    var checkBoard = setInterval(function(){
+      if (cork === 2 && flagB5 === 0){
+        setCollectedMessage(false)
+        console.log('flag = 2')
+        clearInterval(checkBoard);
+        flagB5 = 1;
+      }
+    }, 1000)
+
+    function afterClick() {
+      console.log("afterClick");
+      setCollectedMessage(true);
+      setShowMessage(false);
+      setCorkSeen(true)
+      counter();
+    }
   
     // useFrame(({ camera, mouse }) => {
     //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
@@ -498,7 +601,7 @@ const Dome = () => {
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
-                                    onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
+                                    onClick={() => afterClick()}>
                                     Collect the piece of the migration map.
 
                                 </h3>
@@ -520,12 +623,13 @@ const Dome = () => {
   function Box6(props) {
     const mesh = useRef()
     const [showMessage, setShowMessage] = useState(false);
+    const [corkSeen, setCorkSeen] = useState(false)
     const [hovered, set] = useState(false)
-    const [collectedMessage, setCollectedMessage] = useState(false)
-    if(collectedMessage){
-      counter();
+    const [collectedMessage, setCollectedMessage] = useState(true)
+    // if(corkSeen){
+    //   counter();
        
-    }
+    // }
     const texture = useLoader(THREE.TextureLoader, img6)
 
     const onMouseOver = event => {
@@ -539,6 +643,23 @@ const Dome = () => {
       let black = "transparent";
       el.style.background = black;
     };
+    
+    var checkBoard = setInterval(function(){
+      if (cork === 2 && flagB6 === 0){
+        setCollectedMessage(false)
+        console.log('flag = 2')
+        clearInterval(checkBoard);
+        flagB6 = 1;
+      }
+    }, 1000)
+
+    function afterClick() {
+      console.log("afterClick");
+      setCollectedMessage(true);
+      setShowMessage(false);
+      setCorkSeen(true)
+      counter();
+    }
   
     // useFrame(({ camera, mouse }) => {
     //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
@@ -581,7 +702,7 @@ const Dome = () => {
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}
-                                    onClick={() => {setCollectedMessage(true); setShowMessage(false)}}>
+                                    onClick={() => afterClick()}>
                                     Collect the piece of the migration map.
 
                                 </h3>
@@ -683,6 +804,54 @@ const Dome = () => {
     )
   }
 
+  // CorkBoard
+  function TouchPoint1({ position, color, onClick }) {
+    const [hovered, set] = useState(false)
+    // const [showButton, setShowButton] = useState(true);
+    const [showMessage, setShowMessage] = useState(false);
+
+    useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
+    return (
+        <mesh 
+            scale={hovered ? [2, 2, 2, 2] : [2, 2, 2, 2]}
+            position={position}
+            onPointerOver={() => set(true)}
+            onPointerOut={() => set(false)}
+            onClick={() => {setShowMessage(true); cork = 2}}>
+            <sphereGeometry attach="geometry" args={[1, 32, 32]} />
+            <meshBasicMaterial attach="material" transparent opacity={hovered? 0.1 : 0} /> 
+            <Html center>
+                <Container>
+                    <CSSTransition
+                        in={showMessage}
+                        timeout={300}
+                        classNames="alert1"
+                        unmountOnExit
+                        // onEnter={() => setShowButton(false)}
+                        // onExited={() => setShowButton(true)}
+                    >
+                        <Alert
+                        className="alert"
+                        variant="primary"
+                        // dismissible
+                        onClose={() => setShowMessage(false)}
+                        >
+                        <button onClick={() => setShowMessage(false)} style={{ cursor: 'pointer', position: 'absolute', top: '12px', right: '-257', opacity: '0'}}>XXX</button>
+                        <div className="alert-inside2" style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '200%' }}>
+                        <button className="close" onClick={() => setShowMessage(false)}>×</button>
+
+                            <div>
+                                <img src={board}   />
+                            </div>
+                        </div>
+                        </Alert>
+                    </CSSTransition>
+                </Container>
+            </Html>
+        </mesh>
+    )
+}
+
 
 function TouchPoint5({ position, color, onClick }) {
   const [showMessage, setShowMessage] = useState(false);
@@ -694,6 +863,7 @@ function TouchPoint5({ position, color, onClick }) {
   
   // function that checks the number of boxes collected
   setInterval(function(){
+    console.log('x', x);
     puzzlePro = localStorage.getItem("puzzleComplete");
     if(x === 13 && y === 0){
       setCollectedMessage(true);
@@ -714,7 +884,7 @@ function TouchPoint5({ position, color, onClick }) {
 
   return (
       <mesh 
-          scale={collectedMessage ? [0.4, 0.4, 0.4] : [0, 0, 0]}
+          scale={[0.4, 0.4, 0.4]}
           position={position}
           onPointerOver={() => set(true)}
           onPointerOut={() => set(false)}
@@ -910,6 +1080,7 @@ function obama(){
 function Counter(){
   const [something, setSomething] = useState(4);
   const [pieceCollected, setPieceCollected] = useState(0);
+  const [pieceShow, setPieceShow] = useState(false);
   
   setInterval(function(){
       if(x===12){
@@ -919,7 +1090,10 @@ function Counter(){
         setSomething(6);
       }  
       // console.log("x: ", x)
-      setPieceCollected(Math.floor(x/2));
+      setPieceCollected(x);
+      if(cork === 2){
+        setPieceShow(true);
+      }
   }, 500);
 
 
@@ -929,7 +1103,7 @@ function Counter(){
         <h1 style={{ letterSpacing: '4px' }}>{something}/<span>7</span></h1>
         <h3>CHALLENGES</h3>
       </div>
-      <div className="bg-text7">
+      <div className="bg-text7" style={{visibility: pieceShow? 'visible' : 'hidden'}}>
         <img src={Map} height="45%" width="45%" />
         <h1 style={{paddingLeft: '50px'}}>{pieceCollected}/<span>6</span></h1>
         <h3 style={{paddingLeft: '32px'}}>PIECES</h3> 
