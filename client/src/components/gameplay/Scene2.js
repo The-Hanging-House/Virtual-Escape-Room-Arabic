@@ -887,13 +887,13 @@ function TouchPoint5({ position, color, onClick }) {
 
   return (
       <mesh 
-          scale={[0.4, 0.4, 0.4]}
+          scale={[2, 2, 2]}
           position={position}
           onPointerOver={() => set(true)}
           onPointerOut={() => set(false)}
           onClick={() => {setShowMessage(true); new Audio(paper).play(); localStorage.setItem('pState', "1");}}>
           <sphereGeometry attach="geometry" args={[1, 32, 32]} />
-          <meshBasicMaterial attach="material" color="orange" /> 
+          <meshBasicMaterial attach="material" transparent opacity={hovered? 0.2 : 0.2} /> 
           <Html center>
               <Container>
                   <CSSTransition
