@@ -15,7 +15,7 @@ function TouchPoint7({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={[0.7, 4, 0.3, 0.7]}
+            scale={[1.3, 1.3, 1.3, 1.3]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}

@@ -15,9 +15,9 @@ function TouchPoint4({ position, color, onClick }) {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-        scale={[25, 0.1, 0.1]}
+        scale={[28.5, 0.1, 0.1]}
             position={position}
-            rotation={[0, 0.1, 0.1]}
+            rotation={[0, 0.06, 0.06]}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => setShowMessage(true)}>

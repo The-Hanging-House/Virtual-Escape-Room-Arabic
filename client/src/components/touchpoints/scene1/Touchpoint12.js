@@ -10,14 +10,14 @@ import { Html } from 'drei';
 
 import X from '../../../img/x.svg'
 
-function TouchPoint1({ position, color, onClick }) {
+function TouchPoint12({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     const [showMessage, setShowMessage] = useState(false);
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={[0.8, 0.8, 0.8]}
+            scale={[0.5, 0.5, 0.5]}
             position={position}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
@@ -57,4 +57,4 @@ function TouchPoint1({ position, color, onClick }) {
     )
 }
 
-export default TouchPoint1;
+export default TouchPoint12;

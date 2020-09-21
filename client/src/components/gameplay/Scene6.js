@@ -141,10 +141,12 @@ function Scene6() {
                         <TouchPoint5 position={[-1, -3.2, 0.4]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint2 position={[-15, -3, 1]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-4.5, -8.5, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint4 position={[-8, -21.7, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint4 position={[8, -19.6, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint4 position={[-2, -20.8, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        {/* <TouchPoint4 position={[8, -19.6, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         <TouchPoint6 position={[6, -9, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint7 position={[-1, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
+
+                        <TouchPoint7 position={[-0.8, -5, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint7 position={[-1, -6.8, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         
                     </Suspense>
             </Canvas>,
