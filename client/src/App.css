@@ -1564,6 +1564,11 @@ h1 span {
   top: -5vh;
   background-color: transparent;
   cursor: pointer;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
 span {
   font-size: 1rem;

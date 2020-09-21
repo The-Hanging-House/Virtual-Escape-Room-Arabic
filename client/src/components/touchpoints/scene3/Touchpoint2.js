@@ -54,7 +54,7 @@ function TouchPoint2({ position, color, onClick }) {
                         onClose={() => setShowMessage(false)}
                         >
                          <div className="alert-inside6">
-                         <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='300%' height='300%'></img></button>
+                         <button className="close" onClick={() => setShowMessage(false)}><img src={X} className="stopDrag" width='300%' height='300%'></img></button>
                             <Alert.Heading>
                             <App />
                             <img src={Lock} style={{ left: '-48px', transform: 'scale(0.9)',  top: '-33px' }}/>
