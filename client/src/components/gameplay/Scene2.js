@@ -1133,10 +1133,13 @@ function Scene2() {
               <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
                   <Suspense fallback={
                       <Html center style={{ color: 'white' }}>
-                        <img src={Loader} />
+                        {/* <img src={Loader} />
                         <div>
                             <h1 style={{ color: '#F8A61F', textAlign: 'center'}}>Loading...</h1>
-                        </div>
+                        </div> */}
+                          {/* <div className="welcomedcc" style={{ position: "absolute", zIndex: "200", left: "50%", top: "50%", transform: "translate(-50%, -50%)"}}> */}
+                            <img src = {hint} style={{transform: 'scale(0.295)'}} />
+                        {/* </div> */}
                       </Html>
                     }>
                       <Dome />  
