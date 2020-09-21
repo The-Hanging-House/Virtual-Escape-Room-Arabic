@@ -433,6 +433,7 @@ body {
   font-weight: 500;
 }
 .option1 {
+  font-family: "Dubai W23", sans-serif;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -515,6 +516,7 @@ body {
   font-weight: 500;
 }
 .option2 {
+  font-family: "Dubai W23", sans-serif;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -646,7 +648,7 @@ body {
 }
 .bg-text-login p {
   position: relative;
-  top: 10%;
+  top: 20%;
 }
 .bg-text1 {
   /* background: url("./../src//img/01.png") no-repeat center/cover; */
@@ -1699,7 +1701,7 @@ h3 {
   }
   .bg-text-login p {
     position: relative;
-    top: 10%;
+    top: 18%;
   }
   .dashblock {
     left: -5%;
@@ -1842,7 +1844,7 @@ h3 {
   }
   .bg-text-login p {
     position: relative;
-    top: 12%;
+    top: 21%;
   }
   .bg-text1
   {
@@ -2165,9 +2167,9 @@ h3 {
   }
   .lead1
   {
-    font-size: 31px;
-    left: 78px;
-    top: 122px;
+    font-size: 26px;
+    left: 81px;
+    top: 127px;
   }
   .button-1 {
     position: absolute;

@@ -61,7 +61,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     }
     else if (password !== password2) {
       setAlert("Passwords do not match!", "danger");
-    } else if (username.length >= 9){
+    }
+    else if (username.length <=3){
+      setAlert("Username 4 characters min", "danger")
+    }
+     else if (username.length >= 9){
       setAlert("Username 8 characters max", "danger")
     }
      else {

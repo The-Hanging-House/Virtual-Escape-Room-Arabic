@@ -82,7 +82,7 @@ function TouchPoint3({ position, color, onClick }) {
                         </button>
 
                             <Alert.Heading>
-                                <p style={{ fontSize: '1.2rem', position: 'absolute', top: '33px', width: '500px', right: '17px' }}>
+                                <p style={{ fontSize: '1.2rem', position: 'absolute', top: '33px', width: '500px', left: '53px' }}>
                                     Which of the following actions would you like to take?
                                 </p>
                                 {/* <div>
