@@ -17,6 +17,7 @@ import Map from '../../img/map.svg'
 import note from './../../img/note.png'
 import xclose from './../../img/x.svg'
 import teleNo from './../../img/teleNo.png'
+import PrePuz from './../../img/prepuz.png'
 
 
 // import TouchPoint1 from '../touchpoints/scene2/Touchpoint1'
@@ -55,6 +56,8 @@ import img5 from './../../img/p5.png'
 
 import egg6 from '../../img/pp6.png'
 import img6 from './../../img/p6.png'
+
+import Xclose from "./../../img/whiteX.png"
 
 import './style.css'
 extend({ OrbitControls })
@@ -922,8 +925,8 @@ function TouchPoint5({ position, color, onClick }) {
                               </div>
                             </div>
                             <div style={{ display: show? 'none' : 'block', transform: 'scale(0.6)', position: 'absolute', top: '0px', left: '0px' }} >
-                              <img src={teleNo} />
-                              <button onClick={() => setShowMessage(false)} style={{ position: 'absolute', right: '39px', top: '36px', opacity: '0', cursor: 'pointer' }}> XX</button>
+                              <img src={PrePuz} style={{ position: 'absolute', transform: 'scale(0.5) translate(-65%, -45%)' }} />
+                              <img src={Xclose} onClick={() => {setShowMessage(false)}} style={{ position: 'absolute', left: '1251px', top: '80px' }} />
                             </div>
                           </Alert.Heading>                       
                       </div>

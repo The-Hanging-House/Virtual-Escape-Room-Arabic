@@ -1273,7 +1273,7 @@ h1 span {
   display: inline-block;
   background-repeat: no-repeat;
   background-size: 100%;
-  border-radius: 30px;
+  border-radius: 4px;
   color: white;
   /*width: 32vw;
   height: 35vh;*/
@@ -1377,7 +1377,7 @@ h1 span {
   display: inline-block;
   background-repeat: no-repeat;
   background-size: 82%;
-  border-radius: 25px;
+  border-radius: 10px;
   color: white;
   padding: 2rem;
   /*width: 30vw;
@@ -1416,7 +1416,7 @@ h1 span {
   display: inline-block;
   background-repeat: no-repeat;
   background-size: 100%;
-  border-radius: 25px;
+  border-radius: 10px;
   color: white;
   padding: 2rem;
   /*width: 30vw;
@@ -1454,7 +1454,7 @@ h1 span {
   display: inline-block;
   background-repeat: no-repeat;
   background-size: 90%;
-  border-radius: 25px;
+  border-radius: 10px;
   color: white;
   padding: 2rem;
   /*width: 30vw;
