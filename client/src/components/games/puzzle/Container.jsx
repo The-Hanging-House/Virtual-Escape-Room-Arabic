@@ -106,7 +106,7 @@ export const Container = () => {
     <div style={{ display: checkAfter? 'none' : 'block'}}>
     <div className="puzzle" >
       <div>
-        <img src={emptyBoard} style={{  display: boxDisplay? 'none' : 'block', position: 'absolute', height: '493px', left: '-290px', top: '-28px'}} className='puzzleBoard' />
+        <img src={emptyBoard} className="stopDrag" style={{  display: boxDisplay? 'none' : 'block', position: 'absolute', height: '493px', left: '-290px', top: '-28px'}} className='puzzleBoard' />
           <div className="solvedboard" style={{ display: boxDisplay? 'none' : 'block', transform: 'scale(1.5)', transform: 'scale(1.5)', height:'493px0', position: 'absolute', width: '355px', right: '-6px', top: '60px'}}>
             {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
               <Dustbin
@@ -119,7 +119,7 @@ export const Container = () => {
             ))}
           </div>
           <div className='puzzleBoard' style={{ display: boxDisplay? 'block' : 'none'}}>
-            <img src={completedPuzzle} style={{height: "493px", position: 'absolute', left: '-105px', top: '-27px', transform: 'scale(1.1)'}} />
+            <img src={completedPuzzle} className="stopDrag" style={{height: "493px", position: 'absolute', left: '-105px', top: '-27px', transform: 'scale(1.1)'}} />
           </div>
 
       </div>
