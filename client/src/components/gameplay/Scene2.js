@@ -890,9 +890,9 @@ function TouchPoint5({ position, color, onClick }) {
 
   return (
       <mesh 
-          scale={[3, 0.5, 0.5]}
+          scale={[2, 0.2, 0.2]}
           position={position}
-          rotation={[2, 0.9, 1.6]}
+          rotation={[0, 1.5, 1.6]}
           onPointerOver={() => set(true)}
           onPointerOut={() => set(false)}
           onClick={() => {setShowMessage(true); new Audio(paper).play(); localStorage.setItem('pState', "1");}}>
@@ -1160,7 +1160,7 @@ function Scene2() {
                       <TouchPoint2 position={[-18, -7.5, -4.5]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint3 position={[1, -1, 2]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint4 position={[-4.5, -2, 0.2]} args={[3, 2, 1]} color='#F8A61F' />
-                      <TouchPoint5 position={[-25, -10, 10]} args={[3, 2, 1]} color='#F8A61F' />
+                      <TouchPoint5 position={[-25, -10.4, 10]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint6 position={[-25, -13.5, -6]} args={[3, 2, 1]} color='#F8A61F' />
                       {/* <Portal position={[-10, -12, -20]} args={[3, 2, 1]} color='#fff' /> */}
                   </Suspense>
