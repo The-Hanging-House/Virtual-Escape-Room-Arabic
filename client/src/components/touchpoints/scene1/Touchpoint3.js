@@ -54,7 +54,7 @@ function TouchPoint3({ position, color, onClick }) {
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-insides1">
-                        <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='250%' height='250%'></img></button>
+                        <button className="close" onClick={() => setShowMessage(false)}><img className="stopDrag" src={X} width='250%' height='250%'></img></button>
                             <Alert.Heading>
                                 <p style={{ fontSize: '1.1rem', color: 'black' }}>
                                     The trunk is locked, but you left the lights and music on. Have you got your keys?
