@@ -271,7 +271,7 @@ function TouchPoint3({ position, color, onClick }) {
                           <p style={{ color: 'black' }}>
                               {/* The car door is not locked, what should I do? */}
                               </p>
-                              <h3 className='mcq-bound-total' style={{ cursor: 'default', fontSize: '1rem', color: 'black', left: '21px'}} >
+                              <h3 className='mcq-bound-total' style={{ cursor: 'default', fontSize: '1rem', color: 'black', left: '37px'}} >
                                 {innerText}
                               </h3>
                               {/* <a href="scene4"> */}
@@ -370,16 +370,24 @@ function Scene3() {
                         {/* <TouchPoint1 position={[-4, -3, 5]} args={[3, 2, 1]} color='#F8A61F' /> */}
                         <TouchPoint2 position={[-6, -1, 1]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint3 position={[-11, -10, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint4 position={[-11, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint9 position={[11, -16, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        
+                        {/* Trunk TP */}
+                        <TouchPoint4 position={[-13.2, -23, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint9 position={[10, -15.7, -15]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint9 position={[-24, -22.6, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         {/* <TouchPoint4 position={[1, -18, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
-                        {/* <TouchPoint5 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' /> */}
+                        
+                        
+                        <TouchPoint5 position={[-30, -20, -15]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[2.9, -5.7, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[10.7, -8, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint5 position={[-1.6, -4.6, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint5 position={[-1.3, -4.6, 5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[-1, -3.2, 0.4]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint6 position={[6.4, -9, 5]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint7 position={[-.7, -6, 5]} args={[3, 2, 1]} color='#F8A61F' />
+
+                        <TouchPoint7 position={[-.40, -5.2, 5]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint7 position={[-.7, -6.5, 5]} args={[3, 2, 1]} color='#F8A61F' />
+
                         <TouchPoint10 position={[-32, -23, -15]} args={[3, 2, 1]} color='#F8A61F' /> 
                         {/* <Portal position={[-6, -5, 1]} args={[3, 2, 1]} color='#fff' /> */}
                         

@@ -162,13 +162,15 @@ function Scene5() {
                         <Task />
                         <TouchPoint5 position={[-10, -10, 0]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[-10, -8, 7]} args={[3, 2, 1]} color='#F8A61F' />
-                        {/* <TouchPoint5 position={[2, -4.6, 5]} args={[3, 2, 1]} color='#F8A61F' /> */}
+                        <TouchPoint5 position={[-10, -13, -10.5]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint5 position={[0, -3, -1]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint2 position={[0.85, -0.4, -2]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint4 position={[20, -27, -2]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint4 position={[11, -20, 15]} args={[3, 2, 1]} color='#F8A61F' />
+                        {/* <TouchPoint4 position={[20, -27, -2]} args={[3, 2, 1]} color='#F8A61F' /> */}
+                        <TouchPoint4 position={[4.5, -6.5, 2.2]} args={[3, 2, 1]} color='#F8A61F' />
                         <TouchPoint6 position={[-10, -12, 4]} args={[3, 2, 1]} color='#F8A61F' />
-                        <TouchPoint7 position={[-12, -18, -10]} args={[3, 2, 1]} color='#F8A61F' />
+                        
+                        <TouchPoint7 position={[-13, -15, -10]} args={[3, 2, 1]} color='#F8A61F' />
+                        <TouchPoint7 position={[-12, -19, -10]} args={[3, 2, 1]} color='#F8A61F' />
                     </Suspense>
             </Canvas>,
             <Music2 />

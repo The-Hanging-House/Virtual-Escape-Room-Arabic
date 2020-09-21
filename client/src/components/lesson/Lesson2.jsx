@@ -11,7 +11,7 @@ const Lesson2 = () => {
     const [watchComplete, setWatchComplete] = useState(false)
 
     const handleWatchComplete = ({ played }) => {
-        if(played >= 0.8 && !watchComplete) {
+        if(played >= 0.87 && !watchComplete) {
             setWatchComplete(true)
             var someData = new Date().getTime();
             localStorage.setItem('myDataKey', someData);
