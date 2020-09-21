@@ -97,13 +97,13 @@ function Initimg(){
 
   setTimeout(function(){
     setDisplayProp(true);
-    console.log("TEXT")
+    // console.log("TEXT")
   }, 6000);
 
     return (
     <>
     <div style={{display: displayProp? 'none' : 'block', position: "absolute", zIndex: "200", left: "60%", top: "50%", transform: "translate(-50%, -50%)"}}>
-        <img src = {hint} style={{width: "50%", height: "50%"}}/>
+        <img className="stopDrag" src={hint} style={{width: "50%", height: "50%"}}/>
     </div>
     </>
     )
