@@ -148,7 +148,7 @@ if (number !== "" && number <= 14 ){
         </div>
 
         <div className="form-group">
-            <select id="dropdown" style={{ color: '#717171' }} value={selectValue} onChange={(e) => onChange(e)} name="selectValue" placeholder="Select Emirates" >
+            <select id="dropdown" style={{ color: '#717171', appearance: 'none', background: 'url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #eee', backgroundPositionX: '323px', backgroundSize: '12px' }} value={selectValue} onChange={(e) => onChange(e)} name="selectValue" placeholder="Select Emirates" >
               <option value="" disabled selected>Select Emirate</option>
               <option value="Dubai">Dubai</option>
               <option value="Sharjah">Sharjah</option>
