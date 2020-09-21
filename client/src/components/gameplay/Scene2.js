@@ -813,12 +813,13 @@ const Dome = () => {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={hovered ? [2, 2, 2, 2] : [2, 2, 2, 2]}
+            scale={[5.2, 0.15, 0.1]}
             position={position}
+            rotation={[0, 1, 0]}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => {setShowMessage(true); cork = 2}}>
-            <sphereGeometry attach="geometry" args={[1, 32, 32]} />
+            <planeGeometry attach="geometry" args={[1, 32, 32]} />
             <meshBasicMaterial attach="material" transparent opacity={hovered? 0.1 : 0} /> 
             <Html center>
                 <Container>
@@ -859,14 +860,16 @@ function TouchPoint5({ position, color, onClick }) {
   const [hovered, set] = useState(false);
   const [coll, setColl] = useState(false);
   const [showProceed, setShowProceed] = useState('hidden');
+  const [show, setShow] = useState(false);
+  
   var puzzlePro;
   
   // function that checks the number of boxes collected
   setInterval(function(){
     console.log('x', x);
     puzzlePro = localStorage.getItem("puzzleComplete");
-    if(x === 13 && y === 0){
-      setCollectedMessage(true);
+    if(x === 6 && y === 0){
+      setShow(true);
     }if(coll){
       ccom=6;
       y = 1;
@@ -907,14 +910,20 @@ function TouchPoint5({ position, color, onClick }) {
                       >
                       <div className="alert-inside20">
                           <Alert.Heading>
-                            <Puzzle />
-                             <div>
-                                  <button onClick={() => {setShowMessage(false); setColl(true); localStorage.setItem('pState', "0");}} style={{visibility: showProceed, position: 'absolute', left: '746px', top: '94px', opacity: '0'}} className="btn btn-primary3">
-                                      x
-                                  </button>
-                                  <button onClick={() => {setShowMessage(false); localStorage.setItem('pState', "0");}} style={{visibility: showMessage? 'visible' : 'hidden', position: 'absolute', left: '526px', top: '116px', opacity: '0'}} className="btn btn-primary3">
-                                      x
-                                  </button>
+                            <div style={{ display: show? 'block' : 'none'}}>
+                              <Puzzle />
+                              <div>
+                                    <button onClick={() => {setShowMessage(false); setColl(true); localStorage.setItem('pState', "0");}} style={{visibility: showProceed, position: 'absolute', left: '746px', top: '94px', opacity: '0'}} className="btn btn-primary3">
+                                        x
+                                    </button>
+                                    <button onClick={() => {setShowMessage(false); localStorage.setItem('pState', "0");}} style={{visibility: showMessage? 'visible' : 'hidden', position: 'absolute', left: '526px', top: '116px', opacity: '0'}} className="btn btn-primary3">
+                                        x
+                                    </button>
+                              </div>
+                            </div>
+                            <div style={{ display: show? 'none' : 'block', transform: 'scale(0.6)', position: 'absolute', top: '0px', left: '0px' }} >
+                              <img src={teleNo} />
+                              <button onClick={() => setShowMessage(false)} style={{ position: 'absolute', right: '39px', top: '36px', opacity: '0', cursor: 'pointer' }}> XX</button>
                             </div>
                           </Alert.Heading>                       
                       </div>
@@ -1140,7 +1149,7 @@ function Scene2() {
                       <Box6 position={[-5, -1.6, 15]} />
                       <ambientLight intensity={0.7}/>
                       <Box7 position={[-20, -10, 9]}/>
-                      <TouchPoint1 position={[-17, 1, -10]} args={[3, 2, 1]} color='#F8A61F' />
+                      <TouchPoint1 position={[-16, 0.5, -10]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint2 position={[-18, -7.5, -4.5]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint3 position={[1, -1, 2]} args={[3, 2, 1]} color='#F8A61F' />
                       <TouchPoint4 position={[-4.5, -2, 0.2]} args={[3, 2, 1]} color='#F8A61F' />
