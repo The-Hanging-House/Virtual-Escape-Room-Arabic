@@ -876,7 +876,7 @@ function TouchPoint5({ position, color, onClick }) {
     }if(coll){
       ccom=6;
       y = 1;
-      setCollectedMessage(false);
+      setCollectedMessage(true);
     } 
     if(puzzlePro === '1'){
         setShowProceed('visible');
@@ -890,7 +890,7 @@ function TouchPoint5({ position, color, onClick }) {
 
   return (
       <mesh 
-          scale={[2, 0.2, 0.2]}
+          scale={collectedMessage? [0, 0, 0] : [2, 0.2, 0.2]}
           position={position}
           rotation={[0, 1.5, 1.6]}
           onPointerOver={() => set(true)}
