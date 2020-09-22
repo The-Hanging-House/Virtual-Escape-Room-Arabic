@@ -10,7 +10,6 @@ import { set } from "mongoose";
 var runOnce = 0;
 var runTwice = 0;
 var userSave = "a";
-var emiratesSelect;
 
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
