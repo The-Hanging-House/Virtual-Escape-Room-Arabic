@@ -20,13 +20,13 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     password: "",
     password2: "",
     emirates: "",
-    selectValue: "",
     name: "",
-    school: ""
+    school: "",
+    age: ""
   });
 
 
-  var { username, email, password, password2, emirates, selectValue, name, school, age } = formData;
+  var { username, email, password, password2, emirates, school, age } = formData;
   
   if (username !== "undefined"){
     userSave = username;
@@ -45,8 +45,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     password = username;
     password2 = username;
 
-    if (selectValue === ""){
-      setFormData({ ...formData, selectValue: "Dubai" })
+    age = number;
+
+    if (emirates === ""){
+      setFormData({ ...formData, emirates: "Dubai" })
       console.log("ChANGE")
     }
 
@@ -54,7 +56,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     console.log("number", number);
 
     e.preventDefault();
-    if(selectValue === ""){
+    if(emirates === ""){
       setAlert("Please Select Emirate", "danger");
     } else if (username.length === 0 ){
       setAlert("Please input username", "danger")
@@ -69,7 +71,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       setAlert("Username 8 characters max", "danger")
     }
      else {
-      register({ username, email, password });
+      register({ username, email, password, emirates, school, age });
     }
     console.log(username.length)
   };
@@ -148,7 +150,7 @@ if (number !== "" && number <= 14 ){
         </div>
 
         <div className="form-group">
-            <select id="dropdown" name="emirates" style={{ color: '#717171', appearance: 'none', background: 'url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #eee', backgroundPositionX: '323px', backgroundSize: '12px' }} value={selectValue} onChange={(e) => onChange(e)} name="selectValue" placeholder="Select Emirates" >
+            <select id="dropdown" name="emirates" style={{ color: '#717171', appearance: 'none', background: 'url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #eee', backgroundPositionX: '323px', backgroundSize: '12px' }} value={emirates} onChange={(e) => onChange(e)}  placeholder="Select Emirates" >
               <option value="" disabled selected>Select Emirate</option>
               <option value="Dubai">Dubai</option>
               <option value="Sharjah">Sharjah</option>
