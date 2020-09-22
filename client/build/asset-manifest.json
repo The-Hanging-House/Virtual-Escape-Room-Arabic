@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.0cff532b.chunk.css",
-    "main.js": "/static/js/main.bc3aa01f.chunk.js",
-    "main.js.map": "/static/js/main.bc3aa01f.chunk.js.map",
+    "main.js": "/static/js/main.df121f1f.chunk.js",
+    "main.js.map": "/static/js/main.df121f1f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
     "static/css/2.1f156bdb.chunk.css": "/static/css/2.1f156bdb.chunk.css",
-    "static/js/2.b70929ee.chunk.js": "/static/js/2.b70929ee.chunk.js",
-    "static/js/2.b70929ee.chunk.js.map": "/static/js/2.b70929ee.chunk.js.map",
+    "static/js/2.80184edf.chunk.js": "/static/js/2.80184edf.chunk.js",
+    "static/js/2.80184edf.chunk.js.map": "/static/js/2.80184edf.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.0885fb12b84ce135fa80e23633802f33.js": "/precache-manifest.0885fb12b84ce135fa80e23633802f33.js",
+    "precache-manifest.50715b791ec1aee14db45fb5ca787b38.js": "/precache-manifest.50715b791ec1aee14db45fb5ca787b38.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.1f156bdb.chunk.css.map": "/static/css/2.1f156bdb.chunk.css.map",
     "static/css/main.0cff532b.chunk.css.map": "/static/css/main.0cff532b.chunk.css.map",
-    "static/js/2.b70929ee.chunk.js.LICENSE.txt": "/static/js/2.b70929ee.chunk.js.LICENSE.txt",
+    "static/js/2.80184edf.chunk.js.LICENSE.txt": "/static/js/2.80184edf.chunk.js.LICENSE.txt",
     "static/media/01.png": "/static/media/01.9feaa871.png",
     "static/media/Birds.mp3": "/static/media/Birds.f60776c4.mp3",
     "static/media/App.css": "/static/media/yellowblock1.e7d166a0.png",
@@ -22,7 +22,6 @@
     "static/media/bgend.png": "/static/media/bgend.5c49681b.png",
     "static/media/board.png": "/static/media/board.390523b2.png",
     "static/media/briefing1.mp4": "/static/media/briefing1.6e8efd8b.mp4",
-    "static/media/briefing2.mp4": "/static/media/briefing2.9d531761.mp4",
     "static/media/carDoor.mp3": "/static/media/carDoor.68ef1c02.mp3",
     "static/media/click.png": "/static/media/click.26b129f9.png",
     "static/media/completedPuzzle.png": "/static/media/completedPuzzle.8173f02c.png",
@@ -81,8 +80,8 @@
   "entrypoints": [
     "static/js/runtime-main.09b85ec0.js",
     "static/css/2.1f156bdb.chunk.css",
-    "static/js/2.b70929ee.chunk.js",
+    "static/js/2.80184edf.chunk.js",
     "static/css/main.0cff532b.chunk.css",
-    "static/js/main.bc3aa01f.chunk.js"
+    "static/js/main.df121f1f.chunk.js"
   ]
 }
