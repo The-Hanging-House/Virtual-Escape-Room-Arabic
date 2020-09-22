@@ -16,6 +16,15 @@ const UserSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
+  emirates: {
+    type: String,
+  },
+  age: {
+    type: Number,
+  },
+  school: {
+    type: String,
+  },
   avatar: {
     type: String,
   },
