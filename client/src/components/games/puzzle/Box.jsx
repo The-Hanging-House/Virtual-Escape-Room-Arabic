@@ -1,4 +1,3 @@
-import { text } from 'express';
 import React from 'react'
 import { DragSource } from 'react-dnd'
 
@@ -32,13 +31,13 @@ const style = {
   marginBottom: '1px',
   cursor: 'grab',
   float: 'left',
+  webkitUserSelect: 'text',
   width: "calc((30% - 10px) - 1px)" 
 }
 
 export const Box = ({ name, isDropped, isDragging, connectDragSource, bgImageName }) => {
   const opacity = isDragging ? 0.4 : 1
   const visibility = isDropped ? 'hidden' : 'visible'
-  const webkitUserSelect = 'text'
   // const visibility = 'visible'
   let backgroundImage = `url(${backgroundsList[bgImageName]})`;
   return connectDragSource(
@@ -46,8 +45,7 @@ export const Box = ({ name, isDropped, isDragging, connectDragSource, bgImageNam
       ...style, 
       opacity, 
       visibility, 
-      backgroundImage,
-      webkitUserSelect
+      backgroundImage
     }}
     >
       {/* {isDropped ? <s>{name}</s> : name} */}
