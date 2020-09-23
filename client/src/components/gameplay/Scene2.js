@@ -927,7 +927,7 @@ function TouchPoint5({ position, color, onClick }) {
                             </div>
                             <div style={{ display: show? 'none' : 'block', transform: 'scale(0.6)', position: 'absolute', top: '0px', left: '0px' }} >
                               <img src={PrePuz} className="stopDrag" style={{ position: 'absolute', transform: 'scale(0.5) translate(-65%, -45%)' }} />
-                              <img src={Xclose} className="stopDrag" onClick={() => {setShowMessage(false)}} style={{ position: 'absolute', left: '1251px', top: '80px' }} />
+                              <img src={Xclose} className="stopDrag" onClick={() => {setShowMessage(false)}} style={{ position: 'absolute', left: '1251px', top: '80px', cursor: 'pointer' }} />
                             </div>
                           </Alert.Heading>                       
                       </div>

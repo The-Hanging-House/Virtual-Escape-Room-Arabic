@@ -300,6 +300,7 @@
   border-radius: 20px;
   background-color: #eeeeee;
   letter-spacing: 2px;
+  -webkit-appearance: none;
 }
 /* .form input[type="text"],
 .form input[type="number"] {
@@ -711,10 +712,12 @@ h1 span {
   padding: 20px;
   text-align: center;
   padding-top: 2rem;
+  /* cursor: pointer; */
 }
 .bg-text4 svg {
   height: 90px;
   width: 90px;
+  cursor: pointer;
 }
 .bg-text4 h3 {
   font-family: "Dubai W23", sans-serif;
@@ -725,6 +728,7 @@ h1 span {
   margin: 0%;
   position: relative;
   letter-spacing: 4px;
+  cursor: pointer;
 }
 .bg-text5 {
   font-family: "Dubai W23", sans-serif;
