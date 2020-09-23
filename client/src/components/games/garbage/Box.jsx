@@ -57,7 +57,7 @@ export const Box = ({ name, isDropped, isDragging, connectDragSource, bgImageNam
 export default DragSource(
   (props) => props.type,
   {
-    beginDrag: (props) => ({ backgroundImage: props.backgroundImage }),
+    beginDrag: (props) => ({ name: props.name }),
   },
   (connect, monitor) => ({
     connectDragSource: connect.dragSource(),
