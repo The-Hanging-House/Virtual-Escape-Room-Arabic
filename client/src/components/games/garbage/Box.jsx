@@ -37,7 +37,7 @@ const style = {
   transform: 'translate(0 , 0)'
 }
 export const Box = ({ name, isDropped, isDragging, connectDragSource, bgImageName }) => {
-  const opacity = isDragging ? 0.4 : 1
+  const opacity = isDragging ? 1 : 1
   const backgroundColor = isDragging ? 'transparent' : 'transparent'
   const visibility = isDropped ? 'hidden' : 'vissible'
   let backgroundImage = `url(${backgroundsList[bgImageName]})`;
@@ -57,7 +57,7 @@ export const Box = ({ name, isDropped, isDragging, connectDragSource, bgImageNam
 export default DragSource(
   (props) => props.type,
   {
-    beginDrag: (props) => ({ name: props.name }),
+    beginDrag: (props) => ({ backgroundImage: props.backgroundImage }),
   },
   (connect, monitor) => ({
     connectDragSource: connect.dragSource(),
