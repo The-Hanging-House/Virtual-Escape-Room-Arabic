@@ -115,7 +115,7 @@ if (number !== "" && number <= 14 ){
       <div className="bg-image"><div className="lock-up"></div></div>
       <div className="bg-text">
       <h1 className="large text-primary" style={{ fontSize: '1.4rem', top: '10px' }}>REGISTER</h1>
-      <form className="form" onSubmit={(e) => onSubmit(e)} style={{ WebkitUserSelect: 'text' }}>
+      <form className="form" onSubmit={(e) => onSubmit(e)} style={{ WebkitUserSelect: 'text', bottom: '20px' }}>
 
         <div className="form-group">
           <input
