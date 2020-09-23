@@ -21,7 +21,7 @@ import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
 import './style.css'
 
 import Music1 from '../../audio/Music1'
-import carDoor from '../../audio/carDoor.mp3'
+import carDoor from '../../audio/carDoor.ogg'
 
 extend({ OrbitControls })
 
