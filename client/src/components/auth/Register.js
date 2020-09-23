@@ -124,7 +124,7 @@ if (number !== "" && number <= 14 ){
             name="username"
             value={username}
             onChange={(e) => onChange(e)}
-            style={{ WebkitUserSelect: 'text' }}
+            style={{ WebkitUserSelect: 'text', top: '11px' }}
           />
         </div>
         <div className="form-group" style={{display:'none' }}>
@@ -149,7 +149,7 @@ if (number !== "" && number <= 14 ){
         </div>
 
         <div className="form-group">
-            <select id="dropdown" name="emirates" style={{ color: '#717171', appearance: 'none', background: 'url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #eee', backgroundPositionX: '323px', backgroundSize: '12px' }} value={emirates} onChange={(e) => onChange(e)}  placeholder="Select Emirates" >
+            <select id="dropdown" name="emirates" style={{ color: '#717171', appearance: 'none', background: 'url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #eee', backgroundPositionX: '323px', backgroundSize: '12px', top: '11px' }} value={emirates} onChange={(e) => onChange(e)}  placeholder="Select Emirates" >
               <option value="" disabled selected>Select Emirate</option>
               <option value="Dubai">Dubai</option>
               <option value="Sharjah">Sharjah</option>
@@ -168,7 +168,7 @@ if (number !== "" && number <= 14 ){
               name="age"
               value={number}
               onChange={e => {setNumber(e.target.value); checkers()}}
-              style={{ WebkitUserSelect: 'text' }}
+              style={{ WebkitUserSelect: 'text', top: '11px' }}
             />
         </div>
         <div className="form-group" style={{display: isVisible? 'none' : 'inline'}}>
@@ -179,7 +179,7 @@ if (number !== "" && number <= 14 ){
             name="email"
             value={textIs? textInput : username + "@e.com"}
             onChange={(e) => {setTextInput(e.target.value); onChange(e) }}
-            style={{ WebkitUserSelect: 'text' }}
+            style={{ WebkitUserSelect: 'text', top: '11px' }}
           />
         </div>
         <div className="form-group" style={{display: isVisible? 'none' : 'inline'}}>
@@ -190,7 +190,7 @@ if (number !== "" && number <= 14 ){
             name="school"
             value={school}
             onChange={(e) => onChange(e)}
-            style={{ WebkitUserSelect: 'text' }}
+            style={{ WebkitUserSelect: 'text', top: '11px' }}
           />
         </div>
         <div style={{ marginTop: '1rem' }}>
