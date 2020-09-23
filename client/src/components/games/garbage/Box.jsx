@@ -23,7 +23,7 @@ const style = {
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   height: '108px',
-  backgroundColor: 'transparent',
+  // backgroundColor: 'blue',
   padding: '0.5rem 1rem',
   marginRight: '1rem',
   marginLeft: '1rem',
@@ -33,16 +33,19 @@ const style = {
   float: 'left',
   // width: "calc((28% - 60px) - 1px)" ,
   width: "120px" ,
-  alignItems: 'center'
+  alignItems: 'center',
+  transform: 'translate(0 , 0)'
 }
 export const Box = ({ name, isDropped, isDragging, connectDragSource, bgImageName }) => {
   const opacity = isDragging ? 0.4 : 1
+  const backgroundColor = isDragging ? 'transparent' : 'transparent'
   const visibility = isDropped ? 'hidden' : 'vissible'
   let backgroundImage = `url(${backgroundsList[bgImageName]})`;
   return connectDragSource(
     <div style={{ 
       ...style, 
       opacity, 
+      backgroundColor,
       visibility, 
       backgroundImage
     }}
