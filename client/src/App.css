@@ -1335,7 +1335,7 @@ h1 span {
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  user-drag: none;
+  -user-drag: none;
 }
 
 .alert-inside5 {
@@ -1572,7 +1572,7 @@ h1 span {
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  user-drag: none;
+  -user-drag: none;
 }
 span {
   font-size: 1rem;
