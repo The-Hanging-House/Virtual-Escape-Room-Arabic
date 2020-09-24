@@ -1,6 +1,6 @@
 import React from "react";
 import PinInput from "react-pin-input";
-import wrong from '../../../audio/wrong.mp3';
+import wrong from '../../../audio/wrong.mpeg';
 import correct from '../../../audio/correct.mp3';
 
 var tryAgain = 'none';

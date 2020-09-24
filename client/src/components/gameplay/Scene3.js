@@ -157,6 +157,8 @@ function Box1(props) {
       ref={mesh}
       rotation={[2, 15, 0]}
       scale={collectedMessage ? [0, 0, 0, 0] : [5, 5, 5, 5]}
+      onPointerOver={() => set(true)}
+      onPointerOut={() => set(false)}
       onClick={() => {setShowMessage(true); new Audio(keyPickup).play()}}>
       <planeBufferGeometry attach="geometry" args={[1, 1, 1]} />
       <meshStandardMaterial attach="material" map={texture} toneMapped={false} transparent />

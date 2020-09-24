@@ -443,6 +443,7 @@ body {
   align-content: center;
   column-gap: 288px;
   margin-top: 3rem;
+  -webkit-column-gap: 18em;
 }
 .icons1 {
   text-align: center;
