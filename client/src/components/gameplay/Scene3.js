@@ -174,9 +174,9 @@ function Box1(props) {
                       dismissible
                       onClose={() => setShowMessage(false)}
                       >
-                      <div className="alert-insides-keys" style={{visibility: collectedMessage? 'hidden' : 'visible', top: "111px", left: '6px', width: '350px', height: "208px", fontWfont: '400' }}>
+                      <div className="alert-insides-keys" style={{visibility: collectedMessage? 'hidden' : 'visible', top: "111px", left: '6px', width: '361px', height: "208px", fontWfont: '400' }}>
                             <Alert.Heading>
-                            <p style={{ transform: 'translate(10px, 10px)', fontSize:'1rem' }}>
+                            <p style={{ transform: 'translate(10px, 10px)', fontSize:'1.1rem' }}>
                               Great! You found your keys.
                             </p>
                             </Alert.Heading>
