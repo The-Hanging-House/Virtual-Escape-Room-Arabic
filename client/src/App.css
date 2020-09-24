@@ -439,11 +439,13 @@ body {
   text-align: center;
   display: flex;
   flex-direction: row;
+  columns: 288px;
   justify-content: center;
   align-content: center;
   column-gap: 288px;
   margin-top: 3rem;
   -webkit-column-gap: 18em;
+  -webkit-columns: 288px;
 }
 .icons1 {
   text-align: center;
