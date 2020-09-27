@@ -282,6 +282,12 @@ function TouchPoint3({ position, color, onClick }) {
                                       </h3>  */}
                               <div className='mcq-bounding-text'>
 
+                                  
+                              <h3 className='mcq-text' style={{ display: wrongAlert? 'block' : 'none' }} onClick={() => {setShowMessage(false); setWrongAlert(false)}}
+                                      onMouseEnter={event => onMouseOver(event)}
+                                      onMouseOut={event => onMouseOut(event)}>
+                                      {show? 'Break the trunk door open in order to search for more clues.' : ""}
+                                  </h3>
                                   <h3 className='mcq-text' style={{ display: wrongAlert? 'block' : 'none' }} 
                                           onMouseEnter={event => onMouseOver(event)}
                                           onMouseOut={event => onMouseOut(event)} 
@@ -291,11 +297,6 @@ function TouchPoint3({ position, color, onClick }) {
                                       {show? 'B. ' : ""}
                                       </h3>  */}
                                       {show? 'Open the trunk with your keys to reach the radio.' : ""}
-                                  </h3>
-                              <h3 className='mcq-text' style={{ display: wrongAlert? 'block' : 'none' }} onClick={() => {setShowMessage(false); setWrongAlert(false)}}
-                                      onMouseEnter={event => onMouseOver(event)}
-                                      onMouseOut={event => onMouseOut(event)}>
-                                      {show? 'Break the trunk door open in order to search for more clues.' : ""}
                                   </h3>
                                   <h3 className='mcq-text' style={{ display: wrongAlert? 'block' : 'none'}} onClick={() => setShowMessage(false)}
                                       onMouseEnter={event => onMouseOver(event)}

@@ -89,11 +89,7 @@ function TouchPoint3({ position, color, onClick }) {
                                     <img src={switchState? switchButtonON : switchButtonOFF} onClick={() => setSwitchState(true)} alt='switch' width='100%' height='100%' />
                                 </div> */}
                                 <div className='mcq-bounding-text2' style={{ display: correctAlert? 'none' : 'block'}}>
-                                <h3 className='mcq-text2' onClick={() => {setSwitchState(true); setCorrectAlert(true)}} style={{ display: wrongAlert? 'block' : 'none' , background: '#FFE7B0'}}
-                                    onMouseEnter={event => onMouseOver(event)}
-                                    onMouseOut={event => onMouseOut(event)}>
-                                    Turn off the lights as you do not need them.
-                                </h3>
+                                
                                 <h3  className='mcq-text2' onMouseEnter={event => onMouseOver(event)} style={{ display: wrongAlert? 'block' : 'none', background: '#FFE7B0' }}
                                     onMouseOut={event => onMouseOut(event)}  onClick={() => setWrongAlert(false)}
                                     >
@@ -108,6 +104,11 @@ function TouchPoint3({ position, color, onClick }) {
                                     onMouseEnter={event => onMouseOver(event)}
                                     onMouseOut={event => onMouseOut(event)}>
                                     Ignore and explore other items in the trunk.
+                                </h3>
+                                <h3 className='mcq-text2' onClick={() => {setSwitchState(true); setCorrectAlert(true)}} style={{ display: wrongAlert? 'block' : 'none' , background: '#FFE7B0'}}
+                                    onMouseEnter={event => onMouseOver(event)}
+                                    onMouseOut={event => onMouseOut(event)}>
+                                    Turn off the lights as you do not need them.
                                 </h3>
                                 <h3 style={{ position: 'absolute', top: '-20px', padding: '20px', left: '35px', display: wrongAlert? 'none' : 'block' }}>Try Again! Glaring light can disturb wildlife. Generally, you should switch off any lights, if they are not needed.</h3>
                                 </div>

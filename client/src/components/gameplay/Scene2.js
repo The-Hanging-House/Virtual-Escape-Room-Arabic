@@ -816,14 +816,14 @@ const Dome = () => {
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
         <mesh 
-            scale={[5.2, 0.15, 0.1]}
+            scale={[2.7, 0.05, 0.1]}
             position={position}
             rotation={[0, 1, 0]}
             onPointerOver={() => set(true)}
             onPointerOut={() => set(false)}
             onClick={() => {setShowMessage(true); cork = 2}}>
             <planeGeometry attach="geometry" args={[1, 32, 32]} />
-            <meshBasicMaterial attach="material" transparent opacity={hovered? 0.1 : 0} /> 
+            <meshBasicMaterial attach="material" transparent opacity={hovered? 0.2 : 0} /> 
             <Html center>
                 <Container>
                     <CSSTransition
