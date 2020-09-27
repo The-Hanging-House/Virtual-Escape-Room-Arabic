@@ -7,8 +7,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import Logout from '../logout/Logout'
 import Loader from '../../img/loader.gif'
 import { Html } from 'drei';
-// import Timer from '../timer/Timer'
-import Task1 from '../popup/Task1';
+
 import TouchPoint5 from '../touchpoints/scene6/Touchpoint5'
 import TouchPoint2 from '../touchpoints/scene6/Touchpoint2'
 import TouchPoint3 from '../touchpoints/scene6/Touchpoint3'
@@ -57,7 +56,7 @@ const Controls = (props) => {
       if (datetime < now) {
         var milisec_diff = now - datetime;
       }else{
-        var milisec_diff = datetime - now;
+        milisec_diff = datetime - now;
       }
       var final = Math.round(900-(milisec_diff/1000));
       if (final < 0){
@@ -128,7 +127,7 @@ function Scene6() {
                 <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
                     <Suspense fallback={
                       <Html center style={{ color: 'white' }}>
-                        <img src={Loader} />
+                        <img src={Loader} alt=" " />
                         <div>
                             <h1 style={{ color: '#F8A61F', textAlign: 'center'}}>Loading...</h1>
                         </div>

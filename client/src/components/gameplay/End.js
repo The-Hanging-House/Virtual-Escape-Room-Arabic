@@ -1,5 +1,4 @@
 import React from 'react';
-// import Bgend from '../../img/bgend.png';
 // import { url } from 'gravatar';
 
 import CWN from '../../img/cwn.svg'

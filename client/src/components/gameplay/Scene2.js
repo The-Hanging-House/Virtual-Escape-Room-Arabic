@@ -45,16 +45,16 @@ import board from '../../img/board.png'
 import egg from '../../img/pp1.png'
 import img from './../../img/p1.png'
 
-import egg3 from '../../img/pp3.png'
+// import egg3 from '../../img/pp3.png'
 import img3 from './../../img/p3.png'
 
-import egg4 from '../../img/pp4.png'
+// import egg4 from '../../img/pp4.png'
 import img4 from './../../img/p4.png'
 
-import egg5 from '../../img/pp5.png'
+// import egg5 from '../../img/pp5.png'
 import img5 from './../../img/p5.png'
 
-import egg6 from '../../img/pp6.png'
+// import egg6 from '../../img/pp6.png'
 import img6 from './../../img/p6.png'
 
 import Xclose from "./../../img/whiteX.png"
@@ -114,7 +114,7 @@ const Dome = () => {
 
     // if(corkSeen){
     //   counter();
-
+ 
     //   // setCollectedMessage(true);
     // }
     const texture = useLoader(THREE.TextureLoader, img)
@@ -187,7 +187,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg} className="stopDrag" />
+                                  <img src={egg} alt=" " className="stopDrag" />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -295,7 +295,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg} className="stopDrag" />
+                                  <img src={egg} alt=" " className="stopDrag" />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -397,7 +397,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg} className="stopDrag" />
+                                  <img src={egg} alt=" " className="stopDrag" />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -498,7 +498,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg} className="stopDrag" />
+                                  <img src={egg} alt=" " className="stopDrag" />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -599,7 +599,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg} className="stopDrag" />
+                                  <img src={egg} alt=" " className="stopDrag" />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -700,7 +700,7 @@ const Dome = () => {
                             Which of the following actions would you like to take?
                                 </p>
                                 <div>
-                                  <img src={egg} className="stopDrag"  />
+                                  <img src={egg} alt=" " className="stopDrag"  />
                                 </div>
                             </Alert.Heading>
                                 <h3 style={{ cursor: 'pointer' }} onMouseEnter={event => onMouseOver(event)}
@@ -739,17 +739,17 @@ const Dome = () => {
     }, 2000);
     const texture = useLoader(THREE.TextureLoader, note)
 
-    const onMouseOver = event => {
-      const el = event.target;
-      let colorhex = "#F8A61F"
-      el.style.background = colorhex;
-    };
+    // const onMouseOver = event => {
+    //   const el = event.target;
+    //   let colorhex = "#F8A61F"
+    //   el.style.background = colorhex;
+    // };
 
-    const onMouseOut = event => {
-      const el = event.target;
-      let black = "transparent";
-      el.style.background = black;
-    };
+    // const onMouseOut = event => {
+    //   const el = event.target;
+    //   let black = "transparent";
+    //   el.style.background = black;
+    // };
   
     // useFrame(({ camera, mouse }) => {
     //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
@@ -789,7 +789,7 @@ const Dome = () => {
                         {/* <button className="close" onClick={() => setShowMessage(false)}><img src={X} width='100%' height='300%' style={{cursor: 'pointer'}} ></img></button> */}
                             <Alert.Heading>
                                 <div>
-                                  <img style={{ cursor: 'pointer' }} className="stopDrag" src={note} alt='stickyNote' style={{ width: '100%' }} />
+                                  <img style={{ cursor: 'pointer', width: '100%' }} className="stopDrag" src={note} alt='stickyNote' />
                                 </div>
                             </Alert.Heading>
                             {/* <h3 onClick={() => setShowMessage(false)} style={{ fontSize: '1rem', cursor: 'pointer'}}
@@ -845,7 +845,7 @@ const Dome = () => {
                         <button className="close" onClick={() => setShowMessage(false)}>×</button>
 
                             <div>
-                                <img src={board} className="stopDrag"  />
+                                <img src={board} alt=" " className="stopDrag"  />
                             </div>
                         </div>
                         </Alert>
@@ -926,8 +926,8 @@ function TouchPoint5({ position, color, onClick }) {
                               </div>
                             </div>
                             <div style={{ display: show? 'none' : 'block', transform: 'scale(0.6)', position: 'absolute', top: '0px', left: '0px' }} >
-                              <img src={PrePuz} className="stopDrag" style={{ position: 'absolute', transform: 'scale(0.5) translate(-65%, -45%)' }} />
-                              <img src={Xclose} className="stopDrag" onClick={() => {setShowMessage(false)}} style={{ position: 'absolute', left: '1251px', top: '80px', cursor: 'pointer' }} />
+                              <img src={PrePuz} className="stopDrag" alt=" " style={{ position: 'absolute', transform: 'scale(0.5) translate(-65%, -45%)' }} />
+                              <img src={Xclose} className="stopDrag" alt=" " onClick={() => {setShowMessage(false)}} style={{ position: 'absolute', left: '1251px', top: '80px', cursor: 'pointer' }} />
                             </div>
                           </Alert.Heading>                       
                       </div>
@@ -951,7 +951,7 @@ function Initimg(){
     return (
     <>
     <div className="welcomedcc" style={{display: displayProp? 'none' : 'block', position: "absolute", zIndex: "200", left: "50%", top: "50%", transform: "translate(-50%, -50%)"}}>
-        <img src = {hint} width='100%' height='100%' className="stopDrag" />
+        <img src = {hint} width='100%' height='100%' className="stopDrag" alt=" " />
     </div>
     </>
     )
@@ -1005,13 +1005,13 @@ function TouchPoint6({ position, color, onClick }) {
                       >
                         <div style={{ display: show? 'block' : 'none' }} >
                       {/* <button className="close" onClick={() => setShowMessage(false)}> */}
-                         <img onClick={() => setShowMessage(false)} className="stopDrag" style={{position: 'absolute', top: '-194px', right: '-141px', transform: 'scale(0.5)', cursor: 'pointer'}} src={xclose} /> 
+                         <img onClick={() => setShowMessage(false)} className="stopDrag" alt=" " style={{position: 'absolute', top: '-194px', right: '-141px', transform: 'scale(0.5)', cursor: 'pointer'}} src={xclose} /> 
                          {/* </button> */}
                       <Telephone />
                       {/* {tele} */}
                       </div>
                       <div style={{ display: show? 'none' : 'block', transform: 'scale(0.6)', position: 'absolute', top: '-145px', left: '-513px' }} >
-                        <img src={teleNo} className="stopDrag" />
+                        <img src={teleNo} alt=" " className="stopDrag" />
                         <button onClick={() => setShowMessage(false)} className="stopDrag" style={{ position: 'absolute', right: '39px', top: '36px', opacity: '0', cursor: 'pointer' }}> XX</button>
                       </div>
                       </Alert>
@@ -1053,7 +1053,7 @@ function obama(){
     if (datetime < now) {
       var milisec_diff = now - datetime;
     }else{
-      var milisec_diff = datetime - now;
+      milisec_diff = datetime - now;
     }
     var final = Math.round(900-(milisec_diff/1000));
     if (final < 0){
@@ -1117,7 +1117,7 @@ function Counter(){
         <h3>CHALLENGES</h3>
       </div>
       <div className="bg-text7" style={{visibility: pieceShow? 'visible' : 'hidden'}}>
-        <img src={Map} height="45%" width="45%" className="stopDrag" />
+        <img src={Map} height="45%" width="45%" className="stopDrag" alt=" " />
         <h1 style={{paddingLeft: '50px'}}>{pieceCollected}/<span>6</span></h1>
         <h3 style={{paddingLeft: '32px'}}>PIECES</h3> 
       </div>    
@@ -1137,7 +1137,7 @@ function Scene2() {
               <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2}  />
                   <Suspense fallback={
                       <Html center style={{ color: 'white' }}>
-                        <img src={Loader} />
+                        <img src={Loader} alt=" " />
                         <div>
                             <h1 style={{ color: '#F8A61F', textAlign: 'center'}}>Loading...</h1>
                         </div>

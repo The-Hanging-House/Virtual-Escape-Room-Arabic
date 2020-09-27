@@ -13,17 +13,17 @@ function TouchPoint3({ position, color, onClick }) {
     // const [showButton, setShowButton] = useState(true);
     const [showMessage, setShowMessage] = useState(false);
 
-    const onMouseOver = event => {
-        const el = event.target;
-        let colorhex = "#F8A61F"
-        el.style.background = colorhex;
-      };
+    // const onMouseOver = event => {
+    //     const el = event.target;
+    //     let colorhex = "#F8A61F"
+    //     el.style.background = colorhex;
+    //   };
 
-      const onMouseOut = event => {
-        const el = event.target;
-        let black = "transparent";
-        el.style.background = black;
-      };
+    //   const onMouseOut = event => {
+    //     const el = event.target;
+    //     let black = "transparent";
+    //     el.style.background = black;
+    //   };
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
@@ -54,7 +54,7 @@ function TouchPoint3({ position, color, onClick }) {
                         onClose={() => setShowMessage(false)}
                         >
                         <div className="alert-insides1">
-                        <button className="close" onClick={() => setShowMessage(false)}><img className="stopDrag" src={X} width='250%' height='250%'></img></button>
+                        <button className="close" onClick={() => setShowMessage(false)}><img className="stopDrag" src={X} width='250%' alt=" " height='250%'></img></button>
                             <Alert.Heading>
                                 <p style={{ fontSize: '1.1rem', color: 'black' }}>
                                     The trunk is locked, but you left the lights and music on. Have you got your keys?

@@ -9,9 +9,9 @@ import drop from '../../../audio/drop.mp3';
 var showHint = "Leaving trash behind in nature pollutes the environment and is harmful to wildlife.";
 
 var count = 0
-var ddd = 'hidden'
+// var ddd = 'hidden'
 var flag = 0;
-var gState = 0;
+// var gState = 0;
 
 export const Container = () => {
   const [garbageDone, setGarbageDone] = useState(false)

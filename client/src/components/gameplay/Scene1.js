@@ -28,7 +28,6 @@ import Music1 from '../../audio/Music1'
 import hint from '../../img/click.png'
 import A from '../../img/a.png'
 
-// import Tp from '../../img/tp.svg'
 
 
 extend({ OrbitControls })
@@ -87,7 +86,7 @@ function Timer() {
 function Counter(){
     return (
         <div className="bg-text6">
-            <img src={A} />
+            <img src={A} alt=" " />
         </div>
     )
 }
@@ -103,7 +102,7 @@ function Initimg(){
     return (
     <>
     <div style={{display: displayProp? 'none' : 'block', position: "absolute", zIndex: "200", left: "60%", top: "50%", transform: "translate(-50%, -50%)"}}>
-        <img className="stopDrag" src={hint} style={{width: "50%", height: "50%"}}/>
+        <img className="stopDrag" src={hint} alt=" " style={{width: "50%", height: "50%"}}/>
     </div>
     </>
     )
@@ -125,7 +124,7 @@ function Scene1() {
                 <Controls enableDamping dampingFactor={0.1} enableZoom={false} />
                     <Suspense fallback={
                       <Html center style={{ color: 'white' }}>
-                        <img src={Loader} />
+                        <img src={Loader} alt=" " />
                         <div>
                             <h1 style={{ color: '#F8A61F', textAlign: 'center'}}>Loading...</h1>
                         </div>

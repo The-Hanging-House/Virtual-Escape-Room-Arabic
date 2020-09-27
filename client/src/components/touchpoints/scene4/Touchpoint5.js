@@ -13,21 +13,21 @@ import switchfx from '../../../audio/switch.mp3'
 function TouchPoint5({ position, color, onClick }) {
     const [hovered, set] = useState(false)
     // const [showButton, setShowButton] = useState(true);
-    const [CON, setCON] = useState(false);
+    // const [CON, setCON] = useState(false);
     const [showMessage, setShowMessage] = useState(false);
     const [switchState, setSwitchState] = useState(false);
 
-    const onMouseOver = event => {
-        const el = event.target;
-        let colorhex = "#F8A61F"
-        el.style.background = colorhex;
-    };
+    // const onMouseOver = event => {
+    //     const el = event.target;
+    //     let colorhex = "#F8A61F"
+    //     el.style.background = colorhex;
+    // };
 
-    const onMouseOut = event => {
-        const el = event.target;
-        let black = "transparent";
-        el.style.background = black;
-    };
+    // const onMouseOut = event => {
+    //     const el = event.target;
+    //     let black = "transparent";
+    //     el.style.background = black;
+    // };
 
     // if(CON){
     //     var scene4 = new Date().getTime();
@@ -75,7 +75,7 @@ function TouchPoint5({ position, color, onClick }) {
                         <div className="alert-inside2" stley={{}}>
                             <Alert.Heading>
                                     <div>
-                                        <img src={switchState? switchButtonON : switchButtonOFF} width='100%' height='100%'/>
+                                        <img src={switchState? switchButtonON : switchButtonOFF} alt=" " width='100%' height='100%'/>
                                         
                                     </div>
                                     {/* <p style={{textAlign: 'center', color: 'black', letterSpacing: '2px', fontWeight: 'bold', fontFamily: 'Dubai W23, sans-serif'}}>

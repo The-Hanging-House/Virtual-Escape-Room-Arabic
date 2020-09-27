@@ -16,17 +16,17 @@ function TouchPoint2({ position, color, onClick }) {
     // const [showButton, setShowButton] = useState(true);
     const [showMessage, setShowMessage] = useState(false);
 
-    const onMouseOver = event => {
-        const el = event.target;
-        let colorhex = "#F8A61F"
-        el.style.background = colorhex;
-      };
+    // const onMouseOver = event => {
+    //     const el = event.target;
+    //     let colorhex = "#F8A61F"
+    //     el.style.background = colorhex;
+    //   };
 
-      const onMouseOut = event => {
-        const el = event.target;
-        let black = "transparent";
-        el.style.background = black;
-      };
+    //   const onMouseOut = event => {
+    //     const el = event.target;
+    //     let black = "transparent";
+    //     el.style.background = black;
+    //   };
     
     useEffect(() => void (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
     return (
@@ -54,10 +54,10 @@ function TouchPoint2({ position, color, onClick }) {
                         onClose={() => setShowMessage(false)}
                         >
                          <div className="alert-inside6" >
-                         <button className="close" onClick={() => setShowMessage(false)}><img className="stopDrag" src={X} width='300%' height='300%'></img></button>
+                         <button className="close" onClick={() => setShowMessage(false)}><img className="stopDrag" alt=" " src={X} width='300%' height='300%'></img></button>
                             <Alert.Heading>
                             <App />
-                            <img className="stopDrag" src={Lock} style={{ left: '-48px', transform: 'scale(0.9)', top: '-33px' }}/>
+                            <img className="stopDrag" alt=" " src={Lock} style={{ left: '-48px', transform: 'scale(0.9)', top: '-33px' }}/>
                             </Alert.Heading>
                                 
                             

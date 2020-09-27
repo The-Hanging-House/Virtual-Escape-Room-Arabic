@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import { DragSource } from 'react-dnd'
+import React from 'react'
+import { DragSource, useDrag } from 'react-dnd'
 
 
 const backgroundsList = {
@@ -36,13 +36,23 @@ const style = {
   alignItems: 'center',
   transform: 'translate(0 , 0)'
 }
-export const Box = ({ name, isDropped, isDragging, connectDragSource, bgImageName }) => {
-  const opacity = isDragging ? 1 : 1
+
+
+export const Box = ({ name, isDropped, type, isDragging, connectDragSource, bgImageName }) => {
+  // const opacity = isDragging ? 1 : 1
+  const [{ opacity }, drag] = useDrag({
+    item: { name, type},
+    collect: (monitor) => ({
+      opacity: monitor.isDragging() ? 0.4 : 1,
+    }),
+  })
   const backgroundColor = isDragging ? 'transparent' : 'transparent'
   const visibility = isDropped ? 'hidden' : 'vissible'
   let backgroundImage = `url(${backgroundsList[bgImageName]})`;
   return connectDragSource(
-    <div style={{ 
+    <div 
+      ref={drag}
+      style={{ 
       ...style, 
       opacity, 
       backgroundColor,

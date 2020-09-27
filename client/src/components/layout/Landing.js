@@ -23,7 +23,7 @@ function Initimg(){
     return (
     <>
     <div style={{display: displayProp? 'none' : 'block', zIndex: "200", left: "50%", top: "50%"}}>
-        <img src = {hint} style={{width: "100%", height: "100%"}}/>
+        <img src = {hint} alt=" " style={{width: "100%", height: "100%"}}/>
     </div>
     </>
     )

@@ -1,6 +1,5 @@
 import React from 'react'
-import Bgend from '../../img/bgend.png'
-import { url } from 'gravatar';
+// import { url } from 'gravatar';
 
 import H from '../../img/h.png'
 import CWN from '../../img/cwn.svg'
@@ -71,11 +70,11 @@ function Timesup() {
                     <div className="icons2">
                     <p>For more adventures, visit the link below</p>
                    
-                    <a target="_blank" href="https://connectwithnature.ae">
-                    <img className="cwnimg1" src={CWN}></img>
+                    <a target="_blank" href="https://connectwithnature.ae" rel="noopener noreferrer">
+                    <img className="cwnimg1" alt=" " src={CWN}></img>
                     </a>
-                    <a target="_blank" href="https://houbarafund.gov.ae/en/home">
-                    <img className="houbara1" src={H}></img>
+                    <a target="_blank" href="https://houbarafund.gov.ae/en/home" rel="noopener noreferrer">
+                    <img className="houbara1" alt=" " src={H}></img>
                     </a>
                 </div>   
                     

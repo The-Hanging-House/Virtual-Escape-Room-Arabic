@@ -24,7 +24,7 @@ import TouchPoint4 from '../touchpoints/scene3/Touchpoint4'
 import TouchPoint5 from '../touchpoints/scene3/Touchpoint5'
 import TouchPoint6 from '../touchpoints/scene3/Touchpoint6'
 import TouchPoint7 from '../touchpoints/scene1/Touchpoint7'
-import TouchPoint8 from '../touchpoints/scene1/Touchpoint8'
+// import TouchPoint8 from '../touchpoints/scene1/Touchpoint8'
 import TouchPoint9 from '../touchpoints/scene1/Touchpoint9'
 import TouchPoint10 from '../touchpoints/scene1/Touchpoint10'
 
@@ -39,7 +39,7 @@ extend({ OrbitControls })
 var data;
 data = localStorage.getItem('myDataKey');
 var now;  
-var tt = 0;
+// var tt = 0;
 var toolCollected = 0;
 // window.location.reload(false);
 
@@ -68,7 +68,7 @@ function obama(){
     if (datetime < now) {
       var milisec_diff = now - datetime;
     }else{
-      var milisec_diff = datetime - now;
+      milisec_diff = datetime - now;
     }
     var final = Math.round(900-(milisec_diff/1000)) - 10;
     if (final < 0){
@@ -268,7 +268,7 @@ function TouchPoint3({ position, color, onClick }) {
                       onClose={() => setShowMessage(false)}
                       >
                       <div className={ show? "alert-inside" : "alert-inside-keys4" }>
-                      <button style={{ display: 'block' }} className="close" onClick={() => setShowMessage(false)}><img src={X} className="stopDrag" style={{ position: 'absolute', top: '-21px', right: '537px' }} ></img></button>
+                      <button style={{ display: 'block' }} className="close" onClick={() => setShowMessage(false)}><img src={X} alt=" " className="stopDrag" style={{ position: 'absolute', top: '-21px', right: '537px' }} ></img></button>
                           <Alert.Heading>
                           <p style={{ color: 'black' }}>
                               {/* The car door is not locked, what should I do? */}
@@ -292,10 +292,9 @@ function TouchPoint3({ position, color, onClick }) {
                                       </h3>  */}
                                       {show? 'Open the trunk with your keys to reach the radio.' : ""}
                                   </h3>
-                              <h3 className='mcq-text' style={{ display: wrongAlert? 'block' : 'none' }} onClick={() => setShowMessage(false)}
+                              <h3 className='mcq-text' style={{ display: wrongAlert? 'block' : 'none' }} onClick={() => {setShowMessage(false); setWrongAlert(false)}}
                                       onMouseEnter={event => onMouseOver(event)}
-                                      onMouseOut={event => onMouseOut(event)}
-                                      onClick={() => setWrongAlert(false)}>
+                                      onMouseOut={event => onMouseOut(event)}>
                                       {show? 'Break the trunk door open in order to search for more clues.' : ""}
                                   </h3>
                                   <h3 className='mcq-text' style={{ display: wrongAlert? 'block' : 'none'}} onClick={() => setShowMessage(false)}
@@ -359,7 +358,7 @@ function Scene3() {
                 <Controls enableZoom={false} enablePan={false} enableDamping dampingFactor={0.2} />
                     <Suspense fallback={
                       <Html center style={{ color: 'white' }}>
-                        <img src={Loader} />
+                        <img src={Loader} alt=" " />
                         <div>
                             <h1 style={{ color: '#F8A61F', textAlign: 'center'}}>Loading...</h1>
                         </div>
