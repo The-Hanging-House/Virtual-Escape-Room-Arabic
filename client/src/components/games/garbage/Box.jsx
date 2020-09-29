@@ -43,7 +43,7 @@ export const Box = ({ name, isDropped, type, isDragging, connectDragSource, bgIm
   const [{ opacity }, drag] = useDrag({
     item: { name, type},
     collect: (monitor) => ({
-      opacity: monitor.isDragging() ? 0.4 : 1,
+      isDragging: !!monitor.isDragging(),
     }),
   })
   const backgroundColor = isDragging ? 'transparent' : 'transparent'

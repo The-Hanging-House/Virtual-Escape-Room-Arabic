@@ -10,9 +10,9 @@ var refreshTime = 1598355449119;
 
 function Timesup() {
 
-    var arri = ['puzSet', 'scene2', 'scene3', 'scene6', 'scene4', 'scene5', 'scene1', 'myDataKey'];
+    var arri = ['puzSet', 'scene2', 'scene3', 'scene6', 'scene4', 'scene5', 'scene1', 'myDataKey', 'gState', 'pState', 'forCheck' ];
     while (i !== arri.length && localStorage.getItem('myDataKey') !== '0') {
-        localStorage.setItem(arri[i], refreshTime); 
+        localStorage.removeItem(arri[i]); 
         i++;
     }
     // const onMouseOver = event => {
