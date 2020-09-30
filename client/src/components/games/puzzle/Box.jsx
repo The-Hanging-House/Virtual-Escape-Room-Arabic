@@ -1,5 +1,5 @@
 import React from 'react'
-import { DragSource, useDrag } from 'react-dnd'
+import { DragSource, useDrag, DragPreviewImage } from 'react-dnd'
 
 
 const backgroundsList = {
@@ -31,14 +31,14 @@ const style = {
   marginBottom: '1px',
   cursor: 'grab',
   float: 'left',
-  webkitUserSelect: 'text',
+  WebkitUserSelect: 'text',
   width: "calc((30% - 10px) - 1px)" 
 }
 
-export const Box = ({ name, isDropped, isDragging, type, connectDragSource, bgImageName }) => {
+export const Box = ({ name, isDropped, type, bgImageName }) => {
   // const opacity = isDragging ? 0.4 : 1
-  const [{ opacity }, drag] = useDrag({
-    item: { name, type},
+  const [{ isDragging }, drag, preview] = useDrag({
+    item: { name, type, bgImageName},
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
@@ -46,18 +46,22 @@ export const Box = ({ name, isDropped, isDragging, type, connectDragSource, bgIm
   const visibility = isDropped ? 'hidden' : 'visible'
   // const visibility = 'visible'
   let backgroundImage = `url(${backgroundsList[bgImageName]})`;
-  return connectDragSource(
-    <div 
-      ref={drag}
-      style={{ 
-      ...style, 
-      opacity, 
-      visibility, 
-      backgroundImage
-    }}
-    >
-      {/* {isDropped ? <s>{name}</s> : name} */}
+  return (
+    <>
+      <DragPreviewImage connect={preview} src={backgroundsList} />
+      <div 
+        ref={drag}
+        style={{ 
+        ...style, 
+        // opacity, 
+        isDragging,
+        visibility, 
+        backgroundImage
+      }}
+      >
+        {/* {isDropped ? <s>{name}</s> : name} */}
     </div>
+    </>
   )
 }
 export default DragSource(

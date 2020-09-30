@@ -2,7 +2,7 @@ import React from 'react';
 // import { url } from 'gravatar';
 
 import CWN from '../../img/cwn.svg'
-import H from '../../img/h.png'
+import H from '../../img/h.svg'
 import Bgend from '../../img/bg.png';
 
 

@@ -35,13 +35,13 @@ const Logout1 = ({ auth: { isAuthenticated, loading }, logout }) => {
         <CSSTransition
           in={showMessage}
           timeout={300}
-          classNames="alert22"
+          classnames="alert22"
           unmountOnExit
           onEnter={() => setShowButton(false)}
           onExited={() => setShowButton(true)}
         >
           <Alert
-            classNames="alert22"
+            classnames="alert22"
             variant="primary"
             dismissible
             onClose={() => setShowMessage(false)}
