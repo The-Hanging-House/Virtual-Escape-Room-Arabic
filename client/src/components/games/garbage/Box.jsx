@@ -38,10 +38,10 @@ const style = {
 }
 
 
-export const Box = ({ name, isDropped, type, isDragging, connectDragSource, bgImageName }) => {
+export const Box = ({ name, isDropped, type, connectDragSource, bgImageName }) => {
   // const opacity = isDragging ? 1 : 1
-  const [{ opacity }, drag] = useDrag({
-    item: { name, type},
+  const [{ isDragging }, drag] = useDrag({
+    item: { name, type, bgImageName},
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
@@ -54,7 +54,8 @@ export const Box = ({ name, isDropped, type, isDragging, connectDragSource, bgIm
       ref={drag}
       style={{ 
       ...style, 
-      opacity, 
+      // opacity, 
+      isDragging,
       backgroundColor,
       visibility, 
       backgroundImage
