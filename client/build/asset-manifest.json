@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.632ce345.chunk.css",
-    "main.js": "/static/js/main.62644bd6.chunk.js",
-    "main.js.map": "/static/js/main.62644bd6.chunk.js.map",
+    "main.js": "/static/js/main.f5c3991b.chunk.js",
+    "main.js.map": "/static/js/main.f5c3991b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
     "static/css/2.1f156bdb.chunk.css": "/static/css/2.1f156bdb.chunk.css",
-    "static/js/2.5ef81589.chunk.js": "/static/js/2.5ef81589.chunk.js",
-    "static/js/2.5ef81589.chunk.js.map": "/static/js/2.5ef81589.chunk.js.map",
+    "static/js/2.f8e6401a.chunk.js": "/static/js/2.f8e6401a.chunk.js",
+    "static/js/2.f8e6401a.chunk.js.map": "/static/js/2.f8e6401a.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2f958ed9cec843f7ad3903e6b7ca6f23.js": "/precache-manifest.2f958ed9cec843f7ad3903e6b7ca6f23.js",
+    "precache-manifest.abe9d928f5b8f81adabc34c504b99c82.js": "/precache-manifest.abe9d928f5b8f81adabc34c504b99c82.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.1f156bdb.chunk.css.map": "/static/css/2.1f156bdb.chunk.css.map",
     "static/css/main.632ce345.chunk.css.map": "/static/css/main.632ce345.chunk.css.map",
-    "static/js/2.5ef81589.chunk.js.LICENSE.txt": "/static/js/2.5ef81589.chunk.js.LICENSE.txt",
+    "static/js/2.f8e6401a.chunk.js.LICENSE.txt": "/static/js/2.f8e6401a.chunk.js.LICENSE.txt",
     "static/media/01.png": "/static/media/01.9feaa871.png",
     "static/media/Birds.mp3": "/static/media/Birds.f60776c4.mp3",
     "static/media/App.css": "/static/media/yellowblock1.e7d166a0.png",
@@ -36,6 +36,7 @@
     "static/media/egg.png": "/static/media/egg.e70e2f1e.png",
     "static/media/feather.png": "/static/media/feather.2dad6274.png",
     "static/media/h.png": "/static/media/h.26fa55f4.png",
+    "static/media/h.svg": "/static/media/h.dcd977a2.svg",
     "static/media/hint.svg": "/static/media/hint.279ebe6f.svg",
     "static/media/instruction.mp4": "/static/media/instruction.bf05f6ab.mp4",
     "static/media/key.png": "/static/media/key.4dcd128d.png",
@@ -76,8 +77,8 @@
   "entrypoints": [
     "static/js/runtime-main.09b85ec0.js",
     "static/css/2.1f156bdb.chunk.css",
-    "static/js/2.5ef81589.chunk.js",
+    "static/js/2.f8e6401a.chunk.js",
     "static/css/main.632ce345.chunk.css",
-    "static/js/main.62644bd6.chunk.js"
+    "static/js/main.f5c3991b.chunk.js"
   ]
 }
