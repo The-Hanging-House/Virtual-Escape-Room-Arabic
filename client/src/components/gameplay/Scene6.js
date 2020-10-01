@@ -43,7 +43,7 @@ const Controls = (props) => {
   }, 500);
 
 
-  function obama(){
+  function timerz(){
     
       var datetime = data;    
       var now = localStorage.getItem('scene4');
@@ -67,7 +67,7 @@ const Controls = (props) => {
     }
     
     function Timer() {
-      var minutes = obama() //minutes passed since start
+      var minutes = timerz() //minutes passed since start
       console.log("minutes", minutes)
       // const [counter, setCounter] = React.useState(900);
       const [counter, setCounter] = React.useState(minutes);

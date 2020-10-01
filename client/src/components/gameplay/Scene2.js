@@ -1038,7 +1038,7 @@ setInterval(function(){
     }
 }, 500);  
 
-function obama(){
+function timerz(){
   
     var datetime = data;
   
@@ -1064,7 +1064,7 @@ function obama(){
   }
   
   function Timer() {
-    var minutes = obama() //minutes passed since start
+    var minutes = timerz() //minutes passed since start
     const [counter, setCounter] = React.useState(minutes);
   
     React.useEffect(() => {

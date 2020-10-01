@@ -447,6 +447,15 @@ body {
   -webkit-column-gap: 18em;
   -webkit-columns: 288px;
 }
+.qrcode {
+  margin-top: 48px;
+  width: 100%;
+  text-align: center;
+}
+.qr {
+  width: 30%;
+  height: 30%;
+}
 .icons1 {
   text-align: center;
   background-color: white;

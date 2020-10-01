@@ -4,6 +4,7 @@ import React from 'react';
 import CWN from '../../img/cwn.svg'
 import H from '../../img/h.svg'
 import Bgend from '../../img/bg.png';
+import Qr from '../../img/qr.png'
 
 
 var winMessage = '';
@@ -88,6 +89,9 @@ function End() {
                                 </button>
                             </a>
                         </div>
+                </div>
+                <div className="qrcode">
+                    <img className="qr" src={Qr}></img>
                 </div>
                 <div className="icons1">
                     <p>For more adventures, visit the link below</p>
