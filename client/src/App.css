@@ -437,15 +437,13 @@ body {
 .option1 {
   font-family: "Dubai W23", sans-serif;
   text-align: center;
-  display: flex;
-  flex-direction: row;
-  columns: 288px;
+  columns: 272px;
   justify-content: center;
   align-content: center;
-  column-gap: 288px;
+  column-gap: 225px;
   margin-top: 3rem;
-  -webkit-column-gap: 18em;
-  -webkit-columns: 288px;
+  display: -webkit-flex;
+  display: flex;
 }
 .qrcode {
   margin-top: 48px;
