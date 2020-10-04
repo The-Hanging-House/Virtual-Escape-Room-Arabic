@@ -457,7 +457,8 @@ body {
 }
 .option1 .home-button {
   display: inline-block;
-  padding: 2rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
 }
 /* .option1 button{
   display: inline-block;
