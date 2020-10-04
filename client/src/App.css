@@ -435,25 +435,13 @@ body {
   font-weight: 500;
 }
 .option1 {
-  width: 100%;
-  font-family: "Dubai W23", sans-serif;
-  text-align: center;
-  -webkit-columns: 272px;
-     -moz-columns: 272px;
-          columns: 272px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-column-gap: 225px;
-     -moz-column-gap: 225px;
-          column-gap: 225px;
-  margin-top: 48px;
-  margin-top: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    width: 100%;
+    font-family: "Dubai W23",sans-serif;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 3rem;
+    display: flex;
 }
 .option1 .home-button {
   display: inline-block;
