@@ -82,7 +82,7 @@ function End() {
                                 </button>
                             </a>
                         </div>
-                        <div className="play-bottom">
+                        <div className="home-button">
                             <a href="briefing">
                                 <button className="btn btn-primary">
                                     PLAY AGAIN

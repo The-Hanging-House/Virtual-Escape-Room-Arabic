@@ -435,6 +435,7 @@ body {
   font-weight: 500;
 }
 .option1 {
+  width: 100%;
   font-family: "Dubai W23", sans-serif;
   text-align: center;
   -webkit-columns: 272px;
@@ -454,6 +455,13 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+.option1 .home-button {
+  display: inline-block;
+  padding: 2rem;
+}
+/* .option1 button{
+  display: inline-block;
+} */
 .qrcode {
   margin-top: 48px;
   width: 100%;
