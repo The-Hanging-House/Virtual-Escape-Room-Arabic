@@ -437,12 +437,21 @@ body {
 .option1 {
   font-family: "Dubai W23", sans-serif;
   text-align: center;
-  columns: 272px;
-  justify-content: center;
-  align-content: center;
-  column-gap: 225px;
+  -webkit-columns: 272px;
+     -moz-columns: 272px;
+          columns: 272px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-column-gap: 225px;
+     -moz-column-gap: 225px;
+          column-gap: 225px;
+  margin-top: 48px;
   margin-top: 3rem;
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .qrcode {
