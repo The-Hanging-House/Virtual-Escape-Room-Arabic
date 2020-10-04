@@ -11,7 +11,7 @@ const ResponsivePlayer = ({ url, onProgress }) => {
             width='100%'
             height='100%'
             playsinline
-            controls={false}
+            controls={true}
             playing={true}
             onProgress={onProgress}
           />
