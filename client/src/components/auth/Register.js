@@ -21,11 +21,12 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     emirates: "",
     name: "",
     school: "",
-    age: ""
+    age: "",
+    time: 0,
   });
 
 
-  var { username, email, password, password2, emirates, school, age } = formData;
+  var { username, email, password, password2, emirates, school, age, time } = formData;
   
   if (username !== "undefined"){
     userSave = username;
@@ -70,7 +71,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       setAlert("Username 8 characters max", "danger")
     }
      else {
-      register({ username, email, password, emirates, school, age });
+      register({ username, email, password, emirates, school, age, time });
     }
     console.log(username.length)
   };
@@ -127,6 +128,16 @@ if (number !== "" && number <= 14 ){
             style={{ WebkitUserSelect: 'text', top: '11px' }}
           />
         </div>
+        {/* <div className="form-group">
+          <input
+            type="text"
+            placeholder="Time"
+            name="time"
+            value={time}
+            onChange={(e) => onChange(e)}
+            style={{ WebkitUserSelect: 'text', top: '11px', display: 'none' }}
+          />
+        </div> */}
         <div className="form-group" style={{display:'none' }}>
           <input
             type="password"
