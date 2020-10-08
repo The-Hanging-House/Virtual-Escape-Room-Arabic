@@ -40,7 +40,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     
     if (number <= 14){
 
-      email = username+"@gmail.com";
+      email = username+"@example.com";
     }
     password = username;
     password2 = username;
@@ -49,11 +49,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
     if (emirates === ""){
       setFormData({ ...formData, emirates: "Dubai" })
-      console.log("ChANGE")
+      // console.log("ChANGE")
     }
 
-    console.log("FormData: ", formData);
-    console.log("number", number);
+    // console.log("FormData: ", formData);
+    // console.log("number", number);
 
     e.preventDefault();
     if(emirates === ""){
@@ -73,7 +73,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
      else {
       register({ username, email, password, emirates, school, age, time });
     }
-    console.log(username.length)
+    // console.log(username.length)
   };
 
   
