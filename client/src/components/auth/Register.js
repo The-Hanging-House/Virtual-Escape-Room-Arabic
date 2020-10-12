@@ -70,6 +70,15 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
      else if (username.length >= 9){
       setAlert("Username 8 characters max", "danger")
     }
+      else if (age.length == ""){
+        setAlert("Put a valid age", "danger")
+    }
+     else if (age == 0){
+       setAlert("Put a valid age", "danger")
+    }
+     else if (school.length == 0 && age > 14 ){
+       setAlert("Put a valid school/company name", "danger")
+     }
      else {
       register({ username, email, password, emirates, school, age, time });
     }
