@@ -1,58 +1,93 @@
-import React, { useEffect, Fragment } from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect, Fragment } from "react";
+import PropTypes from "prop-types";
 
-import { connect } from 'react-redux'
-import Spinner from '../layout/Spinner'
-import { getCurrentProfile } from '../../actions/profile'
-import bg from '../../img/component1.png'
+import { connect } from "react-redux";
+import Spinner from "../layout/Spinner";
+import { getCurrentProfile } from "../../actions/profile";
+import bg from "../../img/component1.png";
 
-import Logout from './../logout/Logout1'
+import Logout from "./../logout/Logout1";
 
-import Music4 from '../../audio/Music4'
+import Music4 from "../../audio/Music4";
 
-const logout = <Logout />
+var x = 0;
 
-const Dashboard2 = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
-    useEffect(() => {
-        getCurrentProfile();
-    }, [getCurrentProfile])
+const logout = <Logout />;
 
-    return loading && profile === null ? <Spinner /> : 
+const Dashboard2 = ({
+  getCurrentProfile,
+  auth: { user },
+  profile: { profile, loading },
+}) => {
+  useEffect(() => {
+    getCurrentProfile();
+  }, [getCurrentProfile]);
+
+  if (x === 0) {
+    if (localStorage.getItem("lang") === "ar") {
+      window.location.href = "/dashboard2-ar";
+      x = 1;
+    }
+  }
+
+  return loading && profile === null ? (
+    <Spinner />
+  ) : (
     <Fragment>
-        <div className="bg-image"><div className="lock-up"></div>
-            <div className="logout" style={{ position: 'sticky', left: '55%', bottom: '19%', zIndex: '50' }}>{logout}</div>
+      <div className="bg-image">
+        <div className="lock-up"></div>
+        <div
+          className="logout"
+          style={{
+            position: "sticky",
+            left: "55%",
+            bottom: "19%",
+            zIndex: "50",
+          }}
+        >
+          {logout}
         </div>
-        <div className="dashblock">
-            <div className="bg-text1"></div>
-            <img className="bg-text1" src={bg} alt="Dashboard" useMap="#workmap" width="600" height="420" />
-            <a href="instruction">
-                <div className="button-1"></div>
-            </a>
-            <a href="briefing">
-                <div className="button-2"></div>
-            </a>
-            {/* <map name="workmap">
+      </div>
+      <div className="dashblock">
+        <div className="bg-text1"></div>
+        <img
+          className="bg-text1"
+          src={bg}
+          alt="Dashboard"
+          useMap="#workmap"
+          width="600"
+          height="420"
+        />
+        <a href="instruction">
+          <div className="button-1"></div>
+        </a>
+        <a href="briefing">
+          <div className="button-2"></div>
+        </a>
+        {/* <map name="workmap">
                 <area shape="rect" coords="240,460,600,530" alt="Intro" href="instruction"/>
                 <area  shape="rect" coords="400,550,680,600" alt="Game" href="briefing" />
             </map> */}
-            <div className="lead1">
-                <p className="lead1">Hello <br /> { user && user.username }</p>
-            </div>
+        <div className="lead1">
+          <p className="lead1">
+            Hello <br /> {user && user.username}
+          </p>
         </div>
-        <Music4 />  
+      </div>
+      <Music4 />
     </Fragment>
-
-}
+  );
+};
 
 Dashboard2.propTypes = {
-    getCurrentProfile: PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired,
-    profile: PropTypes.object.isRequired,
-}
+  getCurrentProfile: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired,
+};
 
-const mapStateToProps = state => ({
-    auth: state.auth,
-    profile: state.profile
-})
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+  profile: state.profile,
+});
 
-export default connect(mapStateToProps, { getCurrentProfile })(Dashboard2)
+export default connect(mapStateToProps, { getCurrentProfile })(Dashboard2);
