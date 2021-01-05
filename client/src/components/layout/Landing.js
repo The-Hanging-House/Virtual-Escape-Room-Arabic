@@ -17,7 +17,6 @@ function Initimg(){
 
   setTimeout(function(){
     setDisplayProp(true);
-    console.log("TEXT")
   }, 6000);
 
     return (

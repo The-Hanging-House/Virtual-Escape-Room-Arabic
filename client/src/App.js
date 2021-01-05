@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch, BrowserRouter } from "react-router-dom";
 import Landing from "./components/layout/Landing";
+import Language from "./components/layout/Language";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import Alert from "./components/layout/Alert";
@@ -44,29 +45,31 @@ const App = () => {
   return (
     <Provider store={store}>
        <BrowserRouter>
-          <Route exact path="/" component={Landing} />
+          <Route exact path="/" component={Language} />
           <section className="container">
             <Alert />
             <Switch>
+              <Route exact path="/home" component={Landing} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute exact path="/instruction" component={Instruction} />
               <PrivateRoute exact path="/dashboard2" component={Dashboard2} />
               <PrivateRoute exact path="/briefing" component={Briefing} />
-              {/* <PrivateRoute exact path="/briefing2" component={Briefing2} /> */}
-              {/* <PrivateRoute exact path="/profile" component={Profile} /> */}
               <PrivateRoute exact path="/intro" component={Intro} />
               <PrivateRoute exact path="/scene1" component={Scene1} />
               <PrivateRoute exact path="/garbage" component={Garbage} />
               <PrivateRoute exact path="/scene3" component={Scene3} />
-              {/* <PrivateRoute exact path="/portal1scene3" component={Portal1Scene3} /> */}
               <PrivateRoute exact path="/scene4" component={Scene4} />
               <PrivateRoute exact path="/scene6" component={Scene6} />
               <PrivateRoute exact path="/scene5" component={Scene5} />
               <PrivateRoute exact path="/scene2" component={Scene2} />
               <PrivateRoute exact path="/end" component={End} />
               <PrivateRoute exact path="/timesup" component={Timesup} />
+
+              {/* Arabic Pages */}
+              <PrivateRoute exact path="/dashboard-ar" component={Dashboard} />
+              <PrivateRoute exact path="/dashboard2-ar" component={Dashboard2} />
             </Switch>
           </section>
         </BrowserRouter>
