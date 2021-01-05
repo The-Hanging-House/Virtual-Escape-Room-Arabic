@@ -16,12 +16,12 @@ import Logout from "../logout/Logout";
 
 // import Task1 from '../popup/Task1';
 // import TouchPoint1 from '../touchpoints/scene4/Touchpoint1'
-import TouchPoint2 from "../touchpoints/scene4/Touchpoint2";
-import TouchPoint3 from "../touchpoints/scene3/Touchpoint5";
-import TouchPoint4 from "../touchpoints/scene4/Touchpoint4";
-import TouchPoint5 from "../touchpoints/scene4/Touchpoint5";
-import TouchPoint6 from "../touchpoints/scene4/Touchpoint6";
-import TouchPoint7 from "../touchpoints/scene1/Touchpoint7";
+import TouchPoint2 from "../touchpoints/scene4/ar/Touchpoint2";
+import TouchPoint4 from "../touchpoints/scene4/ar/Touchpoint4";
+import TouchPoint5 from "../touchpoints/scene4/ar/Touchpoint5";
+import TouchPoint6 from "../touchpoints/scene4/ar/Touchpoint6";
+import TouchPoint3 from "../touchpoints/scene3/ar/Touchpoint5";
+import TouchPoint7 from "../touchpoints/scene1/ar/Touchpoint7";
 
 // import Timer from '../timer/Timer'
 import "./style.css";

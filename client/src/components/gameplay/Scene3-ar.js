@@ -24,15 +24,15 @@ import Logout from "../logout/Logout";
 import X from "./../../img/x.svg";
 
 import Task1 from "../popup/Task1";
-import TouchPoint2 from "../touchpoints/scene3/Touchpoint2";
+import TouchPoint2 from "../touchpoints/scene3/ar/Touchpoint2";
 // import TouchPoint3 from '../touchpoints/scene3/Touchpoint3'
-import TouchPoint4 from "../touchpoints/scene3/Touchpoint4";
-import TouchPoint5 from "../touchpoints/scene3/Touchpoint5";
-import TouchPoint6 from "../touchpoints/scene3/Touchpoint6";
-import TouchPoint7 from "../touchpoints/scene1/Touchpoint7";
+import TouchPoint4 from "../touchpoints/scene3/ar/Touchpoint4";
+import TouchPoint5 from "../touchpoints/scene3/ar/Touchpoint5";
+import TouchPoint6 from "../touchpoints/scene3/ar/Touchpoint6";
+import TouchPoint7 from "../touchpoints/scene1/ar/Touchpoint7";
 // import TouchPoint8 from '../touchpoints/scene1/Touchpoint8'
-import TouchPoint9 from "../touchpoints/scene1/Touchpoint9";
-import TouchPoint10 from "../touchpoints/scene1/Touchpoint10";
+import TouchPoint9 from "../touchpoints/scene1/ar/Touchpoint9";
+import TouchPoint10 from "../touchpoints/scene1/ar/Touchpoint10";
 
 // import Portal from '../touchpoints/scene3/Portal'
 // import Timer from '../timer/Timer'

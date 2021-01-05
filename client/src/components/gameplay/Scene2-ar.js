@@ -21,9 +21,9 @@ import PrePuz from './../../img/prepuz.png'
 
 
 // import TouchPoint1 from '../touchpoints/scene2/Touchpoint1'
-import TouchPoint2 from '../touchpoints/scene2/Touchpoint2'
-import TouchPoint3 from '../touchpoints/scene2/Touchpoint3'
-import TouchPoint4 from '../touchpoints/scene2/Touchpoint4'
+import TouchPoint2 from '../touchpoints/scene2/ar/Touchpoint2'
+import TouchPoint3 from '../touchpoints/scene2/ar/Touchpoint3'
+import TouchPoint4 from '../touchpoints/scene2/ar/Touchpoint4'
 import Telephone from './Telephone';
 
 

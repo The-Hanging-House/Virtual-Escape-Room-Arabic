@@ -14,12 +14,12 @@ import Logout from "../logout/Logout";
 import Loader from "../../img/loader.gif";
 import { Html } from "drei";
 
-import TouchPoint5 from "../touchpoints/scene6/Touchpoint5";
-import TouchPoint2 from "../touchpoints/scene6/Touchpoint2";
-import TouchPoint3 from "../touchpoints/scene6/Touchpoint3";
-import TouchPoint4 from "../touchpoints/scene6/Touchpoint4";
-import TouchPoint6 from "../touchpoints/scene1/Touchpoint6";
-import TouchPoint7 from "../touchpoints/scene1/Touchpoint7";
+import TouchPoint2 from "../touchpoints/scene6/ar/Touchpoint2";
+import TouchPoint3 from "../touchpoints/scene6/ar/Touchpoint3";
+import TouchPoint4 from "../touchpoints/scene6/ar/Touchpoint4";
+import TouchPoint5 from "../touchpoints/scene6/ar/Touchpoint5";
+import TouchPoint6 from "../touchpoints/scene1/ar/Touchpoint6";
+import TouchPoint7 from "../touchpoints/scene1/ar/Touchpoint7";
 import "./style.css";
 
 import Music2 from "../../audio/Music2";

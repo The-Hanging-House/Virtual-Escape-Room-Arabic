@@ -9,11 +9,11 @@ import Loader from '../../img/loader.gif'
 import Logout from '../logout/Logout'
 
 import Task1 from '../popup/Task1';
-import TouchPoint5 from '../touchpoints/scene5/Touchpoint5'
-import TouchPoint2 from '../touchpoints/scene5/Touchpoint2'
-import TouchPoint4 from '../touchpoints/scene5/Touchpoint4'
-import TouchPoint6 from '../touchpoints/scene1/Touchpoint6'
-import TouchPoint7 from '../touchpoints/scene5/Touchpoint7'
+import TouchPoint2 from '../touchpoints/scene5/ar/Touchpoint2'
+import TouchPoint4 from '../touchpoints/scene5/ar/Touchpoint4'
+import TouchPoint5 from '../touchpoints/scene5/ar/Touchpoint5'
+import TouchPoint7 from '../touchpoints/scene5/ar/Touchpoint7'
+import TouchPoint6 from '../touchpoints/scene1/ar/Touchpoint6'
 
 // import Timer from '../timer/Timer'
 import './style.css'

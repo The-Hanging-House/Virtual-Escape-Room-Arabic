@@ -15,18 +15,18 @@ import Logout from "../logout/Logout";
 
 import { Html } from "drei";
 
-import TouchPoint1 from "../touchpoints/scene1/Touchpoint1";
-import TouchPoint2 from "../touchpoints/scene1/Touchpoint2";
-import TouchPoint3 from "../touchpoints/scene1/Touchpoint3";
-import TouchPoint4 from "../touchpoints/scene1/Touchpoint4";
-import TouchPoint5 from "../touchpoints/scene1/Touchpoint5";
-import TouchPoint6 from "../touchpoints/scene1/Touchpoint6";
-import TouchPoint7 from "../touchpoints/scene1/Touchpoint7";
-import TouchPoint8 from "../touchpoints/scene1/Touchpoint8";
-import TouchPoint9 from "../touchpoints/scene1/Touchpoint9";
-import TouchPoint10 from "../touchpoints/scene1/Touchpoint10";
-import TouchPoint11 from "../touchpoints/scene1/Touchpoint11";
-import TouchPoint12 from "../touchpoints/scene1/Touchpoint12";
+import TouchPoint1 from "../touchpoints/scene1/ar/Touchpoint1";
+import TouchPoint2 from "../touchpoints/scene1/ar/Touchpoint2";
+import TouchPoint3 from "../touchpoints/scene1/ar/Touchpoint3";
+import TouchPoint4 from "../touchpoints/scene1/ar/Touchpoint4";
+import TouchPoint5 from "../touchpoints/scene1/ar/Touchpoint5";
+import TouchPoint6 from "../touchpoints/scene1/ar/Touchpoint6";
+import TouchPoint7 from "../touchpoints/scene1/ar/Touchpoint7";
+import TouchPoint8 from "../touchpoints/scene1/ar/Touchpoint8";
+import TouchPoint9 from "../touchpoints/scene1/ar/Touchpoint9";
+import TouchPoint10 from "../touchpoints/scene1/ar/Touchpoint10";
+import TouchPoint11 from "../touchpoints/scene1/ar/Touchpoint11";
+import TouchPoint12 from "../touchpoints/scene1/ar/Touchpoint12";
 // import Timer from '../timer/Timer'
 import "./style.css";
 
@@ -88,7 +88,7 @@ function Timer() {
   var arigato = mins + ":" + secs;
 
   if (counter === 0) {
-    window.location.href = "/timesup";
+    window.location.href = "/timesup-ar";
   }
 
   return (
