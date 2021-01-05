@@ -6,7 +6,7 @@ import H from '../../img/h.svg'
 import Bgend from '../../img/bg.png';
 import Qr from '../../img/qr.png'
 
-
+var languageCheck = 0;
 var winMessage = '';
 
 var data = localStorage.getItem('myDataKey');
@@ -30,7 +30,12 @@ var pacman = mins + ":" + secs;
 
 
 function End() {
-    
+    if (languageCheck === 0) {
+        if (localStorage.getItem("lang") === "ar") {
+          window.location.href = "/end-ar";
+          languageCheck = 1;
+        }
+      }
     if(mins > 8){
         winMessage = 'WOW! THAT WAS REALLY FAST. HAVE YOU DONE THIS BEFORE?'
     }else if (mins > 3 && mins < 8){

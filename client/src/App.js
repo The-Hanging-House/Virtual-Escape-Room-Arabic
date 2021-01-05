@@ -37,7 +37,8 @@ import Scene4ar from './components/gameplay/Scene4-ar';
 import Scene6ar from './components/gameplay/Scene6-ar';
 import Scene5ar from './components/gameplay/Scene5-ar';
 import Scene2ar from './components/gameplay/Scene2 -ar';
-
+import Endar from './components/gameplay/End-ar';
+import Timesupar from './components/gameplay/Timesup-ar';
 
 // Redux
 import { Provider } from "react-redux";
@@ -94,7 +95,8 @@ const App = () => {
               <PrivateRoute exact path="/scene6-ar" component={Scene6ar} />
               <PrivateRoute exact path="/scene5-ar" component={Scene5ar} />
               <PrivateRoute exact path="/scene2-ar" component={Scene2ar} />
-              <PrivateRoute exact path="/garbage" component={Garbage} />
+              <PrivateRoute exact path="/end-ar" component={Endar} />
+              <PrivateRoute exact path="/timesup-ar" component={Timesupar} />
             </Switch>
           </section>
         </BrowserRouter>

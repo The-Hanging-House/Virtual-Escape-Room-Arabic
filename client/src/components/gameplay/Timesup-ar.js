@@ -10,8 +10,8 @@ var languageCheck = 0;
 
 function Timesup() {
   if (languageCheck === 0) {
-    if (localStorage.getItem("lang") === "ar") {
-      window.location.href = "/timesup-ar";
+    if (localStorage.getItem("lang") === "en") {
+      window.location.href = "/timesup";
       languageCheck = 1;
     }
   }
