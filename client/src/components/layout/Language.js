@@ -49,7 +49,7 @@ const Language = ({ isAuthenticated }) => {
           {/* <p className="lead">A VIRTUAL ESCAPE ROOM</p> */}
           <div className="buttons-language">
             <Link
-              to="landing-ar"
+              to="home-ar"
               className="btn btn-primary"
               onClick={() => {
                 localStorage.setItem("lang", "ar");

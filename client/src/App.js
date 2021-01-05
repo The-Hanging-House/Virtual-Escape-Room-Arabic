@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch, BrowserRouter } from "react-router-dom";
 import Landing from "./components/layout/Landing";
-import Language from "./components/layout/Language";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import Alert from "./components/layout/Alert";
@@ -23,6 +22,16 @@ import Scene5 from './components/gameplay/Scene5';
 import Scene2 from './components/gameplay/Scene2';
 import End from './components/gameplay/End';
 import Timesup from './components/gameplay/Timesup';
+
+import Language from "./components/layout/Language";
+
+// Arabic pages
+import Landingar from "./components/layout/Landing-ar";
+import dashboardar from "./components/dashboard/Dashboard-ar";
+import dashboard2ar from "./components/dashboard/Dashboard2-ar";
+import Briefingar from './components/dashboard/Briefing-ar'
+import Instructionar from './components/dashboard/Instruction-ar';
+
 
 // Redux
 import { Provider } from "react-redux";
@@ -68,8 +77,12 @@ const App = () => {
               <PrivateRoute exact path="/timesup" component={Timesup} />
 
               {/* Arabic Pages */}
-              <PrivateRoute exact path="/dashboard-ar" component={Dashboard} />
-              <PrivateRoute exact path="/dashboard2-ar" component={Dashboard2} />
+              <Route exact path="/home-ar" component={Landingar} />
+              <PrivateRoute exact path="/dashboard-ar" component={dashboardar} />
+              <PrivateRoute exact path="/instruction-ar" component={Instructionar} />
+              <PrivateRoute exact path="/dashboard2-ar" component={dashboard2ar} />
+              <PrivateRoute exact path="/briefing-ar" component={Briefingar} />
+
             </Switch>
           </section>
         </BrowserRouter>
