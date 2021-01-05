@@ -28,7 +28,7 @@ import Music1 from '../../audio/Music1'
 import hint from '../../img/click.png'
 import A from '../../img/a.png'
 
-
+var languageCheck = 0;
 
 extend({ OrbitControls })
 
@@ -116,6 +116,12 @@ const counter = <Counter />
 const logout = <Logout />
 
 function Scene1() {
+  if (languageCheck === 0) {
+    if (localStorage.getItem("lang") === "ar") {
+      window.location.href = "/scene1-ar";
+      languageCheck = 1;
+    }
+  }
     return (
       
         <>

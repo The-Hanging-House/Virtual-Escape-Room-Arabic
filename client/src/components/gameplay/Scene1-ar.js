@@ -34,6 +34,8 @@ import Music1 from "../../audio/Music1";
 import hint from "../../img/click.png";
 import A from "../../img/a.png";
 
+var languageCheck = 0;
+
 extend({ OrbitControls });
 
 const Controls = (props) => {
@@ -141,6 +143,12 @@ const counter = <Counter />;
 const logout = <Logout />;
 
 function Scene1ar() {
+  if (languageCheck === 0) {
+    if (localStorage.getItem("lang") === "en") {
+      window.location.href = "/scene1";
+      languageCheck = 1;
+    }
+  }
   return (
     <>
       <Canvas camera={{ position: [0.3, 0, 0.1] }}>

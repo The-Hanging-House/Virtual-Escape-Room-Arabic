@@ -74,6 +74,7 @@ var flagB4 = 0;
 var flagB5 = 0;
 var flagB6 = 0;
 
+var languageCheck = 0;
 
 // value of X increments each time a box is collected
 function counter(){
@@ -1130,6 +1131,12 @@ const logout = <Logout />
 const elementorso = <Timer/>
 const doors = <Door/>
 function Scene2ar() {
+    if (languageCheck === 0) {
+    if (localStorage.getItem("lang") === "en") {
+      window.location.href = "/scene2";
+      languageCheck = 1;
+    }
+  }
   return (
       <>
           {doors}
