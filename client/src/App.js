@@ -31,6 +31,12 @@ import dashboardar from "./components/dashboard/Dashboard-ar";
 import dashboard2ar from "./components/dashboard/Dashboard2-ar";
 import Briefingar from './components/dashboard/Briefing-ar'
 import Instructionar from './components/dashboard/Instruction-ar';
+import Scene1ar from './components/gameplay/Scene1-ar';
+import Scene3ar from './components/gameplay/Scene3-ar';
+import Scene4ar from './components/gameplay/Scene4-ar';
+import Scene6ar from './components/gameplay/Scene6-ar';
+import Scene5ar from './components/gameplay/Scene5-ar';
+import Scene2ar from './components/gameplay/Scene2 -ar';
 
 
 // Redux
@@ -82,7 +88,13 @@ const App = () => {
               <PrivateRoute exact path="/instruction-ar" component={Instructionar} />
               <PrivateRoute exact path="/dashboard2-ar" component={dashboard2ar} />
               <PrivateRoute exact path="/briefing-ar" component={Briefingar} />
-
+              <PrivateRoute exact path="/scene1-ar" component={Scene1ar} />
+              <PrivateRoute exact path="/scene3-ar" component={Scene3ar} />
+              <PrivateRoute exact path="/scene4-ar" component={Scene4ar} />
+              <PrivateRoute exact path="/scene6-ar" component={Scene6ar} />
+              <PrivateRoute exact path="/scene5-ar" component={Scene5ar} />
+              <PrivateRoute exact path="/scene2-ar" component={Scene2ar} />
+              <PrivateRoute exact path="/garbage" component={Garbage} />
             </Switch>
           </section>
         </BrowserRouter>
