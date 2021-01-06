@@ -58,10 +58,10 @@ const Dashboard2ar = ({
           width="600"
           height="420"
         />
-        <a href="instruction">
+        <a href="instruction-ar">
           <div className="button-1"></div>
         </a>
-        <a href="briefing">
+        <a href="briefing-ar">
           <div className="button-2"></div>
         </a>
         {/* <map name="workmap">

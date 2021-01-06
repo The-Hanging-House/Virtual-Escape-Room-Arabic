@@ -155,12 +155,12 @@ const logout = <Logout />;
 const elementorso = <Timer />;
 
 function Scene5() {
-  if (languageCheck === 0) {
-    if (localStorage.getItem("lang") === "ar") {
-      window.location.href = "/scene5-ar";
-      languageCheck = 1;
-    }
-  }
+  // if (languageCheck === 0) {
+  //   if (localStorage.getItem("lang") === "ar") {
+  //     window.location.href = "/scene5-ar";
+  //     languageCheck = 1;
+  //   }
+  // }
   return (
     <>
       {/* <Timer/> */}

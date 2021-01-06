@@ -442,12 +442,12 @@ const logout = <Logout />;
 const elementorso = <Timer />;
 
 function Scene3ar() {
-  if (languageCheck === 0) {
-    if (localStorage.getItem("lang") === "en") {
-      window.location.href = "/scene3";
-      languageCheck = 1;
-    }
-  }
+  // if (languageCheck === 0) {
+  //   if (localStorage.getItem("lang") === "en") {
+  //     window.location.href = "/scene3";
+  //     languageCheck = 1;
+  //   }
+  // }
   return (
     <>
       {/* <Timer/> */}

@@ -148,12 +148,12 @@ const logout = <Logout />;
 var elementorso = <Timer />;
 var carDoors = <Cardoor />;
 function Scene4ar() {
-  if (languageCheck === 0) {
-    if (localStorage.getItem("lang") === "en") {
-      window.location.href = "/scene4";
-      languageCheck = 1;
-    }
-  }
+  // if (languageCheck === 0) {
+  //   if (localStorage.getItem("lang") === "en") {
+  //     window.location.href = "/scene4";
+  //     languageCheck = 1;
+  //   }
+  // }
   return (
     <>
       {/* <Timer/> */}

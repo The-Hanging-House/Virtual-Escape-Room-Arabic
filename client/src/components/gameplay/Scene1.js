@@ -116,12 +116,12 @@ const counter = <Counter />
 const logout = <Logout />
 
 function Scene1() {
-  if (languageCheck === 0) {
-    if (localStorage.getItem("lang") === "ar") {
-      window.location.href = "/scene1-ar";
-      languageCheck = 1;
-    }
-  }
+  // if (languageCheck === 0) {
+  //   if (localStorage.getItem("lang") === "ar") {
+  //     window.location.href = "/scene1-ar";
+  //     languageCheck = 1;
+  //   }
+  // }
     return (
       
         <>

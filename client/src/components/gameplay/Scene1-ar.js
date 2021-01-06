@@ -143,12 +143,12 @@ const counter = <Counter />;
 const logout = <Logout />;
 
 function Scene1ar() {
-  if (languageCheck === 0) {
-    if (localStorage.getItem("lang") === "en") {
-      window.location.href = "/scene1";
-      languageCheck = 1;
-    }
-  }
+  // if (languageCheck === 0) {
+  //   if (localStorage.getItem("lang") === "en") {
+  //     window.location.href = "/scene1";
+  //     languageCheck = 1;
+  //   }
+  // }
   return (
     <>
       <Canvas camera={{ position: [0.3, 0, 0.1] }}>
