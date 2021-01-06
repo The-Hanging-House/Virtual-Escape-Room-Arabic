@@ -3,12 +3,12 @@ import React, { useState, useEffect } from 'react'
 import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
-import Index from '../../games/garbage/index'
+import Index from '../../../games/garbage/index'
 
 import { Html } from 'drei';
 // import Tp from '../../img/tp.svg'
 
-import X from '../../../img/x.svg'
+import X from '../../../../img/x.svg'
 
 function TouchPoint12({ position, color, onClick }) {
     const [hovered, set] = useState(false)

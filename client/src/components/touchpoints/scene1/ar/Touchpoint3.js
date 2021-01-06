@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
-import X from '../../../img/x.svg'
+import X from '../../../../img/x.svg'
 
 import { Html } from 'drei';
 // import App1 from '../../games/game/App1';

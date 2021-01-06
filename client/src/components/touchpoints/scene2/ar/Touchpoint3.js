@@ -5,8 +5,8 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import board from '../../../img/watercooler.png'
-import X from '../../../img/x.svg'
+import board from '../../../../img/watercooler.png'
+import X from '../../../../img/x.svg'
 
 const TouchPoint3 = ({ position, color, onClick }) => {
     const [hovered, set] = useState(false)

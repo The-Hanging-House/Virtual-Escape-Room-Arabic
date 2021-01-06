@@ -36,7 +36,7 @@ import Scene3ar from './components/gameplay/Scene3-ar';
 import Scene4ar from './components/gameplay/Scene4-ar';
 import Scene6ar from './components/gameplay/Scene6-ar';
 import Scene5ar from './components/gameplay/Scene5-ar';
-import Scene2ar from './components/gameplay/Scene2 -ar';
+import Scene2ar from './components/gameplay/Scene2-ar';
 import Endar from './components/gameplay/End-ar';
 import Timesupar from './components/gameplay/Timesup-ar';
 

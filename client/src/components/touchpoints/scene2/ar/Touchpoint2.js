@@ -4,10 +4,10 @@ import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
-import board from '../../../img/tools.png'
+import board from '../../../../img/tools.png'
 // import tools from '../../../img/trap.png'
 
-import X from '../../../img/x.svg'
+import X from '../../../../img/x.svg'
 
 const TouchPoint2 = ({ position, color, onClick }) => {
     const [hovered, set] = useState(false)
