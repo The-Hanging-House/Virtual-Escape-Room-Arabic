@@ -16,12 +16,12 @@ class App extends React.PureComponent {
     const { value } = this.state;
     console.log(value)
     var input1 = "BIRD"
-    // if (value.length === 4){
-      // value.localeCompare(input1)? console.log("NO MATCH") : window.location.href = "/scene2";
-      // var scene5 = new Date().getTime();
-      // localStorage.setItem('scene5', scene5);
-      // window.location.href = '/scene2';
-  // }
+    if (value.length === 4){
+      value.localeCompare(input1)? console.log("NO MATCH") : window.location.href = "/scene2";
+      var scene5 = new Date().getTime();
+      localStorage.setItem('scene5', scene5);
+      window.location.href = '/scene2-ar';
+  }
   if(value.length === 4){
       
     tryAgain = 'block';

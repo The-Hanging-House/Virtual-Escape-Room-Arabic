@@ -41,7 +41,7 @@ function TouchPoint5({ position, color, onClick }) {
         setTimeout(function(){
             var scene4 = new Date().getTime();
             localStorage.setItem('scene4', scene4);
-            window.location.href = '/scene6';
+            window.location.href = '/scene6-ar';
         }, 3000);            
       };
     

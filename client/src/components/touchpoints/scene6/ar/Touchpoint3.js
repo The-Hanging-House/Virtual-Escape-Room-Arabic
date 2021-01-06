@@ -33,7 +33,7 @@ function TouchPoint3({ position, color, onClick }) {
         setTimeout(function(){
             var scene6 = new Date().getTime();
             localStorage.setItem('scene6', scene6);
-            window.location.href = '/scene5';
+            window.location.href = '/scene5-ar';
         }, 4000);            
       };
 

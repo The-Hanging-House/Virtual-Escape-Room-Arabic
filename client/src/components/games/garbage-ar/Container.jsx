@@ -93,7 +93,7 @@ export const Container = () => {
       var scene1 = new Date().getTime();
       localStorage.setItem('scene1', scene1);
       
-      window.location.href = '/scene3';  
+      window.location.href = '/scene3-ar';  
     }, 6000)
   }
   // function Tset(){

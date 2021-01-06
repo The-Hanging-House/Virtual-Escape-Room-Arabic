@@ -26,7 +26,7 @@ class App extends React.PureComponent {
       setTimeout(() => {
         var scene5 = new Date().getTime();
         localStorage.setItem('scene5', scene5);
-        window.location.href = '/scene2';
+        window.location.href = '/scene2-ar';
       }, 3000);
 
   }
