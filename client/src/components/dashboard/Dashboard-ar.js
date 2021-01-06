@@ -61,7 +61,7 @@ const Dashboardar = ({
           height="auto"
           alt="Dashboard"
         />
-        <a href="instruction">
+        <a href="instruction-ar">
           <div className="button-1"></div>
         </a>
 

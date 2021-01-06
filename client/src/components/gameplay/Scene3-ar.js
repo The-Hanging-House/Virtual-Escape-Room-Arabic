@@ -475,6 +475,8 @@ function Scene3ar() {
           <ambientLight intensity={1.2} />
           <Box1 position={[-12, -35, -5]} />
           {/* <TouchPoint1 position={[-4, -3, 5]} args={[3, 2, 1]} color='#F8A61F' /> */}
+
+          {/* lock */}
           <TouchPoint2
             position={[-6, -1, 1]}
             args={[3, 2, 1]}

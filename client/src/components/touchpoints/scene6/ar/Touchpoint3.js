@@ -5,8 +5,6 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import switchButtonON from '../../../../img/telephone.png'
-import switchButtonOFF from '../../../../img/key.png'
 import X from '../../../../img/x.svg'
 
 

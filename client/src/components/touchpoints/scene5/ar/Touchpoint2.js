@@ -7,7 +7,7 @@ import { Html } from 'drei';
 
 import Lock from '../../../../img/lock.png'
 
-import App from '../../../games/lock/App'
+import App from '../../../games/lock-ar/App'
 import X from '../../../../img/whiteX.svg'
 
 function TouchPoint2({ position, color, onClick }) {

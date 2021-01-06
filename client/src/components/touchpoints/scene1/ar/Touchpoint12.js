@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Container, Alert } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
-import Index from '../../../games/garbage/index'
+import Index from '../../../games/garbage-ar/index'
 
 import { Html } from 'drei';
 // import Tp from '../../img/tp.svg'

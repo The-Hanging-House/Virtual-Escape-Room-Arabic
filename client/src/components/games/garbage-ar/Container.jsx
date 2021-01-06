@@ -6,7 +6,7 @@ import update from "immutability-helper";
 import correct from '../../../audio/correct.mp3';
 import drop from '../../../audio/drop.mp3';
 
-var showHint = "Leaving trash behind in nature pollutes the environment and is harmful to wildlife.";
+var showHint = "Arabic Text placeholder";
 
 var count = 0
 // var ddd = 'hidden'

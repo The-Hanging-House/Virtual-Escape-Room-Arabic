@@ -27,7 +27,7 @@ const Lesson2 = () => {
                         onProgress={handleWatchComplete} />
                         <div className={watchComplete ? "marker marker--is-complete" : "marker marker--not-complete"}>
                             <div className="buttons1">
-                                <Link to="dashboard2" className="btn btn-primary" >
+                                <Link to="dashboard2-ar" className="btn btn-primary" >
                                     LET'S PLAY!
                                 </Link>
                                 

@@ -167,6 +167,7 @@ function Scene1ar() {
         >
           <Dome />
 
+          {/* garbage game */}
           <TouchPoint12
             position={[-3.7, -6.2, 0]}
             args={[3, 2, 1]}
@@ -188,6 +189,7 @@ function Scene1ar() {
             color="#F8A61F"
           />
 
+          {/* garbage game */}
           <TouchPoint11
             position={[3.5, -12, 5]}
             args={[3, 2, 1]}
@@ -260,11 +262,14 @@ function Scene1ar() {
             color="#F8A61F"
           />
 
+          {/* Lock */}
           <TouchPoint2
             position={[-10, -2, 1.5]}
             args={[3, 2, 1]}
             color="#F8A61F"
           />
+
+          {/* trunk is locked */}
           <TouchPoint3
             position={[-11, -10, -15]}
             args={[3, 2, 1]}
