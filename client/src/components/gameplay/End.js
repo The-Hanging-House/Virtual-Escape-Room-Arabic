@@ -43,6 +43,7 @@ function End() {
     winMessage = "YOU MADE IT OUT JUST IN TIME.";
   }
 
+  
   return (
     <>
       <div className="bg-image1"></div>
