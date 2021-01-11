@@ -78,7 +78,7 @@ var flagB4 = 0;
 var flagB5 = 0;
 var flagB6 = 0;
 
-var languageCheck = 0;
+// var languageCheck = 0;
 
 // value of X increments each time a box is collected
 function counter() {

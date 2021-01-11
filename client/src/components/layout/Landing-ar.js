@@ -16,7 +16,7 @@ const Landingar = ({ isAuthenticated }) => {
     if (localStorage.getItem("lang") === "en") {
       window.location.href = "/home";
       x = 1;
-    } 
+    }
   }
 
   function Initimg() {
@@ -56,12 +56,12 @@ const Landingar = ({ isAuthenticated }) => {
             SURVIVAL
           </h1> */}
           {/* <p className="lead">A VIRTUAL ESCAPE ROOM</p> */}
-          <div className="buttons">
+          <div className="buttons-arabic">
             <Link to="login" className="btn btn-light">
-              LOG IN
+              تسجيل الدخول
             </Link>
             <Link to="register" className="btn btn-primary">
-              REGISTER
+              التسجيل
             </Link>
           </div>
         </div>

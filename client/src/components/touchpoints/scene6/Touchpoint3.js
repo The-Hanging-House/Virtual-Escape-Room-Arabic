@@ -5,8 +5,6 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import switchButtonON from '../../../img/telephone.png'
-import switchButtonOFF from '../../../img/key.png'
 import X from '../../../img/x.svg'
 
 
@@ -78,16 +76,14 @@ function TouchPoint3({ position, color, onClick }) {
                         >
                         <div className="alert-insides"  style={{ top: '-170px' }}>
                         <button className="close" onClick={() => setShowMessage(false)}>
-                            <img src={X} className="stopDrag" style={{ position: 'absolute', top: '-28px', left: '6px', width: '50px' }} />
+                            <img src={X} alt="x" className="stopDrag" style={{ position: 'absolute', top: '-28px', left: '6px', width: '50px' }} />
                         </button>
 
                             <Alert.Heading>
                                 <p style={{ fontSize: '1rem', position: 'absolute', top: '33px', width: '500px', left: '98px' }}>
                                     Which of the following actions would you like to take?
                                 </p>
-                                {/* <div>
-                                    <img src={switchState? switchButtonON : switchButtonOFF} onClick={() => setSwitchState(true)} alt='switch' width='100%' height='100%' />
-                                </div> */}
+
                                 <div className='mcq-bounding-text2' style={{ display: correctAlert? 'none' : 'block'}}>
                                 
                                 <h3  className='mcq-text2' onMouseEnter={event => onMouseOver(event)} style={{ display: wrongAlert? 'block' : 'none', background: '#FFE7B0' }}

@@ -5,7 +5,6 @@ import H from "../../img/h.png";
 import CWN from "../../img/cwn.svg";
 
 var i = 0;
-var refreshTime = 1598355449119;
 var languageCheck = 0;
 
 function Timesup() {
@@ -32,25 +31,12 @@ function Timesup() {
     localStorage.removeItem(arri[i]);
     i++;
   }
-  // const onMouseOver = event => {
 
-  //     const el = event.target;
-  //     let colorhex = "#F8A61F"
-  //     el.style.background = colorhex;
-  //   };
-
-  //   const onMouseOut = event => {
-  //     const el = event.target;
-  //     let black = "transparent";
-  //     el.style.background = black;
-  //   };
   return (
     <>
       <div className="bg-image2"></div>
       <div className="bg-end1">
-        {/* <div className="congrats">
-                    <h1>CONGRATULATIONS</h1>
-                </div>   */}
+
         <div className="yellow-block1">
           <div className="gametime1">
             <h1>TIMES UP</h1>

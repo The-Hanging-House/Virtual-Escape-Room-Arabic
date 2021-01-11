@@ -67,7 +67,8 @@ const Dashboardar = ({
 
         <div className="lead1">
           <p className="lead1">
-            Hello <br /> {user && user.username}
+            مرحباً
+            <br /> {user && user.username}
           </p>
         </div>
       </div>

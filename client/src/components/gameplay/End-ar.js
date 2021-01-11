@@ -3,19 +3,19 @@ import React from "react";
 
 import CWN from "../../img/cwn.svg";
 import H from "../../img/h.svg";
-import Bgend from "../../img/bg.png";
 import Qr from "../../img/qr.png";
 
 var languageCheck = 0;
 var winMessage = "";
+var milisec_diff = 0;
 
 var data = localStorage.getItem("myDataKey");
 var now = localStorage.getItem("scene2");
 
 if (data < now) {
-  var milisec_diff = now - data;
+  milisec_diff = now - data;
 } else {
-  var milisec_diff = data - now;
+  milisec_diff = data - now;
 }
 var final = Math.round(900 - milisec_diff / 1000);
 if (final < 0) {
@@ -83,16 +83,16 @@ function End() {
           </div>
         </div>
         <div className="qrcode">
-          <img className="qr" src={Qr}></img>
+          <img alt="qr" className="qr" src={Qr}></img>
         </div>
         <div className="icons1">
           <p>For more adventures, visit the link below</p>
 
-          <a target="_blank" href="https://connectwithnature.ae">
-            <img className="cwnimg" src={CWN}></img>
+          <a rel="noopener noreferrer" target="_blank" href="https://connectwithnature.ae">
+            <img alt="cwn" className="cwnimg" src={CWN}></img>
           </a>
-          <a target="_blank" href="https://houbarafund.gov.ae/en/home">
-            <img className="houbara" src={H}></img>
+          <a rel="noopener noreferrer" target="_blank" href="https://houbarafund.gov.ae/en/home">
+            <img alt="houbara" className="houbara" src={H}></img>
           </a>
         </div>
       </div>

@@ -48,6 +48,7 @@ import setAuthToken from "./utils/setAuthToken";
 
 
 import "./App.css";
+import "./App-ar.css";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
