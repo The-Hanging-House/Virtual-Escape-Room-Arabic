@@ -6,7 +6,7 @@ import Spinner from "../layout/Spinner";
 import { getCurrentProfile } from "../../actions/profile";
 import bg from "../../img/01.png";
 
-import Logout from "./../logout/Logout1";
+import Logout from "./../logout/Logout1-ar";
 
 import Music4 from "../../audio/Music4";
 
@@ -65,8 +65,8 @@ const Dashboardar = ({
           <div className="button-1"></div>
         </a>
 
-        <div className="lead1">
-          <p className="lead1">
+        <div className="lead1-ar">
+          <p className="lead1-ar">
             مرحباً
             <br /> {user && user.username}
           </p>

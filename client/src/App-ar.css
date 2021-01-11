@@ -23,8 +23,8 @@
   src: url("./fonts/Kalam-Light.ttf") format("truetype");
 }
 
-.lead1 {
-  /* font-family: "Permanent Marker", cursive; */
+.lead1-ar {
+  font-family: "Permanent Marker", cursive;
   color: black;
   font-weight: bold;
   font-size: 2rem;
@@ -1320,7 +1320,7 @@ h1 span {
   top: 370px;
   width: 400px;
 }
-.alert-inside22 {
+.alert-inside22-ar {
   background-color: white;
   padding: 1rem;
   color: #707070;
@@ -1335,7 +1335,7 @@ h1 span {
   bottom: 10px;
   width: 400px;
 }
-.alert-inside22 button {
+.alert-inside22-ar button {
   margin: 1rem;
   margin-top: 10rem;
 }
@@ -1696,7 +1696,7 @@ h3 {
     top: 169px;
     position: absolute;
   }
-  .lead1 {
+  .lead1-ar {
     /*left: 15.2vw;*/
     /*top: 14vh;*/
     font-size: 24px;
@@ -1831,7 +1831,7 @@ h3 {
     top: 259px;
     position: absolute;
   }
-  .lead1 {
+  .lead1-ar {
     font-size: 2rem;
     left: 112px;
     top: 176px;
@@ -1912,7 +1912,7 @@ h3 {
     top: 160px;
     position: absolute;
   }
-  .lead1 {
+  .lead1-ar {
     /*left: 15.2vw;*/
     /*top: 14vh;*/
     font-size: 24px;
@@ -2059,7 +2059,7 @@ h3 {
     top: 92px;
     position: absolute;
   }
-  .lead1 {
+  .lead1-ar {
     /*left: 15.2vw;*/
     /*top: 14vh;*/
     font-size: 22px;
@@ -2129,7 +2129,7 @@ h3 {
     top: 169px;
     position: absolute;
   }
-  .lead1 {
+  .lead1-ar {
     font-size: 26px;
     left: 81px;
     top: 127px;

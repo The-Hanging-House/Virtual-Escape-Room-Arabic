@@ -6,7 +6,7 @@ import Spinner from "../layout/Spinner";
 import { getCurrentProfile } from "../../actions/profile";
 import bg from "../../img/component1.png";
 
-import Logout from "./../logout/Logout1";
+import Logout from "./../logout/Logout1-ar";
 
 import Music4 from "../../audio/Music4";
 
@@ -64,13 +64,10 @@ const Dashboard2ar = ({
         <a href="briefing-ar">
           <div className="button-2"></div>
         </a>
-        {/* <map name="workmap">
-                <area shape="rect" coords="240,460,600,530" alt="Intro" href="instruction"/>
-                <area  shape="rect" coords="400,550,680,600" alt="Game" href="briefing" />
-            </map> */}
-        <div className="lead1">
-          <p className="lead1">
-            Hello <br /> {user && user.username}
+        <div className="lead1-ar">
+          <p className="lead1-ar">
+            مرحباً
+            <br /> {user && user.username}
           </p>
         </div>
       </div>

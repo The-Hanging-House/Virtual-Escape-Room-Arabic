@@ -3,18 +3,19 @@ import Dustbin from "./Dustbin";
 import Box from "./Box";
 import { ItemTypes } from "./ItemTypes";
 import update from "immutability-helper";
-import correct from '../../../audio/correct.mp3';
-import drop from '../../../audio/drop.mp3';
+import correct from "../../../audio/correct.mp3";
+import drop from "../../../audio/drop.mp3";
 
-var showHint = "Arabic Text placeholder";
+var showHint =
+  "صندوق السيارة مغلق، لكنك تركت الأضواء والموسيقى مضاءة. هل وجدت مفاتيحك؟";
 
-var count = 0
+var count = 0;
 // var ddd = 'hidden'
 var flag = 0;
 // var gState = 0;
 
 export const Container = () => {
-  const [garbageDone, setGarbageDone] = useState(false)
+  const [garbageDone, setGarbageDone] = useState(false);
   // var canProceed = ['visible', 'hidden']
 
   const [dustbins, setDustbins] = useState([
@@ -22,13 +23,13 @@ export const Container = () => {
     {
       accepts: [ItemTypes.FOOD],
       lastDroppedItem: null,
-      bgImageName: "avocado"
+      bgImageName: "avocado",
     },
     {
       accepts: [ItemTypes.PAPER],
       lastDroppedItem: null,
-      bgImageName: "snowman"
-    }
+      bgImageName: "snowman",
+    },
   ]);
   const [boxes] = useState([
     { name: " ", type: ItemTypes.GLASS, bgImageName: "trash" },
@@ -37,7 +38,6 @@ export const Container = () => {
     { name: "    ", type: ItemTypes.FOOD, bgImageName: "trash2" },
     { name: "     ", type: ItemTypes.FOOD, bgImageName: "trash3" },
     { name: "      ", type: ItemTypes.GLASS, bgImageName: "trash5" },
-    
   ]);
   const [droppedBoxNames, setDroppedBoxNames] = useState([]);
   function isDropped(boxName) {
@@ -53,13 +53,12 @@ export const Container = () => {
         update(dustbins, {
           [index]: {
             lastDroppedItem: {
-              $set: item
-            }
-          }
+              $set: item,
+            },
+          },
         })
       );
       new Audio(drop).play();
-      
 
       // setInterval(() => {
       //   gState = localStorage.getItem('gState')
@@ -70,40 +69,44 @@ export const Container = () => {
       // }, 1000);
 
       // if(gState === '1'){
-        count = count + 1;
+      count = count + 1;
       // }
-
     },
     [droppedBoxNames, dustbins]
   );
-  setInterval(function(){
-    if(count > 5){
+  setInterval(function () {
+    if (count > 5) {
       // ddd = canProceed[0]
       setGarbageDone(true);
-      if(flag === 0){
+      if (flag === 0) {
         new Audio(correct).play();
         flag = 1;
       }
     }
   }, 5000);
-  
-  if(garbageDone){
 
-    setTimeout(function(){
+  if (garbageDone) {
+    setTimeout(function () {
       var scene1 = new Date().getTime();
-      localStorage.setItem('scene1', scene1);
-      
-      window.location.href = '/scene3-ar';  
-    }, 6000)
+      localStorage.setItem("scene1", scene1);
+
+      window.location.href = "/scene3-ar";
+    }, 6000);
   }
   // function Tset(){
   // }
   // console.log("scene1",count);
   return (
-
     <div>
-      <div style={{ dispaly: 'none'}}>
-        <div style={{ overflow: "hidden", clear: "both", display: garbageDone? 'none' : 'flex', justifyContent: 'center'}}>
+      <div style={{ dispaly: "none" }}>
+        <div
+          style={{
+            overflow: "hidden",
+            clear: "both",
+            display: garbageDone ? "none" : "flex",
+            justifyContent: "center",
+          }}
+        >
           {dustbins.map(({ accepts, lastDroppedItem, bgImageName }, index) => (
             <Dustbin
               accepts={accepts}
@@ -115,7 +118,17 @@ export const Container = () => {
           ))}
         </div>
 
-        <div style={{ overflow: 'hidden', clear: 'both', top: '100%', bottom: '100%', position: 'relative', display: garbageDone? 'none' : 'block', left: '70px'}}>
+        <div
+          style={{
+            overflow: "hidden",
+            clear: "both",
+            top: "100%",
+            bottom: "100%",
+            position: "relative",
+            display: garbageDone ? "none" : "block",
+            left: "70px",
+          }}
+        >
           {boxes.map(({ name, type, bgImageName }, index) => (
             <Box
               name={name}
@@ -124,14 +137,36 @@ export const Container = () => {
               key={index}
               bgImageName={bgImageName}
             />
-            ))}
+          ))}
         </div>
       </div>
-            <div style={{ textAlign: 'center', fontSize: '1rem', color: 'black', letterSpacing: '2px', fontWeight: 'bold', fontFamily: 'Dubai W23, sans-serif', display: garbageDone? 'none' : 'block' }}>{showHint}</div>
-      <div style={{display: garbageDone? 'block' : 'none'}}>
+      <div
+        style={{
+          textAlign: "center",
+          fontSize: "1rem",
+          color: "black",
+          letterSpacing: "2px",
+          fontWeight: "bold",
+          fontFamily: "Dubai W23, sans-serif",
+          display: garbageDone ? "none" : "block",
+        }}
+      >
+        {showHint}
+      </div>
+      <div style={{ display: garbageDone ? "block" : "none" }}>
         <div>
-          <h2 style={{textAlign: 'center', color: 'black', letterSpacing: '2px', fontWeight: 'bold', fontFamily: 'Dubai W23, sans-serif'}}>Good job not leaving any trash behind! Have you found your keys?</h2>
-          <br/>
+          <h2
+            style={{
+              textAlign: "center",
+              color: "black",
+              letterSpacing: "2px",
+              fontWeight: "bold",
+              fontFamily: "Dubai W23, sans-serif",
+            }}
+          >
+            أحسنت لأنك لم تترك أي قمامة! هل وجدت مفاتيحك؟
+          </h2>
+          <br />
         </div>
         {/* <div style={{  clear: "both", display: 'flex', justifyContent: 'center' }}>
               <button className="btn btn-primary3" onClick={Tset} style={{ width: "auto", height: "auto", textAlign: 'center'}}>

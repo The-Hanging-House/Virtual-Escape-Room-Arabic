@@ -38,11 +38,12 @@ const Lesson = () => {
         }
       >
         <div className="buttons4" style={{ paddingLeft: "2px" }}>
-          {/* <Link to="scene1" className="btn btn-primary">
-                                   CONTINUE
-                                </Link> */}
-          <button onClick={() => ctset()} className="btn btn-primary">
-            CONTINUE
+          <button
+            onClick={() => ctset()}
+            className="btn btn-primary"
+            style={{ letterSpacing: "0" }}
+          >
+            استمر
           </button>
         </div>
       </div>

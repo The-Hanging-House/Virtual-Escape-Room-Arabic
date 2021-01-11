@@ -11,7 +11,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 import Loader from "../../img/loader.gif";
 
-import Logout from "../logout/Logout";
+import Logout from "../logout/Logout-ar";
 
 import { Html } from "drei";
 
