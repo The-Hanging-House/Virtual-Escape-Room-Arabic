@@ -767,12 +767,13 @@ h1 span {
   letter-spacing: 3px;
   font-weight: 600;
 }
-.mcq-text {
+.mcq-text-arabic {
   letter-spacing: 1px;
   background: #ffe7b0;
-  padding-left: 19px;
+  padding-right: 14px;
+  text-align: right;
 }
-.mcq-bounding-text {
+.mcq-bounding-text-arabic {
   position: absolute;
   width: 531px;
   /* top: 76px; */
@@ -1206,7 +1207,7 @@ h1 span {
   line-height: 2rem;
   padding-left: 2rem;
 }
-.alert-insides1 {
+.alert-insides1-arabic {
   background-image: url(../src/img/popupKey.svg);
   display: inline-block;
   background-repeat: no-repeat;
@@ -1220,21 +1221,21 @@ h1 span {
   position: absolute;
   top: 10vh;
 }
-.alert-insides1 p {
+.alert-insides1-arabic p {
   font-family: "Dubai W23", sans-serif;
-  color: #ffffffc7;
-  font-size: 1.2rem;
   position: relative;
   padding: 2rem;
+  text-align: right;
+  right: 9px;
 }
-.alert-insides1 h3 {
+.alert-insides1-arabic h3 {
   font-family: "Dubai W23", sans-serif;
   position: relative;
   top: -3vh;
   line-height: 2rem;
   padding-left: 2rem;
 }
-.alert-insides1 img {
+.alert-insides1-arabic img {
   position: absolute;
   top: -15px;
   right: -50px;
@@ -1427,7 +1428,7 @@ h1 span {
   transform: translate(8px, 8px);
   /* letter-spacing: 2px; */
 }
-.alert-insides-keys {
+.alert-insides-keys-arabic {
   background-image: url(../src/img/popupKey.png);
   display: inline-block;
   background-repeat: no-repeat;
@@ -1443,7 +1444,7 @@ h1 span {
   /* top: -10vh; */
   left: 16px;
 }
-.alert-insides-keys p {
+.alert-insides-keys-arabic p {
   font-family: "Dubai W23", sans-serif;
   color: black;
   font-size: 1.2rem;
@@ -1452,9 +1453,9 @@ h1 span {
   letter-spacing: 0px;
   position: absolute;
   top: 7px;
-  left: 42px;
+  left: 66px;
 }
-.alert-insides-keys h3 {
+.alert-insides-keys-arabic h3 {
   font-family: "Dubai W23", sans-serif;
   margin-bottom: 0.5rem;
   line-height: 1.5rem;

@@ -36,11 +36,11 @@ function End() {
     }
   }
   if (mins > 8) {
-    winMessage = "WOW! THAT WAS REALLY FAST. HAVE YOU DONE THIS BEFORE?";
+    winMessage = "رائع! كان ذلك سريعًا حقًا. هل فعلت هذا من قبل؟";
   } else if (mins > 3 && mins < 8) {
-    winMessage = "THAT WAS GOOD! YOU MUST'VE REALLY CONNECTED WITH THE NATURE";
+    winMessage = ".أحسنت! أنت حقًا متصل بالطبيعة";
   } else if (mins < 3) {
-    winMessage = "YOU MADE IT OUT JUST IN TIME.";
+    winMessage = ".لقد أنجزت المهمة في الوقت المناسب";
   }
 
   return (
@@ -48,17 +48,17 @@ function End() {
       <div className="bg-image1"></div>
       <div className="bg-end">
         <div className="congrats">
-          <h1>CONGRATULATIONS</h1>
+          <h1>تهانينا</h1>
         </div>
         <div className="yellow-block">
           <div className="first-h1">
-            <h1>YOU ESCAPED DANGER WITH</h1>
+            <h1>لقد تخطيت الخطر ومازال لديك</h1>
           </div>
           <div className="gametime">
             <h1>{pacman}</h1>
           </div>
           <div className="second-h1">
-            <h1>TO SPARE</h1>
+            <h1>احتياطي</h1>
           </div>
         </div>
         <div className="message-win">
@@ -73,12 +73,12 @@ function End() {
         <div className="option1">
           <div className="home-button">
             <a href="dashboard2">
-              <button className="btn btn-primary">HOME</button>
+              <button className="btn btn-primary">الصفحة الرئيسية</button>
             </a>
           </div>
           <div className="home-button">
             <a href="briefing">
-              <button className="btn btn-primary">PLAY AGAIN</button>
+              <button className="btn btn-primary">إلعب مرة أخرى</button>
             </a>
           </div>
         </div>
@@ -86,12 +86,20 @@ function End() {
           <img alt="qr" className="qr" src={Qr}></img>
         </div>
         <div className="icons1">
-          <p>For more adventures, visit the link below</p>
+          <p>.لمزيد من المغامرات، قم بزيارة الرابط أدناه</p>
 
-          <a rel="noopener noreferrer" target="_blank" href="https://connectwithnature.ae">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://connectwithnature.ae"
+          >
             <img alt="cwn" className="cwnimg" src={CWN}></img>
           </a>
-          <a rel="noopener noreferrer" target="_blank" href="https://houbarafund.gov.ae/en/home">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://houbarafund.gov.ae/en/home"
+          >
             <img alt="houbara" className="houbara" src={H}></img>
           </a>
         </div>

@@ -12,7 +12,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 import { Html } from "drei";
 import Loader from "../../img/loader.gif";
-import Logout from "../logout/Logout";
+import Logout from "../logout/Logout-ar";
 
 // import Task1 from '../popup/Task1';
 // import TouchPoint1 from '../touchpoints/scene4/Touchpoint1'
@@ -139,7 +139,7 @@ function Counter() {
       <h1>
         1<span>/7</span>
       </h1>
-      <h3>CHALLENGES</h3>
+      <h3>التحديات</h3>
     </div>
   );
 }

@@ -20,7 +20,7 @@ import Loader from "../../img/loader.gif";
 
 import img from "./../../img/key.png";
 
-import Logout from "../logout/Logout";
+import Logout from "../logout/Logout-ar";
 import X from "./../../img/x.svg";
 
 import Task1 from "../popup/Task1";
@@ -83,8 +83,6 @@ function timerz() {
 
 function Timer() {
   var minutes = timerz(); //minutes passed since start
-  // console.log("minutes", minutes)
-  // const [counter, setCounter] = React.useState(900);
   const [counter, setCounter] = React.useState(minutes);
 
   React.useEffect(() => {
@@ -136,7 +134,7 @@ const Task = () => {
   );
 };
 
-// Box code goes here
+// Box code goes here (key)
 function Box1(props) {
   const mesh = useRef();
   const [showMessage, setShowMessage] = useState(false);
@@ -193,7 +191,7 @@ function Box1(props) {
               onClose={() => setShowMessage(false)}
             >
               <div
-                className="alert-insides-keys"
+                className="alert-insides-keys-arabic"
                 style={{
                   visibility: collectedMessage ? "hidden" : "visible",
                   top: "111px",
@@ -210,7 +208,7 @@ function Box1(props) {
                       fontSize: "1.1rem",
                     }}
                   >
-                    Great! You found your keys.
+                    عظيم! لقد وجدت مفاتيحك
                   </p>
                 </Alert.Heading>
               </div>
@@ -222,13 +220,13 @@ function Box1(props) {
   );
 }
 
-// Touchpoint 3 code goes here
+// Touchpoint 3 code goes here (trunk mcq)
 function TouchPoint3({ position, color, onClick }) {
   const [hovered, set] = useState(false);
   const [CON, setCON] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [innerText, setInnerText] = useState(
-    "Seems like the trunk is locked, but you left the lights and music on."
+    "صندوق السيارة مغلق، لكنك تركت الأضواء والموسيقى مضاءة. هل وجدت مفاتيحك؟"
   );
   const [wrongAlert, setWrongAlert] = useState(true);
 
@@ -238,7 +236,7 @@ function TouchPoint3({ position, color, onClick }) {
   setInterval(function () {
     if (toolCollected === 1) {
       setShow(true);
-      setInnerText("Which of the following actions would you like to take?");
+      setInnerText("أي من الخيارات التالية ترغب في اتخاذها");
     }
 
     if (!wrongAlert) {
@@ -323,85 +321,69 @@ function TouchPoint3({ position, color, onClick }) {
                   ></img>
                 </button>
                 <Alert.Heading>
-                  <p style={{ color: "black" }}>
-                    {/* The car door is not locked, what should I do? */}
-                  </p>
+                  <p style={{ color: "black" }}></p>
                   <h3
                     className="mcq-bound-total"
                     style={{
                       cursor: "default",
                       fontSize: "1rem",
                       color: "black",
-                      left: "41px",
+                      left: "21px",
+                      textAlign: "right",
                     }}
                   >
                     {innerText}
                   </h3>
-                  {/* <a href="scene4"> */}
-                  {/* <h3 style={{fontWeight: '800', position: 'absolute', top: '-19px', left: '-33px'}} >
-                                      {show? 'A. ' : ""}
-                                      </h3>  */}
-                  <div className="mcq-bounding-text">
+
+                  <div className="mcq-bounding-text-arabic">
                     <h3
-                      className="mcq-text"
+                      className="mcq-text-arabic"
                       style={{ display: wrongAlert ? "block" : "none" }}
                       onClick={() => {
-                        setShowMessage(false);
+                        // setShowMessage(false);
                         setWrongAlert(false);
                       }}
                       onMouseEnter={(event) => onMouseOver(event)}
                       onMouseOut={(event) => onMouseOut(event)}
                     >
                       {show
-                        ? "Break the trunk door open in order to search for more clues."
+                        ? ".كسر باب صندوق السيارة من أجل البحث عن المزيد من الأدلة"
                         : ""}
                     </h3>
                     <h3
-                      className="mcq-text"
+                      className="mcq-text-arabic"
                       style={{ display: wrongAlert ? "block" : "none" }}
                       onMouseEnter={(event) => onMouseOver(event)}
                       onMouseOut={(event) => onMouseOut(event)}
                       onClick={() => setCON(true)}
                     >
-                      {/* <h3 style={{fontWeight: '800', position: 'absolute', top: '-19px', left: '-33px'}} >
-                                      {show? 'B. ' : ""}
-                                      </h3>  */}
-                      {show
-                        ? "Open the trunk with your keys to reach the radio."
-                        : ""}
+                      {show ? ".فتح الصندوق بمفاتيحك لتصل إلى الراديو" : ""}
                     </h3>
                     <h3
-                      className="mcq-text"
+                      className="mcq-text-arabic"
                       style={{ display: wrongAlert ? "block" : "none" }}
                       onClick={() => setShowMessage(false)}
                       onMouseEnter={(event) => onMouseOver(event)}
                       onMouseOut={(event) => onMouseOut(event)}
                     >
-                      {/* <h3 style={{fontWeight: '800', position: 'absolute', top: '-19px', left: '-33px'}} >
-                                      {show? 'C. ' : ""}
-                                      </h3>  */}
                       {show
-                        ? "Put the keys in your pocket and continue exploring your surroundings for more clues."
+                        ? ".وضع المفاتيح في جيبك ومواصلة استكشاف محيطك للحصول على مزيد من الأدلة"
                         : ""}
                     </h3>
                   </div>
-                  {/* </a> */}
                   <h3
                     onClick={() => setShowMessage(false)}
                     style={{ fontSize: "1rem" }}
-                    // onMouseEnter={event => onMouseOver(event)}
-                    // onMouseOut={event => onMouseOut(event)}
-                  >
-                    {/* {show? 'CLOSE' : "IGNORE IT"} */}
-                  </h3>
+                  ></h3>
                   <h3
                     style={{
                       display: wrongAlert ? "none" : "block",
                       position: "absolute",
-                      top: "88px",
+                      top: "95px",
+                      right: "185px",
                     }}
                   >
-                    Try Again!
+                    حاول مرة أخرى!
                   </h3>
                 </Alert.Heading>
               </div>
@@ -433,7 +415,7 @@ function Counter() {
       <h1>
         1<span>/7</span>
       </h1>
-      <h3>CHALLENGES</h3>
+      <h3>التحديات</h3>
     </div>
   );
 }

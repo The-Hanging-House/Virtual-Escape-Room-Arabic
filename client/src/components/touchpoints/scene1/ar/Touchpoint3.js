@@ -47,7 +47,7 @@ function TouchPoint3({ position, color, onClick }) {
               // dismissible
               onClose={() => setShowMessage(false)}
             >
-              <div className="alert-insides1">
+              <div className="alert-insides1-arabic">
                 <button className="close" onClick={() => setShowMessage(false)}>
                   <img
                     className="stopDrag"

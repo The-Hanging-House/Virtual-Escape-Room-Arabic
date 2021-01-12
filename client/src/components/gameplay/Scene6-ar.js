@@ -10,7 +10,7 @@ import {
 } from "react-three-fiber";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-import Logout from "../logout/Logout";
+import Logout from "../logout/Logout-ar";
 import Loader from "../../img/loader.gif";
 import { Html } from "drei";
 
@@ -127,7 +127,7 @@ function Counter() {
       <h1>
         2<span>/7</span>
       </h1>
-      <h3>CHALLENGES</h3>
+      <h3>التحديات</h3>
     </div>
   );
 }

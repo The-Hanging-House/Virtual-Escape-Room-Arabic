@@ -36,14 +36,13 @@ function Timesup() {
     <>
       <div className="bg-image2"></div>
       <div className="bg-end1">
-
         <div className="yellow-block1">
           <div className="gametime1">
-            <h1>TIMES UP</h1>
+            <h1>انتهى الوقت</h1>
           </div>
         </div>
         <div className="message-win1">
-          <h1>DID YOU DO YOUR BEST?</h1>
+          <h1>هل فعلت ما بوسعك!</h1>
         </div>
         <div className="some-text1">
           <h2>
@@ -54,17 +53,17 @@ function Timesup() {
         <div className="option2">
           <div className="home-button1">
             <a href="dashboard2">
-              <button className="btn btn-primary">HOME</button>
+              <button className="btn btn-primary">الصفحة الرئيسية</button>
             </a>
           </div>
           <div className="play-bottom1">
             <a href="briefing">
-              <button className="btn btn-primary">PLAY AGAIN</button>
+              <button className="btn btn-primary">إلعب مرة أخرى</button>
             </a>
           </div>
         </div>
         <div className="icons2">
-          <p>For more adventures, visit the link below</p>
+          <p>لمزيد من المغامرات، قم بزيارة الرابط أدناه.</p>
 
           <a
             target="_blank"
