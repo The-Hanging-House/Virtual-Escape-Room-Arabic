@@ -56,17 +56,18 @@ class App extends React.PureComponent {
     </div>
     <div className="app-text" style={{ display: tryAgain, position: 'absolute', right: '241px', color: 'white', bottom: '25%', fontFamily: 'Dubai W23, sans-serif', letterSpacing: '1px', zIndex: '5' }}>
       <h3 style={{ textAlign: 'center' }}>
-        Code incorrect. Try again!
+      !الرمز غير صحيح. حاول مرة أخرى
       </h3>
     </div>
-    <div className="app-text" style={{ display: rightAnswer, position: 'absolute', right: '193px', color: 'white', bottom: '25%', fontFamily: 'Dubai W23, sans-serif', letterSpacing: '1px', zIndex: '5' }}>
+    <div className="app-text" style={{ display: rightAnswer, position: 'absolute', right: '221px', color: 'white', bottom: '25%', fontFamily: 'Dubai W23, sans-serif', letterSpacing: '1px', zIndex: '5' }}>
       <h3 style={{ textAlign: 'center' }}>
-        Great job! You found your way inside.
+      أحسنت! لقد وجدت طريقك إلى الداخل
       </h3>
     </div>
-    <div className="app-text" style={{position: 'absolute',  textAlign: 'center', color: 'black', fontFamily: 'Dubai W23, sans-serif', fontWeight: 'lighter', letterSpacing: '1px', zIndex: '6', bottom: '1%', left: '1px'}}>
-      <h3>ARABIC The door is locked!</h3>
-      <h3 style={{marginTop: '0px'}}>Explore the environment around you to find the code that will let you inside the Desert Conservation Centre.</h3>
+    <div className="app-text" style={{position: 'absolute',  textAlign: 'center', color: 'black', fontFamily: 'Dubai W23, sans-serif', fontWeight: 'lighter', letterSpacing: '1px', zIndex: '6', bottom: '1%', left: '18px'}}>
+      <h3>!الباب مغلق</h3>
+      <h3 style={{marginTop: '0px'}}>.استكشف البيئة من حولك للعثور على الرمز الذي سيسمح لك بالدخول إلى مركز الحفاظ على الصحراء
+</h3>
     </div>
     </>
   );

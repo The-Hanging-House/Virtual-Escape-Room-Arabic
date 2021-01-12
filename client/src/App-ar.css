@@ -795,10 +795,11 @@ h1 span {
   font-weight: 400;
   /* width: 566px; */
 }
-.mcq-text2 {
+.mcq-text2-arabic {
   letter-spacing: 1px;
   background: #ffe7b0;
-  padding-left: 13px;
+  padding-right: 20px;
+  text-align: right;
 }
 .mcq-bounding-text2 {
   position: absolute;

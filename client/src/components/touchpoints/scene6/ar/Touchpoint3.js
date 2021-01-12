@@ -102,7 +102,8 @@ function TouchPoint3({ position, color, onClick }) {
                       position: "absolute",
                       top: "33px",
                       width: "500px",
-                      left: "98px",
+                      left: "14px",
+                      textAlign: "right",
                     }}
                   >
                     أي من الخيارات التالية ترغب في اتخاذها
@@ -113,7 +114,7 @@ function TouchPoint3({ position, color, onClick }) {
                     style={{ display: correctAlert ? "none" : "block" }}
                   >
                     <h3
-                      className="mcq-text2"
+                      className="mcq-text2-arabic"
                       onMouseEnter={(event) => onMouseOver(event)}
                       style={{
                         display: wrongAlert ? "block" : "none",
@@ -125,7 +126,7 @@ function TouchPoint3({ position, color, onClick }) {
                       .ترك الأنوار مضاءة حتى نتمكن من رؤية الحياة البرية القريبة
                     </h3>
                     <h3
-                      className="mcq-text2"
+                      className="mcq-text2-arabic"
                       onClick={() => setWrongAlert(false)}
                       style={{
                         display: wrongAlert ? "block" : "none",
@@ -137,7 +138,7 @@ function TouchPoint3({ position, color, onClick }) {
                       .تقليل سطوع الإضاءة أثناء محاولتك دخول مركز الحفظ
                     </h3>
                     <h3
-                      className="mcq-text2"
+                      className="mcq-text2-arabic"
                       onClick={() => setShowMessage(false)}
                       style={{
                         display: wrongAlert ? "block" : "none",
@@ -149,7 +150,7 @@ function TouchPoint3({ position, color, onClick }) {
                       .التجاهل واستكشاف العناصر الأخرى في صندوق السيارة
                     </h3>
                     <h3
-                      className="mcq-text2"
+                      className="mcq-text2-arabic"
                       onClick={() => {
                         setSwitchState(true);
                         setCorrectAlert(true);
@@ -170,9 +171,11 @@ function TouchPoint3({ position, color, onClick }) {
                         padding: "20px",
                         left: "35px",
                         display: wrongAlert ? "none" : "block",
+                        textAlign: "right",
                       }}
                     >
-                        .حاول مرة أخرى! يمكن للضوء الساطع أن يزعج الحياة البرية. بشكل عام، يجب إطفاء أي أضواء، إذا لم تكن هناك حاجة إليها
+                      حاول مرة أخرى! يمكن للضوء الساطع أن يزعج الحياة البرية.
+                      بشكل عام، يجب إطفاء أي أضواء، إذا لم تكن هناك حاجة إليها
                     </h3>
                   </div>
                   <div>
@@ -181,11 +184,13 @@ function TouchPoint3({ position, color, onClick }) {
                         position: "absolute",
                         top: "74px",
                         padding: "20px",
-                        left: "31px",
+                        right: "46px",
                         display: correctAlert ? "block" : "none",
+                        textAlign: "right"
                       }}
                     >
-                      .صحيح! يمكن للضوء الساطع أن يزعج الحياة البرية. بشكل عام، يجب إطفاء أي أضواء، إذا لم تكن هناك حاجة إليها
+                      .صحيح! يمكن للضوء الساطع أن يزعج الحياة البرية. بشكل عام،
+                      يجب إطفاء أي أضواء، إذا لم تكن هناك حاجة إليها
                     </h3>
                   </div>
                 </Alert.Heading>
