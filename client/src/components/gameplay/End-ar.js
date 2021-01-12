@@ -47,7 +47,7 @@ function End() {
     <>
       <div className="bg-image1"></div>
       <div className="bg-end">
-        <div className="congrats">
+        <div className="congrats-arabic">
           <h1>تهانينا</h1>
         </div>
         <div className="yellow-block">
@@ -61,31 +61,38 @@ function End() {
             <h1>احتياطي</h1>
           </div>
         </div>
-        <div className="message-win">
+        <div className="message-win-arabic">
           <h1>{winMessage}</h1>
         </div>
-        <div className="some-text">
-          <h2>
-            Don't forget to take a screenshot to share
-            <br /> with your friends!
-          </h2>
+        <div className="some-text-arabic">
+          <h2>!لا تنس أن تأخذ صورة للشاشة لمشاركتها مع أصدقائك</h2>
         </div>
         <div className="option1">
           <div className="home-button">
             <a href="dashboard2">
-              <button className="btn btn-primary">الصفحة الرئيسية</button>
+              <button
+                className="btn btn-primary"
+                style={{ letterSpacing: "0" }}
+              >
+                الصفحة الرئيسية
+              </button>
             </a>
           </div>
           <div className="home-button">
             <a href="briefing">
-              <button className="btn btn-primary">إلعب مرة أخرى</button>
+              <button
+                className="btn btn-primary"
+                style={{ letterSpacing: "0" }}
+              >
+                إلعب مرة أخرى
+              </button>
             </a>
           </div>
         </div>
         <div className="qrcode">
           <img alt="qr" className="qr" src={Qr}></img>
         </div>
-        <div className="icons1">
+        <div className="icons1" style={{letterSpacing: "0"}}>
           <p>.لمزيد من المغامرات، قم بزيارة الرابط أدناه</p>
 
           <a

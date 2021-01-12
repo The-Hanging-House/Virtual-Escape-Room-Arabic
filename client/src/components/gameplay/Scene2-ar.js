@@ -119,6 +119,7 @@ const Dome = () => {
   );
 };
 
+// table puzzle piece
 function Box1(props) {
   const mesh = useRef();
   const [collectedMessage, setCollectedMessage] = useState(true);
@@ -206,7 +207,7 @@ function Box1(props) {
               onClose={() => setShowMessage(false)}
             >
               <div
-                className="alert-inside3"
+                className="alert-inside3-arabic"
                 style={{
                   visibility: collectedMessage ? "hidden" : "visible",
                   left: "-15%",
@@ -217,7 +218,7 @@ function Box1(props) {
                 }}
               >
                 <Alert.Heading>
-                  <p>Which of the following actions would you like to take?</p>
+                  <p>أي من الإجراءات التالية ترغب في تنفيذها؟</p>
                   <div>
                     <img src={egg} alt=" " className="stopDrag" />
                   </div>
@@ -228,7 +229,7 @@ function Box1(props) {
                   onMouseOut={(event) => onMouseOut(event)}
                   onClick={() => afterClick()}
                 >
-                  Collect the piece of the migration map.
+                  .جمع قطعة من خريطة الهجرة
                 </h3>
                 <h3
                   onClick={() => setShowMessage(false)}
@@ -236,7 +237,7 @@ function Box1(props) {
                   onMouseEnter={(event) => onMouseOver(event)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
-                  Look for other clues.
+                  .البحث عن أدلة أخرى
                 </h3>
               </div>
             </Alert>
@@ -336,7 +337,7 @@ function Box2(props) {
               onClose={() => setShowMessage(false)}
             >
               <div
-                className="alert-inside3"
+                className="alert-inside3-arabic"
                 style={{
                   visibility: collectedMessage ? "hidden" : "visible",
                   left: "-15%",
@@ -347,7 +348,7 @@ function Box2(props) {
                 }}
               >
                 <Alert.Heading>
-                  <p>Which of the following actions would you like to take?</p>
+                  <p>أي من الإجراءات التالية ترغب في تنفيذها؟</p>
                   <div>
                     <img src={egg} alt=" " className="stopDrag" />
                   </div>
@@ -358,7 +359,7 @@ function Box2(props) {
                   onMouseOut={(event) => onMouseOut(event)}
                   onClick={() => afterClick()}
                 >
-                  Collect the piece of the migration map.
+                  .جمع قطعة من خريطة الهجرة
                 </h3>
                 <h3
                   onClick={() => setShowMessage(false)}
@@ -366,7 +367,7 @@ function Box2(props) {
                   onMouseEnter={(event) => onMouseOver(event)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
-                  Look for other clues.
+                  .البحث عن أدلة أخرى
                 </h3>
               </div>
             </Alert>
@@ -458,7 +459,7 @@ function Box3(props) {
               onClose={() => setShowMessage(false)}
             >
               <div
-                className="alert-inside3"
+                className="alert-inside3-arabic"
                 style={{
                   visibility: collectedMessage ? "hidden" : "visible",
                   left: "-15%",
@@ -469,7 +470,7 @@ function Box3(props) {
                 }}
               >
                 <Alert.Heading>
-                  <p>Which of the following actions would you like to take?</p>
+                  <p>أي من الإجراءات التالية ترغب في تنفيذها؟</p>
                   <div>
                     <img src={egg} alt=" " className="stopDrag" />
                   </div>
@@ -480,7 +481,7 @@ function Box3(props) {
                   onMouseOut={(event) => onMouseOut(event)}
                   onClick={() => afterClick()}
                 >
-                  Collect the piece of the migration map.
+                  .جمع قطعة من خريطة الهجرة
                 </h3>
                 <h3
                   onClick={() => setShowMessage(false)}
@@ -488,7 +489,7 @@ function Box3(props) {
                   onMouseEnter={(event) => onMouseOver(event)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
-                  Look for other clues.
+                  .البحث عن أدلة أخرى
                 </h3>
               </div>
             </Alert>
@@ -580,7 +581,7 @@ function Box4(props) {
               onClose={() => setShowMessage(false)}
             >
               <div
-                className="alert-inside3"
+                className="alert-inside3-arabic"
                 style={{
                   visibility: collectedMessage ? "hidden" : "visible",
                   left: "-15%",
@@ -591,7 +592,7 @@ function Box4(props) {
                 }}
               >
                 <Alert.Heading>
-                  <p>Which of the following actions would you like to take?</p>
+                  <p>أي من الإجراءات التالية ترغب في تنفيذها؟</p>
                   <div>
                     <img src={egg} alt=" " className="stopDrag" />
                   </div>
@@ -602,7 +603,7 @@ function Box4(props) {
                   onMouseOut={(event) => onMouseOut(event)}
                   onClick={() => afterClick()}
                 >
-                  Collect the piece of the migration map.
+                  .جمع قطعة من خريطة الهجرة
                 </h3>
                 <h3
                   onClick={() => setShowMessage(false)}
@@ -610,7 +611,7 @@ function Box4(props) {
                   onMouseEnter={(event) => onMouseOver(event)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
-                  Look for other clues.
+                  .البحث عن أدلة أخرى
                 </h3>
               </div>
             </Alert>
@@ -702,7 +703,7 @@ function Box5(props) {
               onClose={() => setShowMessage(false)}
             >
               <div
-                className="alert-inside3"
+                className="alert-inside3-arabic"
                 style={{
                   visibility: collectedMessage ? "hidden" : "visible",
                   left: "-15%",
@@ -713,7 +714,7 @@ function Box5(props) {
                 }}
               >
                 <Alert.Heading>
-                  <p>Which of the following actions would you like to take?</p>
+                  <p>أي من الإجراءات التالية ترغب في تنفيذها؟</p>
                   <div>
                     <img src={egg} alt=" " className="stopDrag" />
                   </div>
@@ -724,7 +725,7 @@ function Box5(props) {
                   onMouseOut={(event) => onMouseOut(event)}
                   onClick={() => afterClick()}
                 >
-                  Collect the piece of the migration map.
+                  .جمع قطعة من خريطة الهجرة
                 </h3>
                 <h3
                   onClick={() => setShowMessage(false)}
@@ -732,7 +733,7 @@ function Box5(props) {
                   onMouseEnter={(event) => onMouseOver(event)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
-                  Look for other clues.
+                  .البحث عن أدلة أخرى
                 </h3>
               </div>
             </Alert>
@@ -824,7 +825,7 @@ function Box6(props) {
               onClose={() => setShowMessage(false)}
             >
               <div
-                className="alert-inside3"
+                className="alert-inside3-arabic"
                 style={{
                   visibility: collectedMessage ? "hidden" : "visible",
                   left: "-15%",
@@ -835,7 +836,7 @@ function Box6(props) {
                 }}
               >
                 <Alert.Heading>
-                  <p>Which of the following actions would you like to take?</p>
+                  <p>أي من الإجراءات التالية ترغب في تنفيذها؟</p>
                   <div>
                     <img src={egg} alt=" " className="stopDrag" />
                   </div>
@@ -846,7 +847,7 @@ function Box6(props) {
                   onMouseOut={(event) => onMouseOut(event)}
                   onClick={() => afterClick()}
                 >
-                  Collect the piece of the migration map.
+                  .جمع قطعة من خريطة الهجرة
                 </h3>
                 <h3
                   onClick={() => setShowMessage(false)}
@@ -854,7 +855,7 @@ function Box6(props) {
                   onMouseEnter={(event) => onMouseOver(event)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
-                  Look for other clues.
+                  .البحث عن أدلة أخرى
                 </h3>
               </div>
             </Alert>
@@ -1439,10 +1440,10 @@ function Counter() {
   return (
     <>
       <div className="bg-text6">
-        <h1 style={{ letterSpacing: "4px" }}>
+        <h1>
           {something}/<span>7</span>
         </h1>
-        <h3>CHALLENGES</h3>
+        <h3 style={{ letterSpacing: "0" }}>التحديات</h3>
       </div>
       <div
         className="bg-text7"
@@ -1452,7 +1453,7 @@ function Counter() {
         <h1 style={{ paddingLeft: "50px" }}>
           {pieceCollected}/<span>6</span>
         </h1>
-        <h3 style={{ paddingLeft: "32px" }}>PIECES</h3>
+        <h3 style={{ paddingLeft: "32px" }}>أجزاء</h3>
       </div>
     </>
   );

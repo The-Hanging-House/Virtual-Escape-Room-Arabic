@@ -325,17 +325,16 @@ body {
   overflow: scroll;
   bottom: 0%;
 }
-.congrats {
+.congrats-arabic {
   color: #ffffff;
   text-align: center;
   /* position: absolute; */
   margin-top: 2.4rem;
   margin-bottom: 2.4rem;
 }
-.congrats h1 {
+.congrats-arabic h1 {
   font-weight: 700;
   font-size: 38px;
-  letter-spacing: 0.8rem;
   text-shadow: 2px 2px 17px black;
 }
 .yellow-block {
@@ -368,23 +367,21 @@ body {
   font-size: 17.5px;
   letter-spacing: 3px;
 }
-.message-win {
+.message-win-arabic {
   text-align: center;
   margin-bottom: 2.4rem;
 }
-.message-win h1 {
+.message-win-arabic h1 {
   font-size: 17.5px;
-  letter-spacing: 3px;
   color: white;
   text-transform: uppercase;
 }
-.some-text {
+.some-text-arabic {
   text-align: center;
   color: white;
   margin-bottom: 1rem;
 }
-.some-text h2 {
-  letter-spacing: 3px;
+.some-text-arabic h2 {
   font-size: 16px;
   font-weight: 500;
 }
@@ -1278,21 +1275,21 @@ h1 span {
   width: 20px;
   height: 20px;
 }
-.alert-inside3 {
+.alert-inside3-arabic {
   position: relative;
   border-radius: 20px;
+  text-align: right;
 }
-.alert-inside3 p {
+.alert-inside3-arabic p {
   font-family: "Dubai W23", sans-serif;
   font-size: 1.2rem;
   padding-left: 1rem;
 }
-.alert-inside3 h3 {
+.alert-inside3-arabic h3 {
   font-family: "Dubai W23", sans-serif;
   margin-bottom: 0.5rem;
-  margin-left: 17px;
-  padding-left: 0.5rem;
-  width: 81%;
+  padding-right: 30px;
+  /* width: 81%; */
   font-size: 1rem;
 }
 .stopDrag {
