@@ -37,32 +37,42 @@ function Timesup() {
       <div className="bg-image2"></div>
       <div className="bg-end1">
         <div className="yellow-block1">
-          <div className="gametime1">
+          <div className="gametime1-arabic">
             <h1>انتهى الوقت</h1>
           </div>
         </div>
-        <div className="message-win1">
+        <div className="message-win1-arabic">
           <h1>هل فعلت ما بوسعك!</h1>
         </div>
-        <div className="some-text1">
+        <div className="some-text1-arabic">
           <h2>
-            TRY AGAIN AND HOPEFULLY YOU WILL <br />
-            MAKE IT TO SAFETY NEXT TIME.
+            حاول مرة أخرى ونأمل أن تصل <br />
+            .إلى بر الأمان في المرة القادمة
           </h2>
         </div>
         <div className="option2">
           <div className="home-button1">
             <a href="dashboard2">
-              <button className="btn btn-primary">الصفحة الرئيسية</button>
+              <button
+                className="btn btn-primary"
+                style={{ letterSpacing: "0" }}
+              >
+                الصفحة الرئيسية
+              </button>
             </a>
           </div>
           <div className="play-bottom1">
             <a href="briefing">
-              <button className="btn btn-primary">إلعب مرة أخرى</button>
+              <button
+                className="btn btn-primary"
+                style={{ letterSpacing: "0" }}
+              >
+                إلعب مرة أخرى
+              </button>
             </a>
           </div>
         </div>
-        <div className="icons2">
+        <div className="icons2-arabic">
           <p>لمزيد من المغامرات، قم بزيارة الرابط أدناه.</p>
 
           <a

@@ -456,33 +456,30 @@ body {
   margin-bottom: 32px;
   margin-top: 3rem;
 }
-.yellow-block1 .gametime1 h1 {
+.yellow-block1 .gametime1-arabic h1 {
   bottom: -39px;
   position: relative;
   left: 23px;
   color: #fff;
   font-size: 4rem;
-  letter-spacing: 6px;
   z-index: 10;
-  left: 8px;
+  left: 3px;
 }
-.message-win1 {
+.message-win1-arabic {
   text-align: center;
   margin-bottom: 2.4rem;
 }
-.message-win1 h1 {
+.message-win1-arabic h1 {
   font-size: 17.5px;
-  letter-spacing: 3px;
   color: white;
   text-transform: uppercase;
 }
-.some-text1 {
+.some-text1-arabic {
   text-align: center;
   color: white;
   margin-bottom: 1rem;
 }
-.some-text1 h2 {
-  letter-spacing: 3px;
+.some-text1-arabic h2 {
   font-size: 16px;
   font-weight: 500;
 }
@@ -496,30 +493,29 @@ body {
   column-gap: 288px;
   margin-top: 3rem;
 }
-.icons2 {
+.icons2-arabic {
   text-align: center;
   background-color: white;
   margin-top: 1rem;
 }
 
-.icons2 p {
+.icons2-arabic p {
   text-align: center;
-  letter-spacing: 2px;
   font-weight: bold;
   margin-top: 3rem;
 }
-.icons2 img {
+.icons2-arabic img {
   margin-top: 1rem;
   height: 36px;
   width: 13%;
 }
-.icons2 .cwnimg1 {
+.icons2-arabic .cwnimg1 {
   position: relative;
   top: -24px;
   left: -71px;
   height: 42px;
 }
-.icons2 .houbara1 {
+.icons2-arabic .houbara1 {
   position: relative;
   top: 5px;
   right: -71px;
