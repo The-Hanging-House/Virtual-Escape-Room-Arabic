@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./lesson.css";
 import ResponsivePlayer from "../video/ResponsivePlayer";
 
-import briefing from "../../video/briefing1.mp4";
+import briefing from "../../video/briefing.mp4";
 // import bg from '../../img/boarder.png'
 
 const Lesson = () => {
@@ -43,7 +43,7 @@ const Lesson = () => {
             className="btn btn-primary"
             style={{ letterSpacing: "0" }}
           >
-            استمر
+            CONTINUE
           </button>
         </div>
       </div>

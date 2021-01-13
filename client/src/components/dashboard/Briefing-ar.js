@@ -1,5 +1,5 @@
 import React from 'react'
-import Lesson from '../lesson/Lesson'
+import Lesson from '../lesson/Lesson-ar'
 import Music1 from '../../audio/Music3'
 
 var x = 0;

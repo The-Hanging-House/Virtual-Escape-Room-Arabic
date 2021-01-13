@@ -33,7 +33,7 @@ const Lesson2 = () => {
             className="btn btn-primary"
             style={{ letterSpacing: "0" }}
           >
-            هيا نلعب
+            LET'S PLAY!
           </Link>
         </div>
       </div>

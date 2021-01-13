@@ -1,5 +1,5 @@
 import React from "react";
-import Lesson2 from "../lesson/Lesson2";
+import Lesson2 from "../lesson/Lesson2-ar";
 
 var x = 0;
 
