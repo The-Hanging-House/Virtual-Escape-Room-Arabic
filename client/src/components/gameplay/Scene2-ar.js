@@ -29,7 +29,7 @@ import PrePuz from "./../../img/prepuz.png";
 import TouchPoint2 from "../touchpoints/scene2/ar/Touchpoint2";
 import TouchPoint3 from "../touchpoints/scene2/ar/Touchpoint3";
 import TouchPoint4 from "../touchpoints/scene2/ar/Touchpoint4";
-import Telephone from "./Telephone";
+import Telephone from "./Telephone-ar";
 
 import ding from "../../audio/ding.mp3";
 import paper from "../../audio/paper.mp3";

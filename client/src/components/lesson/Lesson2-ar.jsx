@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./lesson2.css";
 import ResponsivePlayer from "../video/ResponsivePlayer2";
 
-import briefing2 from "../../video/instruction-arabic.mp4";
+import briefing2 from "../../video/instruction_arabic.mp4";
 
 const Lesson2 = () => {
   const [watchComplete, setWatchComplete] = useState(false);
