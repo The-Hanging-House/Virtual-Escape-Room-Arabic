@@ -6,9 +6,7 @@ import PropTypes from "prop-types";
 import hint from "../../img/hint.svg";
 
 const Language = ({ isAuthenticated }) => {
-  if (isAuthenticated) {
-    return <Redirect to="/dashboard" />;
-  }
+
 
   function Initimg() {
     const [displayProp, setDisplayProp] = React.useState(false);

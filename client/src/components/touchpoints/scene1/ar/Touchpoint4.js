@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import trunk1 from '../../../../img/trunk1.png'
+import trunk1 from '../../../../img/trunk1ar.png'
 
 function TouchPoint4({ position, color, onClick }) {
     const [hovered, set] = useState(false)

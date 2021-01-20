@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="977.809" height="214.103" viewBox="0 0 977.809 214.103">
+  <defs>
+    <filter id="Rectangle_49" x="0" y="0" width="977.809" height="214.103" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-opacity="0.478"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_214" data-name="Group 214" transform="translate(-474 -525)">
+    <g id="Group_341" data-name="Group 341">
+      <g id="Pop_Up_box" data-name="Pop Up box" transform="translate(501 552)">
+        <g transform="matrix(1, 0, 0, 1, -27, -27)" filter="url(#Rectangle_49)">
+          <rect id="Rectangle_49-2" data-name="Rectangle 49" width="917.809" height="154.103" rx="20" transform="translate(27 27)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Action_Touchpoint_MCQ" data-name="Action Touchpoint_MCQ" transform="translate(625 581)">
+        <text id="من_أجل_الحصول_على_أفضل_تجربة_يرجى_المتابعة_في_وضع_الشاشة_الكاملة" data-name="من أجل الحصول على أفضل تجربة، يرجى المتابعة في 
+وضع الشاشة الكاملة" font-size="34" font-family="Dubai-Medium, Dubai" font-weight="500"><tspan x="4.18" y="38">من أجل الحصول على أفضل تجربة، يرجى المتابعة في</tspan><tspan y="38"> </tspan><tspan x="205.222" y="78">وضع الشاشة الكاملة</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

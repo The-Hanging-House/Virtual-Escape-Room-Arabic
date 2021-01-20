@@ -3,7 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-import hint from "../../img/hint.svg";
+import hint from "../../img/hintar.svg";
 
 var x = 0;
 
@@ -45,7 +45,7 @@ const Landingar = ({ isAuthenticated }) => {
   const intiImage = <Initimg />;
 
   return (
-    <section className="landing">
+    <section className="landing-ar">
       <div className="lock-up"></div>
       <div className="orange-overlay">
         <div className="landing-inner">

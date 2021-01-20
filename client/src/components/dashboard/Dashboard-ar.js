@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Spinner from "../layout/Spinner";
 import { getCurrentProfile } from "../../actions/profile";
-import bg from "../../img/01.png";
+import bg from "../../img/01ar.png";
 
 import Logout from "./../logout/Logout1-ar";
 
