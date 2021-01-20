@@ -7,8 +7,8 @@ import update from 'immutability-helper'
 
 import drop from '../../../audio/dropp.mp3';
 
-import completedPuzzle from '../../../img/completedPuzzle1.png'
-import emptyBoard from '../../../img/completedPuzzle.png'
+import completedPuzzle from '../../../img/completedPuzzle1-ar.png'
+import emptyBoard from '../../../img/completedPuzzle-ar.png'
 
 
 var count = 0

@@ -36,7 +36,7 @@ import paper from "../../audio/paper.mp3";
 import door from "../../audio/door.wav";
 import correct from "../../audio/correct.mp3";
 
-import hint from "../../img/welcome.png";
+import hint from "../../img/welcome-ar.png";
 
 import Music2 from "../../audio/Music2";
 
