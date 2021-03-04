@@ -49,7 +49,7 @@ const Dashboard2ar = ({
         </div>
       </div>
       <div className="dashblock">
-        <div className="bg-text1"></div>
+        <div className="bg-text1-ar"></div>
         <img
           className="bg-text1"
           src={bg}

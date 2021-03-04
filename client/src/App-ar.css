@@ -1904,22 +1904,19 @@ h3 {
     height: auto;
     margin-top: -100px;
     margin-top: 0;
-    width: 949px;
-    left: 92px;
+    left: 115px;
     top: 160px;
     position: absolute;
   }
   .lead1-ar {
-    /*left: 15.2vw;*/
-    /*top: 14vh;*/
     font-size: 24px;
-    left: 130px;
-    top: 130px;
+    left: 362px;
+    top: 101px;
   }
   .button-1 {
     position: absolute;
-    top: 461px;
-    left: 469px;
+    top: 430px;
+    left: 440px;
     /* transform: translate(-50%, -50%); */
     transform: none;
     z-index: 2;
@@ -1929,8 +1926,8 @@ h3 {
   }
   .button-2 {
     position: absolute;
-    top: 519px;
-    left: 470px;
+    top: 478px;
+    left: 440px;
     transform: none;
     z-index: 2;
     width: 184px;
@@ -2057,11 +2054,9 @@ h3 {
     position: absolute;
   }
   .lead1-ar {
-    /*left: 15.2vw;*/
-    /*top: 14vh;*/
     font-size: 22px;
-    left: 55px;
-    top: 92px;
+    left: 300px;
+    top: 66px;
   }
   .button-1 {
     position: absolute;
@@ -2122,19 +2117,19 @@ h3 {
     /* margin-top: -100px; */
     margin-top: 0;
     width: 880px;
-    left: 17px;
+    left: 130px;
     top: 169px;
     position: absolute;
   }
   .lead1-ar {
     font-size: 26px;
-    left: 81px;
-    top: 127px;
+    left: 378px;
+    top: 104px;
   }
   .button-1 {
     position: absolute;
     top: 447px;
-    left: 359px;
+    left: 466px;
     transform: none;
     z-index: 2;
     width: 185px;
@@ -2144,7 +2139,7 @@ h3 {
   .button-2 {
     position: absolute;
     top: 500px;
-    left: 360px;
+    left: 470px;
     transform: none;
     z-index: 2;
     width: 184px;
