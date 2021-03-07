@@ -62,13 +62,13 @@ const App = () => {
   return (
     <Provider store={store}>
        <BrowserRouter>
-          <Route exact path="/" component={Language} />
+          <Route exact path="/" component={Landing} />
           <section className="container">
             <Alert />
             <Switch>
-              <Route exact path="/home" component={Landing} />
-              <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/language" component={Language} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute exact path="/instruction" component={Instruction} />
               <PrivateRoute exact path="/dashboard2" component={Dashboard2} />

@@ -116,7 +116,7 @@ if (number !== "" && number <= 14 ){
 }
 
   if (isAuthenticated) {
-    return <Redirect to="/dashboard" />;
+    return <Redirect to="/language" />;
   }
 
   
