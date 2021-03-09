@@ -7,17 +7,17 @@ import hint from "../../img/hint.svg";
 
 var x = 0;
 
+
 const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) {
-    return <Redirect to="/dashboard" />;
-  }
-  
-  if (x === 0) {
     if (localStorage.getItem("lang") === "ar") {
-      window.location.href = "/home-ar";
-      x = 1;
+      return <Redirect to="/dashboard-ar" />;
+    } else {
+      return <Redirect to="/dashboard" />;
+
     }
   }
+
 
   function Initimg() {
     const [displayProp, setDisplayProp] = React.useState(false);

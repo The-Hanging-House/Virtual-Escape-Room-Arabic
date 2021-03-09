@@ -85,7 +85,7 @@ const App = () => {
               <PrivateRoute exact path="/timesup" component={Timesup} />
 
               {/* Arabic Pages */}
-              <Route exact path="/home-ar" component={Landingar} />
+              {/* <Route exact path="/home-ar" component={Landingar} /> */}
               <PrivateRoute exact path="/dashboard-ar" component={dashboardar} />
               <PrivateRoute exact path="/instruction-ar" component={Instructionar} />
               <PrivateRoute exact path="/dashboard2-ar" component={dashboard2ar} />

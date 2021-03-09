@@ -528,6 +528,10 @@ body {
   z-index: -9999;
 }
 
+/* .uuu{
+  background-image: url("./img/language-bg.png");
+} */
+
 .landing {
   position: relative;
   background: url("./img/image1.png") no-repeat center/cover;
@@ -1888,13 +1892,6 @@ h3 {
 }
 
 @media (max-width: 1599px) {
-  /* .bg-text {
-    position: absolute;
-    top: 177px;
-    left: 31%;
-    width: 500px;
-    height: 520px;
-  } */
   .dashblock {
     left: 15%;
     bottom: 5%;
@@ -1910,8 +1907,8 @@ h3 {
   }
   .lead1-ar {
     font-size: 24px;
-    left: 355px;
-    top: 105px;
+    left: 360px;
+    top: 102px;
   }
   .button-1 {
     position: absolute;
@@ -2123,8 +2120,8 @@ h3 {
   }
   .lead1-ar {
     font-size: 26px;
-    left: 372px;
-    top: 110px;
+    left: 379px;
+    top: 107px;
   }
   .button-1 {
     position: absolute;

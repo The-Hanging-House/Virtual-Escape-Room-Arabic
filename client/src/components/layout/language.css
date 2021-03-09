@@ -1,0 +1,44 @@
+@media (min-width: 900px) {
+  .button-ar > a {
+    position: absolute;
+    top: 70px;
+    left: -32px;
+    transform: none;
+    z-index: 2;
+    width: 330px;
+    height: 92px;
+    padding: 20px;
+  }
+  .button-en > a {
+    position: absolute;
+    top: 210px;
+    left: 10px;
+    transform: none;
+    z-index: 2;
+    width: 335px;
+    height: 90px;
+    padding: 20px;
+  }
+}
+@media (min-width: 1600px) {
+  .button-ar > a {
+    position: absolute;
+    top: 70px;
+    left: -32px;
+    transform: none;
+    z-index: 2;
+    width: 447px;
+    height: 144px;
+    padding: 20px;
+  }
+  .button-en > a {
+    position: absolute;
+    top: 268px;
+    left: 25px;
+    transform: none;
+    z-index: 2;
+    width: 447px;
+    height: 144px;
+    padding: 20px;
+  }
+}
