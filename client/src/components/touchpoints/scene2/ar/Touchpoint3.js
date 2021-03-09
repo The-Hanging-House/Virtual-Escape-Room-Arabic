@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import { Html } from 'drei';
 
-import board from '../../../../img/watercooler.png'
+import board from '../../../../img/watercooler-ar.png'
 import X from '../../../../img/x.svg'
 
 const TouchPoint3 = ({ position, color, onClick }) => {

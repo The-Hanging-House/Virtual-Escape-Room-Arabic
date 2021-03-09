@@ -20,10 +20,10 @@ import { CSSTransition } from "react-transition-group";
 import Map from "../../img/map.svg";
 // import X from '../../img/x.svg'
 
-import note from "./../../img/note.png";
+import note from "./../../img/note-ar.png";
 import xclose from "./../../img/x.svg";
-import teleNo from "./../../img/teleNo.png";
-import PrePuz from "./../../img/prepuz.png";
+import teleNo from "./../../img/teleNo-ar.png";
+import PrePuz from "./../../img/prepuz-ar.png";
 
 // import TouchPoint1 from '../touchpoints/scene2/Touchpoint1'
 import TouchPoint2 from "../touchpoints/scene2/ar/Touchpoint2";
@@ -40,11 +40,11 @@ import hint from "../../img/welcome-ar.png";
 
 import Music2 from "../../audio/Music2";
 
-import Puzzle from "../games/puzzle/index";
+import Puzzle from "../games/puzzle-ar/index";
 
 import solved from "../../img/completedPuzzle1.png";
 
-import board from "../../img/board.png";
+import board from "../../img/board-ar.png";
 
 import egg from "../../img/pp1.png";
 import img from "./../../img/p1.png";
@@ -233,7 +233,7 @@ function Box1(props) {
                 </h3>
                 <h3
                   onClick={() => setShowMessage(false)}
-                  style={{ fontSize: "1rem", cursor: "pointer" }}
+                  style={{ cursor: "pointer" }}
                   onMouseEnter={(event) => onMouseOver(event)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -363,7 +363,7 @@ function Box2(props) {
                 </h3>
                 <h3
                   onClick={() => setShowMessage(false)}
-                  style={{ fontSize: "1rem", cursor: "pointer" }}
+                  style={{ cursor: "pointer" }}
                   onMouseEnter={(event) => onMouseOver(event)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -485,7 +485,7 @@ function Box3(props) {
                 </h3>
                 <h3
                   onClick={() => setShowMessage(false)}
-                  style={{ fontSize: "1rem", cursor: "pointer" }}
+                  style={{ cursor: "pointer" }}
                   onMouseEnter={(event) => onMouseOver(event)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -607,7 +607,7 @@ function Box4(props) {
                 </h3>
                 <h3
                   onClick={() => setShowMessage(false)}
-                  style={{ fontSize: "1rem", cursor: "pointer" }}
+                  style={{ cursor: "pointer" }}
                   onMouseEnter={(event) => onMouseOver(event)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -729,7 +729,7 @@ function Box5(props) {
                 </h3>
                 <h3
                   onClick={() => setShowMessage(false)}
-                  style={{ fontSize: "1rem", cursor: "pointer" }}
+                  style={{ cursor: "pointer" }}
                   onMouseEnter={(event) => onMouseOver(event)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -851,7 +851,7 @@ function Box6(props) {
                 </h3>
                 <h3
                   onClick={() => setShowMessage(false)}
-                  style={{ fontSize: "1rem", cursor: "pointer" }}
+                  style={{ cursor: "pointer" }}
                   onMouseEnter={(event) => onMouseOver(event)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >

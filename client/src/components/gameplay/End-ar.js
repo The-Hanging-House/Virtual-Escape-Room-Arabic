@@ -92,8 +92,8 @@ function End() {
         <div className="qrcode">
           <img alt="qr" className="qr" src={Qr}></img>
         </div>
-        <div className="icons1" style={{letterSpacing: "0"}}>
-          <p>.لمزيد من المغامرات، قم بزيارة الرابط أدناه</p>
+        <div className="icons1" style={{ fontSize: "1.4rem"}}>
+          <p style={{ letterSpacing: "1px"}}>.لمزيد من المغامرات، قم بزيارة الرابط أدناه</p>
 
           <a
             rel="noopener noreferrer"
