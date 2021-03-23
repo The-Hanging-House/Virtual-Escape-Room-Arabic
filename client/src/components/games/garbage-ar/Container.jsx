@@ -143,12 +143,13 @@ export const Container = () => {
       <div
         style={{
           textAlign: "center",
-          fontSize: "1rem",
+          fontSize: "21px",
           color: "black",
-          letterSpacing: "2px",
+          letterSpacing: "1px",
           fontWeight: "bold",
           fontFamily: "Dubai W23, sans-serif",
           display: garbageDone ? "none" : "block",
+          lineHeight: "1.1"
         }}
       >
         {showHint}

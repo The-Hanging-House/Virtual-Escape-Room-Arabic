@@ -369,7 +369,7 @@ body {
   margin-bottom: 2.4rem;
 }
 .message-win-arabic h1 {
-  font-size: 17.5px;
+  font-size: 20.5px;
   color: white;
   text-transform: uppercase;
 }
@@ -379,7 +379,7 @@ body {
   margin-bottom: 1rem;
 }
 .some-text-arabic h2 {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
 }
 .option1 {
@@ -2123,7 +2123,7 @@ h3 {
   .lead1-ar {
     font-size: 26px;
     left: 374px;
-    top: 108  px;
+    top: 108px;
   }
   .button-1 {
     position: absolute;

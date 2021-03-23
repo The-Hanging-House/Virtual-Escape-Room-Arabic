@@ -1,7 +1,7 @@
 import React from "react";
 // import { url } from 'gravatar';
 
-import H from "../../img/h.png";
+import H from "../../img/h.svg";
 import CWN from "../../img/cwn.svg";
 
 var i = 0;
@@ -42,7 +42,7 @@ function Timesup() {
           </div>
         </div>
         <div className="message-win1-arabic">
-          <h1>هل فعلت ما بوسعك!</h1>
+          <h1>!هل فعلت ما بوسعك</h1>
         </div>
         <div className="some-text1-arabic">
           <h2>
@@ -73,7 +73,7 @@ function Timesup() {
           </div>
         </div>
         <div className="icons2-arabic">
-          <p>لمزيد من المغامرات، قم بزيارة الرابط أدناه.</p>
+          <p>.لمزيد من المغامرات، قم بزيارة الرابط أدناه</p>
 
           <a
             target="_blank"

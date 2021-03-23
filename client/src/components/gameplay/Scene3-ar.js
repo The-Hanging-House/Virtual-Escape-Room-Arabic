@@ -208,7 +208,7 @@ function Box1(props) {
                       fontSize: "1.1rem",
                     }}
                   >
-                    عظيم! لقد وجدت مفاتيحك
+                    .عظيم! لقد وجدت مفاتيحك
                   </p>
                 </Alert.Heading>
               </div>
@@ -326,7 +326,7 @@ function TouchPoint3({ position, color, onClick }) {
                     className="mcq-bound-total"
                     style={{
                       cursor: "default",
-                      fontSize: "1rem",
+                      fontSize: "1.4rem",
                       color: "black",
                       left: "21px",
                       textAlign: "right",

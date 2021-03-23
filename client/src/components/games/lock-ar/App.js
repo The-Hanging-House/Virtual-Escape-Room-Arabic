@@ -64,7 +64,7 @@ class App extends React.PureComponent {
       أحسنت! لقد وجدت طريقك إلى الداخل
       </h3>
     </div>
-    <div className="app-text" style={{position: 'absolute',  textAlign: 'center', color: 'black', fontFamily: 'Dubai W23, sans-serif', fontWeight: 'lighter', letterSpacing: '1px', zIndex: '6', bottom: '1%', left: '18px'}}>
+    <div className="app-text" style={{position: 'absolute',  textAlign: 'center', color: 'black', fontFamily: 'Dubai W23, sans-serif', fontWeight: 'lighter', letterSpacing: '1px', zIndex: '6', bottom: '1%', left: '18px', fontSize: '18px', lineHeight: '1.16'}}>
       <h3>!الباب مغلق</h3>
       <h3 style={{marginTop: '0px'}}>.استكشف البيئة من حولك للعثور على الرمز الذي سيسمح لك بالدخول إلى مركز الحفاظ على الصحراء
 </h3>
