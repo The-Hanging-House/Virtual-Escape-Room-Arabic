@@ -464,7 +464,7 @@ body {
   margin-bottom: 2.4rem;
 }
 .message-win1-arabic h1 {
-  font-size: 17.5px;
+  font-size: 21.5px;
   color: white;
   text-transform: uppercase;
 }
@@ -474,7 +474,7 @@ body {
   margin-bottom: 1rem;
 }
 .some-text1-arabic h2 {
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 500;
 }
 .option2 {
@@ -497,6 +497,7 @@ body {
   text-align: center;
   font-weight: bold;
   margin-top: 3rem;
+  font-size: 21px;
 }
 .icons2-arabic img {
   margin-top: 1rem;
@@ -2121,8 +2122,8 @@ h3 {
   }
   .lead1-ar {
     font-size: 26px;
-    left: 379px;
-    top: 107px;
+    left: 374px;
+    top: 108  px;
   }
   .button-1 {
     position: absolute;

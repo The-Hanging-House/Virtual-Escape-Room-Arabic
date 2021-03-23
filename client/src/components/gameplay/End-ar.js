@@ -3,7 +3,7 @@ import React from "react";
 
 import CWN from "../../img/cwn.svg";
 import H from "../../img/h.svg";
-import Qr from "../../img/qr.png";
+import Qr from "../../img/qr-ar.png";
 
 var languageCheck = 0;
 var winMessage = "";
