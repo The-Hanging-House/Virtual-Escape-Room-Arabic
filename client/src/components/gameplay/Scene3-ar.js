@@ -205,7 +205,7 @@ function Box1(props) {
                   <p
                     style={{
                       transform: "translate(10px, 10px)",
-                      fontSize: "1.1rem",
+                      fontSize: "1.3rem",
                     }}
                   >
                     .عظيم! لقد وجدت مفاتيحك
@@ -367,7 +367,7 @@ function TouchPoint3({ position, color, onClick }) {
                       onMouseOut={(event) => onMouseOut(event)}
                     >
                       {show
-                        ? ".وضع المفاتيح في جيبك ومواصلة استكشاف محيطك للحصول على مزيد من الأدلة"
+                        ? "وضع المفاتيح في جيبك ومواصلة استكشاف محيطك للحصول على مزيد من الأدلة."
                         : ""}
                     </h3>
                   </div>
@@ -383,7 +383,7 @@ function TouchPoint3({ position, color, onClick }) {
                       right: "185px",
                     }}
                   >
-                    حاول مرة أخرى!
+                    !حاول مرة أخرى
                   </h3>
                 </Alert.Heading>
               </div>
