@@ -19,6 +19,12 @@ const Logout = ({ auth: { isAuthenticated, loading }, logout }) => {
 
     const [showButton, setShowButton] = useState(true);
     const [showMessage, setShowMessage] = useState(false);
+    const [langLog, setLangLog] = useState(false);
+
+    if (langLog){
+      localStorage.removeItem("lang");
+      logout();
+    }
 
     return (
         <div className="bg-text4">
@@ -56,7 +62,7 @@ const Logout = ({ auth: { isAuthenticated, loading }, logout }) => {
             <Button onClick={() => setShowMessage(false)} style={{width:'40%'}}>
               Close
             </Button>
-            <Button onClick={logout} style={{width:'40%'}}>
+            <Button onClick={() => setLangLog(true)} style={{width:'40%'}}>
               Logout
             </Button>
             </div>

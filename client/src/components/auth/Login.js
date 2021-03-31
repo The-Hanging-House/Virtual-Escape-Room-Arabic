@@ -15,7 +15,7 @@ const Login = ({ login, isAuthenticated }) => {
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     // setFormData({ ...formData, [e.target.password]: e.target.value });
-  }
+  };
 
   const onSubmit = async (e) => {
     // setFormData({ ...formData, [e.target.password]: e.target.value });
@@ -32,44 +32,55 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <Fragment>
-    <div className="bg-image"><div className="lock-up"></div></div>
-    
-    <div className="bg-text-login">
-    <h1 className="large text-primary" style={{ fontSize: '1.4rem', top: '259px' }}>LOG IN</h1>
-      <form className="form" onSubmit={(e) => onSubmit(e)} style={{ WebkitUserSelect: 'text', bottom: '17px' }} >
-        <div className="form-group">
-          <input
-            style={{top: '5px', WebkitUserSelect: 'text'}}
-            type="text"
-            placeholder="Username"
-            name="username"
-            value={username}
-            onChange={(e) => onChange(e)}
-            required
-          />
-        </div>
-        <div className="form-group" style={{ display: 'none' }}>
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            value={password}
-            onChange={(e) => onChange(e)}
-            // required
-            // minLength="6"
-          />
-          
-        </div>
-        <div>
-          <input type="submit" value="CONTINUE" className="btn btn-primary" />
-        </div>
-        <p className="my-1">
-        DON'T HAVE AN ACCOUNT? <Link to="/register" className='link'>REGISTER</Link>
-      </p>
-      </form>
+      <div className="bg-image">
+        <div className="lock-up"></div>
+      </div>
 
-      
-    </div>  
+      <div className="bg-text-login">
+        <h1
+          className="large text-primary"
+          style={{ fontSize: "1.4rem", top: "259px" }}
+        >
+          LOG IN
+        </h1>
+        <form
+          className="form"
+          onSubmit={(e) => onSubmit(e)}
+          style={{ WebkitUserSelect: "text", bottom: "17px" }}
+        >
+          <div className="form-group">
+            <input
+              style={{ top: "5px", WebkitUserSelect: "text" }}
+              type="text"
+              placeholder="Username"
+              name="username"
+              value={username}
+              onChange={(e) => onChange(e)}
+              required
+            />
+          </div>
+          <div className="form-group" style={{ display: "none" }}>
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              value={password}
+              onChange={(e) => onChange(e)}
+              // required
+              // minLength="6"
+            />
+          </div>
+          <div>
+            <input type="submit" value="CONTINUE" className="btn btn-primary" />
+          </div>
+          <p className="my-1">
+            DON'T HAVE AN ACCOUNT?{" "}
+            <Link to="/register" className="link">
+              REGISTER
+            </Link>
+          </p>
+        </form>
+      </div>
     </Fragment>
   );
 };

@@ -99,8 +99,11 @@ function Timer() {
 }
 function Counter() {
   return (
-    <div className="bg-text6">
-      <img src={A} alt=" " />
+    <div className="bg-text6-ar">
+      <h1>
+        0<span>/7</span>
+      </h1>
+      <h3>التحديات</h3>
     </div>
   );
 }
