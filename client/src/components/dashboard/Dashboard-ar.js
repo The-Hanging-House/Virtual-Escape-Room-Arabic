@@ -65,8 +65,8 @@ const Dashboardar = ({
           <div className="button-1"></div>
         </a>
 
-        <div className="lead1-ar">
-          <p className="lead1-ar">
+        <div className="lead2-ar">
+          <p className="lead2-ar">
             مرحباً
             <br /> {user && user.username}
           </p>

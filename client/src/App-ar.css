@@ -37,6 +37,20 @@
   -ms-transform: rotate(-5deg); /* IE 9 */
   transform: rotate(-5deg); /* Standard syntax */
 }
+.lead2-ar {
+  font-family: "Permanent Marker", cursive;
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  position: absolute;
+  left: 32vh;
+  top: 13vh;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  -ms-transform: rotate(-5deg); /* IE 9 */
+  transform: rotate(-5deg); /* Standard syntax */
+}
 .lead {
   font-size: 2rem;
   letter-spacing: 1rem;
@@ -1725,8 +1739,11 @@ h3 {
     position: absolute;
   }
   .lead1-ar {
-    /*left: 15.2vw;*/
-    /*top: 14vh;*/
+    font-size: 24px;
+    left: 51px;
+    top: 103px;
+  }
+  .lead2-ar {
     font-size: 24px;
     left: 51px;
     top: 103px;
@@ -1864,6 +1881,11 @@ h3 {
     left: 112px;
     top: 176px;
   }
+  .lead2-ar {
+    font-size: 2rem;
+    left: 112px;
+    top: 176px;
+  }
   .button-1 {
     position: absolute;
     top: 650px;
@@ -1936,6 +1958,11 @@ h3 {
     font-size: 24px;
     left: 360px;
     top: 102px;
+  }
+  .lead2-ar {
+    font-size: 22px;
+    left: 349px;
+    top: 107px;
   }
   .button-1 {
     position: absolute;
@@ -2082,6 +2109,11 @@ h3 {
     left: 300px;
     top: 66px;
   }
+  .lead2-ar {
+    font-size: 22px;
+    left: 300px;
+    top: 66px;
+  }
   .button-1 {
     position: absolute;
     top: 375px;
@@ -2149,6 +2181,11 @@ h3 {
     font-size: 26px;
     left: 374px;
     top: 108px;
+  }
+  .lead2-ar {
+    font-size: 24px;
+    left: 367px;
+    top: 110px;
   }
   .button-1 {
     position: absolute;

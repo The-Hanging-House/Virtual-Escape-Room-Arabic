@@ -5,8 +5,6 @@ import PropTypes from "prop-types";
 
 import hint from "../../img/hint.svg";
 
-var x = 0;
-
 
 const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) {
