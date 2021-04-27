@@ -138,7 +138,7 @@ function Counter(){
 return (
     <div className="bg-text3">
         <h1>3<span>/7</span></h1>
-        <h3>CHALLENGES</h3>
+        <h3>التحديات</h3>
     </div>
 )
 }
