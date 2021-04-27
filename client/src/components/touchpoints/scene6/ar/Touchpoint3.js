@@ -98,7 +98,7 @@ function TouchPoint3({ position, color, onClick }) {
                 <Alert.Heading>
                   <p
                     style={{
-                      fontSize: "1rem",
+                      fontSize: "1.4rem",
                       position: "absolute",
                       top: "33px",
                       width: "500px",
@@ -106,7 +106,7 @@ function TouchPoint3({ position, color, onClick }) {
                       textAlign: "right",
                     }}
                   >
-                    أي من الخيارات التالية ترغب في اتخاذها
+                    أي من الخيارات التالية ترغب في اتخاذها؟
                   </p>
 
                   <div
@@ -172,10 +172,12 @@ function TouchPoint3({ position, color, onClick }) {
                         left: "35px",
                         display: wrongAlert ? "none" : "block",
                         textAlign: "right",
+                        direction: "rtl",
+                        unicodeBidi: "embed",
                       }}
                     >
                       حاول مرة أخرى! يمكن للضوء الساطع أن يزعج الحياة البرية.
-                      .بشكل عام، يجب إطفاء أي أضواء، إذا لم تكن هناك حاجة إليها
+                      بشكل عام، يجب إطفاء أي أضواء، إذا لم تكن هناك حاجة إليها.
                     </h3>
                   </div>
                   <div>
@@ -186,11 +188,12 @@ function TouchPoint3({ position, color, onClick }) {
                         padding: "20px",
                         right: "46px",
                         display: correctAlert ? "block" : "none",
-                        textAlign: "right"
+                        textAlign: "right",                         direction: "rtl",
+                        unicodeBidi: "embed",
+
                       }}
                     >
-                      .صحيح! يمكن للضوء الساطع أن يزعج الحياة البرية. بشكل عام،
-                      يجب إطفاء أي أضواء، إذا لم تكن هناك حاجة إليها
+                      صحيح! يمكن للضوء الساطع أن يزعج الحياة البرية. بشكل عام، يجب إطفاء أي أضواء، إذا لم تكن هناك حاجة إليها.
                     </h3>
                   </div>
                 </Alert.Heading>

@@ -236,7 +236,7 @@ function TouchPoint3({ position, color, onClick }) {
   setInterval(function () {
     if (toolCollected === 1) {
       setShow(true);
-      setInnerText("أي من الخيارات التالية ترغب في اتخاذها");
+      setInnerText("أي من الخيارات التالية ترغب في اتخاذها؟");
     }
 
     if (!wrongAlert) {
@@ -305,7 +305,7 @@ function TouchPoint3({ position, color, onClick }) {
             >
               <div className={show ? "alert-inside" : "alert-inside-keys4"}>
                 <button
-                  style={{ display: "block" }}
+                  style={{ display: "block", letterSpacing: "0" }}
                   className="close"
                   onClick={() => setShowMessage(false)}
                 >
@@ -338,7 +338,10 @@ function TouchPoint3({ position, color, onClick }) {
                   <div className="mcq-bounding-text-arabic">
                     <h3
                       className="mcq-text-arabic"
-                      style={{ display: wrongAlert ? "block" : "none" }}
+                      style={{
+                        display: wrongAlert ? "block" : "none",
+                        letterSpacing: "0",
+                      }}
                       onClick={() => {
                         // setShowMessage(false);
                         setWrongAlert(false);
@@ -352,7 +355,10 @@ function TouchPoint3({ position, color, onClick }) {
                     </h3>
                     <h3
                       className="mcq-text-arabic"
-                      style={{ display: wrongAlert ? "block" : "none" }}
+                      style={{
+                        display: wrongAlert ? "block" : "none",
+                        letterSpacing: "0",
+                      }}
                       onMouseEnter={(event) => onMouseOver(event)}
                       onMouseOut={(event) => onMouseOut(event)}
                       onClick={() => setCON(true)}
@@ -361,7 +367,12 @@ function TouchPoint3({ position, color, onClick }) {
                     </h3>
                     <h3
                       className="mcq-text-arabic"
-                      style={{ display: wrongAlert ? "block" : "none" }}
+                      style={{
+                        display: wrongAlert ? "block" : "none",
+                        letterSpacing: "0",
+                        direction: "rtl",
+                        unicodeBidi: "embed",
+                      }}
                       onClick={() => setShowMessage(false)}
                       onMouseEnter={(event) => onMouseOver(event)}
                       onMouseOut={(event) => onMouseOut(event)}
@@ -411,7 +422,7 @@ const Dome = () => {
 
 function Counter() {
   return (
-    <div className="bg-text6">
+    <div className="bg-text6-ar">
       <h1>
         1<span>/7</span>
       </h1>
