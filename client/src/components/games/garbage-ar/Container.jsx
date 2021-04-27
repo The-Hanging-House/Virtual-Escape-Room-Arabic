@@ -7,7 +7,7 @@ import correct from "../../../audio/correct.mp3";
 import drop from "../../../audio/drop.mp3";
 
 var showHint =
-  "صندوق السيارة مغلق، لكنك تركت الأضواء والموسيقى مضاءة. هل وجدت مفاتيحك؟";
+  ".إن ترك القمامة في الطبيعة يلوث البيئة ويضر بالحياة البرية";
 
 var count = 0;
 // var ddd = 'hidden'
@@ -160,9 +160,10 @@ export const Container = () => {
             style={{
               textAlign: "center",
               color: "black",
-              letterSpacing: "2px",
+              letterSpacing: "0px",
               fontWeight: "bold",
               fontFamily: "Dubai W23, sans-serif",
+              fontSize: "21px",
             }}
           >
             أحسنت لأنك لم تترك أي قمامة! هل وجدت مفاتيحك؟
