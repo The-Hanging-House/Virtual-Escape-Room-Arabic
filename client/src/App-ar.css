@@ -1792,9 +1792,9 @@ h3 {
     position: absolute;
   }
   .lead1-ar {
-    font-size: 2rem;
-    left: 112px;
-    top: 176px;
+    font-size: 1.5rem;
+    left: 338px;
+    top: 99px;
   }
   .lead2-ar {
     font-size: 2rem;
@@ -1857,11 +1857,21 @@ h3 {
     top: 160px;
     position: absolute;
   }
-  .lead1-ar {
-    font-size: 22px;
-    left: 358px;
-    top: 103px;
+  @media (min-width: 1300px) and (max-width: 1370px) {
+    .lead1-ar {
+      font-size: 22px;
+      left: 358px;
+      top: 103px;
+    }
   }
+  @media (min-width: 1400px) and (max-width: 1470px) {
+    .lead1-ar {
+      font-size: 22px;
+      left: 375px;
+      top: 104px;
+    }
+  }
+
   .lead2-ar {
     font-size: 22px;
     left: 349px;
