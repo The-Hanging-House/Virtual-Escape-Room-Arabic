@@ -1,5 +1,5 @@
 import React from "react";
-import Party from "./Party.mpeg";
+import Party from "./Party.mp3";
 
 class Music1 extends React.Component {
   render() {
